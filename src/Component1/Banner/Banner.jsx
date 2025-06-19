@@ -10,7 +10,7 @@ import { GoArrowRight } from "react-icons/go";
 
 const Banner = () => {
   return (
-    <section className="bg-SecondaryColor-0 px-8 pt-8 flex items-center relative z-10 overflow-hidden">
+    <section className="bg-SecondaryColor-0 px-8 py-8 rounded-b-[30px] flex items-center relative z-10 overflow-hidden">
       <div className="w-full grid lg:grid-cols-2 items-center gap-8">
         <div className="bg-BodyBgDark-0 flex justify-center px-[100px] pb-[120px] pt-[126px] rounded-[20px] relative overflow-hidden">
           <div>
