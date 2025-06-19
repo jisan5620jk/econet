@@ -3,9 +3,11 @@ import aboutTeamImg from "/images/about-team-img.png";
 import aboutTeamImg2 from "/images/about-team-img2.png";
 import subtitleIcon from "/images/sub-title-icon.png";
 import shape from "/images/about-shape.png";
+import aboutArrow from "/images/about-arrow-icon.png";
 import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
 import { GoArrowRight } from "react-icons/go";
 import OnScrollCounter from "../../Shared/Counter/OnScrollCounter";
+import Feature from "../Feature/Feature";
 
 const About = () => {
   return (
@@ -14,7 +16,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-[92px] lg:gap-10 items-start">
           <div className="relative">
             <h5 className="font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
-              <img src={subtitleIcon} alt="Icon" draggable={false} /> Services
+              <img src={subtitleIcon} alt="Icon" draggable={false} /> About Us
             </h5>
             <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
               Innovative eco system
@@ -68,7 +70,7 @@ const About = () => {
                   Expert Members
                 </h6>
               </div>
-              <div>
+              <div className="relative">
                 <div className="font-semibold text-[50px] leading-7 text-PrimaryColor-0 flex gap-1 items-start">
                   <OnScrollCounter start={0} end={30} duration={1000} />
                   <span className="text-4xl leading-7">+</span>
@@ -76,11 +78,13 @@ const About = () => {
                 <h6 className="font-Outfit text-white text-lg">
                   Years Experience
                 </h6>
+                <div className="absolute -top-3 -left-[70px]"><img src={aboutArrow} alt="About Arrow" className="animate-swing" /></div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <Feature />
     </section>
   );
 };

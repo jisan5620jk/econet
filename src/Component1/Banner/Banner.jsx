@@ -44,7 +44,7 @@ const Banner = () => {
             className="absolute bottom-[60px] animate-rotate hidden md:block lg:hidden 2xl:block"
           />
         </div>
-        <div className="bg-gradient-to-tl from-BodyBg-0 via-BoxBg2-0 to-BoxBg3-0 px-[100px] pt-[228px] pb-[102px] rounded-[20px] relative overflow-hidden">
+        <div className="bg-gradient-to-tl from-BodyBg-0 from-30% via-BoxBg3-0 to-BoxBg3-0 px-[100px] pt-[228px] pb-[102px] rounded-[20px] relative overflow-hidden">
           <h1 className="font-Outfit font-semibold text-HeadingColor-0 text-[26px] leading-[32px] sm:text-[36px] sm:leading-[42px] md:text-[56px] md:leading-[62px] lg:text-[42px] lg:leading-[48px] xl:text-[48px] xl:leading-[76px] 2xl:text-[74px] 2xl:leading-[78px]">
             Building evergreen
             <br />

@@ -28,7 +28,7 @@ const ServiceCard = ({
       <div className={`absolute ${iconTop} right-1`}>
         <Link
           to={serviceUrl}
-          className="size-[54px] flex justify-center items-center font-Outfit text-HeadingColor-0 text-[28px] bg-white rounded-full transition-all duration-500 relative z-10 overflow-hidden -rotate-45 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 before:rotate-180 before:scale-0 group-hover:before:scale-100 group-hover:before:rotate-0 group-hover:text-white"
+          className="size-[54px] flex justify-center items-center font-Outfit text-HeadingColor-0 text-[28px] rounded-full transition-all duration-500 relative z-10 overflow-hidden -rotate-45 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 before:rotate-180 before:scale-0 group-hover:before:scale-100 group-hover:before:rotate-0 group-hover:text-white"
         >
           {serviceBtnIcon}
         </Link>
