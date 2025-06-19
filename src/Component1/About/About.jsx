@@ -1,125 +1,82 @@
-import aboutThumb from "/images/about-thumb1.png";
-import itemIcon from "/images/about-icon.png";
-import shape from "/images/about-shape2.png";
-import shape2 from "/images/about-shape1.png";
-import shape3 from "/images/about-shape3.png";
-import shape4 from "/images/about-shape5.png";
-import shape5 from "/images/about-shape4.png";
-import { Link } from "react-router-dom";
-import { HiArrowNarrowRight } from "react-icons/hi";
+import aboutThumb from "/images/about-thumb.png";
+import aboutTeamImg from "/images/about-team-img.png";
+import aboutTeamImg2 from "/images/about-team-img2.png";
+import subtitleIcon from "/images/sub-title-icon.png";
+import shape from "/images/about-shape.png";
+import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
+import { GoArrowRight } from "react-icons/go";
 import OnScrollCounter from "../../Shared/Counter/OnScrollCounter";
 
 const About = () => {
   return (
-    <section className="bg-[url(/images/about-bg11.png)] pt-16 md:pt-20 lg:pt-28 bg-no-repeat bg-center bg-cover relative">
-      <img
-        src={shape4}
-        draggable={false}
-        alt="Shape"
-        className="absolute top-[16%] right-[7%] animate-rotational hidden 3xl:block"
-      />
-      <img
-        src={shape5}
-        draggable={false}
-        alt="Shape"
-        className="absolute bottom-[10%] right-[4%] animate-dance3 hidden 3xl:block"
-      />
+    <section className="bg-white py-16 md:py-20 lg:py-[120px] bg-no-repeat bg-center bg-cover relative">
       <div className="Container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-[92px] lg:gap-10 items-end">
-          <div className="relative z-10">
-            <img
-              src={aboutThumb}
-              draggable="false"
-              className="w-full lg:w-[inherit] max-w-[inherit] lg:-ml-[350px] xl:-ml-[250px] 2xl:-ml-[224px]"
-            />
-            <img
-              src={shape}
-              draggable={false}
-              alt="Shape"
-              className="absolute -z-10 -top-[3%] right-0 lg:right-[12%] animate-rotational"
-            />
-            <img
-              src={shape2}
-              draggable={false}
-              alt="Shape"
-              className="absolute -z-10 -top-4 lg:top-[2%] left-5 lg:-left-[6%] animate-swing"
-            />
-            <img
-              src={shape3}
-              draggable={false}
-              alt="Shape"
-              className="absolute top-[30%] left-[24%] animate-wiggle hidden xl:block"
-            />
-          </div>
-          <div className="relative pb-16 md:pb-20 lg:pb-28">
-            <h5 className="font-Outfit font-medium text-HeadingColor-0 uppercase pl-4 relative z-10 before:absolute before:top-1/2 before:left-0 before:-translate-y-1/2 before:bg-PrimaryColor-0 before:size-[6px]">
-              ABOUT US
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-[92px] lg:gap-10 items-start">
+          <div className="relative">
+            <h5 className="font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+              <img src={subtitleIcon} alt="Icon" draggable={false} /> Services
             </h5>
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[42px] 2xl:leading-[52px] text-HeadingColor-0 mt-2 md:mt-[14px] mb-4">
-              Who We Are – Introduction to
+            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+              Innovative eco system
               <br />
-              Educate Online Platform
+              For save human life and
+              <br />
+              Animal protection
             </h1>
-            <p className="font-NotoSans text-TextColor-0 max-w-[570px] w-full">
-              Educate the ultimate destination for knowledge seekers and
-              educators alike. We are committed to transforming special
-              education impact global channels without standards compliant
-              systems
+            <p className="font-NotoSans text-TextColor-0 max-w-[510px] w-full mt-6 mb-9">
+              Econet is a nonprofit environmental organizations maintaince and
+              dedicated to protecting planet through sustainable and renewable
+              community empowerment moderator
             </p>
-            <ul className="grid items-center grid-cols-1 sm:grid-cols-2 gap-y-4 my-7">
-              <li className="flex items-center gap-[10px]">
-                <div>
-                  <img src={itemIcon} draggable={false} alt="Icon" />
-                </div>
-                <h5 className="flex-1 font-Outfit font-medium text-lg sm:text-base md:text-lg lg:text-base 2xl:text-lg text-HeadingColor-0">
-                  Innovative Learning System
-                </h5>
-              </li>
-              <li className="flex items-center gap-[10px]">
-                <div>
-                  <img src={itemIcon} draggable={false} alt="Icon" />
-                </div>
-                <h5 className="flex-1 font-Outfit font-medium text-lg sm:text-base md:text-lg lg:text-base 2xl:text-lg text-HeadingColor-0">
-                  Worldwide Intelligent Learner
-                </h5>
-              </li>
-            </ul>
-            <div className="grid grid-cols-1 items-center sm:grid-cols-2 border-y border-SecondaryColor-0 border-opacity-15 py-5 mb-12">
-              <div className="flex gap-10">
-                <div className="text-2xl md:text-[56px] lg:text-[40px] leading-[56px] tracking-wide font-semibold font-Outfit text-PrimaryColor-0 relative">
-                  <OnScrollCounter start={0} end={30} duration={2000} />
-                  <h2 className="absolute -top-0 -right-5 font-Outfit text-3xl">
-                    +
-                  </h2>
-                </div>
-                <div className="flex-1">
-                  <p className="font-NotoSans text-TextColor-0 mt-2">
-                    Expert and Professional
-                    <br /> all Instructor
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-10">
-                <div className="text-2xl md:text-[56px] lg:text-[40px] leading-[56px] tracking-wide font-semibold font-Outfit text-PrimaryColor-0 relative flex items-center">
-                  <OnScrollCounter start={0} end={6} duration={1000} />
-                  <h2 className="font-Outfit">K</h2>
-                  <h2 className="absolute -top-0 -right-5 font-Outfit text-3xl">
-                    +
-                  </h2>
-                </div>
-                <div className="flex-1">
-                  <p className="font-NotoSans text-TextColor-0 mt-2">
-                    Enrolled Students all
-                    <br /> Over the World
-                  </p>
-                </div>
-              </div>
+            <PrimaryButton as="link" href="/about">
+              More About Us <GoArrowRight size={22} />
+            </PrimaryButton>
+            <div className="absolute -bottom-8 right-20">
+              <img
+                src={shape}
+                alt="About Shape"
+                draggable={false}
+                className="animate-swing"
+                style={{ animationDuration: "3.5s" }}
+              />
             </div>
-            <div>
-              <Link to={"/about"} className="primary-btn2">
-                More About
-                <HiArrowNarrowRight size={20} />
-              </Link>
+          </div>
+          <div className="relative z-10">
+            <img src={aboutThumb} draggable="false" className="w-full" />
+            <div className="bg-SecondaryColor-0 rounded-[20px] pl-10 pt-[34px] pr-14 pb-10 flex items-center justify-between flex-wrap mt-4">
+              <div>
+                <ul className="flex items-center -space-x-4">
+                  <li>
+                    <img
+                      src={aboutTeamImg}
+                      alt="About Team Image"
+                      draggable={false}
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src={aboutTeamImg2}
+                      alt="About Team Image"
+                      draggable={false}
+                    />
+                  </li>
+                  <li className="size-14 flex items-center justify-center bg-PrimaryColor-0 rounded-full font-Outfit text-white text-lg">
+                    +25
+                  </li>
+                </ul>
+                <h6 className="font-Outfit text-white text-lg mt-4">
+                  Expert Members
+                </h6>
+              </div>
+              <div>
+                <div className="font-semibold text-[50px] leading-7 text-PrimaryColor-0 flex gap-1 items-start">
+                  <OnScrollCounter start={0} end={30} duration={1000} />
+                  <span className="text-4xl leading-7">+</span>
+                </div>
+                <h6 className="font-Outfit text-white text-lg">
+                  Years Experience
+                </h6>
+              </div>
             </div>
           </div>
         </div>
