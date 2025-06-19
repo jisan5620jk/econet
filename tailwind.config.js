@@ -9,10 +9,11 @@ export default {
       },
       colors: {
         PrimaryColor: ['#41c575'],
+        PrimaryColor2: ['#ff8540'],
         SecondaryColor: ['#0c2318'],
         HeadingColor: ['#0c2318'],
         TextColor: ['#4d6459'],
-        TextColor2: ['#686868'],
+        TextColor2: ['#9daaa4'],
         ReviewText: ['#ffb108'],
         BodyBg: ['#f8f9f5'],
         BodyBgDark: ['#182f24'],
