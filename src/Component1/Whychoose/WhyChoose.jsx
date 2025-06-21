@@ -47,7 +47,7 @@ const WhyChoose = () => {
           style={{ animationDuration: "4s" }}
         />
       </div>
-      <div className="Container">
+      <div className="Container pb-5">
         <div className="text-center">
           <h5 className="font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
             <img src={subtitleIcon} alt="Icon" draggable={false} /> Why Choose

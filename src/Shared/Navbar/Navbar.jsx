@@ -161,7 +161,7 @@ const Navbar = () => {
         <header
           className={`absolute inline-block w-full max-w-[1720px] z-50 transition-all duration-300 bg-white rounded-[20px] ${
             isSticky
-              ? "!fixed top-7 shadow-shade bg-SecondaryColor-0 lg:bg-white animate-headerSlideDown border-transparent"
+              ? "top-7 shadow-shade bg-SecondaryColor-0 lg:bg-white animate-headerSlideDown border-transparent"
               : ""
           }`}
         >
