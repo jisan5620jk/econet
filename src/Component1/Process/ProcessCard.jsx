@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 
 const ProcessCard = ({
+  processBorder,
+  borderPosition,
   processIcon,
   processLeaf,
   leafPosition,
@@ -8,7 +10,12 @@ const ProcessCard = ({
   processDesc,
 }) => {
   return (
-    <div className="group text-center">
+    <div className="group text-center relative z-10">
+      {processBorder && (
+        <div className={`absolute ${borderPosition} hidden lg:block`}>
+          <img src={processBorder} draggable={false} alt="Border" />
+        </div>
+      )}
       <div className="relative z-10 text-center inline-block">
         <div className="size-[130px] mx-auto rounded-full flex items-center justify-center shrink-0 bg-BodyBgDark-0 relative z-10 overflow-hidden before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:rotate-180 before:transition-all before:duration-500 before:scale-0 before:-z-10 group-hover:before:scale-100 group-hover:before:rotate-0">
           <img

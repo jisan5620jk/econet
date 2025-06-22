@@ -1,5 +1,6 @@
 import About from "../../Component1/About/About";
 import Banner from "../../Component1/Banner/Banner";
+import Brand from "../../Component1/Brand/Brand";
 import Process from "../../Component1/Process/Process";
 import Project from "../../Component1/Project/Project";
 import Service from "../../Component1/Service/Service";
@@ -14,6 +15,7 @@ const Home1 = () => {
       <WhyChoose />
       <Project />
       <Process />
+      <Brand />
     </>
   );
 };

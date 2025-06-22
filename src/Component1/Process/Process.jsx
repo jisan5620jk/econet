@@ -7,6 +7,7 @@ import processLeaf from "/images/process-leaf.png";
 import processBorder from "/images/process-border.png";
 import shape from "/images/why-choose-shape.png";
 import shape2 from "/images/leaf.png";
+import Marquee from "../Marquee/Marquee";
 
 const processData = [
   {
@@ -17,6 +18,7 @@ const processData = [
     processDesc:
       "Econet is a nonprofit environmental main dedicated to protecting planet the through community empowerment",
     processBorder: processBorder,
+    borderPosition: "-top-5 -right-[60%]",
   },
   {
     processIcon: processIcon2,
@@ -26,6 +28,7 @@ const processData = [
     processDesc:
       "Econet is a nonprofit environmental main dedicated to protecting planet the through community empowerment",
     processBorder: processBorder,
+    borderPosition: "-right-[62%] top-12 rotate-[20deg]",
   },
   {
     processIcon: processIcon3,
@@ -80,6 +83,8 @@ const Process = () => {
           </div>
         </div>
       </section>
+      {/* Marquee Text */}
+      <Marquee />
     </div>
   );
 };

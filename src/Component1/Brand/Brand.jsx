@@ -1,78 +1,47 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import brandThumb from "/images/brand-img3.png";
-import brandThumb2 from "/images/brand-img1.png";
-import brandThumb3 from "/images/brand-img2.png";
-import shape from "/images/brand-star.png";
-import shape2 from "/images/brand-arrow.png";
-import shape3 from "/images/brand-line.png";
+
+import brandThumb from "/images/brand-logo.png";
+import brandThumb2 from "/images/brand-logo2.png";
+import brandThumb3 from "/images/brand-logo3.png";
+import brandThumb4 from "/images/brand-logo4.png";
+import brandThumb5 from "/images/brand-logo5.png";
 
 const Brand = () => {
+  const brandLogos = [brandThumb, brandThumb2, brandThumb3, brandThumb4, brandThumb5, brandThumb3];
+
   const settings = {
     modules: [Autoplay],
     loop: true,
     spaceBetween: 26,
     speed: 10000,
-    grabCursor: true, // Fixed typo: cursorGrab -> grabCursor
+    grabCursor: true,
     autoplay: {
-      delay: 100, // Adjust delay in milliseconds (3 seconds here)
-      disableOnInteraction: false, // Keep autoplay running after user interaction
+      delay: 100,
+      disableOnInteraction: false,
     },
     breakpoints: {
       320: { slidesPerView: 1 },
       576: { slidesPerView: 2 },
-      768: { slidesPerView: 3 },
-      992: { slidesPerView: 3 },
-      1400: { slidesPerView: 3 },
+      768: { slidesPerView: 4 },
+      992: { slidesPerView: 5 },
     },
   };
 
   return (
-    <section className="bg-BodyBg-0 pt-16 md:pt-20 lg:pt-[110px] pb-[78px] rounded-b-lg lg:rounded-b-2xl relative z-10">
-      <div className="absolute top-24 left-[40%] animate-rotational hidden lg:block xl:hidden 2xl:block">
-        <img src={shape} draggable={false} alt="Shape" />
-      </div>
-      <div className="absolute top-28 left-48 animate-dance3 hidden 2xl:block">
-        <img src={shape2} draggable={false} alt="Shape" />
-      </div>
-      <div className="absolute -top-16 right-32 animate-wiggle hidden lg:block">
-        <img src={shape3} draggable={false} alt="Shape" />
-      </div>
+    <section className="bg-PrimaryColor-0 relative z-10 py-10 md:py-20">
       <div className="Container">
-        <div className="flex items-center justify-between flex-wrap gap-y-7">
-          <div>
-            <h5 className="font-Outfit font-medium text-HeadingColor-0 uppercase pl-4 relative z-10 before:absolute before:top-1/2 before:left-0 before:-translate-y-1/2 before:bg-PrimaryColor-0 before:size-[6px]">
-              our partners
-            </h5>
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[42px] 2xl:leading-[52px] text-HeadingColor-0 mt-2">
-              Our Trusted Partners
-            </h1>
-          </div>
-          <div className="relative z-10 max-w-[710px] w-full">
-            <Swiper {...settings}>
-              <SwiperSlide>
-                <div>
-                  <img src={brandThumb} draggable="false" className="m-auto" />
+        <div className="relative z-10">
+          <Swiper {...settings}>
+            {brandLogos.map((logo, index) => (
+              <SwiperSlide key={index}>
+                <div className="bg-white h-[120px] w-full rounded-2xl flex items-center justify-center">
+                  <img src={logo} alt={`Brand ${index + 1}`} draggable="false" className="m-auto" />
                 </div>
               </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <img src={brandThumb2} draggable="false" className="m-auto" />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <img src={brandThumb3} draggable="false" className="m-auto" />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <img src={brandThumb2} draggable="false" className="m-auto" />
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>

@@ -65,7 +65,7 @@ const Main = () => {
 
   return (
     <>
-      <HelmetChanger title={"Online Education"} />
+      <HelmetChanger title={"Environment Main Demo"} />
       <BackToTop />
       <Navbar />
       <div id="smooth-wrapper" className="overflow-hidden h-full">
