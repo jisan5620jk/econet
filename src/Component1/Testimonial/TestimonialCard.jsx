@@ -1,47 +1,38 @@
 /* eslint-disable react/prop-types */
-const TestimonialCard = ({
-  testiTitle,
-  testiRatingIcon,
-  testiRatingIcon2,
-  testiQuate,
-  testiName,
-  testiImg,
-  testiDesc,
-  testiDesignation,
-}) => {
+
+import { FaStar } from "react-icons/fa";
+
+const TestimonialCard = ({ rating = 5, quote, name, role, avatar, isActive }) => {
   return (
-    <div>
-      <div className="relative text-left bg-white px-5 sm:px-10 py-4 sm:py-12 mb-8 rounded-[20px]">
-        <div className="flex items-center gap-4 mb-4 sm:mb-10">
-          <div>
-            <img src={testiQuate} draggable="false" alt="Icon" />
-          </div>
-          <div>
-            <h5 className="font-Outfit text-xl sm:text-2xl md:text-[26px] text-HeadingColor-0 font-medium">
-              {testiTitle}
-            </h5>
-          </div>
-        </div>
-        <p className="font-NotoSans text-base sm:text-lg lg:text-base xl:text-lg text-TextColor-0">
-          {testiDesc}
-        </p>
-        <ul className="flex items-center mt-[22px]">
-          <li className="text-ReviewText-0 text-2xl">{testiRatingIcon}</li>
-          <li className="text-ReviewText-0 text-2xl">{testiRatingIcon}</li>
-          <li className="text-ReviewText-0 text-2xl">{testiRatingIcon}</li>
-          <li className="text-ReviewText-0 text-2xl">{testiRatingIcon}</li>
-          <li className="text-ReviewText-0 text-2xl">{testiRatingIcon2}</li>
-        </ul>
+    <div
+      className={`p-6 rounded-xl ${
+        isActive ? "bg-[#123223]" : "bg-[#123223]/80"
+      } text-white transition-all duration-300`}
+    >
+      {/* Stars */}
+      <div className="flex space-x-1 text-[#f97316] mb-4">
+        {Array.from({ length: rating }, (_, i) => (
+          <FaStar key={i} />
+        ))}
       </div>
-      <div className="flex items-center gap-3">
+
+      {/* Quote */}
+      <p className={`text-lg font-medium ${!isActive && "text-white/50"}`}>
+        “{quote}”
+      </p>
+
+      {/* User */}
+      <div className="flex items-center gap-4 mt-6">
+        <img
+          src={avatar}
+          alt={name}
+          className="w-10 h-10 rounded-full object-cover"
+        />
         <div>
-          <img src={testiImg} draggable={false} alt="Image" />
-        </div>
-        <div>
-          <h5 className="font-Outfit font-semibold inline-block text-HeadingColor-0 text-xl relative">
-            {testiName}
-          </h5>
-          <p className="font-NotoSans text-TextColor-0">{testiDesignation}</p>
+          <h4 className={`font-semibold ${!isActive && "text-white/60"}`}>
+            {name}
+          </h4>
+          <p className={`text-sm ${!isActive && "text-white/40"}`}>{role}</p>
         </div>
       </div>
     </div>
