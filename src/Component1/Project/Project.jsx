@@ -1,19 +1,19 @@
 // components/Project.jsx
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GoArrowRight } from "react-icons/go";
 import { FaCheck } from "react-icons/fa6";
 import ProjectCard from "./ProjectCard";
 import subtitleIcon from "/images/sub-title-icon.png";
-import shape from "/images/project-shape2.png";
+import shape from "/images/project-shape.png";
+import shape2 from "/images/project-shape2.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const projectData = [
   {
     projectBg: "bg-[url('/images/project-item-bg.png')]",
-    boxBg: "bg-[url('/images/project-box-bg.png')]",
     boxPosition: "justify-end mr-20 ml-auto",
     boxCheckIcon: <FaCheck />,
     boxSubTitle: "ECOLOGY",
@@ -26,7 +26,6 @@ const projectData = [
   },
   {
     projectBg: "bg-[url('/images/project-item-bg2.png')]",
-    boxBg: "bg-[url('/images/project-box-bg.png')]",
     boxPosition: "justify-start ml-20",
     boxCheckIcon: <FaCheck />,
     boxSubTitle: "RENEWABLE",
@@ -39,7 +38,6 @@ const projectData = [
   },
   {
     projectBg: "bg-[url('/images/project-item-bg3.png')]",
-    boxBg: "bg-[url('/images/project-box-bg.png')]",
     boxPosition: "justify-end mr-20 ml-auto",
     boxCheckIcon: <FaCheck />,
     boxSubTitle: "SEEDLING",
@@ -53,8 +51,6 @@ const projectData = [
 ];
 
 const Project = () => {
-  const containerRef = useRef(null);
-
   useEffect(() => {
     const ctx = gsap.context(() => {
       const items = gsap.utils.toArray(".project-panel-pin");
@@ -64,14 +60,16 @@ const Project = () => {
 
         ScrollTrigger.create({
           trigger: item,
-          start: "top top",
-          end: "+=100%",
+          start: `top 10%`,
+          end: "bottom 90%",
+          endTrigger: ".project-pin-wrapper",
           pin: true,
           pinSpacing: false,
-          scrub: true,
+          scrub: 1,
+          markers: false,
         });
       });
-    }, containerRef);
+    });
 
     return () => ctx.revert();
   }, []);
@@ -79,10 +77,18 @@ const Project = () => {
   return (
     <div className="px-8 relative z-10 -mt-5">
       <div className="absolute top-0 left-0 w-full h-[246px] inline-block bg-SecondaryColor-0 -z-10"></div>
-      <section className="bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px] relative overflow-hidden">
-        <div className="absolute -right-5 top-[86px]">
+      <section className="project-pin-wrapper bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px] relative overflow-hidden">
+        <div className="absolute left-[18%] top-24">
           <img
             src={shape}
+            draggable={false}
+            alt="Shape"
+            className="animate-swing hidden lg:block"
+            style={{ animationDuration: "2.5s" }}
+          />
+        </div><div className="absolute -right-5 top-[86px]">
+          <img
+            src={shape2}
             draggable={false}
             alt="Shape"
             className="animate-dance hidden lg:block"
@@ -100,7 +106,7 @@ const Project = () => {
           </h1>
         </div>
         <div className="Container">
-          <div ref={containerRef} className="relative space-y-[30px] mt-[60px]">
+          <div className="relative space-y-[30px] mt-[60px]">
             {projectData.map((item, i) => (
               <div key={i} className="project-panel-pin">
                 <ProjectCard {...item} />
