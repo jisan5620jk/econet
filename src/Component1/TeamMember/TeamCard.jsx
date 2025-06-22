@@ -1,87 +1,59 @@
 /* eslint-disable react/prop-types */
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const TeamCard = ({
   teamThumb,
   socialIcon,
   socialIcon2,
   socialIcon3,
+  socialIcon4,
   teamTitle,
-  teamUrl,
   teamDesc,
-  ratingFill,
-  ratingHalf,
-  ratingContant,
-    cardBg= 'bg-PrimaryColor-0 bg-opacity-[7%]',
-    descBg= 'bg-PrimaryColor-0 bg-opacity-10',
-    descBorder= 'border-PrimaryColor-0 border-opacity-30',
-    descText='text-PrimaryColor-0',
-    hoverText= 'hover:text-PrimaryColor-0',
-    gradientFrom= 'from-PrimaryColor-0 from-20%',
-    gradientVia= 'via-transparent',
-    gradientTo= 'to-transparent',
+  teamUrl,
+  teamBtnIcon,
 }) => {
   return (
-    <div className={`group relative rounded-[20px] p-3 sm:p-5 ${cardBg}`}>
-      <div className='team-thumb overflow-hidden rounded-[14px] relative z-10'>
-        <div
-          className={`
-            absolute left-0 bottom-0 w-full h-0 transition-all duration-500 group-hover:h-full z-10
-            bg-gradient-to-t ${gradientFrom} ${gradientVia} ${gradientTo}
-          `}
-        ></div>
+    <div className="group rounded-[20px] relative z-10 overflow-hidden before:absolute before:left-0 before:bottom-0 before:w-full before:h-1/3 before:bg-gradient-to-b before:to-SecondaryColor-0 before:from-transparent before:z-10 before:transition-all before:duration-500 hover:before:h-1/2">
+      <img src={teamThumb} alt="Team Image" />
 
-        <img
-          src={teamThumb}
-          alt='Team Image'
-          className='w-full relative z-0'
-        />
-
+      {/* Info section */}
+      <div className="absolute z-20 bottom-10 left-0 right-0 mx-auto rounded-md text-center transition-all duration-500 group-hover:bottom-[92px]">
+        <Link
+          to={teamUrl}
+          className="font-Outfit font-medium text-[32px] text-white block transition-all duration-500"
+        >
+          {teamTitle}
+        </Link>
+        <p className="font-Outfit text-white text-sm bg-white bg-opacity-15 backdrop-filter backdrop-blur-sm px-5 py-[5px] rounded-full mt-3 inline-block border border-white border-opacity-30">
+          {teamDesc}
+        </p>
         {/* Social icons */}
-        {[socialIcon, socialIcon2, socialIcon3].map((icon, i) => (
+        {[socialIcon, socialIcon2, socialIcon3, socialIcon4].map((icon, i) => (
           <div
             key={i}
-            style={{ left: `${25 + i * 18}%` }}
-            className={`absolute z-20 -bottom-10 transition-all duration-${
-              300 + i * 200
-            } group-hover:bottom-5`}
+            style={{
+              left: `${27.5 + i * 12}%`,
+              transitionDuration: `${300 + i * 200}ms`,
+            }}
+            className={`absolute z-20 -bottom-24 opacity-0 transition-all group-hover:-bottom-14 group-hover:opacity-100`}
           >
-            <Link to={'/'}>
-              <button className='size-9 text-sm flex justify-center items-center rounded-full overflow-hidden relative bg-white bg-opacity-30 border border-white transition-all duration-500 hover:text-PrimaryColor-0 text-white z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:rounded-full before:-z-10 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100'>
+            <Link to={"/"}>
+              <button className="size-[34px] text-sm flex justify-center items-center rounded-full overflow-hidden relative bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm border border-white border-opacity-30 transition-all duration-500 hover:border-PrimaryColor-0 hover:border-opacity-100 text-white z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-PrimaryColor-0 before:rounded-full before:-z-10 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100">
                 {icon}
               </button>
             </Link>
           </div>
         ))}
       </div>
+      {/* Team Icon */}
 
-      {/* Info section */}
-      <div className='bg-transparent relative transition-all duration-500 rounded-md text-center pt-3 sm:pt-7 pb-1'>
+      <div className="absolute top-0 right-0">
         <Link
           to={teamUrl}
-          className={`font-Outfit font-medium text-2xl text-HeadingColor-0 block transition-all duration-500 ${hoverText}`}
+          className="size-[50px] flex justify-center items-center font-Outfit text-PrimaryColor-0 text-xl bg-white border border-PrimaryColor-0 rounded-full transition-all duration-500 relative z-10 overflow-hidden -rotate-45 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 before:rotate-180 before:scale-0 group-hover:before:scale-100 group-hover:before:rotate-0 group-hover:text-white"
         >
-          {teamTitle}
+          {teamBtnIcon}
         </Link>
-        <p
-          className={`
-            font-Outfit text-sm px-5 py-[5px] rounded-3xl font-medium mt-3 inline-block
-            ${descBg} ${descBorder} ${descText} border
-          `}
-        >
-          {teamDesc}
-        </p>
-
-        <div className='flex items-center justify-center gap-1 text-ReviewText-0 text-[15px] mt-[19px]'>
-          {ratingFill}
-          {ratingFill}
-          {ratingFill}
-          {ratingFill}
-          {ratingHalf}
-          <span className='font-Outfit ml-1 text-HeadingColor-0 text-base'>
-            {ratingContant}
-          </span>
-        </div>
       </div>
     </div>
   );

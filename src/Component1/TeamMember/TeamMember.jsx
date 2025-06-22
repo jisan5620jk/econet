@@ -1,171 +1,99 @@
-import teamThumb from "/images/team-thumb1.png";
+import teamThumb from "/images/team-thumb.png";
 import teamThumb2 from "/images/team-thumb2.png";
 import teamThumb3 from "/images/team-thumb3.png";
 import teamThumb4 from "/images/team-thumb4.png";
-import shape from "/images/team-shape1.png";
-import shape2 from "/images/team-shape2.png";
 import TeamCard from "./TeamCard";
-import { FaFacebookF, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Autoplay } from "swiper/modules";
-import { BsStarFill, BsStarHalf } from "react-icons/bs";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaPinterestP,
+  FaXTwitter,
+} from "react-icons/fa6";
+import subtitleIcon from "/images/sub-title-icon.png";
+import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
+import { GoArrowRight } from "react-icons/go";
+import { FiArrowRight } from "react-icons/fi";
 
-const teamData = [
+const teamsData = [
   {
-    id: 1,
     teamThumb: teamThumb,
     teamUrl: "/team_details",
     teamTitle: "Jone D. Alexon",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
     socialIcon3: <FaLinkedinIn />,
-    teamDesc: "Web Developer",
-    ratingFill: <BsStarFill />,
-    ratingHalf: <BsStarHalf />,
-    ratingContant: "(4.5)",
-    cardBg: "bg-PrimaryColor3-0 bg-opacity-[7%]",
-    descBg: "bg-PrimaryColor3-0 bg-opacity-10",
-    descBorder: "border-PrimaryColor3-0 border-opacity-30",
-    descText: "text-PrimaryColor3-0",
-    hoverText: "hover:text-PrimaryColor3-0",
-    gradientFrom: "from-PrimaryColor3-0 from-20%",
-    gradientVia: "via-transparent",
-    gradientTo: "to-transparent",
+    socialIcon4: <FaPinterestP />,
+    teamDesc: "Env. Analyst",
+    teamBtnIcon: <FiArrowRight />,
   },
   {
-    id: 2,
     teamThumb: teamThumb2,
     teamUrl: "/team_details",
     teamTitle: "Anjelina M. Jholi",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
     socialIcon3: <FaLinkedinIn />,
-    teamDesc: "Graphic Designer",
-    ratingFill: <BsStarFill />,
-    ratingHalf: <BsStarHalf />,
-    ratingContant: "(4.5)",
-    cardBg: "bg-PrimaryColor-0 bg-opacity-[7%]",
-    descBg: "bg-PrimaryColor-0 bg-opacity-10",
-    descBorder: "border-PrimaryColor-0 border-opacity-30",
-    descText: "text-PrimaryColor-0",
-    hoverText: "hover:text-PrimaryColor-0",
-    gradientFrom: "from-PrimaryColor-0 from-20%",
-    gradientVia: "via-transparent",
-    gradientTo: "to-transparent",
+    socialIcon4: <FaPinterestP />,
+    teamDesc: "EHS Officer",
+    teamBtnIcon: <FiArrowRight />,
   },
   {
-    id: 3,
     teamThumb: teamThumb3,
     teamUrl: "/team_details",
     teamTitle: "Alaina Melvis",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
     socialIcon3: <FaLinkedinIn />,
-    teamDesc: "App Developer",
-    ratingFill: <BsStarFill />,
-    ratingHalf: <BsStarHalf />,
-    ratingContant: "(4.5)",
-    cardBg: "bg-PrimaryColor-0 bg-opacity-[7%]",
-    descBg: "bg-PrimaryColor-0 bg-opacity-10",
-    descBorder: "border-PrimaryColor-0 border-opacity-30",
-    descText: "text-PrimaryColor-0",
-    hoverText: "hover:text-PrimaryColor-0",
-    gradientFrom: "from-PrimaryColor-0 from-20%",
-    gradientVia: "via-transparent",
-    gradientTo: "to-transparent",
+    socialIcon4: <FaPinterestP />,
+    teamDesc: "Env. Analyst",
+    teamBtnIcon: <FiArrowRight />,
   },
   {
-    id: 4,
     teamThumb: teamThumb4,
     teamUrl: "/team_details",
     teamTitle: "David Jhonson",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
     socialIcon3: <FaLinkedinIn />,
-    teamDesc: "UI/UX Designer",
-    ratingFill: <BsStarFill />,
-    ratingHalf: <BsStarHalf />,
-    ratingContant: "(4.5)",
-    cardBg: "bg-PrimaryColor4-0 bg-opacity-[7%]",
-    descBg: "bg-PrimaryColor4-0 bg-opacity-10",
-    descBorder: "border-PrimaryColor4-0 border-opacity-30",
-    descText: "text-PrimaryColor4-0",
-    hoverText: "hover:text-PrimaryColor4-0",
-    gradientFrom: "from-PrimaryColor4-0 from-20%",
-    gradientVia: "via-transparent",
-    gradientTo: "to-transparent",
+    socialIcon4: <FaPinterestP />,
+    teamDesc: "Waste Coord.",
+    teamBtnIcon: <FiArrowRight />,
   },
 ];
 
 const TeamMember = () => {
-  const settings = {
-    loop: true,
-    spaceBetween: 26,
-    modules: [Autoplay],
-    speed: 1500,
-    autoplay: {
-      delay: 3000, // Set delay time in milliseconds
-      disableOnInteraction: false, // Keep autoplay on user interaction
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
-      576: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      992: {
-        slidesPerView: 3,
-      },
-      1200: {
-        slidesPerView: 4,
-      },
-      1400: {
-        slidesPerView: 4,
-      },
-    },
-  };
   return (
-    <section className="bg-white py-16 md:py-20 lg:py-28 relative z-10 team-member">
-      <div className="absolute left-32 top-26 animate-wiggle hidden 3xl:block">
-        <img src={shape} draggable={false} alt="Shape" />
+    <section className="bg-white px-[120px] py-16 md:py-20 lg:py-[120px] relative z-10">
+      <div className="text-center">
+        <h5 className="font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+          <img src={subtitleIcon} alt="Icon" draggable={false} /> Our Teams
+        </h5>
+        <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+          Meet Expert Team Members
+        </h1>
+        <p className="font-NotoSans text-TextColor-0 max-w-[500px] w-full mx-auto mt-5 mb-8">
+          Econet is a nonprofit environmental organizations maintaince and
+          dedicated to protecting planet through sustainable
+        </p>
+        <PrimaryButton as="link" href="/team">
+          All Members <GoArrowRight size={22} />
+        </PrimaryButton>
       </div>
-      <div className="Container">
-        <div className="relative grid items-center grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="border-b border-SecondaryColor-0 border-opacity-15 pb-6 lg:py-6">
-            <h5 className="font-Outfit font-medium text-HeadingColor-0 uppercase pl-4 relative z-10 before:absolute before:top-1/2 before:left-0 before:-translate-y-1/2 before:bg-PrimaryColor-0 before:size-[6px]">
-              INSTRUCTOR
-            </h5>
-          </div>
-          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[42px] 2xl:leading-[52px] text-HeadingColor-0">
-            Introducing the Educators and
-            <br /> Professional Instructor
-          </h1>
-        </div>
-        <div className="mt-[48px]">
-          <Swiper {...settings}>
-            {teamData.map((teams) => {
-              return (
-                <SwiperSlide key={teams.id}>
-                  <TeamCard {...teams} />
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </div>
-      </div>
-      <div className="absolute right-7 bottom-0 hidden 3xl:block">
-        <img
-          src={shape2}
-          draggable={false}
-          alt="Shape"
-          className="animate-dance"
-        />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 mt-[42px]">
+        {teamsData.map((teams, index) => {
+          return (
+            <div
+              key={index}
+              className={`${
+                index !== 0 && index !== teamsData.length - 1
+                  ? ""
+                  : "-mt-[90px]"
+              }`}
+            >
+              <TeamCard {...teams} />
+            </div>
+          );
+        })}
       </div>
     </section>
   );
