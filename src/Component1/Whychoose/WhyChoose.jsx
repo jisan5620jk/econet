@@ -61,11 +61,19 @@ const WhyChoose = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-[92px] lg:gap-6 2xl:gap-10 mt-[60px]">
           <div className="relative z-10">
-            <img
-              src={whyChooseThumb}
-              draggable="false"
-              className="w-full xl:w-[inherit] 2xl:max-w-[inherit]"
-            />
+            <div className="relative inline-block">
+              <img
+                src={whyChooseThumb}
+                draggable="false"
+                className="w-full xl:w-[inherit] 2xl:max-w-[inherit]"
+              />
+              <div className="absolute top-0 right-0">
+                <div className="size-[90px] rounded-bl-[20px] bg-SecondaryColor-0 inline-block relative">
+                  <span className="absolute -left-[30px] top-0 rotate-180 size-[30px] inline-block bg-SecondaryColor-0 [clip-path:path('M0_0_Q0,30_30,30_L_0_30_Z')]"></span>
+                  <span className="absolute -bottom-[30px] right-0 rotate-180 size-[30px] inline-block bg-SecondaryColor-0 [clip-path:path('M0_0_Q0,30_30,30_L_0_30_Z')]"></span>
+                </div>
+              </div>
+            </div>
             <div className="hidden sm:block absolute bottom-20 -left-[100px] text-center bg-[url('/images/why-choose-info-bg.png')] bg-no-repeat bg-cover bg-top rounded-[20px] px-7 lg:px-5 xl:px-7 pt-10 pb-10 w-full max-w-[240px]">
               <div className="text-[40px] text-white flex items-center justify-center mb-3">
                 <PiSealCheckFill />

@@ -14,6 +14,12 @@ const TeamCard = ({
 }) => {
   return (
     <div className="group rounded-[20px] relative z-10 overflow-hidden before:absolute before:left-0 before:bottom-0 before:w-full before:h-1/3 before:bg-gradient-to-b before:to-SecondaryColor-0 before:from-transparent before:z-10 before:transition-all before:duration-500 hover:before:h-1/2">
+      <div className="absolute z-10 top-0 right-0">
+        <div className="size-[60px] rounded-bl-[20px] bg-white inline-block relative">
+          <span className="absolute -left-[30px] top-0 rotate-180 size-[30px] inline-block bg-white [clip-path:path('M0_0_Q0,30_30,30_L_0_30_Z')]"></span>
+          <span className="absolute -bottom-[30px] right-0 rotate-180 size-[30px] inline-block bg-white [clip-path:path('M0_0_Q0,30_30,30_L_0_30_Z')]"></span>
+        </div>
+      </div>
       <img src={teamThumb} alt="Team Image" />
 
       {/* Info section */}

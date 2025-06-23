@@ -6,6 +6,7 @@ import Process from "../../Component1/Process/Process";
 import Project from "../../Component1/Project/Project";
 import Service from "../../Component1/Service/Service";
 import TeamMember from "../../Component1/TeamMember/TeamMember";
+import Testimonial from "../../Component1/Testimonial/Testimonial";
 import WhyChoose from "../../Component1/Whychoose/WhyChoose";
 
 const Home1 = () => {
@@ -18,6 +19,7 @@ const Home1 = () => {
       <Project />
       <Process />
       <TeamMember />
+      <Testimonial />
       <Blog />
       <Brand />
     </>

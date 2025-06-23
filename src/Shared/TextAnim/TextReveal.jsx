@@ -51,7 +51,7 @@ const TextReveal = () => {
           opacity: 1,
           scale: 1,
           y: 0,
-          duration: 1,
+          duration: 0.5,
           ease: "power3.out",
           stagger: 0.05,
           scrollTrigger: {

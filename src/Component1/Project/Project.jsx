@@ -1,4 +1,3 @@
-// components/Project.jsx
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -86,7 +85,8 @@ const Project = () => {
             className="animate-swing hidden lg:block"
             style={{ animationDuration: "2.5s" }}
           />
-        </div><div className="absolute -right-5 top-[86px]">
+        </div>
+        <div className="absolute -right-5 top-[86px]">
           <img
             src={shape2}
             draggable={false}
