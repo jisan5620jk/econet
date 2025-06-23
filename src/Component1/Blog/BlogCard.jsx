@@ -13,12 +13,13 @@ const BlogCard = ({
   isMain,
 }) => {
   return (
-    <div className={isMain ? "" : "flex flex-col sm:flex-row gap-8"}>
+    <div className={isMain ? "" : "flex flex-col sm:flex-row sm:items-center gap-8"}>
       {/* Image */}
       <div className={isMain ? "rounded-2xl overflow-hidden" : ""}>
         <img
           src={blogImage}
           alt={blogTitle}
+          draggable={false}
           className={isMain ? "w-full" : "w-full object-cover rounded-2xl"}
         />
       </div>
@@ -31,7 +32,11 @@ const BlogCard = ({
           </span>
           <span className="font-NotoSans text-TextColor-0">{blogDate}</span>
         </div>
-        <div className="border-b border-SecondaryColor-0 border-opacity-10 pb-7 mb-5">
+        <div
+          className={`border-b border-SecondaryColor-0 border-opacity-10 ${
+            isMain ? "pb-7 mb-5" : "pb-5 mb-4"
+          }`}
+        >
           <Link
             to={blogurl}
             className={`font-Outfit text-HeadingColor-0 inline-block mt-5 ${

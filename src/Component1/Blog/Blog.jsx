@@ -51,9 +51,9 @@ const blogPosts = [
 ];
 const Blog = () => {
   return (
-    <div className="px-8 relative z-10 -mt-5">
+    <div className="px-8 relative z-10 bg-BodyBg-0 -mt-5">
       <div className="absolute top-0 left-0 w-full h-[246px] inline-block bg-SecondaryColor-0 -z-10"></div>
-      <section className="bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px]">
+      <section className="bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px] rounded-b-[20px] overflow-hidden">
         <div className="Container">
           <div className="text-center">
             <h5 className="font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
