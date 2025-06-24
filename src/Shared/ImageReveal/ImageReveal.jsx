@@ -16,12 +16,14 @@ const ImageReveal = () => {
           gsap.fromTo(
             img,
             {
-              clipPath: "inset(60% 60% 60% 60%)",
+              clipPath: "inset(0% 100% 0% 0%)",
               opacity: 0,
+              scale: 1.4,
             },
             {
               clipPath: "inset(0% 0% 0% 0%)",
               opacity: 1,
+              scale: 1,
               duration: 1,
               ease: "power2.out",
               scrollTrigger: {

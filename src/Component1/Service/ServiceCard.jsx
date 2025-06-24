@@ -41,7 +41,7 @@ const ServiceCard = ({
         </div>
       )}
       <h5
-        className={`font-Outfit font-medium text-xl sm:text-2xl xl:text-[22px] 2xl:text-[28px] leading-[36px] ml-10 pt-[52px] ${titlePb} mb-1 text-HeadingColor-0 transition-all duration-500 group-hover:text-white max-w-[260px] w-full`}
+        className={`font-Outfit font-medium text-xl sm:text-2xl xl:text-[22px] 2xl:text-[28px] leading-[36px] ml-10 pt-[52px] ${titlePb} text-HeadingColor-0 transition-all duration-500 group-hover:text-white max-w-[260px] w-full`}
       >
         {serviceTitle}
       </h5>

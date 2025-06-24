@@ -65,9 +65,9 @@ const Testimonial = () => {
       // Sticky right box
       ScrollTrigger.create({
         trigger: stickyBoxRef.current,
-        start: "top 5%",
+        start: "top 9%",
         endTrigger: containerRef.current,
-        end: () => `bottom 99%`,
+        end: () => `bottom 103.2%`,
         pin: true,
         pinSpacing: false,
         scrub: true,
