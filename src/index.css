@@ -43,3 +43,27 @@
     @apply invert hue-rotate-[91deg] sepia-[71%] saturate-[394%] brightness-[94%] contrast-[84%];
   }
 }
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #182f24;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #41c575;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #34a763;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #41c575 #182f24;
+  }
+}
