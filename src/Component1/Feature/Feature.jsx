@@ -10,21 +10,18 @@ const featureData = [
     featureTitle: "Suntainable energy Environment",
     featureUrl: "/feature",
     featureBtnIcon: <IoMdLogIn />,
-    boxBg: "before:bg-[url('/images/feature-box-bg.png')]",
   },
   {
     featureIcon: featureIcon2,
     featureTitle: "Environment Waste Recycling",
     featureUrl: "/feature",
     featureBtnIcon: <IoMdLogIn />,
-    boxBg: "before:bg-[url('/images/feature-box-bg.png')]",
   },
   {
     featureIcon: featureIcon3,
     featureTitle: "Dirty Recycling and Tree Plantation",
     featureUrl: "/feature",
     featureBtnIcon: <IoMdLogIn />,
-    boxBg: "before:bg-[url('/images/feature-box-bg.png')]",
   },
 ];
 

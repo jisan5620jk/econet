@@ -3,16 +3,32 @@
 import { Link } from "react-router-dom";
 
 const FeatureCard = ({
-  boxBg,
   featureTitle,
   featureIcon,
   featureUrl,
   featureBtnIcon,
 }) => {
   return (
-    <div
-      className={`group rounded-[20px] px-11 pt-[52px] relative z-10 ${boxBg} before:absolute before:top-0 before:left-0 before:size-full before:bg-no-repeat before:bg-cover before:bg-top before:transition-all before:duration-500 before:ease-linear before:-z-10 hover:before:[filter:brightness(0)_saturate(100%)_invert(61%)_sepia(71%)_saturate(394%)_hue-rotate(91deg)_brightness(94%)_contrast(84%)] overflow-hidden`}
-    >
+    <div className="group rounded-[20px] px-11 pt-[52px] relative z-10 overflow-hidden bg-gradient-to-tl to-BoxBg2-0 from-BodyBg-0 from-30% via-BoxBg3-0">
+      <div>
+        {[
+          { initial: "left-[12.5%]", hover: "group-hover:left-0" },
+          { initial: "left-[37.5%]", hover: "group-hover:left-[25%]" },
+          { initial: "left-[62.5%]", hover: "group-hover:left-1/2" },
+          { initial: "left-[87.5%]", hover: "group-hover:left-[75%]" },
+        ].map((pos, i) => (
+          <span
+            key={i}
+            className={`absolute top-0 h-full w-0 transition-all duration-500 -z-10 bg-PrimaryColor-0 group-hover:w-[25%] ${pos.initial} ${pos.hover}`}
+          ></span>
+        ))}
+      </div>
+      <div className="absolute z-10 top-0 right-0">
+        <div className="size-[60px] rounded-bl-[20px] bg-white inline-block relative">
+          <span className="absolute -left-[30px] top-0 rotate-180 size-[30px] inline-block bg-white [clip-path:path('M0_0_Q0,30_30,30_L_0_30_Z')]"></span>
+          <span className="absolute -bottom-[30px] right-0 rotate-180 size-[30px] inline-block bg-white [clip-path:path('M0_0_Q0,30_30,30_L_0_30_Z')]"></span>
+        </div>
+      </div>
       <div>
         <img
           src={featureIcon}

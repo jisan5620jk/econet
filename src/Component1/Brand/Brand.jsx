@@ -30,7 +30,7 @@ const Brand = () => {
   };
 
   return (
-    <section className="bg-BodyBg-0 relative z-10 py-10 md:py-20">
+    <section className="bg-BodyBg-0 relative z-10 py-10 md:py-20 rounded-b-[50px] overflow-hidden">
       <div className="Container">
         <div className="relative z-10">
           <Swiper {...settings}>

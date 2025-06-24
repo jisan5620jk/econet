@@ -13,7 +13,7 @@ const serviceCard = [
     serviceImg: serviceImg,
     serviceUrl: "/service_details",
     serviceBtnIcon: <IoMdLogIn />,
-    boxBg: 'before:bg-[url("/images/service-box-bg1.png")]',
+    boxBg: true,
     titlePb: "pb-[34px]",
     iconTop: "top-5",
   },
@@ -22,7 +22,7 @@ const serviceCard = [
     serviceImg: serviceImg2,
     serviceUrl: "/service_details",
     serviceBtnIcon: <IoMdLogIn />,
-    boxBg: 'before:bg-[url("/images/service-box-bg1.png")]',
+    boxBg: true,
     titlePb: "pb-[34px]",
     iconTop: "top-5",
   },
@@ -31,7 +31,7 @@ const serviceCard = [
     serviceImg: serviceImg3,
     serviceUrl: "/service_details",
     serviceBtnIcon: <IoMdLogIn />,
-    boxBg: 'before:bg-[url("/images/service-box-bg2.png")]',
+    boxBg2: true,
     titlePb: "pb-[30px]",
     iconTop: "top-0",
   },
@@ -40,7 +40,7 @@ const serviceCard = [
     serviceImg: serviceImg4,
     serviceUrl: "/service_details",
     serviceBtnIcon: <IoMdLogIn />,
-    boxBg: 'before:bg-[url("/images/service-box-bg2.png")]',
+    boxBg2: true,
     titlePb: "pb-[30px]",
     iconTop: "top-0",
   },
@@ -60,7 +60,7 @@ const Service = () => {
       </div>
       <div
         className="absolute right-[15%] top-36 -rotate-90"
-        style={{ animationDelay: "1s" }}
+        style={{ animationDelay: "1.5s" }}
       >
         <img
           src={shape}

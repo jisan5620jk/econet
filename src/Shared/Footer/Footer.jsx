@@ -15,9 +15,9 @@ import shape2 from "/images/footer-shape2.png";
 
 const Footer = () => {
   return (
-    <div className="bg-[url('/images/footer-bg.png')] bg-cover bg-center bg-no-repeat px-8 pb-8">
+    <div className="bg-[url('/images/footer-bg.png')] bg-cover bg-center bg-no-repeat px-8 pb-8 -mt-12">
       <section className="py-16 md:py-20 lg:py-[120px] relative">
-        <div className="absolute right-[32%] top-16">
+        <div className="absolute right-[32%] top-24">
           <img
             src={ctaShape}
             alt="CTA Shape"
@@ -27,7 +27,7 @@ const Footer = () => {
           />
         </div>
         <div className="Container">
-          <div className="flex items-center justify-between flex-wrap gap-8">
+          <div className="flex items-center justify-between flex-wrap gap-8 mt-12">
             <div className="relative">
               <h5 className="font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
                 <img src={subtitleIcon} alt="Icon" draggable={false} /> Get In
