@@ -12,7 +12,7 @@ const Banner = () => {
   return (
     <section className="bg-SecondaryColor-0 px-8 py-8 rounded-b-[30px] flex items-center relative z-10 overflow-hidden">
       <div className="w-full grid lg:grid-cols-2 items-center gap-8">
-        <div className="bg-BodyBgDark-0 flex justify-center px-[100px] pb-[120px] pt-[126px] rounded-[20px] relative overflow-hidden">
+        <div className="bg-BodyBgDark-0 flex justify-center px-[100px] pb-[120px] pt-[118px] rounded-[20px] relative overflow-hidden">
           <div>
             <img
               src={bannerImg}
@@ -44,7 +44,7 @@ const Banner = () => {
             className="absolute bottom-[60px] animate-rotate hidden md:block lg:hidden 2xl:block"
           />
         </div>
-        <div className="bg-gradient-to-tl from-BodyBg-0 from-30% via-BoxBg3-0 to-BoxBg3-0 px-[100px] pt-[228px] pb-[102px] rounded-[20px] relative overflow-hidden">
+        <div className="bg-gradient-to-tl from-BodyBg-0 from-30% via-BoxBg3-0 to-BoxBg3-0 px-[100px] pt-[222px] pb-[102px] rounded-[20px] relative overflow-hidden">
           <h1 className="font-Outfit font-semibold text-HeadingColor-0 text-[26px] leading-[32px] sm:text-[36px] sm:leading-[42px] md:text-[56px] md:leading-[62px] lg:text-[42px] lg:leading-[48px] xl:text-[48px] xl:leading-[76px] 2xl:text-[74px] 2xl:leading-[78px]">
             Building evergreen
             <br />

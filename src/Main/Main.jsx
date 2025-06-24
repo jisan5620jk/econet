@@ -73,7 +73,7 @@ const Main = () => {
       <HelmetChanger title={"Environment Main Demo"} />
       <BackToTop />
       <Navbar />
-      <div id="smooth-wrapper" className="overflow-hidden h-full">
+      <div id="smooth-wrapper" className="h-full">
         <div id="smooth-content" className="min-h-screen will-change-transform">
           <Outlet />
           <Footer />

@@ -1,10 +1,19 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaChevronDown } from "react-icons/fa";
+import {
+  FaChevronDown,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaPinterestP,
+} from "react-icons/fa";
 import logo from "/images/header-logo.png";
+import logo2 from "/images/footer-logo.png";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import { GoArrowRight } from "react-icons/go";
 import { CgClose } from "react-icons/cg";
+import { FaFacebookF, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { IoMdPaperPlane } from "react-icons/io";
+import { MdLocationPin } from "react-icons/md";
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -96,6 +105,31 @@ const Navbar = () => {
         (link.children &&
           link.children.some((child) => child.to === currentPath))
     );
+
+  // Menu Sidebar
+
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    const popup = document.getElementById("popup-scroll-area");
+
+    if (!popup) return;
+
+    const stopScroll = (e) => e.stopPropagation();
+
+    popup.addEventListener("wheel", stopScroll, { passive: false });
+    popup.addEventListener("touchmove", stopScroll, { passive: false });
+
+    // 🧠 Optional: Pause GSAP ScrollSmoother when popup is open
+    if (window.ScrollSmoother?.get()) {
+      const smoother = window.ScrollSmoother.get();
+      isOpen ? smoother.paused(true) : smoother.paused(false);
+    }
+
+    return () => {
+      popup.removeEventListener("wheel", stopScroll);
+      popup.removeEventListener("touchmove", stopScroll);
+    };
+  }, [isOpen]);
 
   return (
     <div>
@@ -202,7 +236,7 @@ const Navbar = () => {
                 </nav>
               </div>
 
-              {/* Button + Hamburger */}
+              {/* Button + Sidebar + Hamburger */}
               <div>
                 <div className="flex items-center gap-2 sm:gap-7 lg:gap-5 xl:gap-[34px]">
                   <div className="flex items-center gap-4">
@@ -215,8 +249,8 @@ const Navbar = () => {
                     </PrimaryButton>
                   </div>
                   <div
-                    className="lg:hidden group size-8 md:size-[46px] bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
-                    onClick={() => setMobileOpen(true)}
+                    className="group size-8 md:size-10 bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
+                    onClick={() => setIsOpen(true)}
                   >
                     <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
                       <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
@@ -225,7 +259,7 @@ const Navbar = () => {
                     </button>
                   </div>
                   <div
-                    className="lg:hidden group size-8 md:size-[46px] bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
+                    className="lg:hidden group size-8 md:size-10 bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
                     onClick={() => setMobileOpen(true)}
                   >
                     <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
@@ -385,6 +419,140 @@ const Navbar = () => {
           ></div>
         </header>
       </div>
+
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 right-0 z-[99] h-screen w-full max-w-[400px] bg-[#041424] shadow-[0_20px_50px_0_#04142466] transition-all duration-500 ${
+          isOpen
+            ? "translate-x-0 opacity-100 visible"
+            : "translate-x-full opacity-0 invisible"
+        }`}
+      >
+        <div
+          id="popup-scroll-area"
+          className="relative h-full overflow-y-auto p-9 pr-4"
+        >
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-7 right-7 h-10 w-10 bg-PrimaryColor-0 text-white flex items-center justify-center rounded-full"
+          >
+            <CgClose className="text-xl transition-all duration-500 hover:rotate-180" />
+          </button>
+
+          <div className="mb-6">
+            <Link to="/">
+              <img src={logo2} alt="Logo" draggable="false" />
+            </Link>
+          </div>
+
+          <p className="text-TextColor2-0 font-light text-[15px] font-NotoSans mb-5">
+            Econet is a nonprofit advancing sustainability through energy,
+            ecology, and education—empowering communities since 1998.
+          </p>
+
+          <div>
+            <h5 className="text-white text-xl font-Outfit mb-5">
+              What Services We Provide?
+            </h5>
+            <ul className="list-disc list-inside text-TextColor2-0 font-NotoSans font-medium space-y-2">
+              {[
+                "Solar & Wind Power",
+                "Tree & Forest Care",
+                "Recycling & Cleanups",
+                "Eco-Friendly Buildings",
+                "Smart Climate Tools",
+                "Green Learning",
+                "Nature Fix Projects",
+                "Water Saving Projects",
+                "Clean Air Actions",
+                "Green Jobs Training",
+              ].map((service, i) => (
+                <li key={i}>
+                  <Link to="/" className="hover:text-white transition-all">
+                    {service}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-8 mb-12">
+            <h5 className="text-white text-xl font-medium font-Outfit mb-6">
+              Have Questions? Contact Our Team!
+            </h5>
+            <ul className="space-y-4 text-white text-sm font-Outfit">
+              <li className="flex items-center">
+                <MdLocationPin className="text-PrimaryColor-0 text-xl" />
+                <h5 className="ml-1">Melbone st, Australia, Ny 12099</h5>
+              </li>
+              <li className="flex items-center">
+                <FaEnvelope className="text-PrimaryColor-0" />
+                <a
+                  href="mailto:info.econet@gmail.com"
+                  title="info.econet@gmail.com"
+                  className="ml-2 hover:text-PrimaryColor-0 transition"
+                >
+                  info.econet@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center">
+                <FaPhoneAlt className="text-PrimaryColor-0" />
+                <a
+                  href="tel:+48555223224"
+                  title="+48 555 223 224"
+                  className="ml-2 hover:text-PrimaryColor-0 transition"
+                >
+                  +48 555 223 224
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="mb-10">
+            <h4 className="text-white text-xl font-normal font-Outfit mb-6">
+              Get Update
+            </h4>
+            <form className="relative">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter E-Mail"
+                required
+                className="w-full h-[60px] pl-5 pr-[80px] rounded-full bg-transparent border border-white/10 text-white placeholder:text-white/35 outline-none"
+              />
+              <button
+                type="submit"
+                className="absolute bottom-0 right-0 h-[60px] w-[60px] rounded-r-full bg-PrimaryColor-0 text-white text-xl flex items-center justify-center overflow-hidden"
+              >
+                <IoMdPaperPlane />
+              </button>
+            </form>
+          </div>
+
+          <ul className="flex items-center gap-3 mt-6">
+            {[FaFacebookF, FaXTwitter, FaPinterestP, FaLinkedinIn].map(
+              (Icon, i) => (
+                <li key={i}>
+                  <Link
+                    to="/"
+                    className="size-12 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-white overflow-hidden transition-all duration-500 hover:text-white relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:rotate-180 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100 hover:before:rotate-0"
+                  >
+                    <Icon />
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
+        </div>
+      </div>
+
+      {/* Overlay */}
+      <div
+        onClick={() => setIsOpen(false)}
+        className={`fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-all duration-500 cursor-[url("/images/cross.png"),_pointer] ${
+          isOpen ? "opacity-100 visible left-0" : "opacity-0 invisible left-1/2"
+        }`}
+      ></div>
     </div>
   );
 };
