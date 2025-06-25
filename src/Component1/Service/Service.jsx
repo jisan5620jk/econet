@@ -14,7 +14,7 @@ const serviceCard = [
     serviceUrl: "/service_details",
     serviceBtnIcon: <IoMdLogIn />,
     boxBg: true,
-    titlePb: "pb-[34px]",
+    titlePb: "pb-[31px]",
     iconTop: "top-5",
   },
   {
@@ -23,7 +23,7 @@ const serviceCard = [
     serviceUrl: "/service_details",
     serviceBtnIcon: <IoMdLogIn />,
     boxBg: true,
-    titlePb: "pb-[34px]",
+    titlePb: "pb-[31px]",
     iconTop: "top-5",
   },
   {
@@ -49,7 +49,7 @@ const serviceCard = [
 const Service = () => {
   return (
     <section className="relative py-16 md:py-20 lg:py-[120px] bg-BodyBg-0 overflow-hidden">
-      <div className="absolute left-[15%] top-36">
+      <div className="fade-left absolute left-[15%] top-36">
         <img
           src={shape}
           draggable={false}
@@ -59,7 +59,7 @@ const Service = () => {
         />
       </div>
       <div
-        className="absolute right-[15%] top-36 -rotate-90"
+        className="fade-right absolute right-[15%] top-36 -rotate-90"
         style={{ animationDelay: "1.5s" }}
       >
         <img
@@ -72,7 +72,7 @@ const Service = () => {
       </div>
       <div className="px-[120px]">
         <div className="text-center">
-          <h5 className="font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+          <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
             <img src={subtitleIcon} alt="Icon" draggable={false} /> Services
           </h5>
           <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
@@ -81,9 +81,9 @@ const Service = () => {
             Protect Environment
           </h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-7 mt-8 md:mt-[52px]">
+        <div className="box-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-7 mt-8 md:mt-[52px]">
           {serviceCard.map((service, index) => (
-            <div key={index}>
+            <div key={index} className="box">
               <ServiceCard {...service} />
             </div>
           ))}

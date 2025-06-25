@@ -10,7 +10,11 @@ const ImageReveal = () => {
       const images = document.querySelectorAll("img");
 
       gsap.utils.toArray(images).forEach((img) => {
-        if (!img.dataset.gsapAnimated) {
+        // Check if image width is at least 300px
+        if (
+          !img.dataset.gsapAnimated &&
+          img.getBoundingClientRect().width >= 300
+        ) {
           img.dataset.gsapAnimated = "true";
 
           gsap.fromTo(
@@ -28,9 +32,8 @@ const ImageReveal = () => {
               ease: "power2.out",
               scrollTrigger: {
                 trigger: img,
-                start: "top 95%",
+                start: "top 85%",
                 toggleActions: "play none none none",
-                // markers: true, // uncomment for debugging
               },
             }
           );

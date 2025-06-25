@@ -65,26 +65,26 @@ const TeamMember = () => {
   return (
     <section className="bg-white px-[120px] py-16 md:py-20 lg:py-[120px] relative z-10 rounded-b-[50px] overflow-hidden">
       <div className="text-center">
-        <h5 className="font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+        <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
           <img src={subtitleIcon} alt="Icon" draggable={false} /> Our Teams
         </h5>
         <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
           Meet Expert Team Members
         </h1>
-        <p className="font-NotoSans text-TextColor-0 max-w-[500px] w-full mx-auto mt-5 mb-8">
+        <p className="fade-up font-NotoSans text-TextColor-0 max-w-[500px] w-full mx-auto mt-5 mb-8">
           Econet is a nonprofit environmental organizations maintaince and
           dedicated to protecting planet through sustainable
         </p>
-        <PrimaryButton as="link" href="/team">
+        <PrimaryButton as="link" href="/team" className="zoom-in">
           All Members <GoArrowRight size={22} />
         </PrimaryButton>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 mt-[42px]">
+      <div className="box-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 mt-[42px]">
         {teamsData.map((teams, index) => {
           return (
             <div
               key={index}
-              className={`${
+              className={`box ${
                 index !== 0 && index !== teamsData.length - 1
                   ? ""
                   : "-mt-[90px]"

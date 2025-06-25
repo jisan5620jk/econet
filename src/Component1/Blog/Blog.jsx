@@ -56,7 +56,7 @@ const Blog = () => {
       <section className="bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px] rounded-b-[20px] overflow-hidden">
         <div className="Container">
           <div className="text-center">
-            <h5 className="font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+            <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
               <img src={subtitleIcon} alt="Icon" draggable={false} /> Latest
               Blogs
             </h5>
@@ -67,7 +67,7 @@ const Blog = () => {
             </h1>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-[60px]">
-            <div>
+            <div className="fade-left">
               {/* Main blog */}
               <BlogCard
                 blogImage={blogPosts[0].blogImage}
@@ -82,19 +82,20 @@ const Blog = () => {
             </div>
 
             {/* Side blogs */}
-            <div className="flex flex-col gap-6">
+            <div className="box-row flex flex-col gap-6">
               {blogPosts.slice(1).map((post) => (
-                <BlogCard
-                  key={post.id}
-                  blogImage={post.blogImage}
-                  blogTag={post.blogTag}
-                  blogTitle={post.blogTitle}
-                  blogDate={post.blogDate}
-                  blogUrl={post.blogUrl}
-                  blogBtnText={post.blogBtnText}
-                  blogBtnIcon={post.blogBtnIcon}
-                  isMain={false}
-                />
+                <div key={post.id} className="box">
+                  <BlogCard
+                    blogImage={post.blogImage}
+                    blogTag={post.blogTag}
+                    blogTitle={post.blogTitle}
+                    blogDate={post.blogDate}
+                    blogUrl={post.blogUrl}
+                    blogBtnText={post.blogBtnText}
+                    blogBtnIcon={post.blogBtnIcon}
+                    isMain={false}
+                  />
+                </div>
               ))}
             </div>
           </div>

@@ -29,7 +29,7 @@ const features = [
 const WhyChoose = () => {
   return (
     <section className="bg-SecondaryColor-0 pt-16 md:pt-20 lg:pt-[172px] pb-16 md:pb-20 lg:pb-[120px] relative overflow-hidden -mt-[52px]">
-      <div className="absolute left-0 -top-0">
+      <div className="fade-left absolute left-0 -top-0">
         <img
           src={shape}
           draggable={false}
@@ -38,7 +38,7 @@ const WhyChoose = () => {
           style={{ animationDuration: "5s" }}
         />
       </div>
-      <div className="absolute right-[15%] top-36">
+      <div className="zoom-in absolute right-[15%] top-36">
         <img
           src={shape2}
           draggable={false}
@@ -49,7 +49,7 @@ const WhyChoose = () => {
       </div>
       <div className="Container pb-5">
         <div className="text-center">
-          <h5 className="font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+          <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
             <img src={subtitleIcon} alt="Icon" draggable={false} /> Why Choose
             Us
           </h5>
@@ -74,7 +74,7 @@ const WhyChoose = () => {
                 </div>
               </div>
             </div>
-            <div className="hidden sm:block absolute bottom-20 -left-[100px] text-center bg-[url('/images/why-choose-info-bg.png')] bg-no-repeat bg-cover bg-top rounded-[20px] px-7 lg:px-5 xl:px-7 pt-10 pb-10 w-full max-w-[240px]">
+            <div className="fade-left hidden sm:block absolute bottom-20 -left-[100px] text-center bg-[url('/images/why-choose-info-bg.png')] bg-no-repeat bg-cover bg-top rounded-[20px] px-7 lg:px-5 xl:px-7 pt-10 pb-10 w-full max-w-[240px]">
               <div className="text-[40px] text-white flex items-center justify-center mb-3">
                 <PiSealCheckFill />
               </div>
@@ -88,14 +88,14 @@ const WhyChoose = () => {
             </div>
           </div>
           <div className="relative">
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[36px] md:leading-[44px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] text-white">
+            <h2 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[36px] md:leading-[44px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] text-white">
               Innovative Technology Integrations Environmental and Ecology
-            </h1>
-            <div className="mt-10">
+            </h2>
+            <div className="box-row mt-10">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`group flex items-center justify-between gap-5 py-10 border-b border-white border-opacity-10 ${
+                  className={`box group flex items-center justify-between gap-5 py-10 border-b border-white border-opacity-10 ${
                     index !== 0 ? "" : "border-t"
                   }`}
                 >

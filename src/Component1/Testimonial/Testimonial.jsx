@@ -115,7 +115,7 @@ const Testimonial = () => {
       className="bg-SecondaryColor-0 py-16 md:py-20 lg:py-[120px] -mt-[52px] relative overflow-hidden"
       ref={containerRef}
     >
-      <div className="absolute left-0 top-5">
+      <div className="fade-left absolute left-0 top-5">
         <img
           src={shape}
           draggable={false}
@@ -124,7 +124,7 @@ const Testimonial = () => {
           style={{ animationDuration: "5s" }}
         />
       </div>
-      <div className="absolute right-[6%] top-28">
+      <div className="zoom-in absolute right-[6%] top-28">
         <img
           src={shape2}
           draggable={false}
@@ -135,7 +135,7 @@ const Testimonial = () => {
       </div>
       <div className="Container">
         <div className="text-center  pt-[52px]">
-          <h5 className="font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+          <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
             <img src={subtitleIcon} alt="Icon" draggable={false} /> Projects
           </h5>
           <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
@@ -146,7 +146,7 @@ const Testimonial = () => {
         </div>
         <div className="grid grid-cols-2 gap-6 mt-[58px] mb-5">
           {/* Left Column */}
-          <div className="space-y-6">
+          <div className="space-y-6 fade-up">
             {testiData.map((item, index) => (
               <div
                 key={index}
@@ -173,7 +173,7 @@ const Testimonial = () => {
                     alt="Testimonial Image"
                     draggable={false}
                   />
-                  <div className="absolute bottom-0 left-0 flex flex-col items-center justify-center text-center w-[220px] h-[230px] rounded-[20px] bg-PrimaryColor-0">
+                  <div className="fade-up absolute bottom-0 left-0 flex flex-col items-center justify-center text-center w-[220px] h-[230px] rounded-[20px] bg-PrimaryColor-0">
                     <ul className="flex items-center -space-x-4">
                       <li>
                         <img

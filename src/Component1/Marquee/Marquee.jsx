@@ -11,7 +11,7 @@ const Marquee = () => {
   const doubledItems = marqueeItems.concat(marqueeItems);
 
   return (
-    <div className="w-full overflow-hidden whitespace-nowrap bg-PrimaryColor-0 pt-16 pb-11 rounded-b-[20px] -mt-5 relative">
+    <div className="zoom-in w-full overflow-hidden whitespace-nowrap bg-PrimaryColor-0 pt-16 pb-11 rounded-b-[20px] -mt-5 relative">
       {[1, 2].map((row) => (
         <div
           key={`row-${row}`}

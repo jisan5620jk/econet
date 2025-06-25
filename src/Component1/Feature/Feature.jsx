@@ -29,9 +29,11 @@ const Feature = () => {
   return (
     <section className="bg-white pt-[64px] pb-16 md:pb-20 lg:pb-[120px] rounded-b-[50px]">
       <div className="Container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-7 relative z-10">
+        <div className="box-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-7 relative z-10">
           {featureData.map((feature, index) => (
-            <FeatureCard key={index} {...feature} />
+            <div key={index} className="box">
+              <FeatureCard {...feature} />
+            </div>
           ))}
         </div>
       </div>

@@ -9,7 +9,14 @@ import brandThumb4 from "/images/brand-logo4.png";
 import brandThumb5 from "/images/brand-logo5.png";
 
 const Brand = () => {
-  const brandLogos = [brandThumb, brandThumb2, brandThumb3, brandThumb4, brandThumb5, brandThumb3];
+  const brandLogos = [
+    brandThumb,
+    brandThumb2,
+    brandThumb3,
+    brandThumb4,
+    brandThumb5,
+    brandThumb3,
+  ];
 
   const settings = {
     modules: [Autoplay],
@@ -32,12 +39,17 @@ const Brand = () => {
   return (
     <section className="bg-BodyBg-0 relative z-10 py-10 md:py-20 rounded-b-[50px] overflow-hidden">
       <div className="Container">
-        <div className="relative z-10">
+        <div className="box-row relative z-10">
           <Swiper {...settings}>
             {brandLogos.map((logo, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white h-[120px] w-full rounded-2xl flex items-center justify-center">
-                  <img src={logo} alt={`Brand ${index + 1}`} draggable="false" className="m-auto" />
+                <div className="box bg-white h-[120px] w-full rounded-2xl flex items-center justify-center">
+                  <img
+                    src={logo}
+                    alt={`Brand ${index + 1}`}
+                    draggable="false"
+                    className="m-auto"
+                  />
                 </div>
               </SwiperSlide>
             ))}

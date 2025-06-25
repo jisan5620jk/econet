@@ -8,8 +8,10 @@ import Service from "../../Component1/Service/Service";
 import TeamMember from "../../Component1/TeamMember/TeamMember";
 import Testimonial from "../../Component1/Testimonial/Testimonial";
 import WhyChoose from "../../Component1/Whychoose/WhyChoose";
+import BoxReveal from "../../Shared/BoxAnim/BoxReveal";
 
 const Home1 = () => {
+  BoxReveal();
   return (
     <>
       <Banner />
