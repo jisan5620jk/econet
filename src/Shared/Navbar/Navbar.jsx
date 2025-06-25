@@ -119,7 +119,7 @@ const Navbar = () => {
     popup.addEventListener("wheel", stopScroll, { passive: false });
     popup.addEventListener("touchmove", stopScroll, { passive: false });
 
-    // 🧠 Optional: Pause GSAP ScrollSmoother when popup is open
+    // Pause GSAP ScrollSmoother when popup is open
     if (window.ScrollSmoother?.get()) {
       const smoother = window.ScrollSmoother.get();
       isOpen ? smoother.paused(true) : smoother.paused(false);
@@ -133,30 +133,26 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="flex justify-center mt-16 w-full">
+      <div className="flex justify-center mt-4 md:mt-7 lg:mt-16 w-full">
         <header
-          className={`absolute z-50 inline-block w-full max-w-[1720px] transition-all duration-500 bg-white rounded-[20px] ${
+          className={`absolute z-50 inline-block w-[calc(100%-30px)] md:w-[calc(100%-60px)] 3xl:max-w-[1720px] transition-all duration-500 bg-white rounded-[20px] ${
             isSticky
               ? "!fixed top-0 shadow-cases !w-[calc(100%-60px)] max-w-full rounded-t-none bg-SecondaryColor-0 lg:bg-white animate-headerSlideDown border-transparent"
               : ""
           }`}
         >
-          <div className="px-2 sm:px-3 md:px-5 lg:px-2 xl:px-5 2xl:px-8 3xl:px-[50px] py-4 lg:py-0">
+          <div className="px-3 md:px-5 lg:px-2 xl:px-5 2xl:px-8 3xl:px-[50px] py-4 lg:py-0">
             <div className="flex items-center justify-between gap-5">
               <div className="">
                 <Link to="/" title="Econet">
-                  <img
-                    src={logo}
-                    draggable="false"
-                    className="brightness-0 invert-[1] lg:brightness-100 lg:invert-0"
-                  />
+                  <img src={logo} draggable="false" />
                 </Link>
               </div>
 
               {/* Desktop Menu */}
-              <div className="hidden lg:block 2xl:ml-24">
+              <div className="hidden lg:block">
                 <nav>
-                  <ul className="flex gap-8 text-sm font-medium">
+                  <ul className="flex gap-2 xl:gap-5 2xl:gap-8 text-sm font-medium">
                     {menuItems.map((item, idx) => (
                       <li key={idx} className="relative z-10 group">
                         {item.links.length > 1 ? (
@@ -164,7 +160,7 @@ const Navbar = () => {
                             <Link
                               to="#"
                               data-text={item.label}
-                              className={`clip-hover inline-flex items-center gap-1.5 mx-1 my-[31px] font-Outfit font-medium capitalize text-lg transition-all duration-500 hover:text-PrimaryColor-0 relative z-10 overflow-hidden
+                              className={`clip-hover inline-flex items-center gap-1.5 2xl:mx-1 my-[31px] font-Outfit font-medium capitalize text-lg transition-all duration-500 hover:text-PrimaryColor-0 relative z-10 overflow-hidden
                                 ${
                                   isParentActive(item.links)
                                     ? "text-PrimaryColor-0"
@@ -238,8 +234,8 @@ const Navbar = () => {
 
               {/* Button + Sidebar + Hamburger */}
               <div>
-                <div className="flex items-center gap-2 sm:gap-7 lg:gap-5 xl:gap-[34px]">
-                  <div className="flex items-center gap-4">
+                <div className="inline-flex items-center gap-2 sm:gap-7 lg:gap-5 xl:gap-8">
+                  <div className="hidden sm:flex items-center gap-4">
                     <PrimaryButton
                       as="link"
                       href="/about"
@@ -249,9 +245,12 @@ const Navbar = () => {
                     </PrimaryButton>
                   </div>
                   <div
-                    className="group size-8 md:size-10 bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
+                    className="hidden group size-8 md:size-10 bg-transparent border border-white border-opacity-10 rounded-full xl:flex items-center justify-center gap-3 cursor-pointer"
                     onClick={() => setIsOpen(true)}
                   >
+                    <h5 className="hidden 2xl:block font-Outfit text-lg text-HeadingColor-0 font-medium">
+                      Sidebar
+                    </h5>
                     <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
                       <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
                       <span className="bg-SecondaryColor-0 w-6 md:w-6 h-0.5 rounded-xl block"></span>
@@ -279,133 +278,146 @@ const Navbar = () => {
               mobileOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div className="p-4 flex justify-between items-center border-b border-white border-opacity-15">
-              <h2 className="font-Outfit text-2xl font-medium text-white">
-                Menu
-              </h2>
-              <button
-                onClick={() => setMobileOpen(false)}
-                className="text-2xl text-white transition-all duration-500 hover:rotate-180"
-              >
-                <CgClose />
-              </button>
-            </div>
+            <div id="popup-scroll-area">
+              <div className="p-4 flex justify-between items-center border-b border-white border-opacity-15">
+                <h2 className="font-Outfit text-2xl font-medium text-white">
+                  Menu
+                </h2>
+                <button
+                  onClick={() => setMobileOpen(false)}
+                  className="text-2xl text-white transition-all duration-500 hover:rotate-180"
+                >
+                  <CgClose />
+                </button>
+              </div>
 
-            <ul className="p-4 mt-5">
-              {menuItems.map((item, idx) => (
-                <li key={idx}>
-                  {item.links.length > 1 ? (
-                    <>
-                      <button
-                        onClick={() => toggleMobileMenu(item.label)}
-                        className={`w-full text-left inline-flex items-center justify-between py-3 ${
-                          idx !== item.links.length - 1
-                            ? "border-b border-white border-opacity-15"
-                            : ""
-                        } font-Outfit text-lg text-white capitalize transition-all duration-500 relative z-10 overflow-hidden group-hover:text-PrimaryColor-0 hover:pl-3`}
-                      >
-                        {item.label}
-                        <FaChevronDown
-                          className={`transition-transform duration-500 ${
-                            activeMobileMenu === item.label ? "rotate-180" : ""
+              <ul className="p-4 mt-5">
+                {menuItems.map((item, idx) => (
+                  <li key={idx}>
+                    {item.links.length > 1 ? (
+                      <>
+                        <button
+                          onClick={() => toggleMobileMenu(item.label)}
+                          className={`w-full text-left inline-flex items-center justify-between py-3 ${
+                            idx !== item.links.length - 1
+                              ? "border-b border-white border-opacity-15"
+                              : ""
+                          } font-Outfit text-lg text-white capitalize transition-all duration-500 relative z-10 overflow-hidden group-hover:text-PrimaryColor-0 hover:pl-3`}
+                        >
+                          {item.label}
+                          <FaChevronDown
+                            className={`transition-transform duration-500 ${
+                              activeMobileMenu === item.label
+                                ? "rotate-180"
+                                : ""
+                            }`}
+                          />
+                        </button>
+
+                        <div
+                          className={`overflow-hidden transition-all duration-500 ${
+                            activeMobileMenu === item.label
+                              ? "max-h-screen"
+                              : "max-h-0"
                           }`}
-                        />
-                      </button>
+                        >
+                          <ul className="pl-3 mt-2 sm:text-2xl">
+                            {item.links.map((link, i) => (
+                              <li key={i}>
+                                <div>
+                                  {link.children ? (
+                                    <>
+                                      <button
+                                        onClick={() =>
+                                          setActiveMobileSubMenu((prev) =>
+                                            prev === link.label
+                                              ? null
+                                              : link.label
+                                          )
+                                        }
+                                        className={`w-full text-left inline-flex items-center justify-between px-5 py-3 border-b border-white border-opacity-15 font-Outfit text-lg text-white transition-all duration-500 relative z-10 before:absolute before:left-0 before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:before:top-0 hover:text-white ${
+                                          currentPath === link.to
+                                            ? "before:h-full text-white border-none"
+                                            : ""
+                                        }
+                                        `}
+                                      >
+                                        {link.label}
+                                        <FaChevronDown
+                                          className={`transition-transform duration-500 ${
+                                            activeMobileSubMenu === link.label
+                                              ? "rotate-180"
+                                              : ""
+                                          }`}
+                                        />
+                                      </button>
 
-                      <div
-                        className={`overflow-hidden transition-all duration-500 ${
-                          activeMobileMenu === item.label
-                            ? "max-h-screen"
-                            : "max-h-0"
-                        }`}
-                      >
-                        <ul className="pl-3 mt-2 sm:text-2xl">
-                          {item.links.map((link, i) => (
-                            <li key={i}>
-                              <div>
-                                {link.children ? (
-                                  <>
-                                    <button
-                                      onClick={() =>
-                                        setActiveMobileSubMenu((prev) =>
-                                          prev === link.label
-                                            ? null
-                                            : link.label
-                                        )
-                                      }
-                                      className={`w-full text-left block px-5 py-3 border-b border-white border-opacity-15" font-Outfit text-lg text-white transition-all duration-500 relative z-10 before:absolute before:left-0 before:top-auto before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:bottom-auto hover:before:top-0 hover:text-white ${
+                                      <div
+                                        className={`transition-all duration-500 overflow-hidden ${
+                                          activeMobileSubMenu === link.label
+                                            ? "max-h-80"
+                                            : "max-h-0"
+                                        }`}
+                                      >
+                                        <ul className="ml-4">
+                                          {link.children.map((child, j) => (
+                                            <li key={j}>
+                                              <Link
+                                                to={child.to}
+                                                onClick={() =>
+                                                  setMobileOpen(false)
+                                                }
+                                                className="block py-2 pl-2 text-base text-white hover:text-PrimaryColor-0 transition-all duration-500 hover:pl-4 border-b border-white border-opacity-15"
+                                              >
+                                                {child.label}
+                                              </Link>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    </>
+                                  ) : (
+                                    <Link
+                                      to={link.to}
+                                      onClick={() => setMobileOpen(false)}
+                                      className={`block px-5 py-2 border-b border-white border-opacity-15 font-Outfit text-lg text-white transition-all duration-500 relative z-10 before:absolute before:left-0 before:bottom-0 before:w-full before:h-0 before:transition-all before:duration-500 before:bg-PrimaryColor-0 before:-z-10 hover:before:h-full hover:before:top-0 hover:text-white ${
                                         currentPath === link.to
-                                          ? "before:h-full text-white border-none"
+                                          ? "before:h-full text-white"
                                           : ""
-                                      }`}
+                                      }
+                                      `}
                                     >
                                       {link.label}
-                                    </button>
-
-                                    <div
-                                      className={`transition-all duration-500 overflow-hidden ${
-                                        activeMobileSubMenu === link.label
-                                          ? "max-h-80"
-                                          : "max-h-0"
-                                      }`}
-                                    >
-                                      <ul className="ml-4">
-                                        {link.children.map((child, j) => (
-                                          <li key={j}>
-                                            <Link
-                                              to={child.to}
-                                              onClick={() =>
-                                                setMobileOpen(false)
-                                              }
-                                              className={`block py-2 pl-2 text-base text-white hover:text-PrimaryColor-0 transition-all duration-500 hover:pl-4 border-b border-white border-opacity-15`}
-                                            >
-                                              {child.label}
-                                            </Link>
-                                          </li>
-                                        ))}
-                                      </ul>
-                                    </div>
-                                  </>
-                                ) : (
-                                  <Link
-                                    to={link.to}
-                                    onClick={() => setMobileOpen(false)}
-                                    className={`block px-5 py-2 border-b border-white border-opacity-15 font-Outfit text-lg text-white transition-all duration-500 relative z-10 before:absolute before:left-0 before:top-auto before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:bottom-auto hover:before:top-0 hover:text-white ${
-                                      currentPath === link.to
-                                        ? "before:h-full text-white"
-                                        : ""
-                                    }`}
-                                  >
-                                    {link.label}
-                                  </Link>
-                                )}
-                              </div>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </>
-                  ) : (
-                    // Single link, no submenu
-                    <Link
-                      to={item.links[0].to}
-                      onClick={() => setMobileOpen(false)}
-                      className={`block w-full text-left py-2.5 ${
-                        idx !== menuItems.length - 1
-                          ? "border-b border-white border-opacity-15"
-                          : ""
-                      } font-Outfit text-lg text-white capitalize transition-all duration-500 relative z-10 hover:text-PrimaryColor-0 hover:pl-3 ${
-                        currentPath === item.links[0].to
-                          ? "text-PrimaryColor-0"
-                          : ""
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
+                                    </Link>
+                                  )}
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </>
+                    ) : (
+                      // Single link, no submenu
+                      <Link
+                        to={item.links[0].to}
+                        onClick={() => setMobileOpen(false)}
+                        className={`block w-full text-left py-2.5 ${
+                          idx !== menuItems.length - 1
+                            ? "border-b border-white border-opacity-15"
+                            : ""
+                        } font-Outfit text-lg text-white capitalize transition-all duration-500 relative z-10 hover:text-PrimaryColor-0 hover:pl-3 ${
+                          currentPath === item.links[0].to
+                            ? "text-PrimaryColor-0"
+                            : ""
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Overlay */}
