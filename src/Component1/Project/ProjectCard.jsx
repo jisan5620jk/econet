@@ -14,10 +14,10 @@ const ProjectCard = ({
 }) => {
   return (
     <div
-      className={`${projectBg} bg-cover bg-no-repeat bg-bottom py-[90px] rounded-[20px]`}
+      className={`${projectBg} bg-cover bg-no-repeat bg-bottom px-2 sm:px-5 py-6 md:px-0 md:py-[90px] w-full rounded-[20px]`}
     >
       <div
-        className={`bg-cover bg-no-repeat bg-bottom flex items-start flex-col ${boxPosition} max-w-[456px] w-full px-[54px] py-[60px] rounded-[20px] relative z-10 overflow-hidden`}
+        className={`bg-cover bg-no-repeat bg-bottom flex items-start flex-col ${boxPosition} max-w-[456px] w-full px-4 md:px-[54px] py-5 md:py-[60px] rounded-[20px] relative z-10 overflow-hidden`}
       >
         {/* Box BG SVG */}
         <div className="absolute bottom-0 left-0 -z-10">
@@ -48,19 +48,21 @@ const ProjectCard = ({
             </defs>
           </svg>
         </div>
-        <span className="absolute top-8 right-8 size-10 rounded-full text-xl text-white bg-PrimaryColor-0 flex items-center justify-center">
+        <span className="absolute top-4 md:top-8 right-8 size-10 rounded-full text-xl text-white bg-PrimaryColor-0 flex items-center justify-center">
           {boxCheckIcon}
         </span>
         <h5 className="font-Outfit font-medium text-HeadingColor-0 border border-SecondaryColor-0 border-opacity-15 rounded-full px-[30px] py-1.5 inline-block">
           {boxSubTitle}
         </h5>
-        <h2 className="font-Outfit font-semibold text-HeadingColor-0 text-[32px] leading-[40px] mt-4 mb-4">
+        <h2 className="font-Outfit font-semibold text-HeadingColor-0 text-[22px] sm:text-2xl md:text-[32px] md:leading-[40px] mt-4 mb-4">
           {boxTitle}
         </h2>
-        <p className="font-NotoSans text-TextColor-0 mb-10">{boxDesc}</p>
+        <p className="font-NotoSans text-TextColor-0 text-[15px] sm:text-base mb-10">
+          {boxDesc}
+        </p>
         <Link
           to={boxUrl}
-          className="inline-flex items-center gap-2 px-10 py-3 font-Outfit text-lg text-white bg-SecondaryColor-0 rounded-full relative z-10 overflow-hidden before:absolute before:right-0 before:top-0 before:w-0 before:h-full before:opacity-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:left-0 hover:before:w-full hover:before:opacity-100"
+          className="inline-flex items-center gap-2 px-5 sm:px-7 md:px-10 py-1.5 sm:py-2 md:py-3 font-Outfit text-lg text-white bg-SecondaryColor-0 rounded-full relative z-10 overflow-hidden before:absolute before:right-0 before:top-0 before:w-0 before:h-full before:opacity-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:left-0 hover:before:w-full hover:before:opacity-100"
         >
           {boxBtnText}
           <span className="text-[22px]">{boxBtnIcon}</span>

@@ -63,15 +63,17 @@ const Testimonial = () => {
       const boxes = gsap.utils.toArray(".content-box");
 
       // Sticky right box
-      ScrollTrigger.create({
-        trigger: stickyBoxRef.current,
-        start: "top 9%",
-        endTrigger: containerRef.current,
-        end: () => `bottom 103.2%`,
-        pin: true,
-        pinSpacing: false,
-        scrub: true,
-      });
+      if (window.innerWidth >= 1199) {
+        ScrollTrigger.create({
+          trigger: stickyBoxRef.current,
+          start: "top 9%",
+          endTrigger: containerRef.current,
+          end: () => `bottom 103.2%`,
+          pin: true,
+          pinSpacing: false,
+          scrub: true,
+        });
+      }
 
       // Activate boxes
       boxes.forEach((box, i) => {
@@ -134,17 +136,17 @@ const Testimonial = () => {
         />
       </div>
       <div className="Container">
-        <div className="text-center  pt-[52px]">
+        <div className="text-center pt-[52px]">
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
-            <img src={subtitleIcon} alt="Icon" draggable={false} /> Projects
+            <img src={subtitleIcon} alt="Icon" draggable={false} /> Testimonials
           </h5>
-          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
-            We Bring Powerful Solution
+          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
+            Real Clients Testimonial About
             <br />
-            Protect Environment
+            Econet Services
           </h1>
         </div>
-        <div className="grid grid-cols-2 gap-6 mt-[58px] mb-5">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 mt-[58px] mb-5">
           {/* Left Column */}
           <div className="space-y-6 fade-up">
             {testiData.map((item, index) => (
@@ -173,7 +175,7 @@ const Testimonial = () => {
                     alt="Testimonial Image"
                     draggable={false}
                   />
-                  <div className="fade-up absolute bottom-0 left-0 flex flex-col items-center justify-center text-center w-[220px] h-[230px] rounded-[20px] bg-PrimaryColor-0">
+                  <div className="fade-up absolute bottom-0 left-0 flex flex-col items-center justify-center text-center w-[180px] md:w-[220px] h-[180px] md:h-[230px] rounded-[20px] bg-PrimaryColor-0">
                     <ul className="flex items-center -space-x-4">
                       <li>
                         <img

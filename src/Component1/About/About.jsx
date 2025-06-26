@@ -19,7 +19,7 @@ const About = () => {
               <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
                 <img src={subtitleIcon} alt="Icon" draggable={false} /> About Us
               </h5>
-              <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+              <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
                 Innovative eco system
                 <br />
                 For save human life and
@@ -34,7 +34,7 @@ const About = () => {
               <PrimaryButton as="link" href="/about" className="zoom-in">
                 More About Us <GoArrowRight size={22} />
               </PrimaryButton>
-              <div className="zoom-in absolute -bottom-8 right-20">
+              <div className="zoom-in absolute -bottom-8 right-20 hidden md:block">
                 <img
                   src={shape}
                   alt="About Shape"
@@ -46,7 +46,7 @@ const About = () => {
             </div>
             <div className="relative z-10">
               <img src={aboutThumb} draggable="false" className="w-full" />
-              <div className="fade-up bg-SecondaryColor-0 rounded-[20px] pl-10 pt-[34px] pr-14 pb-10 flex items-center justify-between flex-wrap mt-4">
+              <div className="fade-up bg-SecondaryColor-0 rounded-lg sm:rounded-2xl md:rounded-[20px] pl-5 sm:pl-10 pt-[34px] pr-6 sm:pr-14 pb-10 flex items-center justify-between gap-5 flex-wrap mt-4">
                 <div>
                   <ul className="flex items-center -space-x-4">
                     <li>
@@ -79,7 +79,7 @@ const About = () => {
                   <h6 className="font-Outfit text-white text-lg">
                     Years Experience
                   </h6>
-                  <div className="absolute -top-3 -left-[70px]">
+                  <div className="absolute -top-3 -left-[70px] hidden md:block">
                     <img
                       src={aboutArrow}
                       alt="About Arrow"

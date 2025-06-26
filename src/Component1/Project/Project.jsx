@@ -25,7 +25,7 @@ const projectData = [
   },
   {
     projectBg: "bg-[url('/images/project-item-bg2.png')]",
-    boxPosition: "justify-start ml-20",
+    boxPosition: "justify-start md:ml-20",
     boxCheckIcon: <FaCheck />,
     boxSubTitle: "RENEWABLE",
     boxTitle: "Sustainable energy Environment",
@@ -51,38 +51,40 @@ const projectData = [
 
 const Project = () => {
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const items = gsap.utils.toArray(".project-panel-pin");
+    if (window.innerWidth >= 1199) {
+      const ctx = gsap.context(() => {
+        const items = gsap.utils.toArray(".project-panel-pin");
 
-      items.forEach((item, index) => {
-        gsap.set(item, { zIndex: 10 + index });
+        items.forEach((item, index) => {
+          gsap.set(item, { zIndex: 10 + index });
 
-        ScrollTrigger.create({
-          trigger: item,
-          start: `top 10%`,
-          end: "bottom 90%",
-          endTrigger: ".project-pin-wrapper",
-          pin: true,
-          pinSpacing: false,
-          scrub: 1,
-          markers: false,
+          ScrollTrigger.create({
+            trigger: item,
+            start: `top 10%`,
+            end: "bottom 90%",
+            endTrigger: ".project-pin-wrapper",
+            pin: true,
+            pinSpacing: false,
+            scrub: 1,
+            markers: false,
+          });
         });
       });
-    });
 
-    return () => ctx.revert();
+      return () => ctx.revert();
+    }
   }, []);
 
   return (
-    <div className="px-8 relative z-10 -mt-5">
+    <div className="px-2 md:px-4 xl:px-8 relative z-10 -mt-5 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-[246px] inline-block bg-SecondaryColor-0 -z-10"></div>
-      <section className="project-pin-wrapper bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px] relative overflow-hidden">
+      <section className="project-pin-wrapper bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px] rounded-lg sm:rounded-2xl md:rounded-[20px] relative overflow-hidden">
         <div className="fade-left absolute left-[18%] top-24">
           <img
             src={shape}
             draggable={false}
             alt="Shape"
-            className="animate-swing hidden lg:block"
+            className="animate-swing hidden xl:block"
             style={{ animationDuration: "2.5s" }}
           />
         </div>
@@ -91,7 +93,7 @@ const Project = () => {
             src={shape2}
             draggable={false}
             alt="Shape"
-            className="animate-dance hidden lg:block"
+            className="animate-dance hidden xl:block"
             style={{ animationDuration: "5.5s" }}
           />
         </div>
@@ -99,14 +101,14 @@ const Project = () => {
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
             <img src={subtitleIcon} alt="Icon" draggable={false} /> Projects
           </h5>
-          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
             We Bring Powerful Solution
             <br />
             Protect Environment
           </h1>
         </div>
         <div className="Container">
-          <div className="relative space-y-[30px] mt-[60px] fade-up">
+          <div className="relative space-y-[30px] mt-9 sm:mt-12 md:mt-[60px] lg:px-2.5 xl:px-0 fade-up">
             {projectData.map((item, i) => (
               <div key={i} className="project-panel-pin">
                 <ProjectCard {...item} />

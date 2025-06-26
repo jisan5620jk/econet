@@ -28,7 +28,7 @@ const features = [
 
 const WhyChoose = () => {
   return (
-    <section className="bg-SecondaryColor-0 pt-16 md:pt-20 lg:pt-[172px] pb-16 md:pb-20 lg:pb-[120px] relative overflow-hidden -mt-[52px]">
+    <section className="bg-SecondaryColor-0 pt-32 lg:pt-[172px] pb-16 md:pb-20 lg:pb-[120px] relative overflow-hidden -mt-[52px]">
       <div className="fade-left absolute left-0 -top-0">
         <img
           src={shape}
@@ -53,13 +53,13 @@ const WhyChoose = () => {
             <img src={subtitleIcon} alt="Icon" draggable={false} /> Why Choose
             Us
           </h5>
-          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
+          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
             We Bring Powerful Solution
             <br />
             Protect Environment
           </h1>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-[92px] lg:gap-6 2xl:gap-10 mt-[60px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-[92px] lg:gap-6 2xl:gap-10 mt-9 sm:mt-12 md:mt-[60px]">
           <div className="relative z-10">
             <div className="relative inline-block">
               <img
@@ -74,7 +74,7 @@ const WhyChoose = () => {
                 </div>
               </div>
             </div>
-            <div className="fade-left hidden sm:block absolute bottom-20 -left-[100px] text-center bg-[url('/images/why-choose-info-bg.png')] bg-no-repeat bg-cover bg-top rounded-[20px] px-7 lg:px-5 xl:px-7 pt-10 pb-10 w-full max-w-[240px]">
+            <div className="fade-left hidden sm:block absolute bottom-5 xl:bottom-20 left-5 xl:-left-[100px] text-center bg-[url('/images/why-choose-info-bg.png')] bg-no-repeat bg-cover bg-top rounded-[20px] px-7 lg:px-5 xl:px-7 pt-10 pb-10 w-full max-w-[240px]">
               <div className="text-[40px] text-white flex items-center justify-center mb-3">
                 <PiSealCheckFill />
               </div>
@@ -88,14 +88,14 @@ const WhyChoose = () => {
             </div>
           </div>
           <div className="relative">
-            <h2 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[36px] md:leading-[44px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] text-white">
+            <h2 className="font-Outfit font-medium md:font-semibold text-lg leading-7 sm:text-3xl sm:leading-[42px] md:text-[36px] md:leading-[44px] lg:text-[28px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] text-white">
               Innovative Technology Integrations Environmental and Ecology
             </h2>
             <div className="box-row mt-10">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`box group flex items-center justify-between gap-5 py-10 border-b border-white border-opacity-10 ${
+                  className={`box group flex flex-wrap items-center justify-between gap-5 py-10 lg:py-3 xl:py-10 border-b border-white border-opacity-10 ${
                     index !== 0 ? "" : "border-t"
                   }`}
                 >
@@ -111,7 +111,7 @@ const WhyChoose = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-Outfit text-2xl font-medium text-white">
+                    <h3 className="font-Outfit text-xl sm:text-2xl font-medium text-white md:w-[170px] lg:w-[inherit]">
                       {feature.title}
                     </h3>
                   </div>

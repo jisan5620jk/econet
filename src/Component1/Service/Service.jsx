@@ -15,7 +15,7 @@ const serviceCard = [
     serviceBtnIcon: <IoMdLogIn />,
     boxBg: true,
     titlePb: "pb-[31px]",
-    iconTop: "top-5",
+    iconTop: "top-8 sm:top-8 md:top-7 xl:top-5 ",
   },
   {
     serviceTitle: "Echology Climate Solutions",
@@ -24,7 +24,7 @@ const serviceCard = [
     serviceBtnIcon: <IoMdLogIn />,
     boxBg: true,
     titlePb: "pb-[31px]",
-    iconTop: "top-5",
+    iconTop: "top-8 sm:top-8 md:top-7 xl:top-5 ",
   },
   {
     serviceTitle: "Renewable Energy Implement",
@@ -32,8 +32,8 @@ const serviceCard = [
     serviceUrl: "/service_details",
     serviceBtnIcon: <IoMdLogIn />,
     boxBg2: true,
-    titlePb: "pb-[30px]",
-    iconTop: "top-0",
+    titlePb: "pb-5 sm:pb-[30px]",
+    iconTop: "top-4 sm:top-3 xl:top-0",
   },
   {
     serviceTitle: "Forest Management Eco-System",
@@ -41,8 +41,8 @@ const serviceCard = [
     serviceUrl: "/service_details",
     serviceBtnIcon: <IoMdLogIn />,
     boxBg2: true,
-    titlePb: "pb-[30px]",
-    iconTop: "top-0",
+    titlePb: "pb-5 sm:pb-[30px]",
+    iconTop: "top-4 sm:top-3 xl:top-0",
   },
 ];
 
@@ -70,18 +70,18 @@ const Service = () => {
           style={{ animationDuration: "3.5s" }}
         />
       </div>
-      <div className="px-[120px]">
+      <div className="px-3 2xl:px-[120px]">
         <div className="text-center">
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
             <img src={subtitleIcon} alt="Icon" draggable={false} /> Services
           </h5>
-          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
             We Bring Powerful Solution
             <br />
             Protect Environment
           </h1>
         </div>
-        <div className="box-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-7 mt-8 md:mt-[52px]">
+        <div className="box-row grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center gap-7 mt-8 md:mt-[52px]">
           {serviceCard.map((service, index) => (
             <div key={index} className="box">
               <ServiceCard {...service} />

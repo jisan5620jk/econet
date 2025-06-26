@@ -14,7 +14,7 @@
   /*Common Tailwind CSS Start Here*/
 
   .Container {
-    @apply w-full sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px] px-2 md:px-3 lg:px-0 mx-auto;
+    @apply w-full sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px] px-2 sm:px-4 md:px-5 lg:px-0 mx-auto;
   }
 
   /* Progress bar wrapper */

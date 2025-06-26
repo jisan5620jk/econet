@@ -42,7 +42,7 @@ const processData = [
 
 const Process = () => {
   return (
-    <div className="px-8">
+    <div className="px-2 sm:px-4 xl:px-8">
       <section className="py-16 md:py-20 lg:py-[120px] bg-SecondaryColor-0 rounded-[20px] relative z-10 overflow-hidden">
         <div className="fade-leftt absolute left-0 top-5">
           <img
@@ -68,17 +68,17 @@ const Process = () => {
               <img src={subtitleIcon} alt="Icon" draggable={false} /> Working
               Process
             </h5>
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
+            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
               We following 3 Easy Steps
               <br />
               Finished our Works
             </h1>
           </div>
-          <div className="box-row flex items-start justify-around flex-wrap gap-7 mt-[80px]">
+          <div className="box-row flex items-start justify-around flex-wrap gap-7 mt-9 sm:mt-12 md:mt-[80px]">
             {processData.map((process, index) => (
               <div
                 key={index}
-                className={`box ${index !== 1 ? "mt-[60px]" : ""}`}
+                className={`box ${index !== 1 ? "lg:mt-[60px]" : ""}`}
               >
                 <ProcessCard {...process} />
               </div>

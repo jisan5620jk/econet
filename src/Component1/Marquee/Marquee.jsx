@@ -20,7 +20,7 @@ const Marquee = () => {
         >
           {doubledItems.map((text, index) => (
             <div key={`${row}-${index}`} className="flex items-center">
-              <span className="inline-block text-3xl md:text-[36px] text-white uppercase font-Outfit font-medium mx-5 md:mx-10">
+              <span className="inline-block text-2xl md:text-[36px] text-white uppercase font-Outfit md:font-medium mx-5 md:mx-10">
                 {text}
               </span>
               <span className="inline-block w-5 md:w-10 pt-1 md:pt-0">

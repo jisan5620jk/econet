@@ -20,7 +20,7 @@ const TeamCard = ({
           <span className="absolute -bottom-[30px] right-0 rotate-180 size-[30px] inline-block bg-white [clip-path:path('M0_0_Q0,30_30,30_L_0_30_Z')]"></span>
         </div>
       </div>
-      <img src={teamThumb} alt="Team Image" />
+      <img src={teamThumb} alt="Team Image" draggable={false} className="w-full" />
 
       {/* Info section */}
       <div className="absolute z-20 bottom-10 left-0 right-0 mx-auto rounded-md text-center transition-all duration-500 group-hover:bottom-[92px]">

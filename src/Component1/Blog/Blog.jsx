@@ -51,16 +51,16 @@ const blogPosts = [
 ];
 const Blog = () => {
   return (
-    <div className="px-8 relative z-10 bg-BodyBg-0 -mt-5">
+    <div className="px-2 sm:px-4 lg:px-8 relative z-10 bg-BodyBg-0 -mt-5">
       <div className="absolute top-0 left-0 w-full h-[246px] inline-block bg-SecondaryColor-0 -z-10"></div>
-      <section className="bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px] rounded-b-[20px] overflow-hidden">
+      <section className="bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px] rounded-md sm:rounded-xl md:rounded-b-[20px] overflow-hidden">
         <div className="Container">
           <div className="text-center">
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
               <img src={subtitleIcon} alt="Icon" draggable={false} /> Latest
               Blogs
             </h5>
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
               Read our latest insights from
               <br />
               Update blog posts

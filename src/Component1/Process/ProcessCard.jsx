@@ -12,7 +12,7 @@ const ProcessCard = ({
   return (
     <div className="group text-center relative z-10">
       {processBorder && (
-        <div className={`absolute ${borderPosition} hidden lg:block`}>
+        <div className={`absolute ${borderPosition} hidden xl:block`}>
           <img src={processBorder} draggable={false} alt="Border" />
         </div>
       )}
@@ -32,7 +32,7 @@ const ProcessCard = ({
           className={`absolute -top-[18px] ${leafPosition}`}
         />
       </div>
-      <h4 className="font-Outfit font-medium text-[32px] text-white mt-5 mb-2.5">
+      <h4 className="font-Outfit font-medium text-2xl sm:text-[28px] md:text-[32px] text-white mt-5 mb-2.5">
         {processTilte}
       </h4>
       <p className="font-NotoSans text-TextColor2-0 max-w-[325px] w-full mx-auto">

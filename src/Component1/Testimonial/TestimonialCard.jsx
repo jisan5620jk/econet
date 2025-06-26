@@ -28,7 +28,7 @@ const TestimonialCard = ({
           <h5 className="font-Outlet inline-block text-white text-xl sm:text-2xl lg:text-xl xl:text-2xl relative">
             {testiName}
           </h5>
-          <p className="font-NotoSans text-TextColor2-0 font-light flex items-center mt-2">
+          <p className="font-NotoSans text-TextColor2-0 font-light flex flex-wrap items-center mt-2">
             {testiDesignation}{" "}
             <span className="relative pl-7 text-white before:absolute before:top-1/2 before:-translate-y-1/2 before:left-1.5 before:w-4 before:h-[1px] before:bg-TextColor2-0">
               {workPlace}

@@ -13,9 +13,9 @@ const BlogCard = ({
   isMain,
 }) => {
   return (
-    <div className={isMain ? "" : "flex flex-col sm:flex-row sm:items-center gap-8"}>
+    <div className={isMain ? "" : "flex flex-col sm:flex-row sm:items-center gap-8 sm:gap-3 md:gap-8"}>
       {/* Image */}
-      <div className={isMain ? "rounded-2xl overflow-hidden" : ""}>
+      <div className={isMain ? "rounded-2xl overflow-hidden" : "sm:flex-1 md:flex-none"}>
         <img
           src={blogImage}
           alt={blogTitle}
@@ -41,8 +41,8 @@ const BlogCard = ({
             to={blogurl}
             className={`font-Outfit text-HeadingColor-0 inline-block mt-5 ${
               isMain
-                ? "text-4xl font-semibold leading-[44px] xl:mr-20"
-                : "text-2xl font-medium leading-[32px]"
+                ? "text-xl sm:text-3xl md:text-4xl font-semibold md:leading-[44px] md:mr-14 lg:mr-0 xl:mr-20"
+                : "text-lg sm:text-xl md:text-2xl font-medium md:leading-[32px] mr-10 lg:mr-0"
             }`}
           >
             {blogTitle}

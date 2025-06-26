@@ -109,15 +109,18 @@ const Navbar = () => {
   // Menu Sidebar
 
   const [isOpen, setIsOpen] = useState(false);
-  useEffect(() => {
-    const popup = document.getElementById("popup-scroll-area");
 
-    if (!popup) return;
+  useEffect(() => {
+    const popups = document.querySelectorAll(".popup-scroll-area");
+
+    if (!popups.length) return;
 
     const stopScroll = (e) => e.stopPropagation();
 
-    popup.addEventListener("wheel", stopScroll, { passive: false });
-    popup.addEventListener("touchmove", stopScroll, { passive: false });
+    popups.forEach((popup) => {
+      popup.addEventListener("wheel", stopScroll, { passive: false });
+      popup.addEventListener("touchmove", stopScroll, { passive: false });
+    });
 
     // Pause GSAP ScrollSmoother when popup is open
     if (window.ScrollSmoother?.get()) {
@@ -126,8 +129,10 @@ const Navbar = () => {
     }
 
     return () => {
-      popup.removeEventListener("wheel", stopScroll);
-      popup.removeEventListener("touchmove", stopScroll);
+      popups.forEach((popup) => {
+        popup.removeEventListener("wheel", stopScroll);
+        popup.removeEventListener("touchmove", stopScroll);
+      });
     };
   }, [isOpen]);
 
@@ -191,7 +196,7 @@ const Navbar = () => {
 
                                   {/* Grandchild submenu */}
                                   {link.children && (
-                                    <ul className="absolute top-full left-full w-64 bg-white text-HeadingColor-0 rounded-md border-t-[3px] border-PrimaryColor-0 shadow-cases scale-y-0 opacity-0 invisible origin-top-left transition-all duration-500 group-hover/submenu:opacity-100 group-hover/submenu:visible group-hover/submenu:scale-y-100">
+                                    <ul className="absolute top-0 left-full w-64 bg-white text-HeadingColor-0 rounded-md border-t-[3px] border-PrimaryColor-0 shadow-shade scale-y-0 opacity-0 invisible origin-top-left transition-all duration-500 group-hover/submenu:opacity-100 group-hover/submenu:visible group-hover/submenu:scale-y-100">
                                       {link.children.map((child, j) => (
                                         <li key={j}>
                                           <Link
@@ -233,7 +238,7 @@ const Navbar = () => {
               </div>
 
               {/* Button + Sidebar + Hamburger */}
-              <div>
+              <div className="inline-block">
                 <div className="inline-flex items-center gap-2 sm:gap-7 lg:gap-5 xl:gap-8">
                   <div className="hidden sm:flex items-center gap-4">
                     <PrimaryButton
@@ -245,7 +250,7 @@ const Navbar = () => {
                     </PrimaryButton>
                   </div>
                   <div
-                    className="hidden group size-8 md:size-10 bg-transparent border border-white border-opacity-10 rounded-full xl:flex items-center justify-center gap-3 cursor-pointer"
+                    className="hidden group bg-transparent border border-white border-opacity-10 rounded-full xl:flex items-center justify-center gap-3 cursor-pointer"
                     onClick={() => setIsOpen(true)}
                   >
                     <h5 className="hidden 2xl:block font-Outfit text-lg text-HeadingColor-0 font-medium">
@@ -258,9 +263,12 @@ const Navbar = () => {
                     </button>
                   </div>
                   <div
-                    className="lg:hidden group size-8 md:size-10 bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
+                    className="lg:hidden group bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center gap-3 cursor-pointer"
                     onClick={() => setMobileOpen(true)}
                   >
+                    <h5 className="hidden md:block font-Outfit text-lg text-HeadingColor-0 font-medium">
+                      Menu
+                    </h5>
                     <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
                       <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
                       <span className="bg-SecondaryColor-0 w-6 md:w-6 h-0.5 rounded-xl block"></span>
@@ -278,7 +286,7 @@ const Navbar = () => {
               mobileOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div id="popup-scroll-area">
+            <div className="popup-scroll-area">
               <div className="p-4 flex justify-between items-center border-b border-white border-opacity-15">
                 <h2 className="font-Outfit text-2xl font-medium text-white">
                   Menu
@@ -440,10 +448,7 @@ const Navbar = () => {
             : "translate-x-full opacity-0 invisible"
         }`}
       >
-        <div
-          id="popup-scroll-area"
-          className="relative h-full overflow-y-auto p-9 pr-4"
-        >
+        <div className="popup-scroll-area relative h-full overflow-y-auto p-9 pr-4">
           <button
             onClick={() => setIsOpen(false)}
             className="absolute top-7 right-7 h-10 w-10 bg-PrimaryColor-0 text-white flex items-center justify-center rounded-full"

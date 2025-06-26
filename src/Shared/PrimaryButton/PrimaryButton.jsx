@@ -32,7 +32,7 @@ const PrimaryButton = ({
     span.classList.remove("scale-100");
   };
 
-  const sharedClasses = `relative overflow-hidden inline-flex items-center justify-center font-Outfit text-lg leading-7 px-9 py-4 text-white bg-PrimaryColor-0 rounded-full transition duration-300 focus:outline-none ${className}`;
+  const sharedClasses = `relative overflow-hidden inline-flex items-center font-Outfit text-lg leading-7 px-7 md:px-9 py-2.5 md:py-4 text-white bg-PrimaryColor-0 rounded-full transition duration-300 focus:outline-none ${className}`;
 
   const hoverSpan = (
     <span
