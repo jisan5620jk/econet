@@ -15,7 +15,7 @@ const serviceCard = [
     serviceBtnIcon: <IoMdLogIn />,
     boxBg: true,
     titlePb: "pb-[31px]",
-    iconTop: "top-8 sm:top-8 md:top-7 xl:top-5 ",
+    iconTop: "top-8 sm:top-8 md:top-7 xl:top-12 3xl:top-5",
   },
   {
     serviceTitle: "Echology Climate Solutions",
@@ -24,7 +24,7 @@ const serviceCard = [
     serviceBtnIcon: <IoMdLogIn />,
     boxBg: true,
     titlePb: "pb-[31px]",
-    iconTop: "top-8 sm:top-8 md:top-7 xl:top-5 ",
+    iconTop: "top-8 sm:top-8 md:top-7 xl:top-12 3xl:top-5",
   },
   {
     serviceTitle: "Renewable Energy Implement",
@@ -33,7 +33,7 @@ const serviceCard = [
     serviceBtnIcon: <IoMdLogIn />,
     boxBg2: true,
     titlePb: "pb-5 sm:pb-[30px]",
-    iconTop: "top-4 sm:top-3 xl:top-0",
+    iconTop: "top-4 sm:top-3 xl:top-9 3xl:top-0",
   },
   {
     serviceTitle: "Forest Management Eco-System",
@@ -42,7 +42,7 @@ const serviceCard = [
     serviceBtnIcon: <IoMdLogIn />,
     boxBg2: true,
     titlePb: "pb-5 sm:pb-[30px]",
-    iconTop: "top-4 sm:top-3 xl:top-0",
+    iconTop: "top-4 sm:top-3 xl:top-9 3xl:top-0",
   },
 ];
 
@@ -54,7 +54,7 @@ const Service = () => {
           src={shape}
           draggable={false}
           alt="Shape"
-          className="animate-dance2 hidden lg:block"
+          className="animate-dance2 hidden xl:block"
           style={{ animationDuration: "3.5s" }}
         />
       </div>
@@ -66,7 +66,7 @@ const Service = () => {
           src={shape}
           draggable={false}
           alt="Shape"
-          className="animate-dance2 hidden lg:block"
+          className="animate-dance2 hidden xl:block"
           style={{ animationDuration: "3.5s" }}
         />
       </div>

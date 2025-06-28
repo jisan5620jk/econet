@@ -13,7 +13,7 @@ const ProcessCard = ({
     <div className="group text-center relative z-10">
       {processBorder && (
         <div className={`absolute ${borderPosition} hidden xl:block`}>
-          <img src={processBorder} draggable={false} alt="Border" />
+          <img src={processBorder} draggable={false} alt="Border" className="xl:w-3/4 2xl:w-[inherit]" />
         </div>
       )}
       <div className="relative z-10 text-center inline-block">

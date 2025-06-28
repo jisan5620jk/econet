@@ -51,7 +51,7 @@ const blogPosts = [
 ];
 const Blog = () => {
   return (
-    <div className="px-2 sm:px-4 lg:px-8 relative z-10 bg-BodyBg-0 -mt-5">
+    <div className="px-2 sm:px-4 2xl:px-8 relative z-10 bg-BodyBg-0 -mt-5">
       <div className="absolute top-0 left-0 w-full h-[246px] inline-block bg-SecondaryColor-0 -z-10"></div>
       <section className="bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px] rounded-md sm:rounded-xl md:rounded-b-[20px] overflow-hidden">
         <div className="Container">
@@ -66,7 +66,7 @@ const Blog = () => {
               Update blog posts
             </h1>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-[60px]">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 xl:gap-4 2xl:gap-8 mt-[60px]">
             <div className="fade-left">
               {/* Main blog */}
               <BlogCard

@@ -74,7 +74,7 @@ const WhyChoose = () => {
                 </div>
               </div>
             </div>
-            <div className="fade-left hidden sm:block absolute bottom-5 xl:bottom-20 left-5 xl:-left-[100px] text-center bg-[url('/images/why-choose-info-bg.png')] bg-no-repeat bg-cover bg-top rounded-[20px] px-7 lg:px-5 xl:px-7 pt-10 pb-10 w-full max-w-[240px]">
+            <div className="fade-left hidden sm:block absolute bottom-5 3xl:bottom-20 left-5 3xl:-left-[100px] text-center bg-[url('/images/why-choose-info-bg.png')] bg-no-repeat bg-cover bg-top rounded-[20px] px-7 lg:px-5 xl:px-7 pt-10 pb-10 w-full max-w-[240px]">
               <div className="text-[40px] text-white flex items-center justify-center mb-3">
                 <PiSealCheckFill />
               </div>
@@ -88,18 +88,18 @@ const WhyChoose = () => {
             </div>
           </div>
           <div className="relative">
-            <h2 className="font-Outfit font-medium md:font-semibold text-lg leading-7 sm:text-3xl sm:leading-[42px] md:text-[36px] md:leading-[44px] lg:text-[28px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] text-white">
+            <h2 className="font-Outfit font-medium md:font-semibold text-lg leading-7 sm:text-3xl sm:leading-[42px] md:text-[36px] md:leading-[44px] lg:text-[28px] lg:leading-[38px] xl:text-[32px] xl:leading-[40px] 2xl:text-[36px] 2xl:leading-[44px] text-white">
               Innovative Technology Integrations Environmental and Ecology
             </h2>
             <div className="box-row mt-10">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`box group flex flex-wrap items-center justify-between gap-5 py-10 lg:py-3 xl:py-10 border-b border-white border-opacity-10 ${
+                  className={`box group flex flex-wrap xl:flex-nowrap items-center justify-between gap-5 py-10 lg:py-3 xl:py-10 border-b border-white border-opacity-10 ${
                     index !== 0 ? "" : "border-t"
                   }`}
                 >
-                  <div className="flex items-center gap-7">
+                  <div className="flex items-center gap-7 xl:gap-4 2xl:gap-7">
                     {/* Icon */}
                     <div className="size-[74px] rounded-full flex items-center justify-center shrink-0 bg-PrimaryColor-0 relative z-10 overflow-hidden before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor2-0 before:rotate-180 before:transition-all before:duration-500 before:scale-0 before:-z-10 group-hover:before:scale-100 group-hover:before:rotate-0">
                       <img
@@ -111,13 +111,13 @@ const WhyChoose = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-Outfit text-xl sm:text-2xl font-medium text-white md:w-[170px] lg:w-[inherit]">
+                    <h3 className="font-Outfit text-xl sm:text-2xl xl:text-xl 2xl:text-2xl font-medium text-white md:w-[170px] lg:w-[inherit]">
                       {feature.title}
                     </h3>
                   </div>
 
                   {/* Descrition */}
-                  <p className="font-NotoSans text-TextColor2-0 max-w-[312px] w-full">
+                  <p className="font-NotoSans text-TextColor2-0 max-w-[312px] xl:max-w-[280px] 2xl:max-w-[312px] w-full">
                     {feature.description}
                   </p>
                 </div>

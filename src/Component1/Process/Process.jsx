@@ -42,14 +42,14 @@ const processData = [
 
 const Process = () => {
   return (
-    <div className="px-2 sm:px-4 xl:px-8">
+    <div className="px-2 sm:px-4 2xl:px-8">
       <section className="py-16 md:py-20 lg:py-[120px] bg-SecondaryColor-0 rounded-[20px] relative z-10 overflow-hidden">
         <div className="fade-leftt absolute left-0 top-5">
           <img
             src={shape}
             draggable={false}
             alt="Shape"
-            className="animate-wiggle hidden lg:block"
+            className="animate-wiggle hidden 2xl:block"
             style={{ animationDuration: "5s" }}
           />
         </div>
@@ -58,7 +58,7 @@ const Process = () => {
             src={shape2}
             draggable={false}
             alt="Shape"
-            className="animate-swing hidden lg:block"
+            className="animate-swing hidden 2xl:block"
             style={{ animationDuration: "4s" }}
           />
         </div>

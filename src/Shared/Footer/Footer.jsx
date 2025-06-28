@@ -15,7 +15,7 @@ import shape2 from "/images/footer-shape2.png";
 
 const Footer = () => {
   return (
-    <div className="bg-[url('/images/footer-bg.png')] bg-cover bg-center bg-no-repeat px-2 sm:px-4 lg:px-8 pb-2 sm:pb-4 lg:pb-8 -mt-12">
+    <div className="bg-[url('/images/footer-bg.png')] bg-cover bg-center bg-no-repeat px-2 sm:px-4 3xl:px-8 pb-2 sm:pb-4 3xl:pb-8 -mt-12">
       <section className="py-16 md:py-20 lg:py-[120px] relative">
         <div className="absolute right-[32%] top-24 hidden lg:block">
           <img
@@ -77,7 +77,7 @@ const Footer = () => {
 
       <footer className="bg-BodyBgDark-0 pt-16 md:pt-20 lg:pt-[100px] rounded-xl sm:rounded-2xl md:rounded-[50px] border-t-[3px] sm:border-t-4 md:border-t-[10px] border-PrimaryColor-0 relative overflow-hidden">
         <div className="Container">
-          <div className="grid gap-y-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-y-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-2 xl:gap-0">
             <div className="">
               <div>
                 <Link to={"/"} title="Econet">
@@ -261,7 +261,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="absolute top-5 right-0 hidden 2xl:block">
+        <div className="absolute top-5 right-0 hidden 3xl:block">
           <img
             src={shape}
             alt="Shape"
@@ -270,7 +270,7 @@ const Footer = () => {
             style={{ animationDuration: "5s" }}
           />
         </div>
-        <div className="absolute bottom-[5%] left-[2%] hidden 2xl:block">
+        <div className="absolute bottom-[5%] left-[2%] hidden 3xl:block">
           <img
             src={shape2}
             alt="Shape"

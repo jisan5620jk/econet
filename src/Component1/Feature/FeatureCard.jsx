@@ -37,7 +37,7 @@ const FeatureCard = ({
           className="w-inherit transition-all duration-500 group-hover:brightness-0 group-hover:invert group-hover:animate-wobble_vertical"
         />
       </div>
-      <h5 className="font-Outfit font-medium text-[22px] sm:text-2xl xl:text-[22px] 2xl:text-[28px] 2xl:leading-[36px] pt-[24px] pr-10 sm:pr-0 text-HeadingColor-0 transition-all duration-500 group-hover:text-white max-w-[260px] w-full">
+      <h5 className="font-Outfit font-medium text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-[28px] 2xl:leading-[36px] pt-[24px] pr-10 sm:pr-0 text-HeadingColor-0 transition-all duration-500 group-hover:text-white max-w-[260px] w-full">
         {featureTitle}
       </h5>
       <div className="absolute top-0 right-0">

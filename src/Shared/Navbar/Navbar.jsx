@@ -138,7 +138,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="flex justify-center mt-4 md:mt-7 lg:mt-16 w-full">
+      <div className="flex justify-center mt-4 md:mt-7 xl:mt-16 w-full">
         <header
           className={`absolute z-50 inline-block w-[calc(100%-30px)] md:w-[calc(100%-60px)] 3xl:max-w-[1720px] transition-all duration-500 bg-white rounded-[20px] ${
             isSticky

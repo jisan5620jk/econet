@@ -13,7 +13,7 @@ const ServiceCard = ({
   serviceBtnIcon,
 }) => {
   return (
-    <div className="group rounded-[20px] inline-block relative z-10 overflow-hidden">
+    <div className="group rounded-[20px] inline-block 2xl:block relative z-10 overflow-hidden">
       {boxBg && (
         <div className="absolute -z-10 top-0 right-0 inset-0">
           <svg
@@ -41,7 +41,7 @@ const ServiceCard = ({
         </div>
       )}
       <h5
-        className={`font-Outfit font-medium text-xl sm:text-2xl xl:text-[22px] 2xl:text-[28px] 2xl:leading-[36px] ml-4 sm:ml-10 pt-[52px] ${titlePb} text-HeadingColor-0 transition-all duration-500 group-hover:text-white max-w-[190px] sm:max-w-[220px] lg:max-w-[220px] x;:max-w-[260px] w-full`}
+        className={`font-Outfit font-medium text-xl sm:text-2xl xl:text-[22px] 3xl:text-[28px] 3xl:leading-[36px] ml-4 sm:ml-10 xl:ml-5 3xl:ml-10 pt-[52px] xl:pt-[72px] 3xl:pt-[52px] ${titlePb} text-HeadingColor-0 transition-all duration-500 group-hover:text-white max-w-[190px] sm:max-w-[220px] lg:max-w-[220px] 2xl:max-w-[230px] 3xl:max-w-[260px] w-full`}
       >
         {serviceTitle}
       </h5>
@@ -53,10 +53,10 @@ const ServiceCard = ({
           className="w-inherit"
         />
       </div>
-      <div className={`absolute ${iconTop} right-0 sm:right-1 md:right-0 xl:right-1`}>
+      <div className={`absolute ${iconTop} right-0 sm:right-1 md:right-0 3xl:right-1`}>
         <Link
           to={serviceUrl}
-          className="size-11 sm:size-[54px] flex justify-center items-center font-Outfit text-HeadingColor-0 text-[28px] rounded-full transition-all duration-500 relative z-10 overflow-hidden -rotate-45 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 before:rotate-180 before:scale-0 group-hover:before:scale-100 group-hover:before:rotate-0 group-hover:text-white"
+          className="size-11 sm:size-[54px] xl:size-10 3xl:size-[54px] flex justify-center items-center font-Outfit text-HeadingColor-0 text-[28px] rounded-full transition-all duration-500 relative z-10 overflow-hidden -rotate-45 before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 before:rotate-180 before:scale-0 group-hover:before:scale-100 group-hover:before:rotate-0 group-hover:text-white"
         >
           {serviceBtnIcon}
         </Link>

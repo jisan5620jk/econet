@@ -59,16 +59,22 @@ const Testimonial = () => {
   const stickyBoxRef = useRef(null);
 
   useEffect(() => {
+    const width = window.innerWidth;
     const ctx = gsap.context(() => {
       const boxes = gsap.utils.toArray(".content-box");
 
       // Sticky right box
-      if (window.innerWidth >= 1199) {
+      if (window.innerWidth >= 1200) {
         ScrollTrigger.create({
           trigger: stickyBoxRef.current,
           start: "top 9%",
           endTrigger: containerRef.current,
-          end: () => `bottom 103.2%`,
+          end: () =>
+            width >= 1700
+              ? "bottom 103.2%"
+              : width >= 1400
+              ? "bottom 180%"
+              : "bottom 160%",
           pin: true,
           pinSpacing: false,
           scrub: true,
@@ -122,7 +128,7 @@ const Testimonial = () => {
           src={shape}
           draggable={false}
           alt="Shape"
-          className="animate-wiggle hidden lg:block"
+          className="animate-wiggle hidden 2xl:block"
           style={{ animationDuration: "5s" }}
         />
       </div>
@@ -131,7 +137,7 @@ const Testimonial = () => {
           src={shape2}
           draggable={false}
           alt="Shape"
-          className="animate-swing hidden lg:block"
+          className="animate-swing hidden 2xl:block"
           style={{ animationDuration: "4s" }}
         />
       </div>

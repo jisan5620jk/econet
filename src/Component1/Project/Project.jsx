@@ -50,41 +50,49 @@ const projectData = [
 ];
 
 const Project = () => {
-  useEffect(() => {
-    if (window.innerWidth >= 1199) {
-      const ctx = gsap.context(() => {
-        const items = gsap.utils.toArray(".project-panel-pin");
+useEffect(() => {
+  const width = window.innerWidth;
 
-        items.forEach((item, index) => {
-          gsap.set(item, { zIndex: 10 + index });
+  if (width >= 1200) {
+    const ctx = gsap.context(() => {
+      const items = gsap.utils.toArray(".project-panel-pin");
 
-          ScrollTrigger.create({
-            trigger: item,
-            start: `top 10%`,
-            end: "bottom 90%",
-            endTrigger: ".project-pin-wrapper",
-            pin: true,
-            pinSpacing: false,
-            scrub: 1,
-            markers: false,
-          });
+      items.forEach((item, index) => {
+        gsap.set(item, { zIndex: 10 + index });
+
+        ScrollTrigger.create({
+          trigger: item,
+          start: "top 10%",
+          end:
+            width >= 1600
+              ? "bottom 90%"
+              : width >= 1400
+              ? "bottom 145%"
+              : "bottom 150%",
+          endTrigger: ".project-pin-wrapper",
+          pin: true,
+          pinSpacing: false,
+          scrub: 1,
+          markers: false,
         });
       });
+    });
 
-      return () => ctx.revert();
-    }
-  }, []);
+    return () => ctx.revert();
+  }
+}, []);
+
 
   return (
-    <div className="px-2 md:px-4 xl:px-8 relative z-10 -mt-5 overflow-hidden">
+    <div className="px-2 md:px-4 3xl:px-8 relative z-10 -mt-5 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-[246px] inline-block bg-SecondaryColor-0 -z-10"></div>
-      <section className="project-pin-wrapper bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px] rounded-lg sm:rounded-2xl md:rounded-[20px] relative overflow-hidden">
+      <section className="project-pin-wrapper bg-white lg:bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px] rounded-lg sm:rounded-2xl md:rounded-[20px] relative overflow-hidden">
         <div className="fade-left absolute left-[18%] top-24">
           <img
             src={shape}
             draggable={false}
             alt="Shape"
-            className="animate-swing hidden xl:block"
+            className="animate-swing hidden 3xl:block"
             style={{ animationDuration: "2.5s" }}
           />
         </div>
@@ -93,7 +101,7 @@ const Project = () => {
             src={shape2}
             draggable={false}
             alt="Shape"
-            className="animate-dance hidden xl:block"
+            className="animate-dance hidden 3xl:block"
             style={{ animationDuration: "5.5s" }}
           />
         </div>
