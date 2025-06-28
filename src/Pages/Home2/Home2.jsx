@@ -1,33 +1,29 @@
-import About from '../../Component2/About/About';
-import Admission from '../../Component2/Admission/Admission';
-import Banner from '../../Component2/Banner/Banner';
-import Blog from '../../Component2/Blog/Blog';
-import Brand from '../../Component2/Brand/Brand';
-import CallDoAction from '../../Component2/CallDoAction/CallDoAction';
-import Campus from '../../Component2/Campus/Campus';
-import Course from '../../Component2/Course/Course';
-import Event from '../../Component2/Event/Event';
-import Faq from '../../Component2/Faq/Faq';
-import Feature from '../../Component2/Feature/Feature';
-import Marquee from '../../Component2/Marquee/Marquee';
-import Testimonial from '../../Component2/Testimonial/Testimonial';
+import About from "../../Component2/About/About";
+import Banner from "../../Component2/Banner/Banner";
+import Blog from "../../Component2/Blog/Blog";
+import Brand from "../../Component2/Brand/Brand";
+import Process from "../../Component2/Process/Process";
+import Project from "../../Component2/Project/Project";
+import Service from "../../Component2/Service/Service";
+import TeamMember from "../../Component2/TeamMember/TeamMember";
+import Testimonial from "../../Component2/Testimonial/Testimonial";
+import WhyChoose from "../../Component2/Whychoose/WhyChoose";
+import BoxReveal from "../../Shared/BoxAnim/BoxReveal";
 
 const Home2 = () => {
+  BoxReveal();
   return (
     <>
       <Banner />
-      <Feature />
+      <Service />
       <About />
-      <Course />
-      <CallDoAction />
-      <Campus />
-      <Brand />
+      <WhyChoose />
+      <Project />
+      <Process />
+      <TeamMember />
       <Testimonial />
-      <Admission />
-      <Event />
-      <Marquee />
-      <Faq />
       <Blog />
+      <Brand />
     </>
   );
 };

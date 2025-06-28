@@ -1,145 +1,99 @@
-import aboutThumb from "/images/about-thumb31.png";
-import shape from "/images/brand-line.png";
-import shape2 from "/images/about-shape31.png";
-import shape3 from "/images/about-shape32.png";
-import itemIcon from "/images/about-icon.png";
-import icon from "/images/learn-icon.png";
-import { Link } from "react-router-dom";
-import { HiArrowNarrowRight } from "react-icons/hi";
-import aboutIcon from "/images/about-call.png";
+import aboutThumb from "/images/about-thumb.png";
+import aboutTeamImg from "/images/about-team-img.png";
+import aboutTeamImg2 from "/images/about-team-img2.png";
+import subtitleIcon from "/images/sub-title-icon.png";
+import shape from "/images/about-shape.png";
+import aboutArrow from "/images/about-arrow-icon.png";
+import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
+import { GoArrowRight } from "react-icons/go";
 import OnScrollCounter from "../../Shared/Counter/OnScrollCounter";
-import { GoCheckCircleFill } from "react-icons/go";
+import Feature from "../Feature/Feature";
 
 const About = () => {
   return (
-    <section className="bg-white py-16 md:py-20 lg:py-28 relative">
-      <img
-        src={shape}
-        draggable={false}
-        alt="Shape"
-        className="absolute -top-16 right-28 animate-wiggle hidden 3xl:block"
-      />
-      <img
-        src={shape2}
-        draggable={false}
-        alt="Shape"
-        className="absolute right-7 bottom-0 hidden animate-dance 3xl:block"
-      />
-      <div className="Container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-[92px] lg:gap-10 items-center">
-          <div className="relative z-10">
-            <img
-              src={aboutThumb}
-              draggable="false"
-              className="w-full lg:w-[inherit] max-w-[inherit] lg:-ml-[180px] xl:-ml-[100px] 2xl:-ml-[52px]"
-            />
-            <div className="absolute -left-8 bottom-14 hidden md:block lg:hidden xl:block">
-              <img
-                src={shape3}
-                draggable={false}
-                alt="Shape"
-                className="animate-swing"
-              />
-            </div>
-            <div className="absolute top-0 right-0 2xl:right-[50px] sm:flex items-center gap-5 px-9 py-6 md:py-8 bg-PrimaryColor-0 rounded-[10px] sm:max-w-[252px] md:max-w-[335px] lg:max-w-[302px] w-full hidden">
-              <div>
-                <img src={icon} draggable={false} alt="Icon" />
-              </div>
-              <h5 className="flex-1 font-Outfit font-medium text-lg md:text-[22px] lg:text-[22px] text-white">
-                Learm Online
-                <br /> Anywhere
+    <div className="relative z-10">
+      <section className="bg-white pt-16 md:pt-20 lg:pt-[120px] relative">
+        <div className="Container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-[92px] lg:gap-10 items-start">
+            <div className="relative">
+              <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+                <img src={subtitleIcon} alt="Icon" draggable={false} /> About Us
               </h5>
-            </div>
-            <div className="absolute bottom-0 sm:bottom-7 left-0 sm:left-5 lg:-left-5 xl:left-5 flex gap-6 sm:gap-10 lg:gap-6 xl:gap-10">
-              <div className="text-2xl sm:text-[56px] lg:text-[46px] xl:text-[60px] leading-[56px] tracking-tight font-semibold font-Outfit text-PrimaryColor-0 relative">
-                <OnScrollCounter start={0} end={16} duration={1000} />
-                <h2 className="absolute -top-0 -right-3 sm:-right-5 lg:-right-4 xl:-right-5 font-Outfit text-2xl sm:text-3xl">
-                  +
-                </h2>
-              </div>
-              <div className="flex-1">
-                <p className="font-NotoSans text-TextColor-0 mt-2">
-                  Years of
-                  <br /> Experiences
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="relative">
-            <h5 className="font-Outfit font-medium text-PrimaryColor-0 uppercase pl-4 relative z-10 before:absolute before:top-1/2 before:left-0 before:-translate-y-1/2 before:bg-PrimaryColor-0 before:size-[6px]">
-              ABOUT US
-            </h5>
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[42px] 2xl:leading-[52px] text-HeadingColor-0 mt-2 md:mt-[14px] mb-4">
-              Who We Are – Introduction to
-              <br /> Educate Online Platform
-            </h1>
-            <p className="font-NotoSans text-TextColor-0 max-w-[570px] w-full">
-              Educate the ultimate destination for knowledge seekers and
-              educators alike. We are committed to transforming special
-              education impact global channels without standards compliant
-              systems
-            </p>
-            <ul className="space-y-4 my-7">
-              <li className="flex items-center gap-[10px]">
-                <div>
-                  <img src={itemIcon} draggable={false} alt="Icon" />
-                </div>
-                <h5 className="flex-1 font-Outfit font-medium text-lg sm:text-base md:text-lg lg:text-base 2xl:text-lg text-HeadingColor-0">
-                  Course Catalog & Program Information
-                </h5>
-              </li>
-              <li className="flex items-center gap-[10px]">
-                <div>
-                  <img src={itemIcon} draggable={false} alt="Icon" />
-                </div>
-                <h5 className="flex-1 font-Outfit font-medium text-lg sm:text-base md:text-lg lg:text-base 2xl:text-lg text-HeadingColor-0">
-                  Online Application & Admission Process
-                </h5>
-              </li>
-              <li className="flex items-center gap-[10px]">
-                <div>
-                  <img src={itemIcon} draggable={false} alt="Icon" />
-                </div>
-                <h5 className="flex-1 font-Outfit font-medium text-lg sm:text-base md:text-lg lg:text-base 2xl:text-lg text-HeadingColor-0">
-                  Financial Aid and Scholarships
-                </h5>
-              </li>
-            </ul>
-            <div className="flex items-center gap-4 pt-1 pb-10">
-              <div>
-                <img src={aboutIcon} draggable={false} alt="Icon" />
-              </div>
-              <div>
-                <a
-                  href="tel:+6803290570"
-                  title="+(680) 3290 570"
-                  className="font-Outfit text-[22px] font-medium text-HeadingColor-0"
-                >
-                  +(680) 3290 570
-                </a>
-              </div>
-            </div>
-            <div className="sm:absolute bottom-8 lg:-bottom-20 xl:bottom-8 right-0 inline-block bg-BodyBg-0 rounded-2xl px-7 pt-8 pb-7">
-              <GoCheckCircleFill size={34} className="text-PrimaryColor-0" />
-              <h5 className="font-Outfit text-xl text-HeadingColor-0 font-medium my-4">
-                Trusted Online
-                <br /> And offline Best
-                <br /> Educations
-              </h5>
-              <p className="font-Outfit text-[15px] text-HeadingColor-0 pl-6 relative z-10 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:bg-PrimaryColor-0 before:h-[2px] before:w-[14px]">
-                Jhon Doe
+              <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+                Innovative eco system
+                <br />
+                For save human life and
+                <br />
+                Animal protection
+              </h1>
+              <p className="fade-up font-NotoSans text-TextColor-0 max-w-[510px] w-full mt-6 mb-9">
+                Econet is a nonprofit environmental organizations maintaince and
+                dedicated to protecting planet through sustainable and renewable
+                community empowerment moderator
               </p>
+              <PrimaryButton as="link" href="/about" className="zoom-in">
+                More About Us <GoArrowRight size={22} />
+              </PrimaryButton>
+              <div className="zoom-in absolute -bottom-8 right-20 hidden md:block">
+                <img
+                  src={shape}
+                  alt="About Shape"
+                  draggable={false}
+                  className="animate-swing"
+                  style={{ animationDuration: "3.5s" }}
+                />
+              </div>
             </div>
-            <div className="mt-8 sm:mt-0">
-              <Link to={"/about"} className="primary-btn2">
-                More About
-                <HiArrowNarrowRight size={20} />
-              </Link>
+            <div className="relative z-10">
+              <img src={aboutThumb} draggable="false" className="w-full" />
+              <div className="fade-up bg-SecondaryColor-0 rounded-lg sm:rounded-2xl md:rounded-[20px] pl-5 sm:pl-10 pt-[34px] pr-6 sm:pr-14 pb-10 flex items-center justify-between gap-5 flex-wrap mt-4">
+                <div>
+                  <ul className="flex items-center -space-x-4">
+                    <li>
+                      <img
+                        src={aboutTeamImg}
+                        alt="About Team Image"
+                        draggable={false}
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src={aboutTeamImg2}
+                        alt="About Team Image"
+                        draggable={false}
+                      />
+                    </li>
+                    <li className="size-14 flex items-center justify-center bg-PrimaryColor-0 rounded-full font-Outfit text-white text-lg">
+                      +25
+                    </li>
+                  </ul>
+                  <h6 className="font-Outfit text-white text-lg mt-4">
+                    Expert Members
+                  </h6>
+                </div>
+                <div className="relative">
+                  <div className="font-semibold text-[50px] leading-7 text-PrimaryColor-0 flex gap-1 items-start">
+                    <OnScrollCounter start={0} end={30} duration={1000} />
+                    <span className="text-4xl leading-7">+</span>
+                  </div>
+                  <h6 className="font-Outfit text-white text-lg">
+                    Years Experience
+                  </h6>
+                  <div className="absolute -top-3 -left-[70px] hidden md:block">
+                    <img
+                      src={aboutArrow}
+                      alt="About Arrow"
+                      className="animate-swing"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <Feature />
+    </div>
   );
 };
 

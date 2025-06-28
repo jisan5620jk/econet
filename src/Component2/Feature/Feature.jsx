@@ -1,56 +1,40 @@
-import featureIcon from '/images/feature-icon21.png';
-import featureIcon2 from '/images/feature-icon22.png';
-import featureIcon3 from '/images/feature-icon23.png';
-import FeatureCard from './FeatureCard';
+import featureIcon from "/images/feature-box-icon.png";
+import featureIcon2 from "/images/feature-box-icon2.png";
+import featureIcon3 from "/images/feature-box-icon3.png";
+import FeatureCard from "./FeatureCard";
+import { IoMdLogIn } from "react-icons/io";
 
-const processData = [
+const featureData = [
   {
-    id: 1,
     featureIcon: featureIcon,
-    featureTitle: 'Learning Experiences',
-    featureDesc:
-      'The ultimate destination knowledge We are committed to learn',
-    featureUrl: '/service',
+    featureTitle: "Suntainable energy Environment",
+    featureUrl: "/feature",
+    featureBtnIcon: <IoMdLogIn />,
   },
   {
-    id: 2,
     featureIcon: featureIcon2,
-    featureTitle: 'Professional Instructor',
-    featureDesc:
-      'The ultimate destination knowledge We are committed to learn',
-    featureUrl: '/service',
+    featureTitle: "Environment Waste Recycling",
+    featureUrl: "/feature",
+    featureBtnIcon: <IoMdLogIn />,
   },
   {
-    id: 3,
     featureIcon: featureIcon3,
-    featureTitle: 'Moneyback Gaurantee',
-    featureDesc:
-      'The ultimate destination knowledge We are committed to learn',
-    featureUrl: '/service',
+    featureTitle: "Dirty Recycling and Tree Plantation",
+    featureUrl: "/feature",
+    featureBtnIcon: <IoMdLogIn />,
   },
 ];
 
 const Feature = () => {
   return (
-    <section className='bg-BodyBg-0 py-16 md:py-20 lg:py-24 relative'>
-      <div className='Container '>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-7 relative z-10'>
-          {processData.map(
-            ({ id, featureIcon, featureTitle, featureDesc, featureUrl }) => {
-              return (
-                <div
-                  key={id}
-                >
-                  <FeatureCard
-                    featureIcon={featureIcon}
-                    featureTitle={featureTitle}
-                    featureDesc={featureDesc}
-                    featureUrl={featureUrl}
-                  />
-                </div>
-              );
-            }
-          )}
+    <section className="bg-white pt-[64px] pb-16 md:pb-20 lg:pb-[120px] rounded-b-xl sm:rounded-b-2xl md:rounded-b-[50px]">
+      <div className="Container">
+        <div className="box-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-7 relative z-10">
+          {featureData.map((feature, index) => (
+            <div key={index} className="box">
+              <FeatureCard {...feature} />
+            </div>
+          ))}
         </div>
       </div>
     </section>

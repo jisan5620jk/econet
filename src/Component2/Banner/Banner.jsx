@@ -1,153 +1,108 @@
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
-import { FaCheck } from "react-icons/fa6";
-import { HiArrowNarrowRight } from "react-icons/hi";
-import { Link } from "react-router-dom";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import SliderNavigation from "./SliderNavigation";
-import bannerShape from "/images/hero-dot.png";
-import bannerShape2 from "/images/hero-shape31.png";
-import bannerShape3 from "/images/hero-shape33.png";
+import bannerImg from "/images/banner-img.png";
+import bannerShape from "/images/banner-left-shape.png";
+import bannerShape2 from "/images/banner-left-shape2.png";
+import bannerShape3 from "/images/banner-left-shape3.png";
+import bannerShape4 from "/images/banner-right-shape.png";
+import bannerShape5 from "/images/banner-right-shape2.png";
+import bannerShape6 from "/images/banner-left-cercle.png";
+import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
+import { GoArrowRight } from "react-icons/go";
 
 const Banner = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const slides = [
-    {
-      image: "/images/banner-slider.jpg",
-    },
-    {
-      image: "/images/banner-slider2.jpg",
-    },
-  ];
-
-  const handleSlideChange = (swiper) => {
-    setActiveIndex(swiper.realIndex);
-  };
-
-  const settings = {
-    loop: true,
-    speed: 2000,
-    modules: [Autoplay, EffectFade],
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    effect: "fade", // Fade effect for smooth transitions
-    fadeEffect: {
-      crossFade: false,
-    },
-  };
-
   return (
-    <div className="relative z-10">
-      <Swiper
-        {...settings}
-        onSlideChange={handleSlideChange}
-        onSwiper={(swiper) => setActiveIndex(swiper.realIndex)}
-      >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <section
-              className="bg-cover bg-left lg:bg-center bg-no-repeat h-[700px] lg:h-[850px] flex items-center relative z-10"
-              style={{ backgroundImage: `url(${slide.image})` }}
-            >
-              <div className="Container pt-[70px] lg:pt-[120px] pb-20 md:pb-0">
-                <div className="relative">
-                  <h5
-                    className={`font-Outfit bg-white/5 px-5 py-[6px] transition-all duration-500 rounded border border-white/20 text-white text-sm inline-flex items-center gap-3 uppercase mb-4 ${
-                      activeIndex === index
-                        ? "translate-y-0 opacity-100 delay-[100ms]"
-                        : "translate-y-[100px] opacity-0"
-                    }`}
-                  >
-                    <span className="text-PrimaryColor-0">
-                      <FaCheck size={15} />
-                    </span>
-                    100% Satisfaction Guarantee
-                  </h5>
+    <section className="bg-SecondaryColor-0 px-2 sm:px-4 lg:px-8 flex items-center relative z-10 overflow-hidden">
+      <div className="w-full grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
+        <div className="hidden bg-BodyBgDark-0 xl:flex justify-center px-10 3xl:px-[100px] pt-14 xl:pt-[118px] pb-12 lg:pb-[120px] rounded-[20px] relative overflow-hidden">
+          <div>
+            <img
+              src={bannerImg}
+              draggable="false"
+              className="2xl:w-[inherit] relative z-10 3xl:pl-9"
+            />
+          </div>
+          <img
+            src={bannerShape}
+            draggable={false}
+            className="absolute top-5 right-0 animate-wiggle hidden md:block lg:hidden 3xl:block"
+            style={{ animationDelay: "0.5s" }}
+          />
+          <img
+            src={bannerShape2}
+            draggable={false}
+            className="absolute bottom-20 right-10 blur-sm animate-swing hidden md:block lg:hidden 3xl:block"
+            style={{ animationDuration: "3s" }}
+          />
+          <img
+            src={bannerShape3}
+            draggable={false}
+            className="absolute top-64 left-10 animate-dance2 blur-sm hidden md:block lg:hidden 3xl:block"
+            style={{ animationDuration: "4s" }}
+          />
+          <img
+            src={bannerShape6}
+            draggable={false}
+            className="absolute bottom-[60px] animate-rotate xl:block"
+          />
+        </div>
+        <div className="bg-BodyBgDark-0 px-2 sm:px-10 md:px-16 lg:px-20 xl:px-10 3xl:px-[100px] pt-32 sm:pt-44 md:pt-[222px] 2xl:pt-[252px] 3xl:pt-[222px] pb-6 md:pb-[102px] rounded-md sm:rounded-2xl md:rounded-[20px] relative overflow-hidden">
+          <h1 className="relative z-10 font-Outfit font-semibold text-white text-[26px] leading-[32px] sm:text-[36px] sm:leading-[42px] md:text-[56px] md:leading-[62px] lg:text-[60px] lg:leading-[64px] xl:text-[48px] xl:leading-[48px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[78px]">
+            Building evergreen
+            <br />
+            Natural humanity
+            <br />
+            <span className="text-PrimaryColor-0">Innovate</span> earth
+          </h1>
+          <div className="mt-6 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-7">
+            <PrimaryButton as="link" href="/about">
+              Explore Services <GoArrowRight size={22} />
+            </PrimaryButton>
+            <div>
+              <h6 className="font-NotoSans text-[15px] text-TextColor2-0 mb-1">
+                Call Us (Toll Free)
+              </h6>
+              <a
+                href="calto:+1456678032"
+                title="+1 (456) 678 032"
+                className="font-Outfit text-[22px] font-medium text-white"
+              >
+                +1 (456) 678 032
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-wrap xl:flex-nowrap gap-5 justify-between mt-20 md:mt-[136px] xl:mt-24 2xl:mt-[136px] pt-5 border-t border-white border-opacity-10">
+            <div>
+              <h5 className="font-Outfit font-medium text-white text-lg leading-7">
+                We’re Since <span className="text-PrimaryColor-0">1998</span>
+                <br />
+                Based in USA
+              </h5>
+            </div>
+            <div>
+              <p className="font-NotoSans text-TextColor2-0 w-full max-w-[390px] xl:max-w-[300px] 2xl:max-w-[390px]">
+                Econet is a nonprofit environmental organizations dedicated to
+                protecting planet through sustainable community empowerment.
+              </p>
+            </div>
+          </div>
 
-                  <h1
-                    className={`font-Outfit font-semibold text-white text-[26px] leading-[32px] sm:text-[44px] sm:leading-[54px] md:text-[56px] md:leading-[62px] lg:text-[50px] lg:leading-[60px] xl:text-[58px] xl:leading-[68px] 2xl:text-[66px] 2xl:leading-[76px] transition-all duration-500 ${
-                      activeIndex === index
-                        ? "translate-y-0 opacity-100 delay-[200ms]"
-                        : "translate-y-[100px] opacity-0"
-                    }`}
-                  >
-                    Grow Your Learning
-                  </h1>
-
-                  <h1
-                    className={`font-Outfit font-semibold inline-flex gap-1 text-white text-[26px] leading-[32px] sm:text-[44px] sm:leading-[54px] md:text-[56px] md:leading-[62px] lg:text-[50px] lg:leading-[60px] xl:text-[58px] xl:leading-[68px] 2xl:text-[66px] 2xl:leading-[76px] transition-all duration-500 ${
-                      activeIndex === index
-                        ? "translate-y-0 opacity-100 delay-[300ms]"
-                        : "translate-y-[100px] opacity-0"
-                    }`}
-                  >
-                    Educate{" "}
-                    <span className="text-PrimaryColor-0">University</span>
-                  </h1>
-
-                  <p
-                    className={`font-NotoSans text-white text-opacity-70 mb-8 mt-5 transition-all duration-500 ${
-                      activeIndex === index
-                        ? "translate-y-0 opacity-100 delay-[400ms]"
-                        : "translate-y-[100px] opacity-0"
-                    }`}
-                  >
-                    <span className="text-white">Educate</span> the ultimate
-                    destination for knowledge seekers and educators
-                    <br className="hidden lg:block xl:hidden" /> alike.
-                    <br className="hidden md:block lg:hidden xl:block" /> We are
-                    committed to transforming education
-                  </p>
-
-                  <div
-                    className={`flex flex-wrap items-center gap-y-5 gap-x-8 transition-all duration-500 ${
-                      activeIndex === index
-                        ? "translate-y-0 opacity-100 delay-[500ms]"
-                        : "translate-y-[100px] opacity-0"
-                    }`}
-                  >
-                    <Link to="/about" className="primary-btn">
-                      Get Started
-                      <HiArrowNarrowRight size={20} />
-                    </Link>
-                    <Link
-                      to="/about"
-                      className="font-Outfit text-base text-white transition-all duration-500 inline-flex gap-2 uppercase font-medium relative before:absolute before:bottom-0 before:left-0 before:w-full before:h-[1px] before:bg-white before:bg-opacity-50 before:transition-all before:duration-500 hover:before:bg-PrimaryColor-0 hover:text-PrimaryColor-0"
-                    >
-                      Find Course
-                      <span className="relative top-[2px]">
-                        <HiArrowNarrowRight size={20} />
-                      </span>
-                    </Link>
-                  </div>
-                  <img
-                    src={bannerShape}
-                    draggable={false}
-                    className="absolute -top-20 left-[36%] animate-wiggle hidden xl:block"
-                  />
-                  <img
-                    src={bannerShape2}
-                    draggable={false}
-                    className="absolute bottom-12 left-[54%] animate-swing hidden xl:block"
-                  />
-                  <img
-                    src={bannerShape3}
-                    draggable={false}
-                    className="absolute -bottom-32 3xl:-bottom-24 left-0 3xl:-left-[16%] animate-dance2 hidden xl:block"
-                  />
-                </div>
-              </div>
-            </section>
-          </SwiperSlide>
-        ))}
-        <SliderNavigation />
-      </Swiper>
-    </div>
+          <div className="absolute z-10 top-5 right-0 hidden md:block xl:hidden 2xl:block">
+            <img
+              src={bannerShape4}
+              draggable={false}
+              className="animate-wiggle"
+            />
+          </div>
+          <div className="absolute top-5 right-0 hidden md:block xl:hidden 2xl:block">
+            <img
+              src={bannerShape5}
+              draggable={false}
+              className="animate-wiggle"
+              style={{ animationDelay: "1.5s" }}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -1,36 +1,34 @@
-import star from '/images/marquee-icon.png';
+import star from "/images/marquee-icon.png";
 
 const Marquee = () => {
   const marqueeItems = [
-    'Learning Innovation',
-    'Worlwide learners',
-    'Unique Knowledge',
-    'Best Online School',
+    "ENVIRONMENTAL",
+    "RENEWABLE ENERGY",
+    "ANIMAL PROTECTION",
+    "INNOVATION ECOLOGY",
   ];
 
   const doubledItems = marqueeItems.concat(marqueeItems);
 
   return (
-    <div className='w-full overflow-hidden whitespace-nowrap bg-PrimaryColor-0 py-10'>
+    <div className="zoom-in w-full overflow-hidden whitespace-nowrap bg-PrimaryColor-0 pt-16 pb-11 rounded-b-[20px] -mt-5 relative">
       {[1, 2].map((row) => (
         <div
           key={`row-${row}`}
-          className='inline-flex will-change-transform animate-marquee hover:[animation-play-state:paused]'
+          className="inline-flex will-change-transform animate-marquee"
+          style={{ animationDuration: "55s" }}
         >
           {doubledItems.map((text, index) => (
-            <div
-              key={`${row}-${index}`}
-              className='flex items-center'
-            >
-              <span className='inline-block text-3xl md:text-[34px] text-white uppercase font-Rajdhani font-medium mx-5 md:mx-10'>
+            <div key={`${row}-${index}`} className="flex items-center">
+              <span className="inline-block text-2xl md:text-[36px] text-white uppercase font-Outfit md:font-medium mx-5 md:mx-10">
                 {text}
               </span>
-              <span className='inline-block w-5 md:w-[35px] pt-1 md:pt-0'>
+              <span className="inline-block w-5 md:w-10 pt-1 md:pt-0">
                 <img
                   src={star}
                   draggable={false}
-                  alt='Star'
-                  className='w-full animate-rotational'
+                  alt="Star"
+                  className="w-full animate-rotational"
                 />
               </span>
             </div>
