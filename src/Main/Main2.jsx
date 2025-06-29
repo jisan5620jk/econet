@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../Shared/Navbar/Navbar";
+import Navbar2 from "../Shared/Navbar/Navbar2";
 import BackToTop from "../Shared/BackToTop/BackToTop";
 import Footer from "../Shared/Footer/Footer";
 import { useEffect, useRef } from "react";
@@ -72,7 +72,7 @@ const Main2 = () => {
     <>
       <HelmetChanger title={"Environment Dark Version"} />
       <BackToTop />
-      <Navbar />
+      <Navbar2 />
       <div id="smooth-wrapper" className="h-full">
         <div id="smooth-content" className="min-h-screen will-change-transform">
           <Outlet />

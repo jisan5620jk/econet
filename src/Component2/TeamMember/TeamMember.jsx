@@ -93,15 +93,15 @@ const TeamMember = () => {
     },
   };
   return (
-    <section className="bg-white px-2 2xl:px-[120px] py-16 md:py-20 lg:py-[120px] relative z-10 rounded-xl sm:rounded-2xl md:rounded-b-[50px] overflow-hidden">
-      <div className="text-center">
+    <section className="bg-BodyBgDark-0 px-2 2xl:px-[120px] py-16 md:py-20 lg:py-[120px] relative z-10 rounded-xl sm:rounded-2xl md:rounded-b-[50px] overflow-hidden -mt-5">
+      <div className="text-center pt-5">
         <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
           <img src={subtitleIcon} alt="Icon" draggable={false} /> Our Teams
         </h5>
-        <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+        <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
           Meet Expert Team Members
         </h1>
-        <p className="fade-up font-NotoSans text-TextColor-0 max-w-[500px] w-full mx-auto mt-5 mb-8">
+        <p className="fade-up font-NotoSans text-TextColor2-0 max-w-[500px] w-full mx-auto mt-5 mb-8">
           Econet is a nonprofit environmental organizations maintaince and
           dedicated to protecting planet through sustainable
         </p>

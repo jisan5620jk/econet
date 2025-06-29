@@ -48,7 +48,7 @@ const serviceCard = [
 
 const Service = () => {
   return (
-    <section className="relative py-16 md:py-20 lg:py-[120px] -mt-5 bg-SecondaryColor-0 overflow-hidden">
+    <section className="relative z-20 py-16 md:py-20 lg:py-[120px] -mt-5 rounded-xl sm:rounded-2xl md:rounded-b-[50px] bg-SecondaryColor-0 overflow-hidden">
       <div className="fade-left absolute left-[15%] top-36">
         <img
           src={shape}

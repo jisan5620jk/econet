@@ -42,7 +42,7 @@ const processData = [
 
 const Process = () => {
   return (
-    <div className="px-2 sm:px-4 2xl:px-8">
+    <div className="bg-BodyBgDark-0 px-2 sm:px-4 2xl:px-8 pt-5 -mt-5 relative z-20">
       <section className="py-16 md:py-20 lg:py-[120px] bg-SecondaryColor-0 rounded-[20px] relative z-10 overflow-hidden">
         <div className="fade-leftt absolute left-0 top-5">
           <img

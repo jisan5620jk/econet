@@ -11,22 +11,22 @@ import Feature from "../Feature/Feature";
 
 const About = () => {
   return (
-    <div className="relative z-10">
-      <section className="bg-white pt-16 md:pt-20 lg:pt-[120px] relative">
+    <div className="relative z-10 -mt-[52px]">
+      <section className="bg-BodyBgDark-0 pt-16 md:pt-20 lg:pt-[120px] relative">
         <div className="Container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-[92px] lg:gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-[92px] lg:gap-10 items-start pt-[52px]">
             <div className="relative">
               <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
                 <img src={subtitleIcon} alt="Icon" draggable={false} /> About Us
               </h5>
-              <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+              <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
                 Innovative eco system
                 <br />
                 For save human life and
                 <br />
                 Animal protection
               </h1>
-              <p className="fade-up font-NotoSans text-TextColor-0 max-w-[510px] w-full mt-6 mb-9">
+              <p className="fade-up font-NotoSans text-TextColor2-0 max-w-[510px] w-full mt-6 mb-9">
                 Econet is a nonprofit environmental organizations maintaince and
                 dedicated to protecting planet through sustainable and renewable
                 community empowerment moderator
@@ -46,7 +46,7 @@ const About = () => {
             </div>
             <div className="relative z-10">
               <img src={aboutThumb} draggable="false" className="w-full" />
-              <div className="fade-up bg-SecondaryColor-0 rounded-lg sm:rounded-2xl md:rounded-[20px] pl-5 sm:pl-10 pt-[34px] pr-6 sm:pr-14 pb-10 flex items-center justify-between gap-5 flex-wrap mt-4">
+              <div className="fade-up bg-BodyBgDark2-0 rounded-lg sm:rounded-2xl md:rounded-[20px] pl-5 sm:pl-10 pt-[34px] pr-6 sm:pr-14 pb-10 flex items-center justify-between gap-5 flex-wrap mt-4">
                 <div>
                   <ul className="flex items-center -space-x-4">
                     <li>

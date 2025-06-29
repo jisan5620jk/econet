@@ -48,9 +48,13 @@ const Navbar = () => {
           to: "/",
           label: "Main Demo",
           children: [
-            { to: "/home-dark", label: "Dark Version" },
-            { to: "/home-light", label: "Light Version" },
-            { to: "/home-classic", label: "Classic Version" },
+            { to: "/", label: "Environment Main Demo" },
+            { to: "/home2", label: "Environment Dark Version" },
+            { to: "/home3", label: "Environment Classic Version" },
+            {
+              to: "/home4",
+              label: "Environment Classic Dark Version",
+            },
           ],
         },
         { to: "/home2", label: "University Demo" },
@@ -201,7 +205,7 @@ const Navbar = () => {
                                         <li key={j}>
                                           <Link
                                             to={child.to}
-                                            className={`block px-7 py-3 border-b border-SecondaryColor-0 border-opacity-10 font-Outfit font-medium transition-all duration-500 relative z-10 before:absolute before:left-0 before:top-auto before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:bottom-auto hover:before:top-0 hover:text-white
+                                            className={`block px-5 py-3 border-b border-SecondaryColor-0 border-opacity-10 font-Outfit font-medium transition-all duration-500 relative z-10 before:absolute before:left-0 before:top-auto before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:bottom-auto hover:before:top-0 hover:text-white
                                             ${
                                               currentPath === child.to
                                                 ? "before:h-full text-white"
@@ -250,7 +254,7 @@ const Navbar = () => {
                     </PrimaryButton>
                   </div>
                   <div
-                    className="hidden group bg-transparent border border-white border-opacity-10 rounded-full xl:flex items-center justify-center gap-3 cursor-pointer"
+                    className="hidden group bg-transparent xl:flex items-center justify-center gap-3 cursor-pointer"
                     onClick={() => setIsOpen(true)}
                   >
                     <h5 className="hidden 2xl:block font-Outfit text-lg text-HeadingColor-0 font-medium">
@@ -263,7 +267,7 @@ const Navbar = () => {
                     </button>
                   </div>
                   <div
-                    className="lg:hidden group bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center gap-3 cursor-pointer"
+                    className="lg:hidden group bg-transparent flex items-center justify-center gap-3 cursor-pointer"
                     onClick={() => setMobileOpen(true)}
                   >
                     <h5 className="hidden md:block font-Outfit text-lg text-HeadingColor-0 font-medium">

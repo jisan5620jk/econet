@@ -6,7 +6,6 @@ import {
   FaPhoneAlt,
   FaPinterestP,
 } from "react-icons/fa";
-import logo from "/images/header-logo.png";
 import logo2 from "/images/footer-logo.png";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import { GoArrowRight } from "react-icons/go";
@@ -15,7 +14,7 @@ import { FaFacebookF, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { IoMdPaperPlane } from "react-icons/io";
 import { MdLocationPin } from "react-icons/md";
 
-const Navbar = () => {
+const Navbar2 = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMobileMenu, setActiveMobileMenu] = useState(null);
@@ -48,9 +47,13 @@ const Navbar = () => {
           to: "/",
           label: "Main Demo",
           children: [
-            { to: "/home-dark", label: "Dark Version" },
-            { to: "/home-light", label: "Light Version" },
-            { to: "/home-classic", label: "Classic Version" },
+            { to: "/", label: "Environment Main Demo" },
+            { to: "/home2", label: "Environment Dark Version" },
+            { to: "/home3", label: "Environment Classic Version" },
+            {
+              to: "/home4",
+              label: "Environment Classic Dark Version",
+            },
           ],
         },
         { to: "/home2", label: "University Demo" },
@@ -109,54 +112,55 @@ const Navbar = () => {
   // Menu Sidebar
 
   const [isOpen, setIsOpen] = useState(false);
-  useEffect(() => {
-    const popup = document.getElementById("popup-scroll-area");
 
-    if (!popup) return;
+  useEffect(() => {
+    const popups = document.querySelectorAll(".popup-scroll-area");
+
+    if (!popups.length) return;
 
     const stopScroll = (e) => e.stopPropagation();
 
-    popup.addEventListener("wheel", stopScroll, { passive: false });
-    popup.addEventListener("touchmove", stopScroll, { passive: false });
+    popups.forEach((popup) => {
+      popup.addEventListener("wheel", stopScroll, { passive: false });
+      popup.addEventListener("touchmove", stopScroll, { passive: false });
+    });
 
-    // 🧠 Optional: Pause GSAP ScrollSmoother when popup is open
+    // Pause GSAP ScrollSmoother when popup is open
     if (window.ScrollSmoother?.get()) {
       const smoother = window.ScrollSmoother.get();
       isOpen ? smoother.paused(true) : smoother.paused(false);
     }
 
     return () => {
-      popup.removeEventListener("wheel", stopScroll);
-      popup.removeEventListener("touchmove", stopScroll);
+      popups.forEach((popup) => {
+        popup.removeEventListener("wheel", stopScroll);
+        popup.removeEventListener("touchmove", stopScroll);
+      });
     };
   }, [isOpen]);
 
   return (
     <div>
-      <div className="flex justify-center mt-16 w-full">
+      <div className="flex justify-center mt-4 md:mt-7 xl:mt-16 w-full">
         <header
-          className={`absolute z-50 inline-block w-full max-w-[1720px] transition-all duration-500 bg-white rounded-[20px] ${
+          className={`absolute z-50 inline-block w-[calc(100%-30px)] md:w-[calc(100%-60px)] 3xl:max-w-[1720px] transition-all duration-500 bg-BodyBgDark2-0 rounded-[20px] ${
             isSticky
-              ? "!fixed top-0 shadow-cases !w-[calc(100%-60px)] max-w-full rounded-t-none bg-SecondaryColor-0 lg:bg-white animate-headerSlideDown border-transparent"
+              ? "!fixed top-0 !w-[calc(100%-60px)] max-w-full rounded-t-none bg-BodyBgDark2-0 animate-headerSlideDown border-transparent"
               : ""
           }`}
         >
-          <div className="px-2 sm:px-3 md:px-5 lg:px-2 xl:px-5 2xl:px-8 3xl:px-[50px] py-4 lg:py-0">
+          <div className="px-3 md:px-5 lg:px-2 xl:px-5 2xl:px-8 3xl:px-[50px] py-4 lg:py-0">
             <div className="flex items-center justify-between gap-5">
               <div className="">
                 <Link to="/" title="Econet">
-                  <img
-                    src={logo}
-                    draggable="false"
-                    className="brightness-0 invert-[1] lg:brightness-100 lg:invert-0"
-                  />
+                  <img src={logo2} draggable="false" />
                 </Link>
               </div>
 
               {/* Desktop Menu */}
-              <div className="hidden lg:block 2xl:ml-24">
+              <div className="hidden lg:block">
                 <nav>
-                  <ul className="flex gap-8 text-sm font-medium">
+                  <ul className="flex gap-2 xl:gap-5 2xl:gap-8 text-sm font-medium">
                     {menuItems.map((item, idx) => (
                       <li key={idx} className="relative z-10 group">
                         {item.links.length > 1 ? (
@@ -164,18 +168,18 @@ const Navbar = () => {
                             <Link
                               to="#"
                               data-text={item.label}
-                              className={`clip-hover inline-flex items-center gap-1.5 mx-1 my-[31px] font-Outfit font-medium capitalize text-lg transition-all duration-500 hover:text-PrimaryColor-0 relative z-10 overflow-hidden
+                              className={`clip-hover inline-flex items-center gap-1.5 2xl:mx-1 my-[31px] font-Outfit font-medium capitalize text-lg transition-all duration-500 hover:text-PrimaryColor-0 relative z-10 overflow-hidden
                                 ${
                                   isParentActive(item.links)
                                     ? "text-PrimaryColor-0"
-                                    : "text-HeadingColor-0"
+                                    : "text-white"
                                 }`}
                             >
                               {item.label}
                               <FaChevronDown size={12} className="mt-[2px]" />
                             </Link>
 
-                            <ul className="absolute z-50 -left-1 top-full origin-top w-64 bg-white text-HeadingColor-0 rounded-md border-t-[3px] border-PrimaryColor-0 shadow-cases scale-y-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                            <ul className="absolute z-50 -left-1 top-full origin-top w-64 bg-BodyBgDark2-0 text-white rounded-md border-t-[3px] border-PrimaryColor-0 scale-y-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
                               {item.links.map((link, i) => (
                                 <li
                                   key={i}
@@ -195,12 +199,12 @@ const Navbar = () => {
 
                                   {/* Grandchild submenu */}
                                   {link.children && (
-                                    <ul className="absolute top-full left-full w-64 bg-white text-HeadingColor-0 rounded-md border-t-[3px] border-PrimaryColor-0 shadow-cases scale-y-0 opacity-0 invisible origin-top-left transition-all duration-500 group-hover/submenu:opacity-100 group-hover/submenu:visible group-hover/submenu:scale-y-100">
+                                    <ul className="absolute top-0 left-full w-64 bg-BodyBgDark2-0 text-white rounded-md border-t-[3px] border-PrimaryColor-0 scale-y-0 opacity-0 invisible origin-top-left transition-all duration-500 group-hover/submenu:opacity-100 group-hover/submenu:visible group-hover/submenu:scale-y-100">
                                       {link.children.map((child, j) => (
                                         <li key={j}>
                                           <Link
                                             to={child.to}
-                                            className={`block px-7 py-3 border-b border-SecondaryColor-0 border-opacity-10 font-Outfit font-medium transition-all duration-500 relative z-10 before:absolute before:left-0 before:top-auto before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:bottom-auto hover:before:top-0 hover:text-white
+                                            className={`block px-5 py-3 border-b border-SecondaryColor-0 border-opacity-10 font-Outfit font-medium transition-all duration-500 relative z-10 before:absolute before:left-0 before:top-auto before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:bottom-auto hover:before:top-0 hover:text-white
                                             ${
                                               currentPath === child.to
                                                 ? "before:h-full text-white"
@@ -224,7 +228,7 @@ const Navbar = () => {
                             className={`inline-flex items-center gap-1.5 mx-1 my-[31px] font-Outfit font-medium text-lg capitalize transition-all duration-500 hover:text-PrimaryColor-0 relative z-10 overflow-hidden ${
                               currentPath === item.links[0].to
                                 ? "text-PrimaryColor-0"
-                                : "text-HeadingColor-0"
+                                : "text-white"
                             }`}
                           >
                             {item.label}
@@ -237,35 +241,41 @@ const Navbar = () => {
               </div>
 
               {/* Button + Sidebar + Hamburger */}
-              <div>
-                <div className="flex items-center gap-2 sm:gap-7 lg:gap-5 xl:gap-[34px]">
-                  <div className="flex items-center gap-4">
+              <div className="inline-block">
+                <div className="inline-flex items-center gap-2 sm:gap-7 lg:gap-5 xl:gap-8">
+                  <div className="hidden sm:flex items-center gap-4">
                     <PrimaryButton
                       as="link"
                       href="/about"
-                      className="!py-2.5 !px-7 bg-SecondaryColor-0"
+                      className="!py-2.5 !px-7 bg-white bg-opacity-10"
                     >
                       Get a Quote <GoArrowRight size={22} />
                     </PrimaryButton>
                   </div>
                   <div
-                    className="group size-8 md:size-10 bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
+                    className="hidden group bg-transparent xl:flex items-center justify-center gap-3 cursor-pointer"
                     onClick={() => setIsOpen(true)}
                   >
+                    <h5 className="hidden 2xl:block font-Outfit text-lg text-white font-medium">
+                      Sidebar
+                    </h5>
                     <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
-                      <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
-                      <span className="bg-SecondaryColor-0 w-6 md:w-6 h-0.5 rounded-xl block"></span>
-                      <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                      <span className="bg-PrimaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                      <span className="bg-PrimaryColor-0 w-6 md:w-6 h-0.5 rounded-xl block"></span>
+                      <span className="bg-PrimaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
                     </button>
                   </div>
                   <div
-                    className="lg:hidden group size-8 md:size-10 bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
+                    className="lg:hidden group bg-transparent flex items-center justify-center gap-3 cursor-pointer"
                     onClick={() => setMobileOpen(true)}
                   >
+                    <h5 className="hidden md:block font-Outfit text-lg text-white font-medium">
+                      Menu
+                    </h5>
                     <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
-                      <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
-                      <span className="bg-SecondaryColor-0 w-6 md:w-6 h-0.5 rounded-xl block"></span>
-                      <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                      <span className="bg-PrimaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                      <span className="bg-PrimaryColor-0 w-6 md:w-6 h-0.5 rounded-xl block"></span>
+                      <span className="bg-PrimaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
                     </button>
                   </div>
                 </div>
@@ -279,133 +289,146 @@ const Navbar = () => {
               mobileOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div className="p-4 flex justify-between items-center border-b border-white border-opacity-15">
-              <h2 className="font-Outfit text-2xl font-medium text-white">
-                Menu
-              </h2>
-              <button
-                onClick={() => setMobileOpen(false)}
-                className="text-2xl text-white transition-all duration-500 hover:rotate-180"
-              >
-                <CgClose />
-              </button>
-            </div>
+            <div className="popup-scroll-area">
+              <div className="p-4 flex justify-between items-center border-b border-white border-opacity-15">
+                <h2 className="font-Outfit text-2xl font-medium text-white">
+                  Menu
+                </h2>
+                <button
+                  onClick={() => setMobileOpen(false)}
+                  className="text-2xl text-white transition-all duration-500 hover:rotate-180"
+                >
+                  <CgClose />
+                </button>
+              </div>
 
-            <ul className="p-4 mt-5">
-              {menuItems.map((item, idx) => (
-                <li key={idx}>
-                  {item.links.length > 1 ? (
-                    <>
-                      <button
-                        onClick={() => toggleMobileMenu(item.label)}
-                        className={`w-full text-left inline-flex items-center justify-between py-3 ${
-                          idx !== item.links.length - 1
-                            ? "border-b border-white border-opacity-15"
-                            : ""
-                        } font-Outfit text-lg text-white capitalize transition-all duration-500 relative z-10 overflow-hidden group-hover:text-PrimaryColor-0 hover:pl-3`}
-                      >
-                        {item.label}
-                        <FaChevronDown
-                          className={`transition-transform duration-500 ${
-                            activeMobileMenu === item.label ? "rotate-180" : ""
+              <ul className="p-4 mt-5">
+                {menuItems.map((item, idx) => (
+                  <li key={idx}>
+                    {item.links.length > 1 ? (
+                      <>
+                        <button
+                          onClick={() => toggleMobileMenu(item.label)}
+                          className={`w-full text-left inline-flex items-center justify-between py-3 ${
+                            idx !== item.links.length - 1
+                              ? "border-b border-white border-opacity-15"
+                              : ""
+                          } font-Outfit text-lg text-white capitalize transition-all duration-500 relative z-10 overflow-hidden group-hover:text-PrimaryColor-0 hover:pl-3`}
+                        >
+                          {item.label}
+                          <FaChevronDown
+                            className={`transition-transform duration-500 ${
+                              activeMobileMenu === item.label
+                                ? "rotate-180"
+                                : ""
+                            }`}
+                          />
+                        </button>
+
+                        <div
+                          className={`overflow-hidden transition-all duration-500 ${
+                            activeMobileMenu === item.label
+                              ? "max-h-screen"
+                              : "max-h-0"
                           }`}
-                        />
-                      </button>
+                        >
+                          <ul className="pl-3 mt-2 sm:text-2xl">
+                            {item.links.map((link, i) => (
+                              <li key={i}>
+                                <div>
+                                  {link.children ? (
+                                    <>
+                                      <button
+                                        onClick={() =>
+                                          setActiveMobileSubMenu((prev) =>
+                                            prev === link.label
+                                              ? null
+                                              : link.label
+                                          )
+                                        }
+                                        className={`w-full text-left inline-flex items-center justify-between px-5 py-3 border-b border-white border-opacity-15 font-Outfit text-lg text-white transition-all duration-500 relative z-10 before:absolute before:left-0 before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:before:top-0 hover:text-white ${
+                                          currentPath === link.to
+                                            ? "before:h-full text-white border-none"
+                                            : ""
+                                        }
+                                        `}
+                                      >
+                                        {link.label}
+                                        <FaChevronDown
+                                          className={`transition-transform duration-500 ${
+                                            activeMobileSubMenu === link.label
+                                              ? "rotate-180"
+                                              : ""
+                                          }`}
+                                        />
+                                      </button>
 
-                      <div
-                        className={`overflow-hidden transition-all duration-500 ${
-                          activeMobileMenu === item.label
-                            ? "max-h-screen"
-                            : "max-h-0"
-                        }`}
-                      >
-                        <ul className="pl-3 mt-2 sm:text-2xl">
-                          {item.links.map((link, i) => (
-                            <li key={i}>
-                              <div>
-                                {link.children ? (
-                                  <>
-                                    <button
-                                      onClick={() =>
-                                        setActiveMobileSubMenu((prev) =>
-                                          prev === link.label
-                                            ? null
-                                            : link.label
-                                        )
-                                      }
-                                      className={`w-full text-left block px-5 py-3 border-b border-white border-opacity-15" font-Outfit text-lg text-white transition-all duration-500 relative z-10 before:absolute before:left-0 before:top-auto before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:bottom-auto hover:before:top-0 hover:text-white ${
+                                      <div
+                                        className={`transition-all duration-500 overflow-hidden ${
+                                          activeMobileSubMenu === link.label
+                                            ? "max-h-80"
+                                            : "max-h-0"
+                                        }`}
+                                      >
+                                        <ul className="ml-4">
+                                          {link.children.map((child, j) => (
+                                            <li key={j}>
+                                              <Link
+                                                to={child.to}
+                                                onClick={() =>
+                                                  setMobileOpen(false)
+                                                }
+                                                className="block py-2 pl-2 text-base text-white hover:text-PrimaryColor-0 transition-all duration-500 hover:pl-4 border-b border-white border-opacity-15"
+                                              >
+                                                {child.label}
+                                              </Link>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    </>
+                                  ) : (
+                                    <Link
+                                      to={link.to}
+                                      onClick={() => setMobileOpen(false)}
+                                      className={`block px-5 py-2 border-b border-white border-opacity-15 font-Outfit text-lg text-white transition-all duration-500 relative z-10 before:absolute before:left-0 before:bottom-0 before:w-full before:h-0 before:transition-all before:duration-500 before:bg-PrimaryColor-0 before:-z-10 hover:before:h-full hover:before:top-0 hover:text-white ${
                                         currentPath === link.to
-                                          ? "before:h-full text-white border-none"
+                                          ? "before:h-full text-white"
                                           : ""
-                                      }`}
+                                      }
+                                      `}
                                     >
                                       {link.label}
-                                    </button>
-
-                                    <div
-                                      className={`transition-all duration-500 overflow-hidden ${
-                                        activeMobileSubMenu === link.label
-                                          ? "max-h-80"
-                                          : "max-h-0"
-                                      }`}
-                                    >
-                                      <ul className="ml-4">
-                                        {link.children.map((child, j) => (
-                                          <li key={j}>
-                                            <Link
-                                              to={child.to}
-                                              onClick={() =>
-                                                setMobileOpen(false)
-                                              }
-                                              className={`block py-2 pl-2 text-base text-white hover:text-PrimaryColor-0 transition-all duration-500 hover:pl-4 border-b border-white border-opacity-15`}
-                                            >
-                                              {child.label}
-                                            </Link>
-                                          </li>
-                                        ))}
-                                      </ul>
-                                    </div>
-                                  </>
-                                ) : (
-                                  <Link
-                                    to={link.to}
-                                    onClick={() => setMobileOpen(false)}
-                                    className={`block px-5 py-2 border-b border-white border-opacity-15 font-Outfit text-lg text-white transition-all duration-500 relative z-10 before:absolute before:left-0 before:top-auto before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:bottom-auto hover:before:top-0 hover:text-white ${
-                                      currentPath === link.to
-                                        ? "before:h-full text-white"
-                                        : ""
-                                    }`}
-                                  >
-                                    {link.label}
-                                  </Link>
-                                )}
-                              </div>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </>
-                  ) : (
-                    // Single link, no submenu
-                    <Link
-                      to={item.links[0].to}
-                      onClick={() => setMobileOpen(false)}
-                      className={`block w-full text-left py-2.5 ${
-                        idx !== menuItems.length - 1
-                          ? "border-b border-white border-opacity-15"
-                          : ""
-                      } font-Outfit text-lg text-white capitalize transition-all duration-500 relative z-10 hover:text-PrimaryColor-0 hover:pl-3 ${
-                        currentPath === item.links[0].to
-                          ? "text-PrimaryColor-0"
-                          : ""
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
+                                    </Link>
+                                  )}
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </>
+                    ) : (
+                      // Single link, no submenu
+                      <Link
+                        to={item.links[0].to}
+                        onClick={() => setMobileOpen(false)}
+                        className={`block w-full text-left py-2.5 ${
+                          idx !== menuItems.length - 1
+                            ? "border-b border-white border-opacity-15"
+                            : ""
+                        } font-Outfit text-lg text-white capitalize transition-all duration-500 relative z-10 hover:text-PrimaryColor-0 hover:pl-3 ${
+                          currentPath === item.links[0].to
+                            ? "text-PrimaryColor-0"
+                            : ""
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Overlay */}
@@ -420,141 +443,138 @@ const Navbar = () => {
         </header>
       </div>
 
-       {/* Sidebar */}
-            <div
-              className={`fixed top-0 right-0 z-[99] h-screen w-full max-w-[400px] bg-[#041424] shadow-[0_20px_50px_0_#04142466] transition-all duration-500 ${
-                isOpen
-                  ? "translate-x-0 opacity-100 visible"
-                  : "translate-x-full opacity-0 invisible"
-              }`}
-            >
-              <div
-                id="popup-scroll-area"
-                className="relative h-full overflow-y-auto p-9 pr-4"
-              >
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="absolute top-7 right-7 h-10 w-10 bg-PrimaryColor-0 text-white flex items-center justify-center rounded-full"
-                >
-                  <CgClose className="text-xl transition-all duration-500 hover:rotate-180" />
-                </button>
-      
-                <div className="mb-6">
-                  <Link to="/">
-                    <img src={logo2} alt="Logo" draggable="false" />
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 right-0 z-[99] h-screen w-full max-w-[400px] bg-[#041424] shadow-[0_20px_50px_0_#04142466] transition-all duration-500 ${
+          isOpen
+            ? "translate-x-0 opacity-100 visible"
+            : "translate-x-full opacity-0 invisible"
+        }`}
+      >
+        <div className="popup-scroll-area relative h-full overflow-y-auto p-9 pr-4">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-7 right-7 h-10 w-10 bg-PrimaryColor-0 text-white flex items-center justify-center rounded-full"
+          >
+            <CgClose className="text-xl transition-all duration-500 hover:rotate-180" />
+          </button>
+
+          <div className="mb-6">
+            <Link to="/">
+              <img src={logo2} alt="Logo" draggable="false" />
+            </Link>
+          </div>
+
+          <p className="text-TextColor2-0 font-light text-[15px] font-NotoSans mb-5">
+            Econet is a nonprofit advancing sustainability through energy,
+            ecology, and education—empowering communities since 1998.
+          </p>
+
+          <div>
+            <h5 className="text-white text-xl font-Outfit mb-5">
+              What Services We Provide?
+            </h5>
+            <ul className="list-disc list-inside text-TextColor2-0 font-NotoSans font-medium space-y-2">
+              {[
+                "Solar & Wind Power",
+                "Tree & Forest Care",
+                "Recycling & Cleanups",
+                "Eco-Friendly Buildings",
+                "Smart Climate Tools",
+                "Green Learning",
+                "Nature Fix Projects",
+                "Water Saving Projects",
+                "Clean Air Actions",
+                "Green Jobs Training",
+              ].map((service, i) => (
+                <li key={i}>
+                  <Link to="/" className="hover:text-white transition-all">
+                    {service}
                   </Link>
-                </div>
-      
-                <p className="text-TextColor2-0 font-light text-[15px] font-NotoSans mb-5">
-                  Econet is a nonprofit advancing sustainability through energy,
-                  ecology, and education—empowering communities since 1998.
-                </p>
-      
-                <div>
-                  <h5 className="text-white text-xl font-Outfit mb-5">
-                    What Services We Provide?
-                  </h5>
-                  <ul className="list-disc list-inside text-TextColor2-0 font-NotoSans font-medium space-y-2">
-                    {[
-                      "Solar & Wind Power",
-                      "Tree & Forest Care",
-                      "Recycling & Cleanups",
-                      "Eco-Friendly Buildings",
-                      "Smart Climate Tools",
-                      "Green Learning",
-                      "Nature Fix Projects",
-                      "Water Saving Projects",
-                      "Clean Air Actions",
-                      "Green Jobs Training",
-                    ].map((service, i) => (
-                      <li key={i}>
-                        <Link to="/" className="hover:text-white transition-all">
-                          {service}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-      
-                <div className="mt-8 mb-12">
-                  <h5 className="text-white text-xl font-medium font-Outfit mb-6">
-                    Have Questions? Contact Our Team!
-                  </h5>
-                  <ul className="space-y-4 text-white text-sm font-Outfit">
-                    <li className="flex items-center">
-                      <MdLocationPin className="text-PrimaryColor-0 text-xl" />
-                      <h5 className="ml-1">Melbone st, Australia, Ny 12099</h5>
-                    </li>
-                    <li className="flex items-center">
-                      <FaEnvelope className="text-PrimaryColor-0" />
-                      <a
-                        href="mailto:info.econet@gmail.com"
-                        title="info.econet@gmail.com"
-                        className="ml-2 hover:text-PrimaryColor-0 transition"
-                      >
-                        info.econet@gmail.com
-                      </a>
-                    </li>
-                    <li className="flex items-center">
-                      <FaPhoneAlt className="text-PrimaryColor-0" />
-                      <a
-                        href="tel:+48555223224"
-                        title="+48 555 223 224"
-                        className="ml-2 hover:text-PrimaryColor-0 transition"
-                      >
-                        +48 555 223 224
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-      
-                <div className="mb-10">
-                  <h4 className="text-white text-xl font-normal font-Outfit mb-6">
-                    Get Update
-                  </h4>
-                  <form className="relative">
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Enter E-Mail"
-                      required
-                      className="w-full h-[60px] pl-5 pr-[80px] rounded-full bg-transparent border border-white/10 text-white placeholder:text-white/35 outline-none"
-                    />
-                    <button
-                      type="submit"
-                      className="absolute bottom-0 right-0 h-[60px] w-[60px] rounded-r-full bg-PrimaryColor-0 text-white text-xl flex items-center justify-center overflow-hidden"
-                    >
-                      <IoMdPaperPlane />
-                    </button>
-                  </form>
-                </div>
-      
-                <ul className="flex items-center gap-3 mt-6">
-                  {[FaFacebookF, FaXTwitter, FaPinterestP, FaLinkedinIn].map(
-                    (Icon, i) => (
-                      <li key={i}>
-                        <Link
-                          to="/"
-                          className="size-12 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-white overflow-hidden transition-all duration-500 hover:text-white relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:rotate-180 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100 hover:before:rotate-0"
-                        >
-                          <Icon />
-                        </Link>
-                      </li>
-                    )
-                  )}
-                </ul>
-              </div>
-            </div>
-      
-            {/* Overlay */}
-            <div
-              onClick={() => setIsOpen(false)}
-              className={`fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-all duration-500 cursor-[url("/images/cross.png"),_pointer] ${
-                isOpen ? "opacity-100 visible left-0" : "opacity-0 invisible left-1/2"
-              }`}
-            ></div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-8 mb-12">
+            <h5 className="text-white text-xl font-medium font-Outfit mb-6">
+              Have Questions? Contact Our Team!
+            </h5>
+            <ul className="space-y-4 text-white text-sm font-Outfit">
+              <li className="flex items-center">
+                <MdLocationPin className="text-PrimaryColor-0 text-xl" />
+                <h5 className="ml-1">Melbone st, Australia, Ny 12099</h5>
+              </li>
+              <li className="flex items-center">
+                <FaEnvelope className="text-PrimaryColor-0" />
+                <a
+                  href="mailto:info.econet@gmail.com"
+                  title="info.econet@gmail.com"
+                  className="ml-2 hover:text-PrimaryColor-0 transition"
+                >
+                  info.econet@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center">
+                <FaPhoneAlt className="text-PrimaryColor-0" />
+                <a
+                  href="tel:+48555223224"
+                  title="+48 555 223 224"
+                  className="ml-2 hover:text-PrimaryColor-0 transition"
+                >
+                  +48 555 223 224
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="mb-10">
+            <h4 className="text-white text-xl font-normal font-Outfit mb-6">
+              Get Update
+            </h4>
+            <form className="relative">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter E-Mail"
+                required
+                className="w-full h-[60px] pl-5 pr-[80px] rounded-full bg-transparent border border-white/10 text-white placeholder:text-white/35 outline-none"
+              />
+              <button
+                type="submit"
+                className="absolute bottom-0 right-0 h-[60px] w-[60px] rounded-r-full bg-PrimaryColor-0 text-white text-xl flex items-center justify-center overflow-hidden"
+              >
+                <IoMdPaperPlane />
+              </button>
+            </form>
+          </div>
+
+          <ul className="flex items-center gap-3 mt-6">
+            {[FaFacebookF, FaXTwitter, FaPinterestP, FaLinkedinIn].map(
+              (Icon, i) => (
+                <li key={i}>
+                  <Link
+                    to="/"
+                    className="size-12 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-white overflow-hidden transition-all duration-500 hover:text-white relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:rotate-180 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100 hover:before:rotate-0"
+                  >
+                    <Icon />
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
+        </div>
+      </div>
+
+      {/* Overlay */}
+      <div
+        onClick={() => setIsOpen(false)}
+        className={`fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-all duration-500 cursor-[url("/images/cross.png"),_pointer] ${
+          isOpen ? "opacity-100 visible left-0" : "opacity-0 invisible left-1/2"
+        }`}
+      ></div>
     </div>
   );
 };
 
-export default Navbar;
+export default Navbar2;

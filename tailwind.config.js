@@ -17,6 +17,7 @@ export default {
         ReviewText: ['#ffb108'],
         BodyBg: ['#f8f9f5'],
         BodyBgDark: ['#182f24'],
+        BodyBgDark2: ['#243b30'],
         BoxBg: ['#fff4dd'],
         BoxBg2: ['#f1ffde'],
         BoxBg3: ['#e7ffd8'],

@@ -14,7 +14,7 @@ const serviceCard = [
     serviceUrl: "/service_details",
     serviceBtnIcon: <IoMdLogIn />,
     boxBg: true,
-    titlePb: "pb-[31px]",
+    titlePb: "pb-[25px]",
     iconTop: "top-8 sm:top-8 md:top-7 xl:top-12 3xl:top-5",
   },
   {
@@ -23,7 +23,7 @@ const serviceCard = [
     serviceUrl: "/service_details",
     serviceBtnIcon: <IoMdLogIn />,
     boxBg: true,
-    titlePb: "pb-[31px]",
+    titlePb: "pb-[25px]",
     iconTop: "top-8 sm:top-8 md:top-7 xl:top-12 3xl:top-5",
   },
   {
@@ -32,7 +32,7 @@ const serviceCard = [
     serviceUrl: "/service_details",
     serviceBtnIcon: <IoMdLogIn />,
     boxBg2: true,
-    titlePb: "pb-5 sm:pb-[30px]",
+    titlePb: "pb-5 sm:pb-[25px]",
     iconTop: "top-4 sm:top-3 xl:top-9 3xl:top-0",
   },
   {
@@ -41,14 +41,14 @@ const serviceCard = [
     serviceUrl: "/service_details",
     serviceBtnIcon: <IoMdLogIn />,
     boxBg2: true,
-    titlePb: "pb-5 sm:pb-[30px]",
+    titlePb: "pb-5 sm:pb-[25px]",
     iconTop: "top-4 sm:top-3 xl:top-9 3xl:top-0",
   },
 ];
 
 const Service = () => {
   return (
-    <section className="relative py-16 md:py-20 lg:py-[120px] bg-BodyBg-0 overflow-hidden">
+    <section className="relative z-20 py-16 md:py-20 lg:py-[120px] rounded-xl sm:rounded-2xl md:rounded-b-[50px] bg-BodyBg-0 overflow-hidden">
       <div className="fade-left absolute left-[15%] top-36">
         <img
           src={shape}

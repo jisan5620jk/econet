@@ -11,10 +11,10 @@ import Feature from "../Feature/Feature";
 
 const About = () => {
   return (
-    <div className="relative z-10">
+    <div className="relative z-10 -mt-[52px]">
       <section className="bg-white pt-16 md:pt-20 lg:pt-[120px] relative">
         <div className="Container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-[92px] lg:gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-[92px] lg:gap-10 items-start pt-[52px]">
             <div className="relative">
               <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
                 <img src={subtitleIcon} alt="Icon" draggable={false} /> About Us
