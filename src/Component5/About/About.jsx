@@ -1,98 +1,152 @@
-import aboutThumb from "/images/about-thumb71.png";
-import aboutThumb2 from "/images/about-thumb72.png";
-import shape from "/images/about-shape72.png";
-import user from "/images/autor-ins8.png";
-import shape3 from "/images/about-shape71.png";
-import icon from "/images/about-icon7.png";
-import { Link } from "react-router-dom";
-import { HiArrowNarrowRight } from "react-icons/hi";
+import subtitleIcon from "/images/sub-title-icon.png";
+import aboutThumb from "/images/about2-thumb.png";
+import shape from "/images/about2-shape.gif";
+import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
+import { GoArrowRight } from "react-icons/go";
 import OnScrollCounter from "../../Shared/Counter/OnScrollCounter";
-import { FaCircle } from "react-icons/fa";
-import Category from "../Category/Category";
+
+const cardData = [
+  {
+    Bg: "/images/about2-card.png",
+    counter: 10,
+    counterSuffix: "K+",
+    description: "Our Total Completed Solar Projects",
+  },
+  {
+    Bg: "/images/about2-card2.png",
+    counter: 98,
+    counterSuffix: "%",
+    description: "Customer Satisfaction Rates",
+  },
+];
+
+const itemData = [
+  {
+    icon: "/images/about2-icon.png",
+    title: "Expert Installation Team",
+    description:
+      "We leverage real environmental data tailor projects that maximize ecology benefit in your region",
+  },
+  {
+    icon: "/images/about2-icon2.png",
+    title: "24 Hours Clients Supports",
+    description:
+      "We leverage real environmental data tailor projects that maximize ecology benefit in your region",
+  },
+];
 
 const About = () => {
   return (
-    <section className='bg-PrimaryColor-0 pt-16 md:pt-20 lg:pt-28 relative z-10 before:absolute before:left-0 before:top-0 before:w-full before:h-[80%] before:bg-[url("/images/about-bg7.png")] before:bg-no-repeat before:bg-cover before:bg-center'>
-      <div className="Container">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-[92px] lg:gap-10 items-center">
-          <div className="col-span-1 lg:col-span-7 relative z-10 inline-block">
-            <div className="flex gap-6 h-auto sm:h-[600px] w-full">
-              <img
-                src={aboutThumb}
-                draggable="false"
-                className="w-full md:max-w-[inherit] lg:w-[48%] 2xl:!w-auto lg:max-w-full 2xl:max-w-[inherit] mb-auto"
-              />
-              <img
-                src={aboutThumb2}
-                draggable="false"
-                className="w-full md:max-w-[inherit] lg:w-[48%] 2xl:!w-auto lg:max-w-full 2xl:max-w-[inherit] mt-auto"
-              />
-            </div>
-            <img
-              src={shape}
-              draggable={false}
-              alt="Shape"
-              className="absolute -z-10 bottom-2 lg:left-16 animate-wiggle hidden sm:block"
-            />
-            <div className="hidden absolute top-2 lg:top-5 right-10 lg:right-0 xl:right-5 2xl:right-24 bg-BodyBg3-0 border-2 border-white rounded-se-[30px] rounded-bl-[30px] px-6 py-5 md:inline-flex gap-4 items-start">
-              <div>
-                <img src={user} draggable={false} alt="User Image" />
-              </div>
-              <div>
-                <div className="!font-Outfit font-semibold text-[26px] text-HeadingColor-0 flex gap-1 items-center">
-                  <OnScrollCounter start={0} end={130} duration={3000} />
-                  <span>+</span>
-                </div>
-                <h5 className="font-NotoSans text-HeadingColor-0 -mt-1">
-                  Expert Instructor
-                </h5>
-              </div>
-            </div>
-          </div>
-          <div className="col-span-1 lg:col-span-5 relative">
-            <h5 className="font-NotoSans bg-white bg-opacity-20 pl-4 pr-5 py-[7px] rounded-r-full border border-PrimaryColor-0 border-opacity-20 text-HeadingColor-0 text-sm inline-flex items-center gap-2 uppercase">
-              <span className="text-PrimaryColor-0">
-                <FaCircle size={10} />
-              </span>
-              about our educate
-            </h5>
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[45px] 2xl:leading-[55px] text-HeadingColor-0 mt-2 sm:mt-[18px] mb-4">
-              Tools and Techniques for
-              <br />
-              Online <span className="text-PrimaryColor-0">Teaching</span>
-            </h1>
-            <p className="font-NotoSans text-TextColor-0 text-[17px] w-full max-w-[500px] mb-9">
-              Experience future of learning our education-focused to main
-              backgroud courses pro designed to and empower learners courses
-              combine teaching tools.
-            </p>
-            <h5 className="font-Outfit font-medium text-SecondaryColor-0 text-xl flex items-end gap-5">
-              <img src={icon} draggable={false} alt="Icon" />
-              Flexible Shedule Classes
-            </h5>
-            <p className="font-NotoSans text-TextColor-0 text-[17px] w-full max-w-[500px] mt-8 mb-12">
-              Backgroud courses pro designed to and empower learners courses
-              combine teaching tools.
-            </p>
+    <div className="px-2 md:px-4 3xl:px-8 bg-SecondaryColor-0 relative z-10 -mt-5 overflow-hidden">
+      <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-right py-16 md:py-20 lg:py-[120px] relative z-10 rounded-[20px] overflow-hidden">
+        <div className="Container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 mt-5">
             <div>
-              <Link to={"/about"} className="primary-btn2">
-                Start Trial
-                <HiArrowNarrowRight size={20} />
-              </Link>
+              <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+                <img src={subtitleIcon} alt="Icon" draggable={false} /> About Us
+              </h5>
+              <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+                Leading the Transition to
+                <br />
+                Renewable Energy
+              </h1>
+              <div className="mt-5">
+                <img src={aboutThumb} draggable={false} alt="About Image" />
+              </div>
+            </div>
+            <div>
+              <div className="box-row grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {cardData.map((card, index) => (
+                  <div key={index} className={`box group px-10 pt-8 pb-[34px] relative z-10`}>
+                    {/* Card BG */}
+                    <div className="absolute -z-10 top-0 right-0 w-full h-full">
+                      <img
+                        src={card.Bg}
+                        alt="Card Background"
+                        draggable={false}
+                        className="w-full h-full"
+                      />
+                    </div>
+
+                    {/* Card Counter */}
+                    <div className="!font-Outfit font-semibold text-[50px] leading-7 text-white flex gap-1 justify-start items-center">
+                      <OnScrollCounter
+                        start={0}
+                        end={card.counter}
+                        duration={1000}
+                      />
+                      <span className="-mt-2">{card.counterSuffix}</span>
+                    </div>
+
+                    {/* Descrition */}
+                    <h5 className="font-NotoSans text-white text-lg w-full max-w-[180px] mt-4">
+                      {card.description}
+                    </h5>
+                  </div>
+                ))}
+              </div>
+              <div className="box-row mt-6">
+                {itemData.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`box group flex flex-wrap xl:flex-nowrap items-center justify-between gap-5 py-9 lg:py-3 xl:py-9 border-SecondaryColor-0 border-opacity-10 ${
+                      index !== 0 ? "border-t" : ""
+                    }`}
+                  >
+                    <div className="flex items-center gap-7 xl:gap-4 2xl:gap-7">
+                      {/* Icon */}
+                      <div className="size-[74px] rounded-full flex items-center justify-center shrink-0 bg-PrimaryColor-0 relative z-10 overflow-hidden before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor2-0 before:rotate-180 before:transition-all before:duration-500 before:scale-0 before:-z-10 group-hover:before:scale-100 group-hover:before:rotate-0">
+                        <img
+                          src={item.icon}
+                          alt="Why Choose about Icon"
+                          draggable={false}
+                          className="group-hover:animate-wobble_vertical"
+                        />
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="font-Outfit text-xl sm:text-2xl xl:text-xl 2xl:text-2xl font-medium text-HeadingColor-0 md:w-[170px] lg:w-[inherit]">
+                        {item.title}
+                      </h3>
+                    </div>
+
+                    {/* Descrition */}
+                    <p className="font-NotoSans text-TextColor-0 max-w-[312px] xl:max-w-[280px] 2xl:max-w-[312px] w-full">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-2 md:mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-7">
+                <PrimaryButton as="link" href="/about">
+                  Explore Services <GoArrowRight size={22} />
+                </PrimaryButton>
+                <div>
+                  <h6 className="font-NotoSans text-[15px] text-TextColor-0 mb-1">
+                    Call Us (Toll Free)
+                  </h6>
+                  <a
+                    href="calto:+1456678032"
+                    title="+1 (456) 678 032"
+                    className="font-Outfit text-[22px] font-medium text-HeadingColor-0"
+                  >
+                    +1 (456) 678 032
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-[51%] left-24 z-10 hidden 2xl:block">
-        <img
-          src={shape3}
-          draggable={false}
-          alt="Shape"
-          className="animate-dance2"
-        />
-      </div>
-      <Category />
-    </section>
+        <div className="absolute -bottom-3 right-8 z-10 hidden 2xl:block">
+          <img
+            src={shape}
+            draggable={false}
+            alt="Shape"
+            className="w-full max-w-[356px]"
+          />
+        </div>
+      </section>
+    </div>
   );
 };
 

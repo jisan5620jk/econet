@@ -70,12 +70,12 @@ const Feature = () => {
     },
   };
   return (
-    <section className="bg-SecondaryColor-0 pt-16 md:pt-20 lg:pt-[120px] pb-28 md:pb-48 lg:pb-[170px] rounded-b-xl sm:rounded-b-2xl md:rounded-b-[50px] -mt-5">
+    <section className="bg-SecondaryColor-0 pt-16 md:pt-20 lg:pt-[120px] pb-28 md:pb-48 lg:pb-[170px] -mt-5">
       <div className="Container">
         <div className="flex items-center gap-20 pt-5">
           <div>
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
-              <img src={subtitleIcon} alt="Icon" draggable={false} /> About Us
+              <img src={subtitleIcon} alt="Icon" draggable={false} /> Features
             </h5>
             <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
               Reliable Solar Installation
