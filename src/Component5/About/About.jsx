@@ -38,9 +38,9 @@ const itemData = [
 const About = () => {
   return (
     <div className="px-2 md:px-4 3xl:px-8 bg-SecondaryColor-0 relative z-10 -mt-5 overflow-hidden">
-      <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-right py-16 md:py-20 lg:py-[120px] relative z-10 rounded-[20px] overflow-hidden">
+      <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] relative z-10 rounded-[20px] overflow-hidden">
         <div className="Container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 mt-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
             <div>
               <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
                 <img src={subtitleIcon} alt="Icon" draggable={false} /> About Us

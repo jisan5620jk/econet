@@ -65,6 +65,16 @@ const serviceData = [
     serviceBtnText: "Explore More",
     serviceBtnIcon: <GoArrowRight />,
   },
+  {
+    serviceImg: serviceImg3,
+    serviceTitle: "Solar Panel Cleaning",
+    serviceDesc:
+      "Environmental organizations maintainance dedicated to protecting",
+    serviceIcon: serviceIcon3,
+    serviceUrl: "/services/solar-cleaning",
+    serviceBtnText: "Explore More",
+    serviceBtnIcon: <GoArrowRight />,
+  },
 ];
 
 const Service = () => {

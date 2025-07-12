@@ -1,7 +1,9 @@
 import About from "../../Component5/About/About";
 import Banner from "../../Component5/Banner/Banner";
 import Feature from "../../Component5/Feature/Feature";
+import Project from "../../Component5/Project/Feature";
 import Service from "../../Component5/Service/Service";
+import WhyChoose from "../../Component5/Whychoose/WhyChoose";
 import BoxReveal from "../../Shared/BoxAnim/BoxReveal";
 
 const Home5 = () => {
@@ -12,6 +14,8 @@ const Home5 = () => {
       <Feature />
       <About />
       <Service />
+      <WhyChoose />
+      <Project />
     </>
   );
 };
