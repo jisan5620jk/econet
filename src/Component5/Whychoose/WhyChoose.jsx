@@ -85,11 +85,7 @@ const WhyChoose = () => {
           />
         </div>
         <div className="zoom-in absolute right-8 bottom-8">
-          <img
-            src={shape4}
-            draggable={false}
-            alt="Shape"
-          />
+          <img src={shape4} draggable={false} alt="Shape" />
         </div>
         <div className="Container pt-5">
           <div className="text-center">
@@ -98,9 +94,9 @@ const WhyChoose = () => {
               Us
             </h5>
             <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
-              We Bring Powerful Solution
+              Don’t Just Install Solar—We Build
               <br />
-              Protect Environment
+              Energy Partnerships
             </h1>
           </div>
           <div className="flex flex-col md:flex-row justify-between mt-[58px]">
