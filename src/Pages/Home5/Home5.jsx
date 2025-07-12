@@ -1,5 +1,7 @@
 import About from "../../Component5/About/About";
 import Banner from "../../Component5/Banner/Banner";
+import Blog from "../../Component5/Blog/Blog";
+import CallDoAction from "../../Component5/CallDoAction/CallDoAction";
 import Feature from "../../Component5/Feature/Feature";
 import Process from "../../Component5/Process/Process";
 import Project from "../../Component5/Project/Project";
@@ -18,6 +20,8 @@ const Home5 = () => {
       <WhyChoose />
       <Project />
       <Process />
+      <Blog />
+      <CallDoAction />
     </>
   );
 };
