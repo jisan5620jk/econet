@@ -1,6 +1,7 @@
 import About from "../../Component5/About/About";
 import Banner from "../../Component5/Banner/Banner";
 import Feature from "../../Component5/Feature/Feature";
+import Process from "../../Component5/Process/Process";
 import Project from "../../Component5/Project/Project";
 import Service from "../../Component5/Service/Service";
 import WhyChoose from "../../Component5/Whychoose/WhyChoose";
@@ -16,6 +17,7 @@ const Home5 = () => {
       <Service />
       <WhyChoose />
       <Project />
+      <Process />
     </>
   );
 };
