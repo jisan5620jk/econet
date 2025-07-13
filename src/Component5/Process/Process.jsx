@@ -42,7 +42,7 @@ const processData = [
 const Process = () => {
   return (
     <div className="bg-SecondaryColor-0 px-2 sm:px-4 2xl:px-8">
-      <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] rounded-t-[20px] relative z-10 overflow-hidden">
+      <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] rounded-t-[30px] relative z-10 overflow-hidden">
         <div className="Container">
           <div className="text-center">
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">

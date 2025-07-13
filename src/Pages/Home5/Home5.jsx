@@ -1,4 +1,5 @@
 import About from "../../Component5/About/About";
+import Appointment from "../../Component5/Appointment/Appointment";
 import Banner from "../../Component5/Banner/Banner";
 import Blog from "../../Component5/Blog/Blog";
 import CallDoAction from "../../Component5/CallDoAction/CallDoAction";
@@ -20,6 +21,7 @@ const Home5 = () => {
       <WhyChoose />
       <Project />
       <Process />
+      <Appointment />
       <Blog />
       <CallDoAction />
     </>
