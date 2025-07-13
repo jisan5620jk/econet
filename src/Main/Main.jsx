@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import BackToTop from "../Shared/BackToTop/BackToTop";
 import Footer from "../Shared/Footer/Footer";
@@ -14,6 +14,14 @@ import TextReveal from "../Shared/TextAnim/TextReveal";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
 const Main = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (smootherRef.current) {
+      smootherRef.current.scrollTo(0, true); // Scroll to top with animation
+    }
+  }, [location]);
+
   //image Reveal
 
   ImageReveal();

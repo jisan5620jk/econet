@@ -1,75 +1,129 @@
-import { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { Autoplay, EffectFade } from 'swiper/modules';
-import testiImg from '/images/testi-thumb7.png';
-import { MdOutlineStarPurple500 } from 'react-icons/md';
-import TestimonialCard from './TestimonialCard';
-import testiProfile from '/images/testi-autor7.png';
-import TestiNavigation from './TestiNavigation';
+import subtitleIcon from "/images/sub-title-icon.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { useRef } from "react";
+import TestimonialCard from "./TestimonialCard";
+import testiImg from "/images/testi2-img.png";
+import testiImg2 from "/images/testi2-img2.png";
+import testiImg3 from "/images/testi2-img3.png";
+import TestimonialNavigation from "./TestimonialNavigation";
+import { Autoplay } from "swiper/modules";
+import shape from "/images/why-choose2-shape4.png";
 
 const testiData = [
   {
-    id: 1,
-    testiImg,
-    testiTitle: 'Explore Genuine Feedback',
-    testiSubTitle: 'Clients Feedback',
-    testiDesc: `Enrolling in the Advanced digital marketing learning course was transfors pro lessons and personalized feedback enabled me to master marketing techniques I've already noticed a significant boost camp toun recommend this course to digital marketing skills!`,
-    testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiProfile,
-    testiName: 'Emily Jhonson',
-    testiDesignation: 'Teacher',
+    image: testiImg2,
+    name: "Anjelina Watson",
+    role: "UI Designer",
+    company: "Dream IT",
+    rating: 5.0,
+    review:
+      "Econet is a environmental organization maintaince dedicated to protecting planet through...",
   },
   {
-    id: 2,
-    testiImg,
-    testiTitle: 'Explore Genuine Feedback',
-    testiSubTitle: 'Clients Feedback',
-    testiDesc: `Enrolling in the Advanced digital marketing learning course was transfors pro lessons and personalized feedback enabled me to master marketing techniques I've already noticed a significant boost camp toun recommend this course to digital marketing skills!`,
-    testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiProfile,
-    testiName: 'Mariya Watson',
-    testiDesignation: 'Instructor',
+    image: testiImg,
+    name: "John D. Alex",
+    role: "UI Designer",
+    company: "Dream IT",
+    rating: 5.0,
+    review:
+      "Econet is a environmental organization maintaince dedicated to protecting planet through...",
+  },
+  {
+    image: testiImg3,
+    name: "Jakulin Farna",
+    role: "UI Designer",
+    company: "Dream IT",
+    rating: 5.0,
+    review:
+      "Econet is a environmental organization maintaince dedicated to protecting planet through...",
+  },
+  {
+    image: testiImg3,
+    name: "Jakulin Farna",
+    role: "UI Designer",
+    company: "Dream IT",
+    rating: 5.0,
+    review:
+      "Econet is a environmental organization maintaince dedicated to protecting planet through...",
   },
 ];
 
 const Testimonial = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const swiperRef = useRef(null);
 
   const settings = {
     loop: true,
-    spaceBetween: 30,
-    speed: 1500,
-    modules: [Autoplay,EffectFade],
+    spaceBetween: 26,
+    modules: [Autoplay],
+    speed: 2000,
     autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
+      delay: 3000, // Set delay time in milliseconds
+      disableOnInteraction: false, // Keep autoplay on user interaction
     },
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 2.5,
+      },
+      1400: {
+        slidesPerView: 2.9,
+      },
     },
-    onSlideChange: (swiper) => setActiveIndex(swiper.realIndex),
-    onSwiper: (swiper) => setActiveIndex(swiper.realIndex),
   };
-
   return (
-    <section className='px-2 sm:px-3 md:px-5 lg:px-2 xl:px-5 2xl:px-8 3xl:px-[50px] mt-16 md:mt-20 lg:mt-28'>
-      <div className='bg-white rounded-xl sm:rounded-2xl md:rounded-[30px] relative z-10 pb-16 md:pb-20 lg:pb-28 overflow-hidden'>
-        <div className='Container'>
+    <section className="bg-SecondaryColor-0 py-16 md:py-20 lg:py-[120px] -mt-5">
+      <div className="Container">
+        <div className="flex items-center gap-20 relative z-10">
+          <div>
+            <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+              <img src={subtitleIcon} alt="Icon" draggable={false} />{" "}
+              Testimonial
+            </h5>
+            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
+              Real Stories from Our
+              <br />
+              Real Customers
+            </h1>
+          </div>
+          <p className="fade-up font-NotoSans text-TextColor2-0 max-w-[395px] w-full pt-4">
+            Econet is a environmental organizations maintaince dedicated to
+            protecting planet through sustainable community empowerment
+            moderator
+          </p>
+        </div>
+      </div>
+      <div className="relative z-10 pt-[58px] pb-5">
+        <div className="box-row relative z-10 ml-[292px]">
           <Swiper
             {...settings}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
-            {testiData.map((data, index) => (
-              <SwiperSlide key={index}>
-                <TestimonialCard
-                  {...data}
-                  isActive={activeIndex === index}
-                />
-              </SwiperSlide>
-            ))}
-            <TestiNavigation />
+            {testiData.map((service, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <TestimonialCard {...service} />
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
+        </div>
+        <TestimonialNavigation swiperRef={swiperRef} />
+        <div className="absolute left-14 -bottom-14">
+          <img
+            src={shape}
+            alt="Shape"
+            draggable={false}
+            className="animate-wiggle"
+          />
         </div>
       </div>
     </section>

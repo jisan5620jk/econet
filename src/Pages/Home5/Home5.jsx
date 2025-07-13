@@ -7,6 +7,7 @@ import Feature from "../../Component5/Feature/Feature";
 import Process from "../../Component5/Process/Process";
 import Project from "../../Component5/Project/Project";
 import Service from "../../Component5/Service/Service";
+import Testimonial from "../../Component5/Testimonial/Testimonial";
 import WhyChoose from "../../Component5/Whychoose/WhyChoose";
 import BoxReveal from "../../Shared/BoxAnim/BoxReveal";
 
@@ -22,6 +23,7 @@ const Home5 = () => {
       <Project />
       <Process />
       <Appointment />
+      <Testimonial />
       <Blog />
       <CallDoAction />
     </>

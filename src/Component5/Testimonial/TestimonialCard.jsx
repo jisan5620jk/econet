@@ -1,108 +1,42 @@
 /* eslint-disable react/prop-types */
-import { FaCircle } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
-const TestimonialCard = ({
-  testiImg,
-  testiSubTitle,
-  testiTitle,
-  testiRatingIcon,
-  testiName,
-  testiProfile,
-  testiDesignation,
-  testiDesc,
-  isActive,
-}) => {
+const TestimonialCard = ({ image, name, role, company, rating, review }) => {
   return (
-    <div className="flex items-end justify-between flex-col lg:flex-row gap-7 pb-24 lg:pb-0">
-      <div>
-        <img
-          src={testiImg}
-          draggable={false}
-          alt="Testimonial Image"
-          className={`transition-all duration-500 ${
-            isActive
-              ? "translate-y-0 opacity-100 delay-[500ms]"
-              : "translate-y-[100px] opacity-0"
-          }`}
-        />
+    <div className="bg-BodyBgDark-0 rounded-[20px] px-10 pt-10 pb-10 relative overflow-hidden">
+      <div className="absolute z-10 top-0 right-0">
+        <div className="size-[60px] rounded-bl-[20px] bg-SecondaryColor-0 inline-block relative">
+          <span className="absolute -left-[30px] top-0 rotate-180 size-[30px] inline-block bg-SecondaryColor-0 [clip-path:path('M0_0_Q0,30_30,30_L_0_30_Z')]"></span>
+          <span className="absolute -bottom-[30px] right-0 rotate-180 size-[30px] inline-block bg-SecondaryColor-0 [clip-path:path('M0_0_Q0,30_30,30_L_0_30_Z')]"></span>
+        </div>
       </div>
-      <div className="group relative max-w-[670px] lg:max-w-[500px] xl:max-w-[600px] 2xl:max-w-[670px] w-full transition-all duration-500 pb-1">
-        <div className="bg-PrimaryColor-0 bg-opacity-[.07] px-4 sm:px-9 lg:px-4 xl:px-9 2xl:px-10 pt-4 sm:pt-10 lg:pt-4 xl:pt-12 pb-5 sm:pb-10 lg:pb-5 xl:pb-11 rounded-2xl">
-          <h5
-            className={`font-NotoSans bg-white bg-opacity-30 pl-4 pr-5 py-2 transition-all duration-500 rounded-r-full border border-PrimaryColor-0 border-opacity-20 text-HeadingColor-0 text-sm font-medium inline-flex items-center gap-2 uppercase ${
-              isActive
-                ? "translate-y-0 opacity-100 delay-[200ms]"
-                : "translate-y-[100px] opacity-0"
-            }`}
-          >
-            <span className="text-PrimaryColor-0">
-              <FaCircle size={10} />
-            </span>
-            {testiSubTitle}
-          </h5>
-
-          <h5
-            className={`font-Outfit text-[22px] sm:text-2xl 2xl:text-2xl 3xl:text-[28px] text-HeadingColor-0 font-semibold transition-all duration-500 mb-2 mt-6 ${
-              isActive
-                ? "translate-y-0 opacity-100 delay-[400ms]"
-                : "translate-y-[100px] opacity-0"
-            }`}
-          >
-            {testiTitle}
-          </h5>
-
-          <ul
-            className={`flex items-center gap-1 mt-9 mb-6 transition-all duration-500 ${
-              isActive
-                ? "translate-y-0 opacity-100 delay-[600ms]"
-                : "translate-y-[100px] opacity-0"
-            }`}
-          >
-            {Array(5)
-              .fill(0)
-              .map((_, i) => (
-                <li key={i} className="text-PrimaryColor-0 text-[22px]">
-                  {testiRatingIcon}
-                </li>
-              ))}
-          </ul>
-
-          <p
-            className={`font-NotoSans text-TextColor2-0 leading-8 sm:text-[17px] transition-all duration-500 ${
-              isActive
-                ? "translate-y-0 opacity-100 delay-[800ms]"
-                : "translate-y-[100px] opacity-0"
-            }`}
-          >
-            {testiDesc}
+      {/* User Info */}
+      <div className="flex items-center gap-6">
+        <img src={image} alt={name} className="rounded-full object-cover" />
+        <div>
+          <h3 className="font-Outfit text-white text-2xl">{name}</h3>
+          <p className="font-NotoSans text-TextColor2-0 font-light mt-1.5">
+            {role} at — <span className="text-white">{company}</span>
           </p>
         </div>
+      </div>
 
-        <div
-          className={`flex items-center justify-between pt-[30px] transition-all duration-500 ${
-            isActive
-              ? "translate-y-0 opacity-100 delay-[1000ms]"
-              : "translate-y-[100px] opacity-0"
-          }`}
-        >
-          <div className="flex items-center gap-2 sm:gap-6">
-            <div>
-              <img src={testiProfile} draggable={false} alt="User Image" />
-            </div>
-            <div>
-              <h5 className="font-Outfit font-semibold text-HeadingColor-0 text-[22px] sm:text-2xl">
-                {testiName}
-              </h5>
-              <p className="font-NotoSans text-TextColor2-0 flex items-center gap-3 mt-1">
-                <span className="text-PrimaryColor-0">
-                  <FaCircle size={8} />
-                </span>
-                {testiDesignation}
-              </p>
-            </div>
-          </div>
+      {/* Rating */}
+      <div className="flex justify-between items-center bg-BodyBgDark2-0 px-8 py-4 rounded-2xl mt-7 mb-7">
+        <span className="font-Outfit text-PrimaryColor-0 font-medium text-[32px]">
+          {rating.toFixed(2)}
+        </span>
+        <div className="flex gap-1 text-ReviewText-0">
+          {Array.from({ length: 5 }).map((_, idx) => (
+            <FaStar key={idx} />
+          ))}
         </div>
       </div>
+
+      {/* Review Text */}
+      <p className="font-NotoSans text-lg text-TextColor2-0">
+        “ {review} ”
+      </p>
     </div>
   );
 };

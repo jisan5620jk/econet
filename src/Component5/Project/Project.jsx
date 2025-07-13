@@ -42,6 +42,20 @@ const projectData = [
     projectTitle: "Solar Panel Cleaning",
     projectUrl: "/project",
   },
+  {
+    projectImg: projectImg2,
+    projectIcon: <HiMiniArrowUpRight />,
+    projectSubTitle: "Installation",
+    projectTitle: "Turbine Installations",
+    projectUrl: "/project",
+  },
+  {
+    projectImg: projectImg3,
+    projectIcon: <HiMiniArrowUpRight />,
+    projectSubTitle: "Planet",
+    projectTitle: "Industrial Power Planet",
+    projectUrl: "/project",
+  },
 ];
 
 const project = () => {
@@ -74,9 +88,23 @@ const project = () => {
     },
   };
   return (
-    <section className="bg-SecondaryColor-0 pt-16 md:pt-20 lg:pt-[120px] pb-28 md:pb-48 lg:pb-[170px] -mt-5 relative">
-      <div className="absolute top-[19%] right-[30%]"><img src={shape} alt="Shape" draggable={false} className="animate-dance" /></div>
-      <div className="absolute top-[10%] right-[27%]"><img src={shape2} alt="Shape" draggable={false} className="animate-swing" /></div>
+    <section className="bg-SecondaryColor-0 py-16 md:py-20 lg:py-[120px] -mt-5 relative">
+      <div className="absolute top-[19%] right-[30%]">
+        <img
+          src={shape}
+          alt="Shape"
+          draggable={false}
+          className="animate-dance"
+        />
+      </div>
+      <div className="absolute top-[10%] right-[27%]">
+        <img
+          src={shape2}
+          alt="Shape"
+          draggable={false}
+          className="animate-swing"
+        />
+      </div>
       <div className="Container">
         <div className="flex items-center gap-7 justify-between pt-6">
           <div>

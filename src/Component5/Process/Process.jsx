@@ -41,7 +41,7 @@ const processData = [
 
 const Process = () => {
   return (
-    <div className="bg-SecondaryColor-0 px-2 sm:px-4 2xl:px-8">
+    <div className="bg-SecondaryColor-0 px-2 sm:px-4 2xl:px-8 relative z-20">
       <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] rounded-t-[30px] relative z-10 overflow-hidden">
         <div className="Container">
           <div className="text-center">
