@@ -9,11 +9,11 @@ import { useState } from "react";
 const Banner = () => {
   const [enabled, setEnabled] = useState(false);
   return (
-    <section className="bg-SecondaryColor-0 px-2 sm:px-4 lg:px-8 py-2 sm:py-4 lg:py-8 relative z-30 overflow-hidden">
-      <div className="bg-[url(/images/banner2-bg.png)] bg-cover bg-no-repeat bg-center pt-[234px] pb-36 rounded-xl sm:rounded-2xl md:rounded-[30px]">
+    <section className="bg-SecondaryColor-0 px-2 sm:px-4 2xl:px-8 py-2 sm:py-4 lg:py-8 relative z-30 overflow-hidden">
+      <div className="bg-[url(/images/banner2-bg.png)] bg-cover bg-no-repeat bg-left xl:bg-center 2xl:px-5 3xl:px-0 pt-44 sm:pt-[234px] pb-36 rounded-xl sm:rounded-2xl md:rounded-[30px]">
         <div className="Container">
           <div className="max-w-[745px]">
-            <h2 className="relative z-10 font-Outfit font-semibold text-HeadingColor-0 text-2xl leading-[32px] sm:text-[36px] sm:leading-[42px] md:text-[56px] md:leading-[62px] lg:text-[60px] lg:leading-[64px] xl:text-[48px] xl:leading-[48px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[88px] uppercase">
+            <h2 className="relative z-10 font-Outfit font-semibold text-HeadingColor-0 text-2xl leading-[32px] sm:text-[44px] sm:leading-[48px] md:text-[56px] md:leading-[62px] lg:text-[64px] lg:leading-[68px] xl:text-[48px] xl:leading-[48px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[88px] uppercase">
               <div className="flex items-center">
                 Take{" "}
                 <div className="px-2 md:px-5">
@@ -38,7 +38,7 @@ const Banner = () => {
               </div>
               Solor Renewable
               <div className="flex items-center gap-2 md:gap-5">
-                <div className="inline-block w-8 md:w-[inherit]">
+                <div className="inline-block w-8 sm:w-9 md:w-[inherit]">
                   <img
                     src={circle}
                     draggable={false}

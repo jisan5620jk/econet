@@ -50,38 +50,37 @@ const projectData = [
 ];
 
 const Project = () => {
-useEffect(() => {
-  const width = window.innerWidth;
+  useEffect(() => {
+    const width = window.innerWidth;
 
-  if (width >= 1200) {
-    const ctx = gsap.context(() => {
-      const items = gsap.utils.toArray(".project-panel-pin");
+    if (width >= 1200) {
+      const ctx = gsap.context(() => {
+        const items = gsap.utils.toArray(".project-panel-pin");
 
-      items.forEach((item, index) => {
-        gsap.set(item, { zIndex: 10 + index });
+        items.forEach((item, index) => {
+          gsap.set(item, { zIndex: 10 + index });
 
-        ScrollTrigger.create({
-          trigger: item,
-          start: "top 10%",
-          end:
-            width >= 1600
-              ? "bottom 90%"
-              : width >= 1400
-              ? "bottom 145%"
-              : "bottom 150%",
-          endTrigger: ".project-pin-wrapper",
-          pin: true,
-          pinSpacing: false,
-          scrub: 1,
-          markers: false,
+          ScrollTrigger.create({
+            trigger: item,
+            start: "top 10%",
+            end:
+              width >= 1600
+                ? "bottom 90%"
+                : width >= 1400
+                ? "bottom 145%"
+                : "bottom 150%",
+            endTrigger: ".project-pin-wrapper",
+            pin: true,
+            pinSpacing: false,
+            scrub: 1,
+            markers: false,
+          });
         });
       });
-    });
 
-    return () => ctx.revert();
-  }
-}, []);
-
+      return () => ctx.revert();
+    }
+  }, []);
 
   return (
     <div className="px-2 md:px-4 3xl:px-8 relative z-10 -mt-5 overflow-hidden">

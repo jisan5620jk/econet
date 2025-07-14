@@ -49,7 +49,7 @@ const Process = () => {
               <img src={subtitleIcon} alt="Icon" draggable={false} /> Working
               Process
             </h5>
-            <h1 className="font-Outfit font-semibold text-lg leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+            <h1 className="font-Outfit font-semibold text-lg leading-7 sm:text-[32px] sm:leading-[40px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
               Clear, Transparent, & Hassle Free
               <br />
               From Start to Finish
@@ -72,7 +72,7 @@ const Process = () => {
             src={shape}
             draggable={false}
             alt="Shape"
-            className="animate-wiggle hidden lg:block"
+            className="animate-wiggle hidden 3xl:block"
             style={{ animationDuration: "6s" }}
           />
         </div>

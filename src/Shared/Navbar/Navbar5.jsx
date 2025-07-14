@@ -169,13 +169,13 @@ const Navbar3 = () => {
     <div>
       {/* Header Main */}
       <header
-        className={`absolute md:top-8 w-full z-50 transition-all duration-300 bg-transparent ${
+        className={`absolute sm:top-4 md:top-8 w-full z-50 transition-all duration-300 bg-transparent ${
           isSticky
             ? "!fixed !top-0 shadow-shadows bg-white animate-headerSlideDown border-transparent"
             : ""
         }`}
       >
-        <div className="px-5 lg:px-2 xl:px-5 2xl:px-8 3xl:px-[50px] py-4 lg:py-0">
+        <div className="px-5 sm:px-8 lg:px-[50px] xl:px-8 2xl:px-[50px] py-4 lg:py-0">
           <div className="flex items-center justify-between gap-5">
             {/* Logo */}
             <div className="">
@@ -271,7 +271,7 @@ const Navbar3 = () => {
             </div>
             <div>
               <div className="flex items-center gap-2 sm:gap-7 lg:gap-5 xl:gap-[34px]">
-                <div className="flex items-center gap-2 sm:gap-4 lg:gap-2 xl:gap-4">
+                <div className="flex items-center gap-2 sm:gap-4 lg:gap-2 xl:gap-4 lg:hidden xl:flex">
                   <div
                     className="size-8 md:size-[46px] lg:size-9 xl:size-[46px] bg-transparent rounded-full border border-HeadingColor-0 border-opacity-20 overflow-hidden text-HeadingColor-0 transition-all duration-500 flex items-center justify-center cursor-pointer relative z-10 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:rotate-180 before:scale-0 before:-z-10 hover:before:scale-100 hover:before:rotate-0 hover:text-white hover:border-PrimaryColor-0"
                     onClick={handleMenuSearchClick}
@@ -282,7 +282,7 @@ const Navbar3 = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="hidden xl:block">
+                  <div className="hidden lg:block">
                     <Link
                       to={"/contact"}
                       className="inline-flex items-center gap-2 text-base uppercase text-white font-medium font-Outfit rounded-full bg-PrimaryColor-0 px-[30px] py-3 transition-all duration-500 relative z-10 overflow-hidden before:absolute before:h-full before:w-0 before:bg-PrimaryColor2-0 before:opacity-50 before:top-0 before:left-auto before:right-0 before:transition-all before:duration-500 before:-z-10 hover:before:left-0 hover:before:opacity-100 hover:before:w-full hover:right-auto"

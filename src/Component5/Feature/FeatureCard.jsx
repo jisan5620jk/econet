@@ -19,7 +19,7 @@ const FeatureCard = ({ featureTitle, featureImg, featureIcon, featureUrl }) => {
             ></span>
           ))}
         </div>
-        <img src={featureImg} draggable={false} alt="Feature Image" />
+        <img src={featureImg} draggable={false} alt="Feature Image" className="w-full" />
       </div>
       <div className=" -mt-[94px]">
         <div className="-mt-[35px] -mb-[35px] size-[70px] ml-auto bg-PrimaryColor-0 flex justify-center items-center rounded-l-[10px] transition-all duration-500 relative z-20 overflow-hidden before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor2-0 before:transition-all before:duration-500 before:-z-10 before:rotate-180 before:scale-0 group-hover:before:scale-100 group-hover:before:rotate-0">

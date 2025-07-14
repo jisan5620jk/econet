@@ -65,7 +65,7 @@ const Blog = () => {
               Update blog posts
             </h1>
           </div>
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 xl:gap-4 2xl:gap-8 mt-[60px]">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 xl:gap-4 2xl:gap-8 mt-10 md:mt-[60px] 2xl:px-5 3xl:px-0">
             <div className="fade-left">
               {/* Main blog */}
               <BlogCard

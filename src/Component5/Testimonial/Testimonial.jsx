@@ -82,7 +82,7 @@ const Testimonial = () => {
   return (
     <section className="bg-SecondaryColor-0 py-16 md:py-20 lg:py-[120px] -mt-5">
       <div className="Container">
-        <div className="flex items-center gap-20 relative z-10">
+        <div className="flex flex-wrap items-center gap-4 md:gap-10 lg:gap-20 relative z-10">
           <div>
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
               <img src={subtitleIcon} alt="Icon" draggable={false} />{" "}
@@ -101,8 +101,8 @@ const Testimonial = () => {
           </p>
         </div>
       </div>
-      <div className="relative z-10 pt-[58px] pb-5">
-        <div className="box-row relative z-10 ml-[292px]">
+      <div className="relative z-10 pt-[140px] md:pt-[58px] pb-5">
+        <div className="box-row relative z-10 ml-2 lg:ml-8 3xl:ml-[292px]">
           <Swiper
             {...settings}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -117,7 +117,7 @@ const Testimonial = () => {
           </Swiper>
         </div>
         <TestimonialNavigation swiperRef={swiperRef} />
-        <div className="absolute left-14 -bottom-14">
+        <div className="absolute left-14 -bottom-14 hidden 3xl:block">
           <img
             src={shape}
             alt="Shape"

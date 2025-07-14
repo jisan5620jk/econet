@@ -12,8 +12,8 @@ import shape2 from "/images/footer-shape2.png";
 
 const Footer5 = () => {
   return (
-    <footer className="bg-SecondaryColor-0 px-2 sm:px-4 3xl:px-8 pt-16 md:pt-20 lg:pt-[88px] relative z-10">
-      <div className="Container">
+    <footer className="bg-SecondaryColor-0 px-2 sm:px-4 3xl:px-8 pt-16 md:pt-20 lg:pt-[88px] relative z-10 -mt-5">
+      <div className="Container pt-5">
         <div className="grid gap-y-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-2 xl:gap-0">
           <div className="">
             <div>

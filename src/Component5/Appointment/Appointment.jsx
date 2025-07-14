@@ -10,12 +10,13 @@ import aboutTeamImg2 from "/images/about-team-img2.png";
 const Appointment = () => {
   return (
     <div className="px-2 sm:px-4 2xl:px-8 py-6 relative z-10 bg-SecondaryColor-0 -mt-5">
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-5">
+      <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 pt-5">
         <div className="relative rounded-[30px] overflow-hidden">
           <img
             src={appointmentTHumb}
             alt="Appointment Image"
             draggable={false}
+            className="xl:h-full 2xl:[inherit]"
           />
           <div className="absolute z-10 -bottom-2 right-0 rotate-90 hidden sm:block">
             <div className="size-[245px] rounded-bl-[30px] bg-SecondaryColor-0 inline-block relative">
@@ -48,7 +49,7 @@ const Appointment = () => {
             </h6>
           </div>
         </div>
-        <div className="bg-[url(/images/application-bg.png)] bg-no-repeat bg-center bg-cover rounded-[30px] p-20 overflow-hidden">
+        <div className="bg-[url(/images/application-bg.png)] bg-no-repeat bg-center bg-cover rounded-[30px] p-4 md:p-20 xl:p-10 2xl:p-20 overflow-hidden">
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
             <img src={subtitleIcon} alt="Icon" draggable={false} />{" "}
             Consultations
@@ -123,7 +124,7 @@ const Appointment = () => {
                 name="message"
                 id="message"
                 placeholder="Write Message..."
-                className="min-h-[150px] w-full rounded-md px-7 py-3 resize-none text-PrimaryColor-0 font-Rajdhani text-lg bg-white outline-none border border-SecondaryColor-0 border-opacity-15 transition-all duration-500 ease-linear placeholder:text-HeadingColor-0 hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
+                className="min-h-[150px] w-full rounded-[30px] px-7 py-3 resize-none text-PrimaryColor-0 font-Rajdhani text-lg bg-white outline-none border border-SecondaryColor-0 border-opacity-15 transition-all duration-500 ease-linear placeholder:text-HeadingColor-0 hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
               ></textarea>
             </div>
             <PrimaryButton type="submit">

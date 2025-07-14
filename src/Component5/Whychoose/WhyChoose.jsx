@@ -62,7 +62,7 @@ const WhyChoose = () => {
             src={shape}
             draggable={false}
             alt="Shape"
-            className="animate-wiggle hidden lg:block"
+            className="animate-wiggle hidden 3xl:block"
             style={{ animationDuration: "4s" }}
           />
         </div>
@@ -71,7 +71,7 @@ const WhyChoose = () => {
             src={shape2}
             draggable={false}
             alt="Shape"
-            className="animate-rotational hidden lg:block"
+            className="animate-rotational hidden 3xl:block"
             style={{ animationDuration: "9s" }}
           />
         </div>
@@ -80,11 +80,11 @@ const WhyChoose = () => {
             src={shape3}
             draggable={false}
             alt="Shape"
-            className="animate-wiggle hidden lg:block"
+            className="animate-wiggle hidden 3xl:block"
             style={{ animationDuration: "6s" }}
           />
         </div>
-        <div className="zoom-in absolute right-8 bottom-8 hidden lg:block">
+        <div className="zoom-in absolute right-8 bottom-8 hidden 3xl:block">
           <img src={shape4} draggable={false} alt="Shape" />
         </div>
         <div className="Container pt-5">
@@ -93,7 +93,7 @@ const WhyChoose = () => {
               <img src={subtitleIcon} alt="Icon" draggable={false} /> Why Choose
               Us
             </h5>
-            <h1 className="font-Outfit font-semibold text-lg leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+            <h1 className="font-Outfit font-semibold text-lg leading-7 sm:text-[32px] sm:leading-[40px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
               Don’t Just Install Solar—We Build
               <br />
               Energy Partnerships
@@ -101,7 +101,7 @@ const WhyChoose = () => {
           </div>
           <div className="flex flex-col md:flex-row gap-10 md:gap-0 justify-between mt-10 md:mt-[58px]">
             {/* Left features */}
-            <div className="flex-1 flex flex-col space-y-4 md:mr-9 lg:mt-[38px]">
+            <div className="flex-1 flex flex-col space-y-4 md:mr-9 xl:mt-[38px] lg:pb-8 xl:pb-0">
               {featuresLeft.map((item, index) => (
                 <div
                   key={index}
@@ -147,14 +147,14 @@ const WhyChoose = () => {
             </div>
 
             {/* Center Image */}
-            <div className="flex-1 flex justify-center lg:-mb-[98px] relative z-10">
+            <div className="flex-1 flex justify-center lg:-mb-[98px] relative z-10 md:hidden lg:flex">
               <div className="overflow-hidden flex items-center justify-center">
                 <img src={whyChooseThumb} alt="House" draggable={false} />
               </div>
             </div>
 
             {/* Right features */}
-            <div className="flex-1 flex flex-col space-y-4 lg:ml-[54px] lg:mt-[38px]">
+            <div className="flex-1 flex flex-col space-y-4 lg:ml-[54px] xl:mt-[38px] lg:pb-8 xl:pb-0">
               {featuresRight.map((item, index) => (
                 <div
                   key={index}

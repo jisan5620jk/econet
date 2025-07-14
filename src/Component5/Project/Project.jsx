@@ -89,7 +89,7 @@ const project = () => {
   };
   return (
     <section className="bg-SecondaryColor-0 py-16 md:py-20 lg:py-[120px] -mt-5 relative">
-      <div className="absolute top-[19%] right-[30%] hidden md:block">
+      <div className="absolute top-[19%] right-[30%] hidden lg:block">
         <img
           src={shape}
           alt="Shape"
@@ -97,7 +97,7 @@ const project = () => {
           className="animate-dance"
         />
       </div>
-      <div className="absolute top-[10%] right-[27%] hidden md:block">
+      <div className="absolute top-[10%] right-[27%] hidden lg:block">
         <img
           src={shape2}
           alt="Shape"
@@ -113,7 +113,7 @@ const project = () => {
             </h5>
             <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
               Browse Latest Solar
-              <br /> Renewable Energy Works
+              <br />Renewable Energy Works
             </h1>
           </div>
           <div>

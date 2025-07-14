@@ -63,9 +63,9 @@ const TextReveal = () => {
           opacity: 1,
           scale: 1,
           y: 0,
-          duration: 0.3,
+          duration: 0.15,
           ease: "power3.out",
-          stagger: 0.03,
+          stagger: 0.015,
           scrollTrigger: {
             trigger: heading,
             start: "top 95%",
