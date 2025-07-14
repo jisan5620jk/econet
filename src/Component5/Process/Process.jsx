@@ -41,7 +41,7 @@ const processData = [
 
 const Process = () => {
   return (
-    <div className="bg-SecondaryColor-0 px-2 sm:px-4 2xl:px-8 relative z-20">
+    <div className="bg-SecondaryColor-0 px-2 sm:px-4 2xl:px-8 relative z-20 -mt-5 pt-5">
       <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] rounded-t-[30px] relative z-10 overflow-hidden">
         <div className="Container">
           <div className="text-center">
@@ -49,8 +49,8 @@ const Process = () => {
               <img src={subtitleIcon} alt="Icon" draggable={false} /> Working
               Process
             </h5>
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
-              Clear, Transparent, and Hassle-Free
+            <h1 className="font-Outfit font-semibold text-lg leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+              Clear, Transparent, & Hassle Free
               <br />
               From Start to Finish
             </h1>

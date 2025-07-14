@@ -56,7 +56,7 @@ const featuresRight = [
 const WhyChoose = () => {
   return (
     <div className="px-2 md:px-4 3xl:px-8 bg-SecondaryColor-0 relative z-10 -mt-5">
-      <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center pt-16 md:pt-20 lg:pt-[120px] relative z-10 rounded-[20px]">
+      <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:pb-0 lg:pt-[120px] relative z-10 rounded-[20px]">
         <div className="fade-left absolute left-[22%] top-52">
           <img
             src={shape}
@@ -84,7 +84,7 @@ const WhyChoose = () => {
             style={{ animationDuration: "6s" }}
           />
         </div>
-        <div className="zoom-in absolute right-8 bottom-8">
+        <div className="zoom-in absolute right-8 bottom-8 hidden lg:block">
           <img src={shape4} draggable={false} alt="Shape" />
         </div>
         <div className="Container pt-5">
@@ -93,15 +93,15 @@ const WhyChoose = () => {
               <img src={subtitleIcon} alt="Icon" draggable={false} /> Why Choose
               Us
             </h5>
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+            <h1 className="font-Outfit font-semibold text-lg leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
               Don’t Just Install Solar—We Build
               <br />
               Energy Partnerships
             </h1>
           </div>
-          <div className="flex flex-col md:flex-row justify-between mt-[58px]">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-0 justify-between mt-10 md:mt-[58px]">
             {/* Left features */}
-            <div className="flex-1 flex flex-col space-y-4 mr-9 mt-[38px]">
+            <div className="flex-1 flex flex-col space-y-4 md:mr-9 lg:mt-[38px]">
               {featuresLeft.map((item, index) => (
                 <div
                   key={index}
@@ -117,7 +117,7 @@ const WhyChoose = () => {
                       className="transition-all duration-500 group-hover:brightness-0 group-hover:invert-1 group-hover:animate-wobble_vertical"
                     />
                   </div>
-                  <h4 className="font-Outfit text-HeadingColor-0 text-2xl font-medium transition-all duration-500 group-hover:text-white">
+                  <h4 className="flex-1 font-Outfit text-HeadingColor-0 text-[22px] sm:text-2xl font-medium transition-all duration-500 group-hover:text-white">
                     {item.label}
                   </h4>
                   <div>
@@ -147,14 +147,14 @@ const WhyChoose = () => {
             </div>
 
             {/* Center Image */}
-            <div className="flex-1 flex justify-center -mb-[98px] relative z-10">
+            <div className="flex-1 flex justify-center lg:-mb-[98px] relative z-10">
               <div className="overflow-hidden flex items-center justify-center">
                 <img src={whyChooseThumb} alt="House" draggable={false} />
               </div>
             </div>
 
             {/* Right features */}
-            <div className="flex-1 flex flex-col space-y-4 ml-[54px] mt-[38px]">
+            <div className="flex-1 flex flex-col space-y-4 lg:ml-[54px] lg:mt-[38px]">
               {featuresRight.map((item, index) => (
                 <div
                   key={index}
@@ -170,8 +170,8 @@ const WhyChoose = () => {
                       className="transition-all duration-500 group-hover:brightness-0 group-hover:invert-1 group-hover:animate-wobble_vertical"
                     />
                   </div>
-                  <h4 className="font-Outfit text-HeadingColor-0 text-2xl font-medium transition-all duration-500 group-hover:text-white">
-                    {item.label}
+                  <h4 className="flex-1 font-Outfit text-HeadingColor-0 text-[22px] sm:text-2xl font-medium transition-all duration-500 group-hover:text-white">
+                     {item.label}
                   </h4>
                   <div>
                     {[

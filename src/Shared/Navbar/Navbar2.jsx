@@ -143,9 +143,9 @@ const Navbar2 = () => {
     <div>
       <div className="flex justify-center mt-4 md:mt-7 xl:mt-16 w-full">
         <header
-          className={`absolute z-50 inline-block w-[calc(100%-30px)] md:w-[calc(100%-60px)] 3xl:max-w-[1720px] transition-all duration-500 bg-BodyBgDark2-0 rounded-[20px] ${
+          className={`absolute z-50 inline-block w-[calc(100%-20px)] sm:w-[calc(100%-30px)] md:w-[calc(100%-60px)] 3xl:max-w-[1720px] transition-all duration-500 bg-BodyBgDark2-0 rounded-[20px] ${
             isSticky
-              ? "!fixed top-0 !w-[calc(100%-60px)] max-w-full rounded-t-none bg-BodyBgDark2-0 animate-headerSlideDown border-transparent"
+              ? "!fixed top-0 !w-[calc(100%-20px)] sm:!w-[calc(100%-30px)] md:!w-[calc(100%-60px)] max-w-full rounded-t-none bg-BodyBgDark2-0 animate-headerSlideDown border-transparent"
               : ""
           }`}
         >

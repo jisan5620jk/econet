@@ -105,7 +105,7 @@ const Service = () => {
   return (
     <section className="bg-SecondaryColor-0 pt-16 md:pt-20 lg:pt-[120px] pb-28 md:pb-48 lg:pb-[170px] -mt-5">
       <div className="Container">
-        <div className="flex items-center gap-20 pt-5 relative z-10">
+        <div className="flex items-center flex-wrap gap-20 pt-5 relative z-10">
           <div>
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
               <img src={subtitleIcon} alt="Icon" draggable={false} /> services
@@ -123,7 +123,7 @@ const Service = () => {
           </p>
         </div>
       </div>
-      <div className="box-row px-2 2xl:px-[120px] relative z-10 pt-[58px]">
+      <div className="box-row px-2 2xl:px-[120px] relative z-10 pt-[140px] md:pt-[58px]">
         <Swiper
           {...settings}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -163,7 +163,7 @@ const Service = () => {
                   </div>
 
                   {/* Content  */}
-                  <div className="pb-5 px-5">
+                  <div className="pb-2 sm:pb-5 px-2 sm:px-5">
                     <div
                       className={`-mt-[74px] size-[70px] ${mainColor} flex justify-center items-center rounded-[10px] transition-all duration-500 group-hover:border-PrimaryColor-0 relative z-20 overflow-hidden before:absolute before:left-0 before:top-0 before:size-full ${beforeColor} before:transition-all before:duration-500 before:-z-10 before:rotate-180 before:scale-0 group-hover:before:scale-100 group-hover:before:rotate-6`}
                     >

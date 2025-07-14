@@ -30,7 +30,7 @@ const FeatureCard = ({ featureTitle, featureImg, featureIcon, featureUrl }) => {
             className="w-inherit transition-all duration-500 group-hover:brightness-0 group-hover:invert group-hover:animate-wobble_vertical"
           />
         </div>
-        <div className="ml-auto w-[calc(100%-40px)] bg-SecondaryColor-0 relative z-10 rounded-[20px] pl-[34px] pt-9 pb-8 overflow-hidden before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-BodyBgDark2-0 before:-z-10 before:transition-all before:duration-500 group-hover:before:left-0 group-hover:before:w-full">
+        <div className="ml-auto w-[calc(100%-20px)] sm:w-[calc(100%-40px)] bg-SecondaryColor-0 relative z-10 rounded-[20px] pl-[34px] pt-9 pb-8 overflow-hidden before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-BodyBgDark2-0 before:-z-10 before:transition-all before:duration-500 group-hover:before:left-0 group-hover:before:w-full">
           <Link
             to={featureUrl}
             className="w-full font-Outfit font-medium text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-[28px] 2xl:leading-[36px] text-white"

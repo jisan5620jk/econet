@@ -11,7 +11,7 @@ const ProjectCard = ({
 }) => {
   return (
     <div className="group relative pb-3">
-      <div className="rounded-[20px] relative z-10 bg-BodyBgDark-0 p-[18px] before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-BodyBgDark2-0 before:rounded-[20px] before:-z-10 before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full">
+      <div className="rounded-[20px] relative z-10 bg-BodyBgDark-0 p-3 sm:p-[18px] before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-BodyBgDark2-0 before:rounded-[20px] before:-z-10 before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full">
         <div className="relative rounded-2xl overflow-hidden">
           <div>
             {[
@@ -40,7 +40,7 @@ const ProjectCard = ({
             className="w-full"
           />
         </div>
-        <div className="pt-8 pb-4 px-7 flex items-center justify-between">
+        <div className="pt-8 pb-4 px-2 sm:px-7 flex items-center justify-between">
           <div>
             <h6 className="inline-block px-6 py-1.5 bg-white bg-opacity-[7%] rounded-full font-Outfit text-PrimaryColor-0 uppercase mb-5">
               {projectSubTitle}
@@ -52,7 +52,7 @@ const ProjectCard = ({
               {projectTitle}
             </Link>
           </div>
-          <div className="size-[58px] bg-white bg-opacity-[7%] text-[22px] text-PrimaryColor-0 group-hover:text-white flex justify-center items-center rounded-full transition-all duration-500 relative z-20 overflow-hidden before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 before:rotate-180 before:scale-0 group-hover:before:scale-100 group-hover:before:rotate-0">
+          <div className="size-10 sm:size-[58px] bg-white bg-opacity-[7%] text-[22px] text-PrimaryColor-0 group-hover:text-white flex justify-center items-center rounded-full transition-all duration-500 relative z-20 overflow-hidden before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 before:rotate-180 before:scale-0 group-hover:before:scale-100 group-hover:before:rotate-0">
             <Link to={projectUrl}>{projectIcon}</Link>
           </div>
         </div>

@@ -9,7 +9,7 @@ import aboutTeamImg2 from "/images/about-team-img2.png";
 
 const Appointment = () => {
   return (
-    <div className="px-2 sm:px-4 2xl:px-8 py-2 sm:py-4 2xl:py-6 relative z-10 bg-SecondaryColor-0 -mt-5">
+    <div className="px-2 sm:px-4 2xl:px-8 py-6 relative z-10 bg-SecondaryColor-0 -mt-5">
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-5">
         <div className="relative rounded-[30px] overflow-hidden">
           <img
@@ -17,13 +17,13 @@ const Appointment = () => {
             alt="Appointment Image"
             draggable={false}
           />
-          <div className="absolute z-10 -bottom-2 right-0 rotate-90">
+          <div className="absolute z-10 -bottom-2 right-0 rotate-90 hidden sm:block">
             <div className="size-[245px] rounded-bl-[30px] bg-SecondaryColor-0 inline-block relative">
               <span className="absolute -left-[30px] top-0 rotate-180 size-[30px] inline-block bg-SecondaryColor-0 [clip-path:path('M0_0_Q0,30_30,30_L_0_30_Z')]"></span>
               <span className="absolute -bottom-[30px] right-0 rotate-180 size-[30px] inline-block bg-SecondaryColor-0 [clip-path:path('M0_0_Q0,30_30,30_L_0_30_Z')]"></span>
             </div>
           </div>
-          <div className="size-[220px] bg-BodyBgDark-0 rounded-[30px] absolute z-20 bottom-0 right-0 flex items-center flex-col justify-center">
+          <div className="size-[220px] bg-BodyBgDark-0 rounded-[30px] absolute z-20 bottom-0 right-0 hidden sm:flex items-center flex-col justify-center">
             <ul className="flex items-center -space-x-4">
               <li>
                 <img
@@ -50,7 +50,8 @@ const Appointment = () => {
         </div>
         <div className="bg-[url(/images/application-bg.png)] bg-no-repeat bg-center bg-cover rounded-[30px] p-20 overflow-hidden">
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
-            <img src={subtitleIcon} alt="Icon" draggable={false} /> Consultations
+            <img src={subtitleIcon} alt="Icon" draggable={false} />{" "}
+            Consultations
           </h5>
           <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
             {`Need Help? We're Here`}

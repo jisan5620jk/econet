@@ -13,21 +13,23 @@ const Banner = () => {
       <div className="bg-[url(/images/banner2-bg.png)] bg-cover bg-no-repeat bg-center pt-[234px] pb-36 rounded-xl sm:rounded-2xl md:rounded-[30px]">
         <div className="Container">
           <div className="max-w-[745px]">
-            <h2 className="relative z-10 font-Outfit font-semibold text-HeadingColor-0 text-[26px] leading-[32px] sm:text-[36px] sm:leading-[42px] md:text-[56px] md:leading-[62px] lg:text-[60px] lg:leading-[64px] xl:text-[48px] xl:leading-[48px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[88px] uppercase">
+            <h2 className="relative z-10 font-Outfit font-semibold text-HeadingColor-0 text-2xl leading-[32px] sm:text-[36px] sm:leading-[42px] md:text-[56px] md:leading-[62px] lg:text-[60px] lg:leading-[64px] xl:text-[48px] xl:leading-[48px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[88px] uppercase">
               <div className="flex items-center">
                 Take{" "}
-                <div className="px-5">
+                <div className="px-2 md:px-5">
                   <button
                     onClick={() => setEnabled(!enabled)}
-                    className={`w-[100px] h-14 flex items-center rounded-full p-2.5 duration-300 border border-PrimaryColor-0 ${
+                    className={`w-[50px] md:w-[100px] h-7 md:h-14 flex items-center rounded-full p-1 md:p-2.5 duration-300 border border-PrimaryColor-0 ${
                       enabled
                         ? "bg-white border-green-500"
                         : "bg-white border-green-500"
                     }`}
                   >
                     <div
-                      className={`bg-green-500 size-[38px] rounded-full shadow-md transform duration-300 ${
-                        enabled ? "translate-x-10" : "translate-x-0"
+                      className={`bg-green-500 size-5 md:size-[38px] rounded-full shadow-md transform duration-300 ${
+                        enabled
+                          ? "translate-x-5 md:translate-x-10"
+                          : "translate-x-0"
                       }`}
                     ></div>
                   </button>
@@ -35,8 +37,8 @@ const Banner = () => {
                 Controled
               </div>
               Solor Renewable
-              <div className="flex items-center gap-5">
-                <div>
+              <div className="flex items-center gap-2 md:gap-5">
+                <div className="inline-block w-8 md:w-[inherit]">
                   <img
                     src={circle}
                     draggable={false}

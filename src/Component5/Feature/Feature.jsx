@@ -72,7 +72,7 @@ const Feature = () => {
   return (
     <section className="bg-SecondaryColor-0 pt-16 md:pt-20 lg:pt-[120px] pb-28 md:pb-48 lg:pb-[170px] -mt-5">
       <div className="Container">
-        <div className="flex items-center gap-20 pt-5">
+        <div className="flex items-center flex-wrap gap-2 md:gap-20 pt-5">
           <div>
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
               <img src={subtitleIcon} alt="Icon" draggable={false} /> Features
@@ -89,9 +89,11 @@ const Feature = () => {
             moderator
           </p>
         </div>
-        <div className="box-row relative z-10 pt-[58px]">
-          <Swiper {...settings}
-            onSwiper={(swiper) => (swiperRef.current = swiper)}>
+        <div className="box-row relative z-10 pt-[140px] md:pt-[58px]">
+          <Swiper
+            {...settings}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+          >
             {featureData.map((feature, index) => (
               <SwiperSlide key={index}>
                 <div className="box">

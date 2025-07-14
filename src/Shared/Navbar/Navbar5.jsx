@@ -169,13 +169,13 @@ const Navbar3 = () => {
     <div>
       {/* Header Main */}
       <header
-        className={`absolute top-8 w-full z-50 transition-all duration-300 bg-SecondaryColor-0 lg:bg-transparent lg:border-b border-SecondaryColor-0 border-opacity-10 ${
+        className={`absolute md:top-8 w-full z-50 transition-all duration-300 bg-transparent ${
           isSticky
-            ? "!fixed !top-0 shadow-shadows bg-SecondaryColor-0 lg:bg-white animate-headerSlideDown border-transparent"
+            ? "!fixed !top-0 shadow-shadows bg-white animate-headerSlideDown border-transparent"
             : ""
         }`}
       >
-        <div className="px-2 sm:px-3 md:px-5 lg:px-2 xl:px-5 2xl:px-8 3xl:px-[50px] py-4 lg:py-0">
+        <div className="px-5 lg:px-2 xl:px-5 2xl:px-8 3xl:px-[50px] py-4 lg:py-0">
           <div className="flex items-center justify-between gap-5">
             {/* Logo */}
             <div className="">
@@ -183,7 +183,6 @@ const Navbar3 = () => {
                 <img
                   src={logo}
                   draggable="false"
-                  className="brightness-0 invert-[1] lg:brightness-100 lg:invert-0"
                 />
               </Link>
             </div>
@@ -274,7 +273,7 @@ const Navbar3 = () => {
               <div className="flex items-center gap-2 sm:gap-7 lg:gap-5 xl:gap-[34px]">
                 <div className="flex items-center gap-2 sm:gap-4 lg:gap-2 xl:gap-4">
                   <div
-                    className="size-8 md:size-[46px] lg:size-9 xl:size-[46px] bg-transparent rounded-full border border-white lg:border-HeadingColor-0 border-opacity-20 lg:border-opacity-20 overflow-hidden text-white lg:text-HeadingColor-0 transition-all duration-500 flex items-center justify-center cursor-pointer relative z-10 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:rotate-180 before:scale-0 before:-z-10 hover:before:scale-100 hover:before:rotate-0 hover:text-white hover:border-PrimaryColor-0"
+                    className="size-8 md:size-[46px] lg:size-9 xl:size-[46px] bg-transparent rounded-full border border-HeadingColor-0 border-opacity-20 overflow-hidden text-HeadingColor-0 transition-all duration-500 flex items-center justify-center cursor-pointer relative z-10 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:rotate-180 before:scale-0 before:-z-10 hover:before:scale-100 hover:before:rotate-0 hover:text-white hover:border-PrimaryColor-0"
                     onClick={handleMenuSearchClick}
                   >
                     <button className="menu-cart text-lg md:text-[22px] lg:text-lg xl:text-[22px]">
@@ -306,13 +305,13 @@ const Navbar3 = () => {
                 {/* Hamburger Icon */}
 
                 <div
-                  className="group lg:hidden size-8 md:size-[46px] bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
+                  className="group lg:hidden size-8 md:size-[46px] bg-transparent border border-SecondaryColor-0 border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
                   onClick={() => setMobileOpen(true)}
                 >
                   <button className="space-y-[3px] md:space-y-1">
-                    <span className="bg-white w-4 md:w-5 h-0.5 rounded-xl block"></span>
-                    <span className="bg-white w-4 md:w-5 h-0.5 rounded-xl block"></span>
-                    <span className="bg-white w-2 md:w-3 h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-5"></span>
+                    <span className="bg-SecondaryColor-0 w-4 md:w-5 h-0.5 rounded-xl block"></span>
+                    <span className="bg-SecondaryColor-0 w-4 md:w-5 h-0.5 rounded-xl block"></span>
+                    <span className="bg-SecondaryColor-0 w-2 md:w-3 h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-5"></span>
                   </button>
                 </div>
               </div>

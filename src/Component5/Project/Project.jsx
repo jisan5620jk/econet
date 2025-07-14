@@ -89,7 +89,7 @@ const project = () => {
   };
   return (
     <section className="bg-SecondaryColor-0 py-16 md:py-20 lg:py-[120px] -mt-5 relative">
-      <div className="absolute top-[19%] right-[30%]">
+      <div className="absolute top-[19%] right-[30%] hidden md:block">
         <img
           src={shape}
           alt="Shape"
@@ -97,7 +97,7 @@ const project = () => {
           className="animate-dance"
         />
       </div>
-      <div className="absolute top-[10%] right-[27%]">
+      <div className="absolute top-[10%] right-[27%] hidden md:block">
         <img
           src={shape2}
           alt="Shape"
@@ -106,7 +106,7 @@ const project = () => {
         />
       </div>
       <div className="Container">
-        <div className="flex items-center gap-7 justify-between pt-6">
+        <div className="flex flex-wrap items-center gap-7 justify-between pt-6">
           <div>
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
               <img src={subtitleIcon} alt="Icon" draggable={false} /> Projects
