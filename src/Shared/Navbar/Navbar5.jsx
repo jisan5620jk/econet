@@ -19,7 +19,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { MdLocationPin } from "react-icons/md";
 import { CgClose } from "react-icons/cg";
 
-const Navbar3 = () => {
+const Navbar5 = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMobileMenu, setActiveMobileMenu] = useState(null);
@@ -661,4 +661,4 @@ const Navbar3 = () => {
   );
 };
 
-export default Navbar3;
+export default Navbar5;

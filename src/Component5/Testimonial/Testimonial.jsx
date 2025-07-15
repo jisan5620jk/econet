@@ -109,7 +109,7 @@ const Testimonial = () => {
           >
             {testiData.map((service, index) => {
               return (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className="box">
                   <TestimonialCard {...service} />
                 </SwiperSlide>
               );
