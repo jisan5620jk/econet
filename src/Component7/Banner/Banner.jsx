@@ -46,15 +46,15 @@ const Banner = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <section
-              className="bg-cover bg-left lg:bg-center bg-no-repeat 2xl:px-5 3xl:px-0 pt-[50px] relative z-10"
+              className="bg-cover bg-left lg:bg-center bg-no-repeat 2xl:px-5 3xl:px-0 pt-44 lg:pt-[140px] xl:pt-[120px] 2xl:pt-[50px] relative z-10"
               style={{ backgroundImage: `url(${slide.BgImage})` }}
             >
               <div className="Container">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                   {/* === Left Content === */}
-                  <div className="lg:col-span-7 2xl:pt-10">
+                  <div className="lg:col-span-7 2xl:pt-10 pb-20">
                     {/* Title Block with Animation */}
-                    <h2 className="relative z-10 font-Outfit font-semibold text-white text-2xl leading-[32px] sm:text-[44px] sm:leading-[48px] md:text-[56px] md:leading-[62px] lg:text-[64px] lg:leading-[68px] xl:text-[48px] xl:leading-[48px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[88px] uppercase">
+                    <h2 className="relative z-10 font-Outfit font-semibold text-white text-2xl leading-[32px] sm:text-[44px] sm:leading-[48px] md:text-[56px] md:leading-[62px] lg:text-[48px] lg:leading-[52px] xl:text-[60px] xl:leading-[64px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[88px] uppercase">
                       <div
                         className={`flex items-center gap-2 md:gap-5 transition-all duration-700 ${
                           activeIndex === index
@@ -67,7 +67,7 @@ const Banner = () => {
                           src="/images/solar-banner-classic-title-img.png"
                           alt="Title Image"
                           draggable={false}
-                          className="rounded-full"
+                          className="rounded-full w-20 sm:w-28 md:w-[inherit]"
                         />{" "}
                         Controls
                       </div>
@@ -114,7 +114,7 @@ const Banner = () => {
 
                     {/* Customer/Team Section with Animation */}
                     <div
-                      className={`mt-24 md:mt-[112px] transition-all duration-700 ${
+                      className={`mt-14 md:mt-[112px] lg:mt-20 xl:mt-[112px] transition-all duration-700 ${
                         activeIndex === index
                           ? "translate-y-0 opacity-100 delay-[750ms]"
                           : "translate-y-[100px] opacity-0"
@@ -156,7 +156,7 @@ const Banner = () => {
                     <img
                       src={slide.image}
                       alt="Slide Visual"
-                      className="w-full 2xl:w-[inherit] 2xl:max-w-[inherit]"
+                      className="w-full 3xl:w-[inherit] 3xl:max-w-[inherit]"
                       draggable={false}
                     />
                   </div>

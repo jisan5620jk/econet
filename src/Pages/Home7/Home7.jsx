@@ -3,7 +3,6 @@ import Appointment from "../../Component7/Appointment/Appointment";
 import Banner from "../../Component7/Banner/Banner";
 import Blog from "../../Component7/Blog/Blog";
 import CallDoAction from "../../Component7/CallDoAction/CallDoAction";
-import Feature from "../../Component7/Feature/Feature";
 import Process from "../../Component7/Process/Process";
 import Project from "../../Component7/Project/Project";
 import Service from "../../Component7/Service/Service";
@@ -16,7 +15,6 @@ const Home7 = () => {
   return (
     <>
       <Banner />
-      <Feature />
       <About />
       <Service />
       <WhyChoose />

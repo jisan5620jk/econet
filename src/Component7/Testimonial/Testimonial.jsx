@@ -80,8 +80,8 @@ const Testimonial = () => {
     },
   };
   return (
-    <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] -mt-5 relative">
-      <div className="Container">
+    <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] -mt-5">
+      <div className="Container pt-5">
         <div className="flex flex-wrap items-center gap-4 md:gap-10 lg:gap-20 relative z-10">
           <div>
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">

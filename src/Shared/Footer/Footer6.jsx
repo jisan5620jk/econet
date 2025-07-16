@@ -12,7 +12,7 @@ import { GoArrowRight } from "react-icons/go";
 import { HiOutlineMail } from "react-icons/hi";
 import { PiArrowCircleRight } from "react-icons/pi";
 
-const Footer = () => {
+const Footer6 = () => {
   return (
     <div className="px-2 sm:px-3 md:px-5 lg:px-2 xl:px-5 2xl:px-8 3xl:px-[50px] pb-2 sm:pb-3 md:pb-5 2xl:pb-8 3xl:pb-[50px] bg-BodyBgDark3-0">
       <footer className="rounded-b-lg lg:rounded-b-2xl bg-HeadingColor-0 relative pt-16 md:pt-20 lg:pt-28 overflow-hidden">
@@ -227,4 +227,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer6;

@@ -9,7 +9,7 @@ import icon3 from "/images/why-choose2-icon3.png";
 import icon4 from "/images/why-choose2-icon4.png";
 import icon5 from "/images/why-choose2-icon5.png";
 import icon6 from "/images/why-choose2-icon6.png";
-import whyChooseThumb from "/images/why-choose2-thumb.png";
+import whyChooseThumb from "/images/solar-why-choose-classic-img.png";
 
 const featuresLeft = [
   {
@@ -55,8 +55,8 @@ const featuresRight = [
 
 const WhyChoose = () => {
   return (
-    <div className="px-2 md:px-4 3xl:px-8 bg-SecondaryColor-0 relative z-10 -mt-5">
-      <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:pb-0 lg:pt-[120px] relative z-10 rounded-[20px]">
+    <div className="relative z-10 -mt-5">
+      <section className="bg-SecondaryColor-0 py-16 md:py-20 lg:py-[120px] relative z-10">
         <div className="fade-left absolute left-[22%] top-52">
           <img
             src={shape}
@@ -93,19 +93,19 @@ const WhyChoose = () => {
               <img src={subtitleIcon} alt="Icon" draggable={false} /> Why Choose
               Us
             </h5>
-            <h1 className="font-Outfit font-semibold text-lg leading-7 sm:text-[32px] sm:leading-[40px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+            <h1 className="font-Outfit font-semibold text-lg leading-7 sm:text-[32px] sm:leading-[40px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
               Don’t Just Install Solar—We Build
               <br />
               Energy Partnerships
             </h1>
           </div>
-          <div className="flex flex-col md:flex-row gap-10 md:gap-0 justify-between mt-10 md:mt-[58px]">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-0 justify-between items-center mt-10 md:mt-[58px]">
             {/* Left features */}
-            <div className="box-row flex-1 flex flex-col space-y-4 md:mr-9 xl:mt-[38px] lg:pb-8 xl:pb-0">
+            <div className="box-row flex-1 flex flex-col space-y-4 md:mr-9 lg:pb-8 xl:pb-0">
               {featuresLeft.map((item, index) => (
                 <div
                   key={index}
-                  className="box group flex gap-4 items-center justify-start bg-white p-5 rounded-full transition shadow-shade max-w-[395px] w-full relative z-10 overflow-hidden"
+                  className="box group flex gap-4 items-center justify-start bg-BodyBgDark2-0 p-5 rounded-full transition max-w-[395px] w-full relative z-10 overflow-hidden"
                 >
                   <div
                     className={`size-[60px] flex items-center justify-center rounded-full ${item.bgColor} ${item.textColor} relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:scale-0 before:rounded-full before:transition-all before:duration-500 group-hover:before:scale-100`}
@@ -117,7 +117,7 @@ const WhyChoose = () => {
                       className="transition-all duration-500 group-hover:brightness-0 group-hover:invert-1 group-hover:animate-wobble_vertical"
                     />
                   </div>
-                  <h4 className="flex-1 font-Outfit text-HeadingColor-0 text-[22px] sm:text-2xl font-medium transition-all duration-500 group-hover:text-white">
+                  <h4 className="flex-1 font-Outfit text-white text-[22px] sm:text-2xl font-medium transition-all duration-500 group-hover:text-white">
                     {item.label}
                   </h4>
                   <div>
@@ -147,18 +147,18 @@ const WhyChoose = () => {
             </div>
 
             {/* Center Image */}
-            <div className="flex-1 flex justify-center lg:-mb-[98px] relative z-10 md:hidden lg:flex">
+            <div className="flex-1 flex justify-center relative z-10 md:hidden lg:flex">
               <div className="overflow-hidden flex items-center justify-center">
-                <img src={whyChooseThumb} alt="House" draggable={false} />
+                <img src={whyChooseThumb} alt="House" draggable={false} className="rounded-full" />
               </div>
             </div>
 
             {/* Right features */}
-            <div className="box-row flex-1 flex flex-col space-y-4 lg:ml-[54px] xl:mt-[38px] lg:pb-8 xl:pb-0">
+            <div className="box-row flex-1 flex flex-col space-y-4 lg:ml-[54px] lg:pb-8 xl:pb-0">
               {featuresRight.map((item, index) => (
                 <div
                   key={index}
-                  className="box group flex gap-4 items-center justify-start bg-white p-5 rounded-full transition shadow-shade max-w-[395px] w-full relative z-10 overflow-hidden"
+                  className="box group flex gap-4 items-center justify-start bg-BodyBgDark2-0 p-5 rounded-full transition max-w-[395px] w-full relative z-10 overflow-hidden"
                 >
                   <div
                     className={`size-[60px] flex items-center justify-center rounded-full ${item.bgColor} ${item.textColor} relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:scale-0 before:rounded-full before:transition-all before:duration-500 group-hover:before:scale-100`}
@@ -170,7 +170,7 @@ const WhyChoose = () => {
                       className="transition-all duration-500 group-hover:brightness-0 group-hover:invert-1 group-hover:animate-wobble_vertical"
                     />
                   </div>
-                  <h4 className="flex-1 font-Outfit text-HeadingColor-0 text-[22px] sm:text-2xl font-medium transition-all duration-500 group-hover:text-white">
+                  <h4 className="flex-1 font-Outfit text-white text-[22px] sm:text-2xl font-medium transition-all duration-500 group-hover:text-white">
                      {item.label}
                   </h4>
                   <div>

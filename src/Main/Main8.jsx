@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from "react-router-dom";
-import Navbar6 from "../Shared/Navbar/Navbar6";
+import Navbar7 from "../Shared/Navbar/Navbar7";
 import BackToTop from "../Shared/BackToTop/BackToTop";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -9,11 +9,11 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 import HelmetChanger from "../Shared/Helmet/Helmet";
 import ImageReveal from "../Shared/ImageReveal/ImageReveal";
 import TextReveal from "../Shared/TextAnim/TextReveal";
-import Footer5 from "../Shared/Footer/Footer5";
+import Footer7 from "../Shared/Footer/Footer7";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
-const Main6 = () => {
+const Main8 = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -80,15 +80,15 @@ const Main6 = () => {
     <>
       <HelmetChanger title={"Environment Main Demo"} />
       <BackToTop />
-      <Navbar6 />
+      <Navbar7 />
       <div id="smooth-wrapper" className="h-full">
         <div id="smooth-content" className="min-h-screen will-change-transform">
           <Outlet />
-          <Footer5 />
+          <Footer7 />
         </div>
       </div>
     </>
   );
 };
 
-export default Main6;
+export default Main8;

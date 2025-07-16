@@ -1,98 +1,173 @@
-import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
 import { GoArrowRight } from "react-icons/go";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import BannerNavigation from "./BannerNavigation";
+import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
+import circle from "/images/circle.png";
 import aboutTeamImg from "/images/about-team-img.png";
 import aboutTeamImg2 from "/images/about-team-img2.png";
-import icon from "/images/banner2-icon.png";
-import circle from "/images/circle.png";
-import { useState } from "react";
 
 const Banner = () => {
-  const [enabled, setEnabled] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const slides = [
+    {
+      BgImage: "/images/solar-banner-classic-bg.png",
+      image: "/images/solar-banner-classic-img.png",
+    },
+    {
+      BgImage: "/images/solar-banner-classic-bg.png",
+      image: "/images/solar-banner-classic-img.png",
+    },
+  ];
+
+  const settings = {
+    loop: true,
+    speed: 2000,
+    modules: [Autoplay, EffectFade],
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    effect: "fade",
+    fadeEffect: {
+      crossFade: false,
+    },
+    onSlideChange: (swiper) => setActiveIndex(swiper.realIndex),
+    onSwiper: (swiper) => setActiveIndex(swiper.realIndex),
+  };
+
   return (
-    <section className="bg-SecondaryColor-0 px-2 sm:px-4 2xl:px-8 py-2 sm:py-4 lg:py-8 relative z-30 overflow-hidden">
-      <div className="bg-[url(/images/solar-banner.png)] bg-cover bg-no-repeat bg-left xl:bg-center 2xl:px-5 3xl:px-0 pt-44 sm:pt-[234px] pb-36 rounded-xl sm:rounded-2xl md:rounded-[30px]">
-        <div className="Container">
-          <div className="max-w-[745px]">
-            <h2 className="relative z-10 font-Outfit font-semibold text-HeadingColor-0 text-2xl leading-[32px] sm:text-[44px] sm:leading-[48px] md:text-[56px] md:leading-[62px] lg:text-[64px] lg:leading-[68px] xl:text-[48px] xl:leading-[48px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[88px] uppercase">
-              <div className="flex items-center">
-                Take{" "}
-                <div className="px-2 md:px-5">
-                  <button
-                    onClick={() => setEnabled(!enabled)}
-                    className={`w-[50px] md:w-[100px] h-7 md:h-14 flex items-center rounded-full p-1 md:p-2.5 duration-300 border border-PrimaryColor-0 ${
-                      enabled
-                        ? "bg-white border-green-500"
-                        : "bg-white border-green-500"
+    <div className="relative z-10">
+      <Swiper {...settings}>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <section
+              className="bg-cover bg-left lg:bg-center bg-no-repeat 2xl:px-5 3xl:px-0 pt-44 lg:pt-[140px] xl:pt-[120px] 2xl:pt-[50px] relative z-10"
+              style={{ backgroundImage: `url(${slide.BgImage})` }}
+            >
+              <div className="Container">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                  {/* === Left Content === */}
+                  <div className="lg:col-span-7 2xl:pt-10 pb-20">
+                    {/* Title Block with Animation */}
+                    <h2 className="relative z-10 font-Outfit font-semibold text-white text-2xl leading-[32px] sm:text-[44px] sm:leading-[48px] md:text-[56px] md:leading-[62px] lg:text-[48px] lg:leading-[52px] xl:text-[60px] xl:leading-[64px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[88px] uppercase">
+                      <div
+                        className={`flex items-center gap-2 md:gap-5 transition-all duration-700 ${
+                          activeIndex === index
+                            ? "translate-y-0 opacity-100 delay-[150ms]"
+                            : "translate-y-[100px] opacity-0"
+                        }`}
+                      >
+                        Take{" "}
+                        <img
+                          src="/images/solar-banner-classic-title-img.png"
+                          alt="Title Image"
+                          draggable={false}
+                          className="rounded-full w-20 sm:w-28 md:w-[inherit]"
+                        />{" "}
+                        Controls
+                      </div>
+                      <div
+                        className={`transition-all duration-700 ${
+                          activeIndex === index
+                            ? "translate-y-0 opacity-100 delay-[300ms]"
+                            : "translate-y-[100px] opacity-0"
+                        }`}
+                      >
+                        Solor Renewable
+                      </div>
+                      <div
+                        className={`flex items-center gap-2 md:gap-5transition-all duration-500 ${
+                          activeIndex === index
+                            ? "translate-y-0 opacity-100 delay-[450ms]"
+                            : "translate-y-[100px] opacity-0"
+                        }`}
+                      >
+                        <div className="inline-block w-8 sm:w-9 md:w-[inherit]">
+                          <img
+                            src={circle}
+                            draggable={false}
+                            alt="circle"
+                            className="animate-rotational"
+                          />
+                        </div>{" "}
+                        Energy
+                      </div>
+                    </h2>
+
+                    {/* Button with Animation */}
+                    <div
+                      className={`mt-9 transition-all duration-700 ${
+                        activeIndex === index
+                          ? "translate-y-0 opacity-100 delay-[600ms]"
+                          : "translate-y-[100px] opacity-0"
+                      }`}
+                    >
+                      <PrimaryButton as="link" href="/about">
+                        Explore Services <GoArrowRight size={22} />
+                      </PrimaryButton>
+                    </div>
+
+                    {/* Customer/Team Section with Animation */}
+                    <div
+                      className={`mt-14 md:mt-[112px] lg:mt-20 xl:mt-[112px] transition-all duration-700 ${
+                        activeIndex === index
+                          ? "translate-y-0 opacity-100 delay-[750ms]"
+                          : "translate-y-[100px] opacity-0"
+                      }`}
+                    >
+                      <ul className="flex items-center -space-x-4">
+                        <li>
+                          <img
+                            src={aboutTeamImg}
+                            alt="About Team Image"
+                            draggable={false}
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src={aboutTeamImg2}
+                            alt="About Team Image"
+                            draggable={false}
+                          />
+                        </li>
+                        <li className="size-14 flex items-center justify-center bg-PrimaryColor2-0 rounded-full font-Outfit text-white text-lg">
+                          +25
+                        </li>
+                      </ul>
+                      <h6 className="font-Outfit text-white font-light text-lg mt-4">
+                        Satisfied Customers
+                      </h6>
+                    </div>
+                  </div>
+
+                  {/* === Right Image === */}
+                  <div
+                    className={`lg:col-span-5 mx-auto text-center transition-all duration-1000 ${
+                      activeIndex === index
+                        ? "translate-x-0 scale-100 opacity-100 delay-[300ms]"
+                        : "translate-x-[150px] scale-75 opacity-0"
                     }`}
                   >
-                    <div
-                      className={`bg-green-500 size-5 md:size-[38px] rounded-full shadow-md transform duration-300 ${
-                        enabled
-                          ? "translate-x-5 md:translate-x-10"
-                          : "translate-x-0"
-                      }`}
-                    ></div>
-                  </button>
-                </div>{" "}
-                Controled
-              </div>
-              Solor Renewable
-              <div className="flex items-center gap-2 md:gap-5">
-                <div className="inline-block w-8 sm:w-9 md:w-[inherit]">
-                  <img
-                    src={circle}
-                    draggable={false}
-                    alt="circle"
-                    className="animate-rotational"
-                  />
-                </div>{" "}
-                Energy
-              </div>
-            </h2>
-            <div className="mt-9">
-              <PrimaryButton as="link" href="/about">
-                Explore Services <GoArrowRight size={22} />
-              </PrimaryButton>
-            </div>
-            <div className="flex flex-wrap xl:flex-nowrap gap-5 items-center justify-between mt-20 md:mt-[62px]">
-              <div>
-                <ul className="flex items-center -space-x-4">
-                  <li>
                     <img
-                      src={aboutTeamImg}
-                      alt="About Team Image"
+                      src={slide.image}
+                      alt="Slide Visual"
+                      className="w-full 3xl:w-[inherit] 3xl:max-w-[inherit]"
                       draggable={false}
                     />
-                  </li>
-                  <li>
-                    <img
-                      src={aboutTeamImg2}
-                      alt="About Team Image"
-                      draggable={false}
-                    />
-                  </li>
-                  <li className="size-14 flex items-center justify-center bg-SecondaryColor-0 rounded-full font-Outfit text-white text-lg">
-                    +25
-                  </li>
-                </ul>
-                <h6 className="font-Outfit text-HeadingColor-0 font-medium text-lg mt-4">
-                  Satisfied Customers
-                </h6>
-              </div>
-              <div className="flex items-center gap-5 pb-1">
-                <div>
-                  <img src={icon} draggable={false} alt="Icon" />
+                  </div>
                 </div>
-                <p className="font-NotoSans text-HeadingColor-0 w-full max-w-[315px]">
-                  Econet is a nonprofit environmental main dedicated to
-                  protecting planets through empowerment.
-                </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            </section>
+          </SwiperSlide>
+        ))}
+        <BannerNavigation />
+      </Swiper>
+    </div>
   );
 };
 

@@ -2,59 +2,46 @@
 
 import { Link } from "react-router-dom";
 
-const BlogCard = ({
-  blogImage,
-  blogTag,
-  blogurl,
-  blogTitle,
-  blogDate,
-  blogBtnText,
-  blogBtnIcon,
-  isMain,
-}) => {
+const BlogCard = ({ blogImage, blogurl, blogTitle, blogDate, blogPostBy }) => {
   return (
-    <div className={isMain ? "" : "flex flex-col sm:flex-row sm:items-center gap-8 sm:gap-3 md:gap-8"}>
+    <div className="group">
       {/* Image */}
-      <div className={isMain ? "rounded-2xl overflow-hidden" : "sm:flex-1 md:flex-none xl:flex-1 2xl:flex-none"}>
+      <div className="overflow-hidden rounded-[10px] relative">
         <img
           src={blogImage}
           alt={blogTitle}
           draggable={false}
-          className={isMain ? "w-full" : "w-full object-cover rounded-2xl"}
+          className="w-full rounded-[10px] transition-all duration-500 group-hover:scale-110"
         />
+        <div>
+          {[
+            { initial: "left-[12.5%]", hover: "group-hover:left-0" },
+            { initial: "left-[37.5%]", hover: "group-hover:left-[25%]" },
+            { initial: "left-[62.5%]", hover: "group-hover:left-1/2" },
+            { initial: "left-[87.5%]", hover: "group-hover:left-[75%]" },
+          ].map((pos, i) => (
+            <span
+              key={i}
+              className={`absolute top-0 h-full w-0 transition-all duration-500 bg-PrimaryColor-0 group-hover:w-[25%] group-hover:opacity-0 ${pos.initial} ${pos.hover}`}
+            ></span>
+          ))}
+        </div>
       </div>
 
       {/* Text Content */}
-      <div className={isMain ? "mt-[30px]" : "flex-1"}>
-        <div className="flex items-center gap-4">
-          <span className="bg-PrimaryColor-0 font-Outfit text-white text-sm px-5 py-1.5 rounded-full">
-            {blogTag}
-          </span>
-          <span className="font-NotoSans text-TextColor-0">{blogDate}</span>
-        </div>
-        <div
-          className={`border-b border-SecondaryColor-0 border-opacity-10 ${
-            isMain ? "pb-7 mb-5" : "pb-5 mb-4"
-          }`}
-        >
-          <Link
-            to={blogurl}
-            className={`font-Outfit text-HeadingColor-0 inline-block mt-5 ${
-              isMain
-                ? "text-xl sm:text-3xl md:text-4xl xl:text-[32px] 2xl:text-4xl font-semibold md:leading-[44px] md:mr-14 lg:mr-0 xl:mr-20"
-                : "text-lg sm:text-xl md:text-2xl xl:text-xl 2xl:text-2xl font-medium md:leading-[32px] mr-10 lg:mr-0"
-            }`}
-          >
-            {blogTitle}
-          </Link>
+      <div className="pr-10 lg:pr-[74px] pt-8">
+        <div className="inline-block bg-PrimaryColor-0 font-Outfit text-white text-sm px-5 py-1.5 rounded-full mb-3.5">
+          {blogDate}
         </div>
         <Link
           to={blogurl}
-          className="flex items-center font-Outfit gap-2 text-lg text-HeadingColor-0 font-medium mt-2 transition-all duration-500 hover:gap-3"
+          className="font-Outfit text-HeadingColor-0 inline-block text-lg sm:text-xl md:text-2xl xl:text-xl 2xl:text-2xl font-medium md:leading-[32px] transition-all duration-500 hover:text-PrimaryColor-0"
         >
-          {blogBtnText}
-          <span className="">{blogBtnIcon}</span>
+          {blogTitle}
         </Link>
+        <h6 className="font-Outfit text-HeadingColor-0 mt-4">
+          By - <span className="text-PrimaryColor-0">{blogPostBy}</span>
+        </h6>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 import HelmetChanger from "../Shared/Helmet/Helmet";
 import ImageReveal from "../Shared/ImageReveal/ImageReveal";
 import TextReveal from "../Shared/TextAnim/TextReveal";
-import Footer5 from "../Shared/Footer/Footer5";
+import Footer7 from "../Shared/Footer/Footer7";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
@@ -84,7 +84,7 @@ const Main7 = () => {
       <div id="smooth-wrapper" className="h-full">
         <div id="smooth-content" className="min-h-screen will-change-transform">
           <Outlet />
-          <Footer5 />
+          <Footer7 />
         </div>
       </div>
     </>

@@ -179,10 +179,7 @@ const Navbar7 = () => {
             {/* Logo */}
             <div className="">
               <Link to="/" title="EducateX">
-                <img
-                  src={logo}
-                  draggable="false"
-                />
+                <img src={logo} draggable="false" />
               </Link>
             </div>
 
@@ -291,7 +288,7 @@ const Navbar7 = () => {
                     </Link>
                   </div>
                   <div
-                    className="group hidden size-[46px] bg-SecondaryColor-0 rounded-full 2xl:flex items-center justify-center cursor-pointer"
+                    className="group hidden size-[46px] bg-SecondaryColor-0 border border-white border-opacity-20 rounded-full 2xl:flex items-center justify-center cursor-pointer"
                     onClick={() => setIsOpen(true)}
                   >
                     <button className="space-y-1">
@@ -304,13 +301,13 @@ const Navbar7 = () => {
                 {/* Hamburger Icon */}
 
                 <div
-                  className="group lg:hidden size-8 md:size-[46px] bg-transparent border border-SecondaryColor-0 border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
+                  className="group lg:hidden size-8 md:size-[46px] bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
                   onClick={() => setMobileOpen(true)}
                 >
                   <button className="space-y-[3px] md:space-y-1">
-                    <span className="bg-SecondaryColor-0 w-4 md:w-5 h-0.5 rounded-xl block"></span>
-                    <span className="bg-SecondaryColor-0 w-4 md:w-5 h-0.5 rounded-xl block"></span>
-                    <span className="bg-SecondaryColor-0 w-2 md:w-3 h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-5"></span>
+                    <span className="bg-white w-4 md:w-5 h-0.5 rounded-xl block"></span>
+                    <span className="bg-white w-4 md:w-5 h-0.5 rounded-xl block"></span>
+                    <span className="bg-white w-2 md:w-3 h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-5"></span>
                   </button>
                 </div>
               </div>
@@ -621,7 +618,7 @@ const Navbar7 = () => {
         {/* Arrow Button */}
         <button
           onClick={handleCloseSearchClick}
-          className={`absolute left-0 right-0 mx-auto rounded-full bg-gradient-to-r from-PrimaryColor-0 to-PrimaryColor3-0 w-[70px] h-[70px] cursor-pointer border-4 border-t-white border-l-[#a64cf9] border-b-white border-r-[#a64cf9] shadow-md flex items-center justify-center transition-all duration-500 ease-in-out ${
+          className={`absolute left-0 right-0 mx-auto rounded-full bg-gradient-to-r from-PrimaryColor-0 to-PrimaryColor3-0 w-[70px] h-[70px] cursor-pointer border-4 border-t-white border-l-PrimaryColor2-0 border-b-white border-r-PrimaryColor2-0 shadow-md flex items-center justify-center transition-all duration-500 ease-in-out ${
             isSearchActive
               ? "visible opacity-100 top-[25%] delay-[1500ms]"
               : "invisible opacity-0 top-[75%] -mt-[200px]"
@@ -644,12 +641,12 @@ const Navbar7 = () => {
               placeholder="Search Here"
               required
               ref={searchInputRef}
-              className="block w-full h-14 md:h-[70px] text-[18px] leading-[50px] px-[30px] py-[10px] text-black bg-white border-2 border-[#1ec28f] rounded-md font-['Outfit'] appearance-none transition-all duration-500 ease-in-out focus:outline-none"
+              className="block w-full h-14 md:h-[70px] text-[18px] leading-[50px] px-[30px] py-[10px] text-black bg-white border-2 border-PrimaryColor-0 rounded-md font-Outfit appearance-none transition-all duration-500 ease-in-out focus:outline-none"
             />
             <button
               type="submit"
               disabled={isSubmitting}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#1ec28f] h-full px-[25px] text-white text-[24px] cursor-pointer border-none transition-all duration-500 ease-in-out"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-PrimaryColor-0 h-full px-[25px] text-white text-2xl cursor-pointer border-none transition-all duration-500 ease-in-out"
             >
               {isSubmitting ? <span>Loading...</span> : <IoSearch />}
             </button>

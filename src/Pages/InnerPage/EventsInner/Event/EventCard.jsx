@@ -44,7 +44,7 @@ const EventCard = ({
       <div className="col-span-12 sm:col-span-7 lg:col-span-4 pr-10 sm:pr-0 lg:pl-10 2xl:pl-20">
         <Link
           to={eventUrl}
-          className={`${hoverText} transition-all duration-500 font-Outfit font-semibold text-xl leading-7 sm:text-2xl md:text-[32px] md:leading-[42px] lg:text-[24px] lg:leading-[34px] xl:text-[28px] xl:leading-[38px] 2xl:text-[30px] 2xl:leading-[40px] text-HeadingColor-0 mt-2 mb-4`}
+          className={`${hoverText} transition-all duration-500 font-Outfit font-semibold text-xl leading-7 sm:text-2xl md:text-[32px] md:leading-[42px] lg:text-2xl lg:leading-[34px] xl:text-[28px] xl:leading-[38px] 2xl:text-[30px] 2xl:leading-[40px] text-HeadingColor-0 mt-2 mb-4`}
         >
           {eventTitle}
         </Link>

@@ -10,7 +10,7 @@ import aboutTeamImg2 from "/images/about-team-img2.png";
 const Appointment = () => {
   return (
     <div className="bg-white -mt-5">
-      <section className="grid grid-cols-1 xl:grid-cols-2 pt-5">
+      <section className="grid grid-cols-1 gap-7 xl:gap-0 xl:grid-cols-2 pt-5 pb-16 md:pb-20 lg:pb-28 xl:pb-0">
         <div className="relative overflow-hidden">
           <img
             src={appointmentTHumb}
@@ -43,7 +43,7 @@ const Appointment = () => {
             </h6>
           </div>
         </div>
-        <div className="bg-white pt-4 md:pt-20 xl:pt-10 2xl:pt-24 px-4 md:px-20 xl:px-10 2xl:px-[100px] overflow-hidden">
+        <div className="bg-white pt-4 md:pt-20 xl:py-10 2xl:py-20 3xl:py-24 px-4 md:px-20 xl:px-10 2xl:px-20 3xl:px-[100px] overflow-hidden">
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
             <img src={subtitleIcon} alt="Icon" draggable={false} />{" "}
             Consultations

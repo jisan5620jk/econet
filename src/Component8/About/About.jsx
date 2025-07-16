@@ -1,5 +1,5 @@
 import subtitleIcon from "/images/sub-title-icon.png";
-import aboutThumb from "/images/about2-thumb.png";
+import aboutThumb from "/images/solar-about-classic-img.png";
 import shape from "/images/about2-shape.gif";
 import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
 import { GoArrowRight } from "react-icons/go";
@@ -7,13 +7,13 @@ import OnScrollCounter from "../../Shared/Counter/OnScrollCounter";
 
 const cardData = [
   {
-    Bg: "/images/about2-card.png",
+    Bg: "/images/solar-about-classic-card-bg.png",
     counter: 10,
     counterSuffix: "K+",
     description: "Our Total Completed Solar Projects",
   },
   {
-    Bg: "/images/about2-card2.png",
+    Bg: "/images/solar-about-classic-card-bg2.png",
     counter: 98,
     counterSuffix: "%",
     description: "Customer Satisfaction Rates",
@@ -37,8 +37,8 @@ const itemData = [
 
 const About = () => {
   return (
-    <div className="px-2 md:px-4 3xl:px-8 bg-SecondaryColor-0 relative z-10 -mt-5 overflow-hidden">
-      <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] relative z-10 rounded-[20px] overflow-hidden">
+    <div className="relative z-10 -mt-5 overflow-hidden">
+      <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] relative z-10 overflow-hidden">
         <div className="Container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-8 xl:gap-12 2xl:gap-20">
             <div>
@@ -50,8 +50,8 @@ const About = () => {
                 <br />
                 Renewable Energy
               </h1>
-              <div className="mt-10 md:mt-5">
-                <img src={aboutThumb} draggable={false} alt="About Image" />
+              <div className="mt-10 md:mt-[54px]">
+                <img src={aboutThumb} draggable={false} alt="About Image" className="rounded-[30px]" />
               </div>
             </div>
             <div>

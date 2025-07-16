@@ -27,12 +27,6 @@ const ProjectCard = ({
             ))}
           </div>
 
-          <div className="absolute z-10 -bottom-1 right-0 rotate-90">
-            <div className="size-[72px] rounded-bl-2xl bg-BodyBgDark-0 transition-all duration-500 group-hover:bg-BodyBgDark2-0 inline-block relative">
-              <span className="absolute -left-[20px] top-0 rotate-180 size-[20px] inline-block bg-BodyBgDark-0 transition-all duration-500 group-hover:bg-BodyBgDark2-0 [clip-path:path('M0_0_Q0,20_20,20_L_0_20_Z')]"></span>
-              <span className="absolute -bottom-[20px] right-0 rotate-180 size-[20px] inline-block bg-BodyBgDark-0 transition-all duration-500 group-hover:bg-BodyBgDark2-0 [clip-path:path('M0_0_Q0,20_20,20_L_0_20_Z')]"></span>
-            </div>
-          </div>
           <img
             src={projectImg}
             draggable={false}
@@ -47,7 +41,7 @@ const ProjectCard = ({
             </h6>
             <Link
               to={projectUrl}
-              className="w-full font-Outfit font-medium block text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-[32px] 2xl:leading-[40px] text-HeadingColor-0"
+              className="w-full font-Outfit font-medium block text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-2xl 3xl:text-[32px] 2xl:leading-[40px] text-HeadingColor-0"
             >
               {projectTitle}
             </Link>

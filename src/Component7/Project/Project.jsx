@@ -80,15 +80,18 @@ const project = () => {
         slidesPerView: 2,
       },
       992: {
-        slidesPerView: 3,
+        slidesPerView: 2.4,
       },
       1400: {
+        slidesPerView: 3.2,
+      },
+      1600: {
         slidesPerView: 3.6,
       },
     },
   };
   return (
-    <section className="bg-white py-16 md:py-20 lg:py-[120px] -mt-5 relative">
+    <section className="bg-white pt-16 md:pt-20 lg:pt-[120px] pb-11 md:py-16 lg:py-[100px] -mt-5 relative">
       <div className="absolute top-[19%] right-[30%] hidden lg:block">
         <img
           src={shape}
@@ -113,7 +116,8 @@ const project = () => {
             </h5>
             <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
               Browse Latest Solar
-              <br />Renewable Energy Works
+              <br />
+              Renewable Energy Works
             </h1>
           </div>
           <div className="fade-right">

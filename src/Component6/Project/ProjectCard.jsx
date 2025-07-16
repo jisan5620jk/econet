@@ -47,7 +47,7 @@ const ProjectCard = ({
             </h6>
             <Link
               to={projectUrl}
-              className="w-full font-Outfit font-medium block text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-[32px] 2xl:leading-[40px] text-white"
+              className="w-full font-Outfit font-medium block text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-2xl 3xl:text-[32px] 2xl:leading-[40px] text-white"
             >
               {projectTitle}
             </Link>
