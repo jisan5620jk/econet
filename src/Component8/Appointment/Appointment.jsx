@@ -9,7 +9,7 @@ import aboutTeamImg2 from "/images/about-team-img2.png";
 
 const Appointment = () => {
   return (
-    <div className="bg-white -mt-5">
+    <div className="bg-BodyBgDark-0 -mt-5 relative z-20">
       <section className="grid grid-cols-1 gap-7 xl:gap-0 xl:grid-cols-2 pt-5 pb-16 md:pb-20 lg:pb-28 xl:pb-0">
         <div className="relative overflow-hidden">
           <img
@@ -43,12 +43,12 @@ const Appointment = () => {
             </h6>
           </div>
         </div>
-        <div className="bg-white pt-4 md:pt-20 xl:py-10 2xl:py-20 3xl:py-24 px-4 md:px-20 xl:px-10 2xl:px-20 3xl:px-[100px] overflow-hidden">
+        <div className="bg-BodyBgDark-0 pt-4 md:pt-20 xl:py-10 2xl:py-20 3xl:py-24 px-4 md:px-20 xl:px-10 2xl:px-20 3xl:px-[100px] overflow-hidden">
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
             <img src={subtitleIcon} alt="Icon" draggable={false} />{" "}
             Consultations
           </h5>
-          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
             {`Need Help? We're Here`}
           </h1>
           <form
@@ -64,7 +64,7 @@ const Appointment = () => {
                   id="name"
                   placeholder="Your Name*"
                   required
-                  className="h-[58px] w-full rounded-full pl-8 text-HeadingColor-0 font-NotoSans bg-transparent outline-none border border-SecondaryColor-0 border-opacity-15 transition-all duration-500 ease-linear placeholder:text-HeadingColor-0 hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
+                  className="h-[58px] w-full rounded-full pl-8 text-white font-NotoSans bg-transparent outline-none border border-white border-opacity-15 transition-all duration-500 ease-linear placeholder:text-white hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
                 />
                 <span className="absolute top-1/2 -translate-y-1/2 right-7 flex items-center justify-center text-PrimaryColor-0">
                   <PiUserCircleFill size={22} />
@@ -77,7 +77,7 @@ const Appointment = () => {
                   id="phone"
                   placeholder="Your Phone No*"
                   required
-                  className="h-[58px] w-full rounded-full pl-8 text-HeadingColor-0 font-NotoSans bg-transparent outline-none border border-SecondaryColor-0 border-opacity-15 transition-all duration-500 ease-linear placeholder:text-HeadingColor-0 hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
+                  className="h-[58px] w-full rounded-full pl-8 text-white font-NotoSans bg-transparent outline-none border border-white border-opacity-15 transition-all duration-500 ease-linear placeholder:text-white hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
                 />
                 <span className="absolute top-1/2 -translate-y-1/2 right-7 size-5 border border-PrimaryColor-0 rounded-full flex items-center justify-center text-PrimaryColor-0">
                   <FaPhone size={12} />
@@ -92,7 +92,7 @@ const Appointment = () => {
                   id="name"
                   placeholder="Your Name*"
                   required
-                  className="h-[58px] w-full rounded-full pl-8 text-HeadingColor-0 font-NotoSans bg-transparent outline-none border border-SecondaryColor-0 border-opacity-15 transition-all duration-500 ease-linear placeholder:text-HeadingColor-0 hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
+                  className="h-[58px] w-full rounded-full pl-8 text-white font-NotoSans bg-transparent outline-none border border-white border-opacity-15 transition-all duration-500 ease-linear placeholder:text-white hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
                 />
                 <span className="absolute top-1/2 -translate-y-1/2 right-7 flex items-center justify-center text-PrimaryColor-0">
                   <FaRegEnvelopeOpen />
@@ -100,7 +100,7 @@ const Appointment = () => {
               </div>
               <div className="relative">
                 <select
-                  className="h-[58px] w-full cursor-pointer rounded-full pl-7 text-HeadingColor-0 font-NotoSans bg-transparent outline-none border border-SecondaryColor-0 border-opacity-15 placeholder:text-HeadingColor-0 transition-all duration-500 ease-linear hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
+                  className="h-[58px] w-full cursor-pointer rounded-full pl-7 text-white font-NotoSans bg-transparent outline-none border border-white border-opacity-15 placeholder:text-white transition-all duration-500 ease-linear hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
                   defaultValue=""
                 >
                   <option value="" disabled>
@@ -118,7 +118,7 @@ const Appointment = () => {
                 name="message"
                 id="message"
                 placeholder="Write Message..."
-                className="min-h-[150px] w-full rounded-[30px] px-7 py-3 resize-none text-PrimaryColor-0 font-Rajdhani text-lg bg-white outline-none border border-SecondaryColor-0 border-opacity-15 transition-all duration-500 ease-linear placeholder:text-HeadingColor-0 hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
+                className="min-h-[150px] w-full rounded-[30px] px-7 py-3 resize-none text-PrimaryColor-0 font-Rajdhani text-lg bg-transparent outline-none border border-white border-opacity-15 transition-all duration-500 ease-linear placeholder:text-white hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
               ></textarea>
             </div>
             <PrimaryButton type="submit">

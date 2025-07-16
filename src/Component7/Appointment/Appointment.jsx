@@ -9,7 +9,7 @@ import aboutTeamImg2 from "/images/about-team-img2.png";
 
 const Appointment = () => {
   return (
-    <div className="bg-white -mt-5">
+    <div className="bg-white -mt-5 relative z-20">
       <section className="grid grid-cols-1 gap-7 xl:gap-0 xl:grid-cols-2 pt-5 pb-16 md:pb-20 lg:pb-28 xl:pb-0">
         <div className="relative overflow-hidden">
           <img
@@ -118,7 +118,7 @@ const Appointment = () => {
                 name="message"
                 id="message"
                 placeholder="Write Message..."
-                className="min-h-[150px] w-full rounded-[30px] px-7 py-3 resize-none text-PrimaryColor-0 font-Rajdhani text-lg bg-white outline-none border border-SecondaryColor-0 border-opacity-15 transition-all duration-500 ease-linear placeholder:text-HeadingColor-0 hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
+                className="min-h-[150px] w-full rounded-[30px] px-7 py-3 resize-none text-PrimaryColor-0 font-Rajdhani text-lg bg-transparent outline-none border border-SecondaryColor-0 border-opacity-15 transition-all duration-500 ease-linear placeholder:text-HeadingColor-0 hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
               ></textarea>
             </div>
             <PrimaryButton type="submit">

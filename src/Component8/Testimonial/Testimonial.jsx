@@ -80,7 +80,7 @@ const Testimonial = () => {
     },
   };
   return (
-    <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] -mt-5">
+    <section className="bg-SecondaryColor-0 py-16 md:py-20 lg:py-[120px] relative z-10 -mt-5">
       <div className="Container pt-5">
         <div className="flex flex-wrap items-center gap-4 md:gap-10 lg:gap-20 relative z-10">
           <div>
@@ -88,13 +88,13 @@ const Testimonial = () => {
               <img src={subtitleIcon} alt="Icon" draggable={false} />{" "}
               Testimonial
             </h5>
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
               Real Stories from Our
               <br />
               Real Customers
             </h1>
           </div>
-          <p className="fade-up font-NotoSans text-TextColor-0 max-w-[395px] w-full pt-4">
+          <p className="fade-up font-NotoSans text-TextColor2-0 max-w-[395px] w-full pt-4">
             Econet is a environmental organizations maintaince dedicated to
             protecting planet through sustainable community empowerment
             moderator

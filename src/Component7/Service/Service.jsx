@@ -189,7 +189,7 @@ const Service = () => {
 
                     <Link
                       to={service.serviceUrl}
-                      className={`w-full flex justify-between items-center font-Outfit px-8 py-3 rounded-full text-HeadingColor-0 border border-s border-opacity-15 transition-all duration-500 group-hover:text-white relative z-10 overflow-hidden before:absolute before:right-0 before:top-0 before:w-0 before:h-full ${beforeColor} before:transition-all before:duration-500 before:-z-10 group-hover:before:w-full group-hover:before:left-0`}
+                      className={`w-full flex justify-between items-center font-Outfit px-8 py-3 rounded-full text-HeadingColor-0 border border-SecondaryColor-0 border-opacity-15 transition-all duration-500 group-hover:text-white relative z-10 overflow-hidden before:absolute before:right-0 before:top-0 before:w-0 before:h-full ${beforeColor} before:transition-all before:duration-500 before:-z-10 group-hover:before:w-full group-hover:before:left-0`}
                     >
                       {service.serviceBtnText}
                       {service.serviceBtnIcon}

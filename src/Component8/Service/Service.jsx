@@ -103,20 +103,20 @@ const Service = () => {
     },
   };
   return (
-    <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] -mt-5">
+    <section className="bg-BodyBgDark-0 py-16 md:py-20 lg:py-[120px] -mt-5">
       <div className="Container">
         <div className="flex items-center flex-wrap gap-4 md:gap-10 xl:gap-20 pt-5 relative z-10">
           <div>
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
               <img src={subtitleIcon} alt="Icon" draggable={false} /> services
             </h5>
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
               Smart, Sustainable, and
               <br />
               Seamless Solar Services
             </h1>
           </div>
-          <p className="fade-up font-NotoSans text-TextColor-0 max-w-[395px] w-full pt-4">
+          <p className="fade-up font-NotoSans text-TextColor2-0 max-w-[395px] w-full pt-4">
             Econet is a environmental organizations maintaince dedicated to
             protecting planet through sustainable community empowerment
             moderator
@@ -142,7 +142,7 @@ const Service = () => {
 
             return (
               <SwiperSlide key={index}>
-                <div className="box group p-5 bg-white shadow-shade rounded-[20px] relative z-10 overflow-hidden">
+                <div className="box group p-5 bg-BodyBgDark2-0 rounded-[20px] relative z-10 overflow-hidden">
                   <div className="relative z-10 rounded-[20px] overflow-hidden pb-5">
                     <div>
                       <svg
@@ -178,18 +178,18 @@ const Service = () => {
 
                     <Link
                       to={service.serviceUrl}
-                      className="w-full inline-block font-Outfit text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-[28px] 2xl:leading-[36px] text-HeadingColor-0 mt-7"
+                      className="w-full inline-block font-Outfit text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-[28px] 2xl:leading-[36px] text-white mt-7"
                     >
                       {service.serviceTitle}
                     </Link>
 
-                    <p className="font-NotoSans text-TextColor-0 mt-3.5 mb-9">
+                    <p className="font-NotoSans text-TextColor2-0 mt-3.5 mb-9">
                       {service.serviceDesc}
                     </p>
 
                     <Link
                       to={service.serviceUrl}
-                      className={`w-full flex justify-between items-center font-Outfit px-8 py-3 rounded-full text-HeadingColor-0 border border-s border-opacity-15 transition-all duration-500 group-hover:text-white relative z-10 overflow-hidden before:absolute before:right-0 before:top-0 before:w-0 before:h-full ${beforeColor} before:transition-all before:duration-500 before:-z-10 group-hover:before:w-full group-hover:before:left-0`}
+                      className={`w-full flex justify-between items-center font-Outfit px-8 py-3 rounded-full text-white border border-white border-opacity-15 transition-all duration-500 group-hover:text-white relative z-10 overflow-hidden before:absolute before:right-0 before:top-0 before:w-0 before:h-full ${beforeColor} before:transition-all before:duration-500 before:-z-10 group-hover:before:w-full group-hover:before:left-0`}
                     >
                       {service.serviceBtnText}
                       {service.serviceBtnIcon}

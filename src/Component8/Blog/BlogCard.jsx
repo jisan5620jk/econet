@@ -35,11 +35,11 @@ const BlogCard = ({ blogImage, blogurl, blogTitle, blogDate, blogPostBy }) => {
         </div>
         <Link
           to={blogurl}
-          className="font-Outfit text-HeadingColor-0 inline-block text-lg sm:text-xl md:text-2xl xl:text-xl 2xl:text-2xl font-medium md:leading-[32px] transition-all duration-500 hover:text-PrimaryColor-0"
+          className="font-Outfit text-white inline-block text-lg sm:text-xl md:text-2xl xl:text-xl 2xl:text-2xl md:leading-[32px] transition-all duration-500 hover:text-PrimaryColor-0"
         >
           {blogTitle}
         </Link>
-        <h6 className="font-Outfit text-HeadingColor-0 mt-4">
+        <h6 className="font-Outfit text-white font-light mt-4">
           By - <span className="text-PrimaryColor-0">{blogPostBy}</span>
         </h6>
       </div>

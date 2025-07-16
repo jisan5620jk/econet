@@ -80,7 +80,7 @@ const Testimonial = () => {
     },
   };
   return (
-    <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] -mt-5">
+    <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] relative z-10 -mt-5">
       <div className="Container pt-5">
         <div className="flex flex-wrap items-center gap-4 md:gap-10 lg:gap-20 relative z-10">
           <div>

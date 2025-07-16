@@ -91,7 +91,7 @@ const project = () => {
     },
   };
   return (
-    <section className="bg-white pt-16 md:pt-20 lg:pt-[120px] pb-11 md:py-16 lg:py-[100px] -mt-5 relative">
+    <section className="bg-BodyBgDark-0 pt-16 md:pt-20 lg:pt-[120px] pb-11 md:py-16 lg:py-[100px] -mt-5 relative">
       <div className="absolute top-[19%] right-[30%] hidden lg:block">
         <img
           src={shape}
@@ -114,7 +114,7 @@ const project = () => {
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
               <img src={subtitleIcon} alt="Icon" draggable={false} /> Projects
             </h5>
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
               Browse Latest Solar
               <br />
               Renewable Energy Works
