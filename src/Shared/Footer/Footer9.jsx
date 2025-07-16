@@ -10,7 +10,7 @@ import { BsArrowRight } from "react-icons/bs";
 import shape from "/images/why-choose2-shape4.png";
 import shape2 from "/images/footer-shape2.png";
 
-const Footer7 = () => {
+const Footer9 = () => {
   return (
     <footer className="bg-SecondaryColor-0 px-2 sm:px-4 3xl:px-8 pt-16 md:pt-20 lg:pt-[120px] relative z-10 -mt-5">
       <div className="Container pt-5">
@@ -219,4 +219,4 @@ const Footer7 = () => {
   );
 };
 
-export default Footer7;
+export default Footer9;

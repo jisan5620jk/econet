@@ -18,7 +18,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { MdLocationPin } from "react-icons/md";
 import { CgClose } from "react-icons/cg";
 
-const Navbar6 = () => {
+const Navbar9 = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMobileMenu, setActiveMobileMenu] = useState(null);
@@ -168,9 +168,9 @@ const Navbar6 = () => {
     <div>
       {/* Header Main */}
       <header
-        className={`absolute sm:top-4 md:top-8 w-full z-50 transition-all duration-300 bg-transparent ${
+        className={`relative w-full z-50 transition-all duration-300 bg-SecondaryColor-0 ${
           isSticky
-            ? "!fixed !top-0 shadow-shade !bg-SecondaryColor-0 animate-headerSlideDown border-transparent"
+            ? "!fixed !top-0 shadow-shade animate-headerSlideDown border-transparent"
             : ""
         }`}
       >
@@ -194,7 +194,7 @@ const Navbar6 = () => {
                           <Link
                             to="#"
                             data-text={item.label}
-                            className={`clip-hover inline-flex items-center gap-1.5 2xl:mx-1 my-[31px] font-Outfit font-medium capitalize text-lg transition-all duration-500 hover:text-PrimaryColor-0 relative z-10 overflow-hidden
+                            className={`clip-hover inline-flex items-center gap-1.5 2xl:mx-1 my-[36px] font-Outfit font-medium capitalize text-lg transition-all duration-500 hover:text-PrimaryColor-0 relative z-10 overflow-hidden
                                 ${
                                   isParentActive(item.links)
                                     ? "text-PrimaryColor-0"
@@ -251,7 +251,7 @@ const Navbar6 = () => {
                         // Only 1 link, render direct link with no submenu
                         <Link
                           to={item.links[0].to}
-                          className={`inline-flex items-center gap-1.5 mx-1 my-[31px] font-Outfit font-medium text-lg capitalize transition-all duration-500 hover:text-PrimaryColor-0 relative z-10 overflow-hidden ${
+                          className={`inline-flex items-center gap-1.5 mx-1 my-[36px] font-Outfit font-medium text-lg capitalize transition-all duration-500 hover:text-PrimaryColor-0 relative z-10 overflow-hidden ${
                             currentPath === item.links[0].to
                               ? "text-PrimaryColor-0"
                               : "text-white"
@@ -266,7 +266,7 @@ const Navbar6 = () => {
               </nav>
             </div>
             <div>
-              <div className="flex items-center gap-2 sm:gap-7 lg:gap-5 xl:gap-[34px]">
+              <div className="flex items-center gap-2 sm:gap-4">
                 <div className="flex items-center gap-2 sm:gap-4 lg:gap-2 xl:gap-4 lg:hidden xl:flex">
                   <div
                     className="size-8 md:size-[46px] lg:size-9 xl:size-[46px] bg-transparent rounded-full bg-white bg-opacity-15 overflow-hidden text-white transition-all duration-500 flex items-center justify-center cursor-pointer relative z-10 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:rotate-180 before:scale-0 before:-z-10 hover:before:scale-100 hover:before:rotate-0 hover:text-white hover:border-PrimaryColor-0"
@@ -277,18 +277,17 @@ const Navbar6 = () => {
                     </button>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
                   <div className="hidden lg:block">
                     <Link
                       to={"/contact"}
                       className="inline-flex items-center gap-2 text-base uppercase text-white font-medium font-Outfit rounded-full bg-PrimaryColor-0 px-[30px] py-3 transition-all duration-500 relative z-10 overflow-hidden before:absolute before:h-full before:w-0 before:bg-PrimaryColor2-0 before:opacity-50 before:top-0 before:left-auto before:right-0 before:transition-all before:duration-500 before:-z-10 hover:before:left-0 hover:before:opacity-100 hover:before:w-full hover:right-auto"
                     >
-                      Free Trial
+                      Get a Quote
                       <HiArrowNarrowRight size={18} />
                     </Link>
                   </div>
                   <div
-                    className="group hidden size-[46px] bg-white bg-opacity-15 rounded-full 2xl:flex items-center justify-center cursor-pointer"
+                    className="group hidden size-[46px] bg-PrimaryColor2-0 rounded-full 2xl:flex items-center justify-center cursor-pointer"
                     onClick={() => setIsOpen(true)}
                   >
                     <button className="space-y-1">
@@ -297,17 +296,16 @@ const Navbar6 = () => {
                       <span className="bg-white w-3 h-0.5 rounded-xl block transition-all duration-500 group-hover:w-5"></span>
                     </button>
                   </div>
-                </div>
                 {/* Hamburger Icon */}
 
                 <div
-                  className="group lg:hidden size-8 md:size-[46px] bg-transparent border border-SecondaryColor-0 border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
+                  className="group lg:hidden size-8 md:size-[46px] bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
                   onClick={() => setMobileOpen(true)}
                 >
                   <button className="space-y-[3px] md:space-y-1">
-                    <span className="bg-SecondaryColor-0 w-4 md:w-5 h-0.5 rounded-xl block"></span>
-                    <span className="bg-SecondaryColor-0 w-4 md:w-5 h-0.5 rounded-xl block"></span>
-                    <span className="bg-SecondaryColor-0 w-2 md:w-3 h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-5"></span>
+                    <span className="bg-white w-4 md:w-5 h-0.5 rounded-xl block"></span>
+                    <span className="bg-white w-4 md:w-5 h-0.5 rounded-xl block"></span>
+                    <span className="bg-white w-2 md:w-3 h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-5"></span>
                   </button>
                 </div>
               </div>
@@ -657,4 +655,4 @@ const Navbar6 = () => {
   );
 };
 
-export default Navbar6;
+export default Navbar9;

@@ -170,7 +170,7 @@ const Navbar7 = () => {
       <header
         className={`absolute w-full z-50 transition-all duration-300 bg-transparent ${
           isSticky
-            ? "!fixed !top-0 shadow-shadows !bg-SecondaryColor-0 animate-headerSlideDown border-transparent"
+            ? "!fixed !top-0 shadow-shade !bg-SecondaryColor-0 animate-headerSlideDown border-transparent"
             : ""
         }`}
       >
