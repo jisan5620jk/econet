@@ -3,22 +3,6 @@ import aboutThumb from "/images/about2-thumb.png";
 import shape from "/images/about2-shape.gif";
 import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
 import { GoArrowRight } from "react-icons/go";
-import OnScrollCounter from "../../Shared/Counter/OnScrollCounter";
-
-const cardData = [
-  {
-    Bg: "/images/about2-card.png",
-    counter: 10,
-    counterSuffix: "K+",
-    description: "Our Total Completed Solar Projects",
-  },
-  {
-    Bg: "/images/about2-card2.png",
-    counter: 98,
-    counterSuffix: "%",
-    description: "Customer Satisfaction Rates",
-  },
-];
 
 const itemData = [
   {
@@ -37,7 +21,7 @@ const itemData = [
 
 const About = () => {
   return (
-    <div className="px-2 md:px-4 3xl:px-8 bg-SecondaryColor-0 relative z-10 -mt-5 overflow-hidden">
+    <div className="relative z-10 overflow-hidden">
       <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] relative z-10 rounded-[20px] overflow-hidden">
         <div className="Container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-8 xl:gap-12 2xl:gap-20">
@@ -55,36 +39,14 @@ const About = () => {
               </div>
             </div>
             <div>
-              <div className="box-row grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {cardData.map((card, index) => (
-                  <div key={index} className={`box group px-10 sm:px-4 md:px-10 lg:px-4 xl:px-10 pt-8 pb-[34px] relative z-10`}>
-                    {/* Card BG */}
-                    <div className="absolute -z-10 top-0 right-0 w-full h-full">
-                      <img
-                        src={card.Bg}
-                        alt="Card Background"
-                        draggable={false}
-                        className="w-full h-full"
-                      />
-                    </div>
-
-                    {/* Card Counter */}
-                    <div className="!font-Outfit font-semibold text-[50px] leading-7 text-white flex gap-1 justify-start items-center">
-                      <OnScrollCounter
-                        start={0}
-                        end={card.counter}
-                        duration={1000}
-                      />
-                      <span className="-mt-2">{card.counterSuffix}</span>
-                    </div>
-
-                    {/* Descrition */}
-                    <h5 className="font-NotoSans text-white text-lg w-full max-w-[180px] mt-4">
-                      {card.description}
-                    </h5>
-                  </div>
-                ))}
-              </div>
+              <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+                <img src={subtitleIcon} alt="Icon" draggable={false} /> About Us
+              </h5>
+              <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+                Leading the Transition to
+                <br />
+                Renewable Energy
+              </h1>
               <div className="box-row mt-6">
                 {itemData.map((item, index) => (
                   <div
