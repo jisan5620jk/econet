@@ -3,6 +3,7 @@ import Appointment from "../../Component9/Appointment/Appointment";
 import Banner from "../../Component9/Banner/Banner";
 import Blog from "../../Component9/Blog/Blog";
 import CallDoAction from "../../Component9/CallDoAction/CallDoAction";
+import Donations from "../../Component9/Donations/Donations";
 import Feature from "../../Component9/Feature/Feature";
 import Process from "../../Component9/Process/Process";
 import Project from "../../Component9/Project/Project";
@@ -18,6 +19,7 @@ const Home9 = () => {
       <Banner />
       <Feature />
       <About />
+      <Donations />
       <Service />
       <WhyChoose />
       <Project />

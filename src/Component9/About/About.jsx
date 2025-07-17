@@ -29,7 +29,7 @@ const About = () => {
     <div className="relative z-10 overflow-hidden">
       <section className="bg-white py-16 md:py-20 lg:py-[120px] relative z-10 rounded-[20px] overflow-hidden">
         <div className="Container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 2xl:gap-6 items-center pt-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 2xl:gap-6 items-center pt-6 pb-2.5">
             <div className="relative 2xl:-ml-[60px]">
               <img src={aboutThumb} draggable={false} alt="About Image" />
               <div className="absolute bottom-20 left-8">
