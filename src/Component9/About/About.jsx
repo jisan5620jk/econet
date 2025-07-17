@@ -1,19 +1,24 @@
 import subtitleIcon from "/images/sub-title-icon.png";
-import aboutThumb from "/images/about2-thumb.png";
-import shape from "/images/about2-shape.gif";
+import aboutThumb from "/images/charity-about-img.png";
+import shape from "/images/charity-about-shape.png";
+import shape2 from "/images/charity-about-shape2.png";
+import shape3 from "/images/charity-about-shape3.png";
 import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
 import { GoArrowRight } from "react-icons/go";
+import aboutArrow from "/images/charity-about-arrow.png";
+import aboutDot from "/images/charity-about-dot.png";
+import OnScrollCounter from "../../Shared/Counter/OnScrollCounter";
 
 const itemData = [
   {
-    icon: "/images/about2-icon.png",
-    title: "Expert Installation Team",
+    icon: "/images/charity-about-icon.png",
+    title: "Donation Management",
     description:
       "We leverage real environmental data tailor projects that maximize ecology benefit in your region",
   },
   {
-    icon: "/images/about2-icon2.png",
-    title: "24 Hours Clients Supports",
+    icon: "/images/charity-about-icon2.png",
+    title: "Volunteer Driven Support",
     description:
       "We leverage real environmental data tailor projects that maximize ecology benefit in your region",
   },
@@ -22,20 +27,38 @@ const itemData = [
 const About = () => {
   return (
     <div className="relative z-10 overflow-hidden">
-      <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] relative z-10 rounded-[20px] overflow-hidden">
+      <section className="bg-white py-16 md:py-20 lg:py-[120px] relative z-10 rounded-[20px] overflow-hidden">
         <div className="Container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-8 xl:gap-12 2xl:gap-20">
-            <div>
-              <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
-                <img src={subtitleIcon} alt="Icon" draggable={false} /> About Us
-              </h5>
-              <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
-                Leading the Transition to
-                <br />
-                Renewable Energy
-              </h1>
-              <div className="mt-10 md:mt-5">
-                <img src={aboutThumb} draggable={false} alt="About Image" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 2xl:gap-6 items-center pt-6">
+            <div className="relative 2xl:-ml-[60px]">
+              <img src={aboutThumb} draggable={false} alt="About Image" />
+              <div className="absolute bottom-20 left-8">
+                <div className="relative text-center">
+                  <div className="font-semibold text-[74px] leading-10 text-PrimaryColor-0">
+                    <OnScrollCounter start={0} end={30} duration={1000} />
+                  </div>
+                  <h6 className="font-Outfit text-HeadingColor-0 font-medium text-lg text-center uppercase pt-1">
+                    Years of
+                    <br />
+                    Experience
+                  </h6>
+                  <div className="absolute -top-8 -left-[64px] hidden md:block">
+                    <img
+                      src={aboutArrow}
+                      alt="About Arrow"
+                      className="animate-swing"
+                      style={{ animationDuration: "2s" }}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="absolute top-2 right-32 hidden md:block">
+                <img
+                  src={aboutDot}
+                  alt="About Dot"
+                  className="animate-dance"
+                  style={{ animationDuration: "6s" }}
+                />
               </div>
             </div>
             <div>
@@ -43,11 +66,11 @@ const About = () => {
                 <img src={subtitleIcon} alt="Icon" draggable={false} /> About Us
               </h5>
               <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
-                Leading the Transition to
+                Creating a Brighter Future
                 <br />
-                Renewable Energy
+                Help the Humanity
               </h1>
-              <div className="box-row mt-6">
+              <div className="box-row mt-1">
                 {itemData.map((item, index) => (
                   <div
                     key={index}
@@ -67,13 +90,13 @@ const About = () => {
                       </div>
 
                       {/* Title */}
-                      <h3 className="font-Outfit text-xl sm:text-2xl md:text-[22px] xl:text-xl 2xl:text-2xl font-medium text-HeadingColor-0 md:w-[170px] lg:w-[inherit]">
+                      <h3 className="font-Outfit text-xl sm:text-2xl md:text-[22px] xl:text-xl 2xl:text-2xl font-medium text-HeadingColor-0 md:w-[170px]">
                         {item.title}
                       </h3>
                     </div>
 
                     {/* Descrition */}
-                    <p className="font-NotoSans text-TextColor-0 max-w-[312px] xl:max-w-[280px] 2xl:max-w-[312px] w-full">
+                    <p className="font-NotoSans text-TextColor-0 max-w-[312px] xl:max-w-[280px] 2xl:max-w-[312px] w-full 2xl:ml-10">
                       {item.description}
                     </p>
                   </div>
@@ -81,7 +104,7 @@ const About = () => {
               </div>
               <div className="mt-2 md:mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-7">
                 <PrimaryButton as="link" href="/about">
-                  Explore Services <GoArrowRight size={22} />
+                  More About Us <GoArrowRight size={22} />
                 </PrimaryButton>
                 <div>
                   <h6 className="font-NotoSans text-[15px] text-TextColor-0 mb-1">
@@ -99,12 +122,30 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="absolute -bottom-3 right-8 z-10 hidden 3xl:block">
+        <div className="absolute -top-[6%] left-0 z-10 hidden 3xl:block">
           <img
             src={shape}
             draggable={false}
             alt="Shape"
-            className="w-full max-w-[356px]"
+            className="animate-wiggle"
+          />
+        </div>
+        <div className="absolute top-36 right-32 z-10 hidden 3xl:block">
+          <img
+            src={shape2}
+            draggable={false}
+            alt="Shape"
+            className="animate-dance2"
+            style={{ animationDuration: "5s" }}
+          />
+        </div>
+        <div className="absolute -bottom-12 right-12 z-10 hidden 3xl:block">
+          <img
+            src={shape3}
+            draggable={false}
+            alt="Shape"
+            className="animate-wiggle"
+            style={{ animationDelay: "1s" }}
           />
         </div>
       </section>
