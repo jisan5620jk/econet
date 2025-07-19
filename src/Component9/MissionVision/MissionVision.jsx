@@ -6,6 +6,7 @@ import { GiCheckMark } from "react-icons/gi";
 import shape from "/images/charity-mission-vision-shape.png";
 import shape2 from "/images/charity-mission-vision-shape2.png";
 import shape3 from "/images/charity-mission-vision-shape3.png";
+import lineShape from "/images/line-shape.png";
 
 const tabs = [
   {
@@ -37,7 +38,7 @@ const missionList = [
 const MissionVision = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <section className="bg-SecondaryColor-0 pt-[242px] pb-16 md:pb-20 lg:ob-[120px] relative z-10">
+    <section className="bg-SecondaryColor-0 pt-[242px] pb-16 md:pb-20 lg:pb-[320px] relative z-20">
       <div className="Container">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           <div>
@@ -146,6 +147,10 @@ const MissionVision = () => {
           className="animate-wiggle"
           style={{ animationDuration: "5.5s" }}
         />
+      </div>
+
+      <div className="absolute -bottom-[58px] left-0 right-0">
+        <img src={lineShape} alt="Line Shape" draggable={false} />
       </div>
     </section>
   );
