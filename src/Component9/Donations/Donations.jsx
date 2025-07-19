@@ -1,5 +1,7 @@
 import DonationCard from "./DonationCard";
 import subtitleIcon from "/images/sub-title-icon.png";
+import shape from "/images/charity-donation-shape.png";
+import shape2 from "/images/charity-donation-shape2.png";
 
 const cardData = [
   {
@@ -52,6 +54,25 @@ const Donations = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="absolute -z-10 top-[14%] left-[19%]">
+        <img
+          src={shape}
+          alt="Image Shape"
+          draggable={false}
+          className="animate-rotateX"
+          style={{ animationDuration: "6s" }}
+        />
+      </div>
+      <div className="absolute -z-10 top-[15%] right-[20%]">
+        <img
+          src={shape2}
+          alt="Image Shape"
+          draggable={false}
+          className="animate-swing"
+          style={{ animationDuration: "3.5s" }}
+        />
       </div>
     </section>
   );
