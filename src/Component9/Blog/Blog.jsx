@@ -1,18 +1,18 @@
 import { GoArrowRight } from "react-icons/go";
 import BlogCard from "./BlogCard";
-import blogImage from "/images/blog2-thumb.png";
-import blogImage2 from "/images/blog2-thumb2.png";
-import blogImage3 from "/images/blog2-thumb3.png";
-import blogImage4 from "/images/blog2-thumb4.png";
+import blogImage from "/images/charity-blog-thumb.png";
+import blogImage2 from "/images/charity-blog-img2.png";
+import blogImage3 from "/images/charity-blog-img3.png";
+import blogImage4 from "/images/charity-blog-img4.png";
 import subtitleIcon from "/images/sub-title-icon.png";
 
 const blogPosts = [
   {
     id: 1,
-    blogTitle: "Top 5 Eco-Innovations Changing World Right Now",
+    blogTitle: "How One Act of Kindness Can Transform the World",
     blogDate: "03 June, 2025",
     blogImage: blogImage,
-    blogTag: "ECOLOGY",
+    blogTag: "Child",
     isMain: true,
     blogUrl: "/blog_details",
     blogBtnText: "Read More",
@@ -20,30 +20,30 @@ const blogPosts = [
   },
   {
     id: 2,
-    blogTitle: "10 Simple ways to live a more Eco friendly life",
+    blogTitle: "Look at How We’re Support Families in Times",
     blogDate: "04 June, 2025",
     blogImage: blogImage2,
-    blogTag: "LIFESTYLE",
+    blogTag: "Support",
     blogUrl: "/blog_details",
     blogBtnText: "Read More",
     blogBtnIcon: <GoArrowRight />,
   },
   {
     id: 3,
-    blogTitle: "Top 10 most popular tips for Recycling dirty",
+    blogTitle: "How Our Worldwide Efforts Touching Lives",
     blogDate: "05 June, 2025",
     blogImage: blogImage3,
-    blogTag: "RECYCLING",
+    blogTag: "Foods",
     blogUrl: "/blog_details",
     blogBtnText: "Read More",
     blogBtnIcon: <GoArrowRight />,
   },
   {
     id: 4,
-    blogTitle: "How to Install Econet apps on Android and ISO?",
+    blogTitle: "How Our Health and Wellness Programs for Kids",
     blogDate: "06 June, 2025",
     blogImage: blogImage4,
-    blogTag: "TECHNOLOGY",
+    blogTag: "Education",
     blogUrl: "/blog_details",
     blogBtnText: "Read More",
     blogBtnIcon: <GoArrowRight />,

@@ -28,7 +28,7 @@ const VideoCta = () => {
               </button>
             </div>
           </div>
-          <div className="bg-[url(/images/charity-cta-bg.png)] bg-cover bg-no-repeat bg-center rounded-[20px] overflow-hidden px-5 sm:px-11 lg:px-6 2xl:px-[52px] pt-6 sm:pt-[50px] lg:pt-5 2xl:pt-[62px] pb-7 sm:pb-[49px] lg:pb-5 xl:pb-6 2xl:pb-[49px] relative z-10">
+          <div className="bg-[url(/images/charity-video-cta-bg.png)] bg-cover bg-no-repeat bg-center rounded-[20px] overflow-hidden px-5 sm:px-11 lg:px-6 2xl:px-[52px] pt-6 sm:pt-[50px] lg:pt-5 2xl:pt-[62px] pb-7 sm:pb-[49px] lg:pb-5 xl:pb-6 2xl:pb-[49px] relative z-10">
             <h6 className="font-Outfit text-lg text-PrimaryColor-0 font-medium mb-2 inline-block uppercase">
               Donate Love
             </h6>

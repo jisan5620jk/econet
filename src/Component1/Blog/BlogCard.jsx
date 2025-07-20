@@ -16,8 +16,8 @@ const BlogCard = ({
     <div
       className={
         isMain
-          ? ""
-          : "flex flex-col sm:flex-row sm:items-center gap-8 sm:gap-3 md:gap-8"
+          ? "group"
+          : "group flex flex-col sm:flex-row sm:items-center gap-8 sm:gap-3 md:gap-8"
       }
     >
       {/* Image */}
@@ -25,7 +25,7 @@ const BlogCard = ({
         className={
           isMain
             ? "rounded-2xl overflow-hidden relative"
-            : "sm:flex-1 md:flex-none xl:flex-1 2xl:flex-none relative"
+            : "sm:flex-1 md:flex-none xl:flex-1 2xl:flex-none overflow-hidden relative"
         }
       >
         <img
@@ -64,7 +64,7 @@ const BlogCard = ({
         >
           <Link
             to={blogurl}
-            className={`font-Outfit text-HeadingColor-0 inline-block mt-5 transition-all duration-500 hover:text-PrimaryColor-0 transition-all duration-500 hover:text-PrimaryColor-0 ${
+            className={`font-Outfit text-HeadingColor-0 inline-block mt-5 transition-all duration-500 hover:text-PrimaryColor-0 ${
               isMain
                 ? "text-xl sm:text-3xl md:text-4xl xl:text-[32px] 2xl:text-4xl font-semibold md:leading-[44px] md:mr-14 lg:mr-0 xl:mr-20"
                 : "text-lg sm:text-xl md:text-2xl xl:text-xl 2xl:text-2xl font-medium md:leading-[32px] mr-10 lg:mr-0"

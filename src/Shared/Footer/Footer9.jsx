@@ -7,8 +7,9 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import { BsArrowRight } from "react-icons/bs";
-import shape from "/images/why-choose2-shape4.png";
+import shape from "/images/charity-donation-form-shape.png";
 import shape2 from "/images/footer-shape2.png";
+import shape3 from "/images/charity-footer-shape.png";
 
 const Footer9 = () => {
   return (
@@ -197,12 +198,12 @@ const Footer9 = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-24 right-14 hidden 3xl:block">
+      <div className="absolute top-28 right-[8%] hidden 3xl:block">
         <img
           src={shape}
           alt="Shape"
           draggable={false}
-          className="animate-wiggle"
+          className="animate-rotateX"
           style={{ animationDuration: "5s" }}
         />
       </div>
@@ -212,6 +213,15 @@ const Footer9 = () => {
           alt="Shape"
           draggable={false}
           className="animate-dance2"
+          style={{ animationDuration: "5s" }}
+        />
+      </div>
+      <div className="absolute -bottom-20 -right-[70px] hidden 3xl:block">
+        <img
+          src={shape3}
+          alt="Shape"
+          draggable={false}
+          className="animate-wiggle"
           style={{ animationDuration: "5s" }}
         />
       </div>

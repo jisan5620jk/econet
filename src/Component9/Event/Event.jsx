@@ -75,7 +75,11 @@ const Event = () => {
         </div>
         <div className="box-row space-y-6 mt-[58px]">
           {eventData.map((event, index) => (
-            <div key={index} className="box">
+            <div
+              key={index}
+              className="box relative"
+              style={{ zIndex: index + 40 }} // every next box has higher z-index
+            >
               <EventCard {...event} />
             </div>
           ))}

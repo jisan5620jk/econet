@@ -16,8 +16,8 @@ const BlogCard = ({
     <div
       className={
         isMain
-          ? ""
-          : "flex flex-col sm:flex-row sm:items-center gap-8 sm:gap-3 md:gap-8"
+          ? "group"
+          : "group flex flex-col sm:flex-row sm:items-center gap-8 sm:gap-3 md:gap-8"
       }
     >
       {/* Image */}
@@ -25,7 +25,7 @@ const BlogCard = ({
         className={
           isMain
             ? "rounded-2xl overflow-hidden relative"
-            : "sm:flex-1 md:flex-none xl:flex-1 2xl:flex-none relative"
+            : "sm:flex-1 md:flex-none xl:flex-1 2xl:flex-none overflow-hidden relative"
         }
       >
         <img

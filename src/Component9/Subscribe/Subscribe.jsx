@@ -1,10 +1,10 @@
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 
 
-const CallDoAction = () => {
+const Subscribe = () => {
   return (
-    <div className="p-2 sm:p-4 2xl:p-8 relative z-10 bg-SecondaryColor-0">
-      <section className="bg-[url(/images/cta-bg.png)] bg-no-repeat bg-center bg-cover py-6 md:py-[64px] rounded-md sm:rounded-xl md:rounded-[30px] overflow-hidden">
+    <div className="relative z-20">
+      <section className="bg-[url(/images/cta-bg.png)] bg-no-repeat bg-center bg-cover py-6 md:py-[64px] overflow-hidden">
         <div className="Container">
           <div className="flex flex-wrap justify-between items-center 2xl:px-5 3xl:px-0">
             <div className="flex relative">
@@ -27,4 +27,4 @@ const CallDoAction = () => {
   );
 };
 
-export default CallDoAction;
+export default Subscribe;

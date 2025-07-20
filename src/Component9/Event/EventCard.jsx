@@ -18,7 +18,7 @@ const EventCard = ({
   eventBtnIcon,
 }) => {
   return (
-    <div className="group relative z-10">
+    <div className="group">
       <div className="bg-BodyBg-0 grid grid-cols-12 items-center gap-7 lg:gap-0 px-5 lg:px-0 py-5 md:py-8 rounded-[20px] relative z-10 before:absolute before:left-[19%] before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-[100px] before:bg-SecondaryColor-0 before:bg-opacity-10 after:absolute after:left-[57%] after:top-1/2 after:-translate-y-1/2 after:w-[1px] after:h-[100px] after:bg-SecondaryColor-0 after:bg-opacity-10 overflow-hidden">
         {/* Date */}
         <div className="col-span-12 sm:col-span-5 lg:col-span-2 flex items-center lg:justify-end gap-5 lg:gap-2 xl:gap-5">
@@ -87,7 +87,7 @@ const EventCard = ({
         </div>
       </div>
       {/* Hover Image */}
-      <div className="absolute z-30 top-24 left-[56%] lg:left-[52%] xl:left-[56%] opacity-0 transition-all duration-500 invisible lg:group-hover:visible lg:group-hover:opacity-100 group-hover:-top-4">
+      <div className="absolute z-20 top-24 left-[56%] lg:left-[52%] xl:left-[56%] opacity-0 transition-all duration-500 invisible lg:group-hover:visible lg:group-hover:opacity-100 group-hover:-top-4">
         <img
           src={eventThumb}
           draggable={false}
