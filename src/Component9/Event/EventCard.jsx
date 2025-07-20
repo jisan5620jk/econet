@@ -26,10 +26,10 @@ const EventCard = ({
             <OnScrollCounter start={0} end={eventDate} duration={1000} />
           </div>
           <div>
-            <h6 className="font-Outfit text-HeadingColor-0 font-medium uppercase">
+            <h6 className="font-Outfit text-HeadingColor-0 font-medium uppercase transition-all duration-500 group-hover:text-TextColor2-0">
               {eventMonth}
             </h6>
-            <h6 className="font-Outfit text-HeadingColor-0 font-medium">
+            <h6 className="font-Outfit text-HeadingColor-0 font-medium transition-all duration-500 group-hover:text-TextColor2-0">
               {eventYear}
             </h6>
           </div>
