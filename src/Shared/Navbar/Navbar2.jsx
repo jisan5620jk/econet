@@ -47,7 +47,7 @@ const Navbar2 = () => {
           label: "Environment Demos",
           children: [
             { to: "/", label: "Environment Creative Version" },
-            { to: "/home2", label: "Environment Dark Version" },
+            { to: "/home2", label: "Environment Creative Dark Version" },
             { to: "/home3", label: "Environment Classic Version" },
             { to: "/home4", label: "Environment Classic Dark Version" },
           ],
@@ -56,7 +56,7 @@ const Navbar2 = () => {
           label: "Solar Demos",
           children: [
             { to: "/home5", label: "Solar Creative Version" },
-            { to: "/home6", label: "Solar Dark Version" },
+            { to: "/home6", label: "Solar Creative Dark Version" },
             { to: "/home7", label: "Solar Classic Version" },
             { to: "/home8", label: "Solar Classic Dark Version" },
           ],
@@ -65,7 +65,7 @@ const Navbar2 = () => {
           label: "Charity Demos",
           children: [
             { to: "/home9", label: "Charity Creative Version" },
-            { to: "/home10", label: "Charity Dark Version" },
+            { to: "/home10", label: "Charity Creative Dark Version" },
             { to: "/home11", label: "Charity Classic Version" },
             { to: "/home12", label: "Charity Classic Dark Version" },
           ],

@@ -51,7 +51,7 @@ const MissionVision = () => {
               <br />
               Mission Shapes Every Life
             </h1>
-            <ul className="flex items-center gap-3.5 mt-[38px]">
+            <ul className="fade-up flex items-center gap-3.5 mt-[38px]">
               {tabs.map((tab, index) => (
                 <li
                   key={index}
@@ -69,7 +69,7 @@ const MissionVision = () => {
             {tabs.map((tab, index) => (
               <div
                 key={index}
-                className={`hidden transition-all duration-500 ease-in-out pt-[30px] ${
+                className={`fade-up hidden transition-all duration-500 ease-in-out pt-[30px] ${
                   activeIndex === index ? "!block animate-fadeInUp" : ""
                 }`}
               >
@@ -78,11 +78,11 @@ const MissionVision = () => {
                 </p>
               </div>
             ))}
-            <ul className="space-y-3 mt-8">
+            <ul className="box-row space-y-3 mt-8">
               {missionList.map((list, index) => (
                 <li
                   key={index}
-                  className="flex font-Outfit text-lg text-white gap-2"
+                  className="box flex font-Outfit text-lg text-white gap-2"
                 >
                   <span
                     className={`size-[22px] rounded-full flex items-center justify-center text-xs 
@@ -98,7 +98,7 @@ const MissionVision = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex items-center justify-between gap-7 xl:gap-0 pt-10 mt-8 border-t border-white/10">
+            <div className="fade-up flex items-center justify-between gap-7 xl:gap-0 pt-10 mt-8 border-t border-white/10">
               <CircleProgress
                 percentage={85}
                 label="Total Donation Completed"

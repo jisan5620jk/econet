@@ -6,9 +6,9 @@ import { RiPhoneFill } from "react-icons/ri";
 
 const CallDoAction = () => {
   return (
-    <div className="bg-BodyBg-0 -mt-[190px]">
+    <div className="bg-BodyBg-0">
       <div className="Container">
-        <div className="relative z-30 pl-20 py-[90px] w-full rounded-[30px] overflow-hidden before:absolute before:-z-10 before:top-0 before:left-0 before:w-full before:h-full before:bg-[linear-gradient(295.67deg,_rgba(255,_255,_255,_0)_40.34%,_#ffffff_58.81%)] inline-block">
+        <div className="fade-up -mt-[190px] relative z-40 pl-20 py-[90px] w-full rounded-[30px] overflow-hidden before:absolute before:-z-10 before:top-0 before:left-0 before:w-full before:h-full before:bg-[linear-gradient(295.67deg,_rgba(255,_255,_255,_0)_40.34%,_#ffffff_58.81%)] inline-block">
           <div className="absolute -z-20 top-0 right-0 w-full h-full">
             <img src={ctaImage} alt="image" draggable={false} />
           </div>

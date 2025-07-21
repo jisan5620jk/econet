@@ -1,5 +1,5 @@
+import { FaRegEnvelopeOpen } from "react-icons/fa";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
-
 
 const CallDoAction = () => {
   return (
@@ -15,9 +15,30 @@ const CallDoAction = () => {
               </div>
             </div>
             <div className="fade-up flex flex-wrap xl:flex-nowrap 2xl:flex-wrap items-center gap-7 md:gap-0 justify-between relative">
-              <form action="#" method="post" className="flex flex-wrap items-center gap-4">
-                <input type="email" name="email" id="email" placeholder="Enter Your E-Mail*" required className="w-full sm:w-[424px] h-[60px] px-7 py-2 bg-transparent border-2 border-white border-opacity-20 rounded-full text-white" />
-                <button type="submit" className="px-[50px] py-[17px] rounded-full bg-PrimaryColor-0 text-white font-Outfit text-[17px] flex items-center gap-1">Signup Now <HiMiniArrowUpRight size={20} /></button>
+              <form
+                action="#"
+                method="post"
+                className="flex flex-wrap items-center gap-4"
+              >
+                <div className="relative z-10 inline-block">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter Your E-Mail*"
+                    required
+                    className="w-full sm:w-[424px] h-[60px] px-7 py-2 bg-transparent border-2 border-white border-opacity-20 rounded-full text-white"
+                  />
+                  <span className="absolute top-1/2 -translate-y-1/2 right-7 text-PrimaryColor-0">
+                    <FaRegEnvelopeOpen />
+                  </span>
+                </div>
+                <button
+                  type="submit"
+                  className="px-[50px] py-[17px] rounded-full bg-PrimaryColor-0 text-white font-Outfit text-[17px] flex items-center gap-1"
+                >
+                  Signup Now <HiMiniArrowUpRight size={20} />
+                </button>
               </form>
             </div>
           </div>

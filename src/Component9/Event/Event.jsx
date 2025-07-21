@@ -69,7 +69,7 @@ const Event = () => {
               Helping the World
             </h1>
           </div>
-          <div>
+          <div className="fade-right">
             <PrimaryButton as="link" href="/about">
               Explore All Event <GoArrowRight size={22} />
             </PrimaryButton>

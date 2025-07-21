@@ -102,7 +102,7 @@ const About = () => {
                   </div>
                 ))}
               </div>
-              <div className="mt-2 md:mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-7">
+              <div className="fade-up mt-2 md:mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-7">
                 <PrimaryButton as="link" href="/about">
                   More About Us <GoArrowRight size={22} />
                 </PrimaryButton>

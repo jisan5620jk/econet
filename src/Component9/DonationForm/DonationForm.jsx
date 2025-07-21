@@ -42,19 +42,23 @@ const DonationForm = () => {
         <div className="bg-BodyBg-0 rounded-[30px] relative before:absolute before:-top-5 before:left-1/2 before:-translate-x-1/2 before:h-full before:w-[calc(100%-40px)] before:bg-PrimaryColor-0 before:rounded-[30px] before:-z-10 after:absolute after:-top-10 after:left-1/2 after:-translate-x-1/2 after:h-full after:w-[calc(100%-80px)] after:bg-white/20 after:rounded-[30px] after:-z-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 rounded-[30px] overflow-hidden">
             <div>
-              <img src={donationFormImg} alt="Donation Form Image" draggable={false} />
+              <img
+                src={donationFormImg}
+                alt="Donation Form Image"
+                draggable={false}
+              />
             </div>
             <div className="py-[67px] 2xl:pr-[60px]">
               {/* Donation Tab Content */}
-              <h2 className="font-Outfit text-4xl leading-[44px] font-semibold text-HeadingColor-0">
+              <h2 className="fade-up font-Outfit text-4xl leading-[44px] font-semibold text-HeadingColor-0">
                 Give Your Love Donation <br /> For Humanity
               </h2>
               {/* Donation Amount */}
               <div className="mt-10">
-                <h5 className="font-Outfit font-medium text-HeadingColor-0 text-2xl mb-5">
+                <h5 className="fade-up font-Outfit font-medium text-HeadingColor-0 text-2xl mb-5">
                   Your Donation
                 </h5>
-                <div className="flex items-center bg-white rounded-full px-3 py-2 border border-SecondaryColor-0/10 w-full">
+                <div className="fade-up flex items-center bg-white rounded-full px-3 py-2 border border-SecondaryColor-0/10 w-full">
                   <span className="size-10 rounded-full flex items-center justify-center bg-PrimaryColor-0 text-white text-lg mr-3">
                     <FaDollarSign />
                   </span>
@@ -68,7 +72,7 @@ const DonationForm = () => {
                 </div>
 
                 {/* Preset Amount Buttons */}
-                <div className="flex flex-wrap gap-1 justify-between mt-6">
+                <div className="fade-up flex flex-wrap gap-1 justify-between mt-6">
                   {presetAmounts.map((amt) => (
                     <button
                       key={amt}
@@ -99,10 +103,10 @@ const DonationForm = () => {
               </div>
               {/* Payment Methods */}
               <div className="mt-[52px]">
-                <h4 className="font-Outfit font-medium text-HeadingColor-0 text-2xl mb-5">
+                <h4 className="fade-up font-Outfit font-medium text-HeadingColor-0 text-2xl mb-5">
                   Select Payment Method
                 </h4>
-                <div className="flex flex-wrap gap-8 mb-11">
+                <div className="fade-up flex flex-wrap gap-8 mb-11">
                   {[
                     { label: "Test Donation", value: "test" },
                     { label: "Credit Card", value: "card" },
@@ -145,9 +149,11 @@ const DonationForm = () => {
                   ))}
                 </div>
               </div>
-              <PrimaryButton as="link" href="/about">
-                Donate Now <GoArrowRight size={22} />
-              </PrimaryButton>
+              <div className="fade-up">
+                <PrimaryButton as="link" href="/about">
+                  Donate Now <GoArrowRight size={22} />
+                </PrimaryButton>
+              </div>
             </div>
           </div>
         </div>
