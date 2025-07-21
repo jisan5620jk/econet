@@ -4,6 +4,7 @@ import Blog from "../../Component9/Blog/Blog";
 import CallDoAction from "../../Component9/CallDoAction/CallDoAction";
 import DonationForm from "../../Component9/DonationForm/DonationForm";
 import Donations from "../../Component9/Donations/Donations";
+import Event from "../../Component9/Event/Event";
 import Feature from "../../Component9/Feature/Feature";
 import Marquee from "../../Component9/Marquee/Marquee";
 import MissionVision from "../../Component9/MissionVision/MissionVision";
@@ -26,6 +27,7 @@ const Home9 = () => {
       <Project />
       <Marquee />
       <DonationForm />
+      <Event />
       <Testimonial />
       <CallDoAction />
       <Blog />

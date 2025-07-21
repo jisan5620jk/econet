@@ -48,23 +48,32 @@ const Navbar9 = () => {
       label: "Home",
       links: [
         {
-          to: "/",
-          label: "Main Demo",
+          label: "Environment Demos",
           children: [
-            { to: "/", label: "Environment Main Demo" },
+            { to: "/", label: "Environment Creative Version" },
             { to: "/home2", label: "Environment Dark Version" },
             { to: "/home3", label: "Environment Classic Version" },
-            {
-              to: "/home4",
-              label: "Environment Classic Dark Version",
-            },
+            { to: "/home4", label: "Environment Classic Dark Version" },
           ],
         },
-        { to: "/home2", label: "University Demo" },
-        { to: "/home3", label: "Kindergarten Demo" },
-        { to: "/home4", label: "Islamic Education" },
-        { to: "/home5", label: "Modern Online Learning" },
-        { to: "/home6", label: "Training Center" },
+        {
+          label: "Solar Demos",
+          children: [
+            { to: "/home5", label: "Solar Creative Version" },
+            { to: "/home6", label: "Solar Dark Version" },
+            { to: "/home7", label: "Solar Classic Version" },
+            { to: "/home8", label: "Solar Classic Dark Version" },
+          ],
+        },
+        {
+          label: "Charity Demos",
+          children: [
+            { to: "/home9", label: "Charity Creative Version" },
+            { to: "/home10", label: "Charity Dark Version" },
+            { to: "/home11", label: "Charity Classic Version" },
+            { to: "/home12", label: "Charity Classic Dark Version" },
+          ],
+        },
       ],
     },
     {
@@ -277,25 +286,25 @@ const Navbar9 = () => {
                     </button>
                   </div>
                 </div>
-                  <div className="hidden lg:block">
-                    <Link
-                      to={"/contact"}
-                      className="inline-flex items-center gap-2 text-base uppercase text-white font-medium font-Outfit rounded-full bg-PrimaryColor-0 px-[30px] py-3 transition-all duration-500 relative z-10 overflow-hidden before:absolute before:h-full before:w-0 before:bg-PrimaryColor2-0 before:opacity-50 before:top-0 before:left-auto before:right-0 before:transition-all before:duration-500 before:-z-10 hover:before:left-0 hover:before:opacity-100 hover:before:w-full hover:right-auto"
-                    >
-                      Get a Quote
-                      <HiArrowNarrowRight size={18} />
-                    </Link>
-                  </div>
-                  <div
-                    className="group hidden size-[46px] bg-PrimaryColor2-0 rounded-full 2xl:flex items-center justify-center cursor-pointer"
-                    onClick={() => setIsOpen(true)}
+                <div className="hidden lg:block">
+                  <Link
+                    to={"/contact"}
+                    className="inline-flex items-center gap-2 text-base uppercase text-white font-medium font-Outfit rounded-full bg-PrimaryColor-0 px-[30px] py-3 transition-all duration-500 relative z-10 overflow-hidden before:absolute before:h-full before:w-0 before:bg-PrimaryColor2-0 before:opacity-50 before:top-0 before:left-auto before:right-0 before:transition-all before:duration-500 before:-z-10 hover:before:left-0 hover:before:opacity-100 hover:before:w-full hover:right-auto"
                   >
-                    <button className="space-y-1">
-                      <span className="bg-white w-5 h-0.5 rounded-xl block"></span>
-                      <span className="bg-white w-5 h-0.5 rounded-xl block"></span>
-                      <span className="bg-white w-3 h-0.5 rounded-xl block transition-all duration-500 group-hover:w-5"></span>
-                    </button>
-                  </div>
+                    Get a Quote
+                    <HiArrowNarrowRight size={18} />
+                  </Link>
+                </div>
+                <div
+                  className="group hidden size-[46px] bg-PrimaryColor2-0 rounded-full 2xl:flex items-center justify-center cursor-pointer"
+                  onClick={() => setIsOpen(true)}
+                >
+                  <button className="space-y-1">
+                    <span className="bg-white w-5 h-0.5 rounded-xl block"></span>
+                    <span className="bg-white w-5 h-0.5 rounded-xl block"></span>
+                    <span className="bg-white w-3 h-0.5 rounded-xl block transition-all duration-500 group-hover:w-5"></span>
+                  </button>
+                </div>
                 {/* Hamburger Icon */}
 
                 <div
