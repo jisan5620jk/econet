@@ -32,7 +32,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 2xl:gap-6 items-center pt-6 pb-2.5">
             <div className="relative 2xl:-ml-[60px]">
               <img src={aboutThumb} draggable={false} alt="About Image" />
-              <div className="absolute bottom-20 left-8">
+              <div className="absolute bottom-20 left-8 hidden sm:block">
                 <div className="relative text-center">
                   <div className="font-semibold text-[74px] leading-10 text-PrimaryColor-0">
                     <OnScrollCounter start={0} end={30} duration={1000} />

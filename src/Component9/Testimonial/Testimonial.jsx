@@ -80,7 +80,7 @@ const Testimonial = () => {
     },
   };
   return (
-    <section className="bg-[url(/images/charity-testi-bg.png)] bg-cover bg-no-repeat bg-center relative z-30 pt-20 md:pt-24 lg:pt-[160px] pb-16 md:pb-20 lg:pb-[310px] -mt-5">
+    <section className="bg-[url(/images/charity-testi-bg.png)] bg-cover bg-no-repeat bg-center relative z-30 pt-20 md:pt-24 lg:pt-[160px] pb-36 md:pb-20 lg:pb-[310px] -mt-5">
       <div className="Container">
         <div className="text-center">
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center justify-center gap-2 border border-PrimaryColor-0 rounded-full">
@@ -93,7 +93,7 @@ const Testimonial = () => {
           </h1>
         </div>
       </div>
-      <div className="relative z-10 pt-[140px] md:pt-[58px]">
+      <div className="relative z-10 pt-9 md:pt-[58px]">
         <div className="box-row relative z-10 ml-2 lg:ml-8 3xl:ml-[292px]">
           <Swiper
             {...settings}
@@ -109,7 +109,7 @@ const Testimonial = () => {
           </Swiper>
         </div>
       </div>
-      <div className="absolute -z-10 top-[20%] left-[19%]">
+      <div className="absolute -z-10 top-[20%] left-[19%] hidden 3xl:block">
         <img
           src={shape}
           alt="Image Shape"
@@ -118,7 +118,7 @@ const Testimonial = () => {
           style={{ animationDuration: "4.5s" }}
         />
       </div>
-      <div className="absolute -z-10 top-[15%] right-[20%]">
+      <div className="absolute -z-10 top-[15%] right-[20%] hidden 3xl:block">
         <img
           src={shape2}
           alt="Image Shape"

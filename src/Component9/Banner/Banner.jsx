@@ -11,9 +11,9 @@ import bannerShape2 from "/images/charity-banner-heart.png";
 const Banner = () => {
   return (
     <section className="bg-SecondaryColor-0 px-2 sm:px-4 2xl:px-8 relative z-30 overflow-hidden">
-      <div className="bg-[url(/images/charity-banner-bg.png)] bg-cover bg-no-repeat bg-left xl:bg-center 2xl:px-5 3xl:px-0 pt-44 sm:pt-20 rounded-xl sm:rounded-2xl md:rounded-[30px] relative z-10 overflow-hidden">
+      <div className="bg-[url(/images/charity-banner-bg.png)] bg-cover bg-no-repeat bg-center 2xl:px-5 3xl:px-0 pt-24 md:pt-40 lg:pt-44 sm:pt-20 rounded-xl sm:rounded-2xl md:rounded-[30px] relative z-10 overflow-hidden">
         <div className="Container">
-          <div className="grid grid-cols-12 items-start">
+          <div className="grid lg:grid-cols-12 items-start">
             <div className="lg:col-span-7 pt-10">
               <h6 className="relative z-10 inline-block font-Outfit text-lg text-white py-1.5 pl-[26px] pr-[62px] bg-[url(/images/charity-banner-subtitle-bg.png)] bg-cover bg-center bg-no-repeat">
                 Help The Humanity
@@ -25,7 +25,7 @@ const Banner = () => {
                 <br />
                 Donate Love
               </h2>
-              <div className="flex flex-wrap xl:flex-nowrap gap-5 sm:gap-10 items-center md:mt-[48px]">
+              <div className="flex flex-wrap xl:flex-nowrap gap-5 sm:gap-10 items-center mt-7 md:mt-[48px]">
                 <PrimaryButton as="link" href="/about">
                   Donate Now <GoArrowRight size={22} />
                 </PrimaryButton>
@@ -49,14 +49,14 @@ const Banner = () => {
                       +25
                     </li>
                   </ul>
-                  <h6 className="font-Outfit text-white text-lg">
+                  <h6 className="font-Outfit text-white text-sm sm:text-lg">
                     OUR DEDICATED
                     <br />
                     VOLUNTEERS
                   </h6>
                 </div>
               </div>
-              <div className="mt-[120px] pt-6 flex items-center gap-4 max-w-[646px] w-full border-t border-white border-opacity-20">
+              <div className="mt-20 md:mt-[120px] pt-6 flex items-center gap-4 max-w-[646px] w-full border-t border-white border-opacity-20">
                 <div>
                   <img src={bannerStar} alt="Banner Star" draggable={false} />
                 </div>
@@ -69,7 +69,7 @@ const Banner = () => {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="relative z-10 pt-[92px]">
+              <div className="relative z-10 pt-16 lg:pt-[92px]">
                 <div className="relative z-10 mx-auto">
                   <img
                     src={bannerImg}
@@ -78,7 +78,7 @@ const Banner = () => {
                     className="w-full 3xl:w-[inherit] 3xl:max-w-[inherit]"
                   />
                 </div>
-                <div className="absolute -z-10 top-0 left-0 right-0 text-center">
+                <div className="absolute -z-10 top-8 md:top-0 left-0 right-0 text-center px-5 md:px-0">
                   <img
                     src={bannerCircle}
                     alt="Banner Circle"
@@ -91,7 +91,7 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <div className="absolute -bottom-2 -left-0 rotate-12">
+        <div className="absolute -bottom-2 -left-0 rotate-12 hidden md:block">
           <img
             src={bannerShape}
             alt="Banner Shape"
@@ -100,7 +100,7 @@ const Banner = () => {
             style={{ animationDuration: "3s" }}
           />
         </div>
-        <div className="absolute top-32 right-44 rotate-12">
+        <div className="absolute top-32 right-44 rotate-12 hidden md:block">
           <img
             src={bannerShape2}
             alt="Banner Shape"

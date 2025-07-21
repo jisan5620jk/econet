@@ -35,7 +35,7 @@ const ProjectCard = ({
           />
         </div>
         <div className="pt-8 pb-4 px-2 sm:px-6 flex items-center justify-between">
-          <div>
+          <div className="flex-1">
             <h6 className="inline-block px-6 py-1.5 border border-SecondaryColor-0/10 rounded-full font-Outfit text-PrimaryColor-0 uppercase mb-5 relative z-10 overflow-hidden transition-all duration-500 group-hover:text-white before:absolute before:left-0 before:top-0 before:bg-PrimaryColor-0 before:h-full before:w-0 before:transition-all before:duration-500 before:-z-10 group-hover:before:w-full group-hover:before:left-0">
               {projectSubTitle}
             </h6>

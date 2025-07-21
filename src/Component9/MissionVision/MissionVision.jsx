@@ -38,7 +38,7 @@ const missionList = [
 const MissionVision = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <section className="bg-SecondaryColor-0 pt-[242px] pb-16 md:pb-20 lg:pb-[320px] relative z-20">
+    <section className="bg-SecondaryColor-0 pt-32 md:pt-40 lg:pt-[242px] pb-16 md:pb-20 lg:pb-[320px] relative z-20">
       <div className="Container">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           <div>
@@ -51,11 +51,11 @@ const MissionVision = () => {
               <br />
               Mission Shapes Every Life
             </h1>
-            <ul className="fade-up flex items-center gap-3.5 mt-[38px]">
+            <ul className="fade-up flex flex-wrap items-center gap-3.5 mt-[38px]">
               {tabs.map((tab, index) => (
                 <li
                   key={index}
-                  className={`font-Outfit text-lg bg-white/5 border border-white/20 rounded-full px-[30px] py-[7px] text-white overflow-hidden cursor-pointer relative z-10 before:absolute before:top-0 before:right-0 before:h-full before:w-0 before:bg-PrimaryColor-0 before:-z-10 before:transition-all before:duration-500 before:ease-in-out ${
+                  className={`font-Outfit text-lg bg-white/5 border border-white/20 rounded-full px-5 sm:px-[30px] py-1 sm:py-[7px] text-white overflow-hidden cursor-pointer relative z-10 before:absolute before:top-0 before:right-0 before:h-full before:w-0 before:bg-PrimaryColor-0 before:-z-10 before:transition-all before:duration-500 before:ease-in-out ${
                     activeIndex === index
                       ? "!border-PrimaryColor-0 before:left-0 before:w-full"
                       : ""
@@ -82,7 +82,7 @@ const MissionVision = () => {
               {missionList.map((list, index) => (
                 <li
                   key={index}
-                  className="box flex font-Outfit text-lg text-white gap-2"
+                  className="box flex font-Outfit sm:text-lg text-white gap-2"
                 >
                   <span
                     className={`size-[22px] rounded-full flex items-center justify-center text-xs 
@@ -94,11 +94,11 @@ const MissionVision = () => {
                   >
                     <GiCheckMark />
                   </span>
-                  {list.listContent}
+                  <span className="flex-1">{list.listContent}</span>
                 </li>
               ))}
             </ul>
-            <div className="fade-up flex items-center justify-between gap-7 xl:gap-0 pt-10 mt-8 border-t border-white/10">
+            <div className="fade-up flex flex-wrap items-center justify-between gap-7 xl:gap-0 pt-10 mt-8 border-t border-white/10">
               <CircleProgress
                 percentage={85}
                 label="Total Donation Completed"
@@ -111,14 +111,14 @@ const MissionVision = () => {
               />
             </div>
           </div>
-          <div className="relative z-10 flex justify-end -mr-[85px]">
+          <div className="relative z-10 flex lg:justify-end mt-10 lg:mt-0 lg:-mr-[85px]">
             <img
               src={missionVisionImg}
               alt="Mission & Vision Image"
               draggable={false}
               className="w-full xl:w-[inherit] xl:max-w-[inherit]"
             />
-            <div className="absolute -z-10 top-[3%] right-[24%]">
+            <div className="absolute -z-10 top-[3%] right-[24%] hidden 3xl:block">
               <img
                 src={shape2}
                 alt="Image Shape"
@@ -127,7 +127,7 @@ const MissionVision = () => {
                 style={{ animationDuration: "3s" }}
               />
             </div>
-            <div className="absolute -z-10 bottom-[1%] right-[19%]">
+            <div className="absolute -z-10 bottom-[1%] right-[19%] hidden 3xl:block">
               <img
                 src={shape3}
                 alt="Image Shape"
@@ -139,7 +139,7 @@ const MissionVision = () => {
           </div>
         </div>
       </div>
-      <div className="absolute -z-10 -top-[16%] left-0">
+      <div className="absolute -z-10 -top-[16%] left-0 hidden 3xl:block">
         <img
           src={shape}
           alt="Image Shape"
@@ -149,7 +149,7 @@ const MissionVision = () => {
         />
       </div>
 
-      <div className="absolute -bottom-[58px] left-0 right-0">
+      <div className="absolute -bottom-2.5 md:-bottom-[58px] left-0 right-0">
         <img src={lineShape} alt="Line Shape" draggable={false} />
       </div>
     </section>

@@ -35,13 +35,13 @@ const cardData = [
 
 const Donations = () => {
   return (
-    <section className="bg-transparent relative z-30 pt-20 md:pt-24 lg:pt-[130px] before:absolute before:top-0 before:left-0 before:w-full before:h-[92%] before:bg-[url(/images/charity-donation-bg.png)] before:bg-cover before:bg-no-repeat before:bg-center before:-z-10 -mt-5 lg:-mb-[130px]">
+    <section className="bg-transparent relative z-30 pt-28 md:pt-32 lg:pt-[130px] before:absolute before:top-0 before:left-0 before:w-full before:h-[92%] before:bg-[url(/images/charity-donation-bg.png)] before:bg-cover before:bg-no-repeat before:bg-center before:-z-10 -mt-5 -mb-16 md:-mb-20 lg:-mb-[130px]">
       <div className="Container">
         <div className="text-center">
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
             <img src={subtitleIcon} alt="Icon" draggable={false} /> Donations
           </h5>
-          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+          <h1 className="font-Outfit font-semibold text-lg leading-6 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
             Donate Now and Help Us Continue
             <br />
             Our Life Changing Work
@@ -56,7 +56,7 @@ const Donations = () => {
         </div>
       </div>
 
-      <div className="absolute -z-10 top-[14%] left-[19%]">
+      <div className="absolute -z-10 top-[14%] left-[19%] hidden 3xl:block">
         <img
           src={shape}
           alt="Image Shape"
@@ -65,7 +65,7 @@ const Donations = () => {
           style={{ animationDuration: "6s" }}
         />
       </div>
-      <div className="absolute -z-10 top-[15%] right-[20%]">
+      <div className="absolute -z-10 top-[15%] right-[20%] hidden 3xl:block">
         <img
           src={shape2}
           alt="Image Shape"

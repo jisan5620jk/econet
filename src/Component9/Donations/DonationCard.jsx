@@ -11,7 +11,7 @@ const DonationCard = ({ image, category, title, raised, goal, color, URL }) => {
   const isInView = useInView(progressRef, { once: true, amount: 0.5 });
 
   return (
-    <div className="group bg-white rounded-[30px] overflow-hidden w-full">
+    <div className="group bg-white rounded-xl sm:rounded-[30px] overflow-hidden w-full">
       <div className="relative">
         <img src={image} alt={title} className="w-full h-64 object-cover" />
         <div className="absolute bottom-7 left-7">
@@ -33,7 +33,7 @@ const DonationCard = ({ image, category, title, raised, goal, color, URL }) => {
           ))}
         </div>
       </div>
-      <div className="px-[42px] pt-9 pb-11">
+      <div className="px-6 sm:px-[42px] pt-7 sm:pt-9 pb-8 sm:pb-11">
         <Link
           to={URL}
           className="font-Outfit font-medium text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-[28px] 2xl:leading-[36px] text-HeadingColor-0 transition-all duration-500 hover:text-PrimaryColor-0"

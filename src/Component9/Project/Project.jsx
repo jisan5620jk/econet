@@ -90,17 +90,17 @@ const project = () => {
     <section className="bg-BodyBg-0 py-16 md:py-20 lg:py-[120px] -mt-5 relative">
       <div className="Container">
         <div className="text-center pt-5">
-          <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+          <h5 className="zoom-in font-Outfit sm:text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
             <img src={subtitleIcon} alt="Icon" draggable={false} /> Our Works
           </h5>
-          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+          <h1 className="font-Outfit font-semibold sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
             From Vision to Reality — A Showcase
             <br />
             Of the Work {`We've`} Done
           </h1>
         </div>
       </div>
-      <div className="box-row relative z-10 pt-[58px]">
+      <div className="box-row relative z-10 pt-8 md:pt-[58px]">
         <Swiper {...settings}>
           {projectData.map((project, index) => (
             <SwiperSlide key={index}>

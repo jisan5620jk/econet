@@ -9,7 +9,7 @@ const VideoCta = () => {
   const [toggler, setToggler] = useState(false);
 
   return (
-    <section className="relative -mt-[172px] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-BodyBg-0 before:z-10">
+    <section className="relative pt-16 md:pt-20 lg:pt-0 lg:-mt-[172px] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-BodyBg-0 before:z-10">
       <div className="Container">
         <div className="relative z-30 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="rounded-[20px] lg:h-full overflow-hidden relative z-10 before:absolute before:z-10 before:-left-3/4 before:top-0 before:w-1/2 before:h-full before:bg-gradient-to-r before:to-transparent before:via-white before:from-transparent before:-skew-x-[20deg] before:opacity-30 hover:before:animate-shine">
@@ -32,7 +32,7 @@ const VideoCta = () => {
             <h6 className="font-Outfit text-lg text-PrimaryColor-0 font-medium mb-2 inline-block uppercase">
               Donate Love
             </h6>
-            <h3 className="font-Outfit text-xl sm:text-[38px] sm:leading-[46px] font-medium text-white transition-all duration-500 mb-12">
+            <h3 className="font-Outfit text-xl sm:text-[38px] sm:leading-[46px] font-medium text-white transition-all duration-500 mb-7 sm:mb-12">
               Give Now – Every
               <br />
               Dollar Counts For
