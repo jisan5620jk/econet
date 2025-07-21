@@ -80,7 +80,7 @@ const Testimonial = () => {
     },
   };
   return (
-    <section className="bg-SecondaryColor-0 py-16 md:py-20 lg:py-[120px] -mt-5">
+    <section className="bg-[url(/images/charity-testi-bg.png)] bg-cover bg-no-repeat bg-center relative z-30 pt-20 md:pt-24 lg:pt-[130px] pb-16 md:pb-20 lg:pb-[120px] -mt-5">
       <div className="Container">
         <div className="flex flex-wrap items-center gap-4 md:gap-10 lg:gap-20 relative z-10">
           <div>
@@ -101,7 +101,7 @@ const Testimonial = () => {
           </p>
         </div>
       </div>
-      <div className="relative z-10 pt-[140px] md:pt-[58px] pb-5">
+      <div className="relative z-10 pt-[140px] md:pt-[58px]">
         <div className="box-row relative z-10 ml-2 lg:ml-8 3xl:ml-[292px]">
           <Swiper
             {...settings}

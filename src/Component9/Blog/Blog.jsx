@@ -51,7 +51,7 @@ const blogPosts = [
 ];
 const Blog = () => {
   return (
-    <div className="px-2 sm:px-4 2xl:px-8 relative z-10 bg-SecondaryColor-0 -mt-5">
+    <div className="-mt-5">
       <section className="bg-white py-16 md:py-20 lg:py-[120px] rounded-md sm:rounded-xl md:rounded-[30px] overflow-hidden">
         <div className="Container">
           <div className="text-center">
