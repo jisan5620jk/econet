@@ -38,7 +38,7 @@ const missionList = [
 const MissionVision = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <section className="bg-SecondaryColor-0 pt-32 md:pt-40 lg:pt-[242px] pb-16 md:pb-20 lg:pb-[290px] 2xl:pb-[320px] relative z-20">
+    <section className="bg-SecondaryColor-0 pt-32 md:pt-40 lg:pt-[242px] pb-16 md:pb-20 lg:pb-[290px] 2xl:pb-[290px] relative z-20">
       <div className="Container">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6 2xl:gap-0 items-center">
           <div>

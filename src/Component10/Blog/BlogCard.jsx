@@ -55,16 +55,16 @@ const BlogCard = ({
           <span className="bg-PrimaryColor-0 font-Outfit text-white text-sm px-5 py-1.5 rounded-full">
             {blogTag}
           </span>
-          <span className="font-NotoSans text-TextColor-0">{blogDate}</span>
+          <span className="font-NotoSans text-TextColor2-0">{blogDate}</span>
         </div>
         <div
-          className={`border-b border-SecondaryColor-0 border-opacity-10 ${
+          className={`border-b border-white border-opacity-10 ${
             isMain ? "pb-7 mb-5" : "pb-5 mb-4"
           }`}
         >
           <Link
             to={blogurl}
-            className={`font-Outfit text-HeadingColor-0 inline-block mt-5 transition-all duration-500 hover:text-PrimaryColor-0 ${
+            className={`font-Outfit text-white inline-block mt-5 transition-all duration-500 hover:text-PrimaryColor-0 ${
               isMain
                 ? "text-xl sm:text-3xl md:text-4xl xl:text-[32px] 2xl:text-4xl font-semibold md:leading-[44px] md:mr-14 lg:mr-0 xl:mr-20"
                 : "text-lg sm:text-xl md:text-2xl xl:text-xl 2xl:text-2xl font-medium md:leading-[32px] mr-10 lg:mr-0"
@@ -75,7 +75,7 @@ const BlogCard = ({
         </div>
         <Link
           to={blogurl}
-          className="flex items-center font-Outfit gap-2 text-lg text-HeadingColor-0 font-medium mt-2 transition-all duration-500 hover:gap-3"
+          className="flex items-center font-Outfit gap-2 text-lg text-white font-medium mt-2 transition-all duration-500 hover:gap-3"
         >
           {blogBtnText}
           <span className="">{blogBtnIcon}</span>

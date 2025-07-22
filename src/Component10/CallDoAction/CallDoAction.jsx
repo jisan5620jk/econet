@@ -6,7 +6,7 @@ import { RiPhoneFill } from "react-icons/ri";
 
 const CallDoAction = () => {
   return (
-    <div className="bg-SecondaryColor-0">
+    <div className="bg-BodyBgDark-0">
       <div className="Container">
         <div className="fade-up -mt-20 md:-mt-32 lg:-mt-[190px] relative z-40 pl-4 md:pl-20 py-5 md:py-[90px] w-full rounded-[30px] overflow-hidden bg-white lg:bg-transparent before:absolute before:-z-10 before:top-0 before:left-0 before:w-full before:h-full lg:before:bg-[linear-gradient(295.67deg,_rgba(255,_255,_255,_0)_28.34%,_#22392e_48.81%)] xl:before:bg-[linear-gradient(295.67deg,_rgba(255,_255,_255,_0)_40.34%,_#22392e_58.81%)] inline-block">
           <div className="absolute -z-20 top-0 right-0 w-full h-full hidden lg:block">

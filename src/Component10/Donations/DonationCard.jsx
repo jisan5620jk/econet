@@ -11,7 +11,7 @@ const DonationCard = ({ image, category, title, raised, goal, color, URL }) => {
   const isInView = useInView(progressRef, { once: true, amount: 0.5 });
 
   return (
-    <div className="group bg-white rounded-xl sm:rounded-[30px] overflow-hidden w-full">
+    <div className="group bg-BodyBgDark2-0 rounded-xl sm:rounded-[30px] overflow-hidden w-full">
       <div className="relative">
         <img src={image} alt={title} className="w-full h-64 object-cover" />
         <div className="absolute bottom-7 left-7">
@@ -36,13 +36,13 @@ const DonationCard = ({ image, category, title, raised, goal, color, URL }) => {
       <div className="px-6 sm:px-9 md:px-[42px] pt-7 sm:pt-9 pb-8 sm:pb-11">
         <Link
           to={URL}
-          className="font-Outfit font-medium text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-[28px] 2xl:leading-[36px] text-HeadingColor-0 transition-all duration-500 hover:text-PrimaryColor-0"
+          className="font-Outfit font-medium text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-[28px] 2xl:leading-[36px] text-white transition-all duration-500 hover:text-PrimaryColor-0"
         >
           {title}
         </Link>
 
-        <div className="flex justify-between items-center font-Outfit font-medium text-TextColor-0 text-lg mb-2.5 mt-[22px]">
-          <span className="text-HeadingColor-0">Donations</span>
+        <div className="flex justify-between items-center font-Outfit font-medium text-TextColor2-0 text-lg mb-2.5 mt-[22px]">
+          <span className="text-white">Donations</span>
           <span className="text-PrimaryColor-0">{percent}%</span>
         </div>
 
@@ -58,14 +58,14 @@ const DonationCard = ({ image, category, title, raised, goal, color, URL }) => {
           ></div>
         </div>
 
-        <div className="flex justify-between font-Outfit text-TextColor-0 font-medium mb-8">
+        <div className="flex justify-between font-Outfit text-TextColor2-0 font-medium mb-8">
           <span>Raised: ${raised}</span>
           <span>Goal: ${goal}</span>
         </div>
 
         <Link
           to={URL}
-          className="w-full flex justify-between items-center font-Outfit font-medium px-8 py-3 rounded-full text-HeadingColor-0 border border-SecondaryColor-0 border-opacity-15 transition-all duration-500 relative z-10 overflow-hidden group-hover:text-white group-hover:border-PrimaryColor-0 before:absolute before:right-0 before:top-0 before:w-0 before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 group-hover:before:w-full group-hover:before:left-0"
+          className="w-full flex justify-between items-center font-Outfit font-medium px-8 py-3 rounded-full text-white border border-white border-opacity-15 transition-all duration-500 relative z-10 overflow-hidden group-hover:text-white group-hover:border-PrimaryColor-0 before:absolute before:right-0 before:top-0 before:w-0 before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 group-hover:before:w-full group-hover:before:left-0"
         >
           Donate Now <GoArrowRight className="ml-2 text-[22px]" />
         </Link>

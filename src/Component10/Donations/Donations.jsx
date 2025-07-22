@@ -35,7 +35,7 @@ const cardData = [
 
 const Donations = () => {
   return (
-    <section className="bg-transparent relative z-30 pt-28 md:pt-32 lg:pt-[130px] before:absolute before:top-0 before:left-0 before:w-full before:h-[92%] before:bg-[url(/images/charity-donation-dark-bg.png)] before:bg-cover before:bg-no-repeat before:bg-center before:-z-10 -mt-5 -mb-16 md:-mb-20 lg:-mb-[130px]">
+    <section className="bg-transparent relative z-30 pt-28 md:pt-32 lg:pt-[130px] before:absolute before:top-0 before:left-0 before:w-full before:h-[92%] before:bg-[url(/images/charity-donation-dark-bg.png)] before:bg-cover before:bg-no-repeat before:bg-center before:-z-10 -mt-6 -mb-16 md:-mb-20 lg:-mb-[130px]">
       <div className="Container">
         <div className="text-center">
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">

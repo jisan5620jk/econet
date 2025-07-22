@@ -9,10 +9,10 @@ const VideoCta = () => {
   const [toggler, setToggler] = useState(false);
 
   return (
-    <section className="relative pt-16 md:pt-20 lg:pt-0 lg:-mt-[172px] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-SecondaryColor-0 before:z-10">
+    <section className="relative pt-16 md:pt-20 lg:pt-0 lg:-mt-[204px] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-SecondaryColor-0 before:z-10">
       <div className="Container">
         <div className="relative z-30 grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="rounded-[20px] lg:h-full overflow-hidden relative z-10 before:absolute before:z-10 before:-left-3/4 before:top-0 before:w-1/2 before:h-full before:bg-gradient-to-r before:to-transparent before:via-white before:from-transparent before:-skew-x-[20deg] before:opacity-30 hover:before:animate-shine">
+          <div className="rounded-[30px] lg:h-full overflow-hidden relative z-10 before:absolute before:z-10 before:-left-3/4 before:top-0 before:w-1/2 before:h-full before:bg-gradient-to-r before:to-transparent before:via-white before:from-transparent before:-skew-x-[20deg] before:opacity-30 hover:before:animate-shine">
             <img
               src={VideoCtaImg}
               draggable={false}
@@ -28,7 +28,7 @@ const VideoCta = () => {
               </button>
             </div>
           </div>
-          <div className="bg-[url(/images/charity-video-cta-bg.png)] bg-cover bg-no-repeat bg-center rounded-[20px] overflow-hidden px-5 sm:px-11 lg:px-6 2xl:px-[52px] pt-6 sm:pt-[50px] lg:pt-10 2xl:pt-[62px] pb-7 sm:pb-[49px] lg:pb-5 xl:pb-6 2xl:pb-[49px] relative z-10">
+          <div className="bg-[url(/images/charity-video-cta-bg.png)] bg-cover bg-no-repeat bg-center rounded-[30px] overflow-hidden px-5 sm:px-11 lg:px-6 2xl:px-[52px] pt-6 sm:pt-[50px] lg:pt-10 2xl:pt-[62px] pb-7 sm:pb-[49px] lg:pb-5 xl:pb-6 2xl:pb-[49px] relative z-10">
             <h6 className="font-Outfit text-lg text-PrimaryColor-0 font-medium mb-2 inline-block uppercase">
               Donate Love
             </h6>

@@ -56,7 +56,7 @@ const eventData = [
 
 const Event = () => {
   return (
-    <section className="bg-SecondaryColor-0 py-16 md:py-20 lg:py-[120px] relative -mt-5">
+    <section className="bg-SecondaryColor-0 pt-16 md:pt-20 lg:pt-[120px] pb-20 md:pb-24 lg:pb-[140px] relative -mt-5">
       <div className="Container pt-5">
         <div className="flex flex-wrap items-center justify-between gap-7">
           <div>

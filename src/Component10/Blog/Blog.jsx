@@ -51,15 +51,15 @@ const blogPosts = [
 ];
 const Blog = () => {
   return (
-    <div className="-mt-5">
-      <section className="bg-BodyBg-0 py-16 md:py-20 lg:py-[120px] rounded-md sm:rounded-xl md:rounded-[30px] overflow-hidden">
+    <div className="-mt-5 -mb-5 bg-BodyBgDark-0 pt-4 pb-5">
+      <section className="py-16 md:py-20 lg:py-[120px] overflow-hidden">
         <div className="Container">
           <div className="text-center">
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
               <img src={subtitleIcon} alt="Icon" draggable={false} /> Latest
               Blogs
             </h5>
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
               Read our latest insights from
               <br />
               Update blog posts
