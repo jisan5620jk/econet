@@ -6,9 +6,9 @@ import TestimonialCard from "./TestimonialCard";
 import testiImg from "/images/testi2-img.png";
 import testiImg2 from "/images/testi2-img2.png";
 import testiImg3 from "/images/testi2-img3.png";
-import TestimonialNavigation from "./TestimonialNavigation";
 import { Autoplay } from "swiper/modules";
-import shape from "/images/why-choose2-shape4.png";
+import shape from "/images/charity-testi-shape.png";
+import shape2 from "/images/charity-testi-shape2.png";
 
 const testiData = [
   {
@@ -80,28 +80,20 @@ const Testimonial = () => {
     },
   };
   return (
-    <section className="bg-SecondaryColor-0 py-16 md:py-20 lg:py-[120px] -mt-5">
+    <section className="bg-[url(/images/charity-testi-bg.png)] bg-cover bg-no-repeat bg-center relative z-30 pt-20 md:pt-24 lg:pt-[160px] pb-36 md:pb-52 lg:pb-[310px] -mt-6">
       <div className="Container">
-        <div className="flex flex-wrap items-center gap-4 md:gap-10 lg:gap-20 relative z-10">
-          <div>
-            <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
-              <img src={subtitleIcon} alt="Icon" draggable={false} />{" "}
-              Testimonial
-            </h5>
-            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
-              Real Stories from Our
-              <br />
-              Real Customers
-            </h1>
-          </div>
-          <p className="fade-up font-NotoSans text-TextColor2-0 max-w-[395px] w-full pt-4">
-            Econet is a environmental organizations maintaince dedicated to
-            protecting planet through sustainable community empowerment
-            moderator
-          </p>
+        <div className="text-center">
+          <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center justify-center gap-2 border border-PrimaryColor-0 rounded-full">
+            <img src={subtitleIcon} alt="Icon" draggable={false} /> Testimonial
+          </h5>
+          <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
+            Real Clients Testimonial About
+            <br />
+            Econet Services
+          </h1>
         </div>
       </div>
-      <div className="relative z-10 pt-[140px] md:pt-[58px] pb-5">
+      <div className="relative z-10 pt-9 md:pt-[58px]">
         <div className="box-row relative z-10 ml-2 lg:ml-8 3xl:ml-[292px]">
           <Swiper
             {...settings}
@@ -116,15 +108,24 @@ const Testimonial = () => {
             })}
           </Swiper>
         </div>
-        <TestimonialNavigation swiperRef={swiperRef} />
-        <div className="absolute left-14 -bottom-14 hidden 3xl:block">
-          <img
-            src={shape}
-            alt="Shape"
-            draggable={false}
-            className="animate-wiggle"
-          />
-        </div>
+      </div>
+      <div className="absolute -z-10 top-[20%] left-[19%] hidden 3xl:block">
+        <img
+          src={shape}
+          alt="Image Shape"
+          draggable={false}
+          className="animate-dance2"
+          style={{ animationDuration: "4.5s" }}
+        />
+      </div>
+      <div className="absolute -z-10 top-[15%] right-[20%] hidden 3xl:block">
+        <img
+          src={shape2}
+          alt="Image Shape"
+          draggable={false}
+          className="animate-swing"
+          style={{ animationDuration: "3.5s" }}
+        />
       </div>
     </section>
   );

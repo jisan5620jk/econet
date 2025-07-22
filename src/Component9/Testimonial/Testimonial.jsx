@@ -80,7 +80,7 @@ const Testimonial = () => {
     },
   };
   return (
-    <section className="bg-[url(/images/charity-testi-bg.png)] bg-cover bg-no-repeat bg-center relative z-30 pt-20 md:pt-24 lg:pt-[160px] pb-36 md:pb-52 lg:pb-[310px] -mt-5">
+    <section className="bg-[url(/images/charity-testi-bg.png)] bg-cover bg-no-repeat bg-center relative z-30 pt-20 md:pt-24 lg:pt-[160px] pb-36 md:pb-52 lg:pb-[310px] -mt-6">
       <div className="Container">
         <div className="text-center">
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center justify-center gap-2 border border-PrimaryColor-0 rounded-full">

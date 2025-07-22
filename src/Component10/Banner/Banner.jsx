@@ -2,94 +2,112 @@ import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
 import { GoArrowRight } from "react-icons/go";
 import aboutTeamImg from "/images/about-team-img.png";
 import aboutTeamImg2 from "/images/about-team-img2.png";
-import icon from "/images/banner2-icon.png";
-import circle from "/images/circle.png";
-import { useState } from "react";
+import bannerImg from "/images/charity-banner-img.png";
+import bannerCircle from "/images/charity-banner-img-circle.png";
+import bannerStar from "/images/charity-banner-star.png";
+import bannerShape from "/images/charity-banner-hand.png";
+import bannerShape2 from "/images/charity-banner-heart.png";
 
 const Banner = () => {
-  const [enabled, setEnabled] = useState(false);
   return (
-    <section className="bg-SecondaryColor-0 px-2 sm:px-4 2xl:px-8 py-2 sm:py-4 lg:py-8 relative z-30 overflow-hidden">
-      <div className="bg-[url(/images/solar-banner.png)] bg-cover bg-no-repeat bg-left xl:bg-center 2xl:px-5 3xl:px-0 pt-44 sm:pt-[234px] pb-36 rounded-xl sm:rounded-2xl md:rounded-[30px]">
+    <section className="bg-SecondaryColor-0 px-2 sm:px-4 2xl:px-8 relative z-30 overflow-hidden">
+      <div className="bg-[url(/images/charity-banner-bg.png)] bg-cover bg-no-repeat bg-center 2xl:px-5 3xl:px-0 pt-24 md:pt-40 2xl:pt-44 sm:pt-20 rounded-xl sm:rounded-2xl md:rounded-[30px] relative z-10 overflow-hidden">
         <div className="Container">
-          <div className="max-w-[745px]">
-            <h2 className="relative z-10 font-Outfit font-semibold text-HeadingColor-0 text-2xl leading-[32px] sm:text-[44px] sm:leading-[48px] md:text-[56px] md:leading-[62px] lg:text-[64px] lg:leading-[68px] xl:text-[48px] xl:leading-[48px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[88px] uppercase">
-              <div className="flex items-center">
-                Take{" "}
-                <div className="px-2 md:px-5">
-                  <button
-                    onClick={() => setEnabled(!enabled)}
-                    className={`w-[50px] md:w-[100px] h-7 md:h-14 flex items-center rounded-full p-1 md:p-2.5 duration-300 border border-PrimaryColor-0 ${
-                      enabled
-                        ? "bg-white border-green-500"
-                        : "bg-white border-green-500"
-                    }`}
-                  >
-                    <div
-                      className={`bg-green-500 size-5 md:size-[38px] rounded-full shadow-md transform duration-300 ${
-                        enabled
-                          ? "translate-x-5 md:translate-x-10"
-                          : "translate-x-0"
-                      }`}
-                    ></div>
-                  </button>
-                </div>{" "}
-                Controled
+          <div className="grid xl:grid-cols-12 items-start">
+            <div className="xl:col-span-7 pt-10 lg:pb-44 xl:pb-0">
+              <h6 className="relative z-10 inline-block font-Outfit text-lg text-white py-1.5 pl-[26px] pr-[62px] bg-[url(/images/charity-banner-subtitle-bg.png)] bg-cover bg-center bg-no-repeat">
+                Help The Humanity
+              </h6>
+              <h2 className="relative z-10 font-Outfit font-semibold text-white text-2xl leading-[32px] sm:text-[44px] sm:leading-[48px] md:text-[56px] md:leading-[62px] lg:text-[64px] lg:leading-[68px] xl:text-[56px] xl:leading-[64px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[80px] mt-6">
+                Join the Movement
+                <br />
+                Change the — World
+                <br />
+                Donate Love
+              </h2>
+              <div className="flex flex-wrap xl:flex-nowrap gap-5 sm:gap-10 items-center mt-7 md:mt-[48px]">
+                <PrimaryButton as="link" href="/about">
+                  Donate Now <GoArrowRight size={22} />
+                </PrimaryButton>
+                <div className="flex items-center gap-5">
+                  <ul className="flex items-center -space-x-4">
+                    <li>
+                      <img
+                        src={aboutTeamImg}
+                        alt="About Team Image"
+                        draggable={false}
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src={aboutTeamImg2}
+                        alt="About Team Image"
+                        draggable={false}
+                      />
+                    </li>
+                    <li className="size-14 flex items-center justify-center bg-PrimaryColor2-0 rounded-full font-Outfit text-white text-lg">
+                      +25
+                    </li>
+                  </ul>
+                  <h6 className="font-Outfit text-white text-sm sm:text-lg">
+                    OUR DEDICATED
+                    <br />
+                    VOLUNTEERS
+                  </h6>
+                </div>
               </div>
-              Solor Renewable
-              <div className="flex items-center gap-2 md:gap-5">
-                <div className="inline-block w-8 sm:w-9 md:w-[inherit]">
-                  <img
-                    src={circle}
-                    draggable={false}
-                    alt="circle"
-                    className="animate-rotational"
-                  />
-                </div>{" "}
-                Energy
-              </div>
-            </h2>
-            <div className="mt-9">
-              <PrimaryButton as="link" href="/about">
-                Explore Services <GoArrowRight size={22} />
-              </PrimaryButton>
-            </div>
-            <div className="flex flex-wrap xl:flex-nowrap gap-5 items-center justify-between mt-20 md:mt-[62px]">
-              <div>
-                <ul className="flex items-center -space-x-4">
-                  <li>
-                    <img
-                      src={aboutTeamImg}
-                      alt="About Team Image"
-                      draggable={false}
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src={aboutTeamImg2}
-                      alt="About Team Image"
-                      draggable={false}
-                    />
-                  </li>
-                  <li className="size-14 flex items-center justify-center bg-SecondaryColor-0 rounded-full font-Outfit text-white text-lg">
-                    +25
-                  </li>
-                </ul>
-                <h6 className="font-Outfit text-HeadingColor-0 font-medium text-lg mt-4">
-                  Satisfied Customers
+              <div className="mt-20 md:mt-[120px] pt-6 flex items-center gap-4 max-w-[646px] w-full border-t border-white border-opacity-20">
+                <div>
+                  <img src={bannerStar} alt="Banner Star" draggable={false} />
+                </div>
+                <h6 className="flex-1 font-Outfit text-lg text-white">
+                  We’re Since <span className="text-PrimaryColor-0">1998</span>
+                  <br />
+                  Based in USA
                 </h6>
               </div>
-              <div className="flex items-center gap-5 pb-1">
-                <div>
-                  <img src={icon} draggable={false} alt="Icon" />
+            </div>
+
+            <div className="xl:col-span-5 lg:hidden xl:block">
+              <div className="relative z-10 pt-16 md:pt-20 lg:pt-[92px]">
+                <div className="relative z-10 mx-auto">
+                  <img
+                    src={bannerImg}
+                    alt="Banner Image"
+                    draggable={false}
+                    className="w-full 3xl:w-[inherit] 3xl:max-w-[inherit]"
+                  />
                 </div>
-                <p className="font-NotoSans text-HeadingColor-0 w-full max-w-[315px]">
-                  Econet is a nonprofit environmental main dedicated to
-                  protecting planets through empowerment.
-                </p>
+                <div className="absolute -z-10 top-8 md:top-0 left-0 md:left-12 xl:left-0 2xl:-left-10 3xl:left-0 right-0 text-center px-5 md:px-0">
+                  <img
+                    src={bannerCircle}
+                    alt="Banner Circle"
+                    draggable={false}
+                    className="animate-rotational"
+                    style={{ animationDuration: "22s" }}
+                  />
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="absolute -bottom-2 -left-0 rotate-12 hidden md:block xl:hidden 3xl:block">
+          <img
+            src={bannerShape}
+            alt="Banner Shape"
+            draggable={false}
+            className="animate-swing"
+            style={{ animationDuration: "3s" }}
+          />
+        </div>
+        <div className="absolute top-32 right-44 rotate-12 hidden md:block xl:hidden 3xl:block">
+          <img
+            src={bannerShape2}
+            alt="Banner Shape"
+            draggable={false}
+            className="animate-swing"
+            style={{ animationDuration: "3s" }}
+          />
         </div>
       </div>
     </section>

@@ -3,13 +3,7 @@ import { FaStar } from "react-icons/fa";
 
 const TestimonialCard = ({ image, name, role, company, rating, review }) => {
   return (
-    <div className="bg-BodyBgDark-0 rounded-[20px] p-5 sm:p-10 relative overflow-hidden z-10 before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-[url(/images/testi-hover-bg.png)] before:bg-cover before:bg-center before:bg-no-repeat before:-z-10 before:opacity-0 before:transition-all before:duration-500 hover:before:w-full hover:before:opacity-100 hover:before:left-0">
-      <div className="absolute z-10 top-0 -right-[2px]">
-        <div className="size-[60px] rounded-bl-[20px] bg-SecondaryColor-0 inline-block relative">
-          <span className="absolute -left-[29px] top-0 rotate-180 size-[30px] inline-block bg-SecondaryColor-0 [clip-path:path('M0_0_Q0,30_30,30_L_0_30_Z')]"></span>
-          <span className="absolute -bottom-[30px] right-0 rotate-180 size-[30px] inline-block bg-SecondaryColor-0 [clip-path:path('M0_0_Q0,30_30,30_L_0_30_Z')]"></span>
-        </div>
-      </div>
+    <div className="rounded-[20px] p-5 sm:p-10 transition-all duration-500 relative overflow-hidden z-10 before:absolute before:top-0 before:right-0 before:w-full before:h-full before:bg-[url(/images/charity-testi-box-bg.png)] before:bg-cover before:bg-right-top before:bg-no-repeat before:-z-10 before:transition-all before:duration-500 hover:before:opacity-0 after:absolute after:top-0 after:right-0 after:w-full after:h-full after:bg-[url(/images/charity-testi-box-hover-bg.png)] after:bg-cover after:bg-right-top after:bg-no-repeat after:-z-10 after:opacity-0 after:transition-all after:duration-500 hover:after:opacity-100 border-l sm:border-l-0 border-b border-white/10 hover:border-PrimaryColor-0">
       {/* User Info */}
       <div className="flex flex-wrap items-center gap-6">
         <img src={image} alt={name} className="rounded-full object-cover" />
@@ -34,7 +28,9 @@ const TestimonialCard = ({ image, name, role, company, rating, review }) => {
       </div>
 
       {/* Review Text */}
-      <p className="font-NotoSans text-lg text-TextColor2-0">“ {review} ”</p>
+      <p className="font-NotoSans text-lg text-TextColor2-0 pb-2">
+        “ {review} ”
+      </p>
     </div>
   );
 };
