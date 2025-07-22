@@ -69,7 +69,7 @@ const project = () => {
       delay: 3000, // Set delay time in milliseconds
       disableOnInteraction: false, // Keep autoplay on user interaction
     },
-    breakpoints: {
+  breakpoints: {
       320: {
         slidesPerView: 1,
       },
@@ -77,16 +77,18 @@ const project = () => {
         slidesPerView: 1,
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 1.4,
+        centeredSlides: true,
       },
       992: {
-        slidesPerView: 2.4,
+        slidesPerView: 1.8,
+        centeredSlides: true,
       },
       1400: {
-        slidesPerView: 3.2,
+        slidesPerView: 2,
       },
       1600: {
-        slidesPerView: 3.6,
+        slidesPerView: 2,
       },
     },
   };
@@ -128,7 +130,7 @@ const project = () => {
         </div>
       </div>
       <div className="box-row relative z-10 pt-[58px]">
-        <Swiper {...settings}>
+        <Swiper {...settings} className="!overflow-visible">
           {projectData.map((project, index) => (
             <SwiperSlide key={index}>
               <div className="box">

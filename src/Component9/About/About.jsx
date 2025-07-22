@@ -32,7 +32,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 2xl:gap-6 items-center pt-6 pb-2.5">
             <div className="relative 2xl:-ml-[60px]">
               <img src={aboutThumb} draggable={false} alt="About Image" />
-              <div className="absolute bottom-20 left-8 hidden sm:block">
+              <div className="absolute bottom-14 md:bottom-20 lg:bottom-4 2xl:bottom-20 left-0 md:left-8 lg:left-0 2xl:left-8 hidden sm:block">
                 <div className="relative text-center">
                   <div className="font-semibold text-[74px] leading-10 text-PrimaryColor-0">
                     <OnScrollCounter start={0} end={30} duration={1000} />
@@ -42,7 +42,7 @@ const About = () => {
                     <br />
                     Experience
                   </h6>
-                  <div className="absolute -top-8 -left-[64px] hidden md:block">
+                  <div className="absolute -top-8 -left-[64px] hidden md:block lg:hidden 2xl:block">
                     <img
                       src={aboutArrow}
                       alt="About Arrow"
@@ -52,7 +52,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute top-2 right-32 hidden md:block">
+              <div className="absolute top-2 right-32 hidden md:block lg:hidden 3xl:block">
                 <img
                   src={aboutDot}
                   alt="About Dot"

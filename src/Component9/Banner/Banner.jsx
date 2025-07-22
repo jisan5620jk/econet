@@ -11,14 +11,14 @@ import bannerShape2 from "/images/charity-banner-heart.png";
 const Banner = () => {
   return (
     <section className="bg-SecondaryColor-0 px-2 sm:px-4 2xl:px-8 relative z-30 overflow-hidden">
-      <div className="bg-[url(/images/charity-banner-bg.png)] bg-cover bg-no-repeat bg-center 2xl:px-5 3xl:px-0 pt-24 md:pt-40 lg:pt-44 sm:pt-20 rounded-xl sm:rounded-2xl md:rounded-[30px] relative z-10 overflow-hidden">
+      <div className="bg-[url(/images/charity-banner-bg.png)] bg-cover bg-no-repeat bg-center 2xl:px-5 3xl:px-0 pt-24 md:pt-40 2xl:pt-44 sm:pt-20 rounded-xl sm:rounded-2xl md:rounded-[30px] relative z-10 overflow-hidden">
         <div className="Container">
-          <div className="grid lg:grid-cols-12 items-start">
-            <div className="lg:col-span-7 pt-10">
+          <div className="grid xl:grid-cols-12 items-start">
+            <div className="xl:col-span-7 pt-10 lg:pb-44 xl:pb-0">
               <h6 className="relative z-10 inline-block font-Outfit text-lg text-white py-1.5 pl-[26px] pr-[62px] bg-[url(/images/charity-banner-subtitle-bg.png)] bg-cover bg-center bg-no-repeat">
                 Help The Humanity
               </h6>
-              <h2 className="relative z-10 font-Outfit font-semibold text-white text-2xl leading-[32px] sm:text-[44px] sm:leading-[48px] md:text-[56px] md:leading-[62px] lg:text-[64px] lg:leading-[68px] xl:text-[48px] xl:leading-[48px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[80px] mt-6">
+              <h2 className="relative z-10 font-Outfit font-semibold text-white text-2xl leading-[32px] sm:text-[44px] sm:leading-[48px] md:text-[56px] md:leading-[62px] lg:text-[64px] lg:leading-[68px] xl:text-[56px] xl:leading-[64px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[80px] mt-6">
                 Join the Movement
                 <br />
                 Change the — World
@@ -68,8 +68,8 @@ const Banner = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-5">
-              <div className="relative z-10 pt-16 lg:pt-[92px]">
+            <div className="xl:col-span-5 lg:hidden xl:block">
+              <div className="relative z-10 pt-16 md:pt-20 lg:pt-[92px]">
                 <div className="relative z-10 mx-auto">
                   <img
                     src={bannerImg}
@@ -78,7 +78,7 @@ const Banner = () => {
                     className="w-full 3xl:w-[inherit] 3xl:max-w-[inherit]"
                   />
                 </div>
-                <div className="absolute -z-10 top-8 md:top-0 left-0 right-0 text-center px-5 md:px-0">
+                <div className="absolute -z-10 top-8 md:top-0 left-0 md:left-12 xl:left-0 2xl:-left-10 3xl:left-0 right-0 text-center px-5 md:px-0">
                   <img
                     src={bannerCircle}
                     alt="Banner Circle"
@@ -91,7 +91,7 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <div className="absolute -bottom-2 -left-0 rotate-12 hidden md:block">
+        <div className="absolute -bottom-2 -left-0 rotate-12 hidden md:block xl:hidden 3xl:block">
           <img
             src={bannerShape}
             alt="Banner Shape"
@@ -100,7 +100,7 @@ const Banner = () => {
             style={{ animationDuration: "3s" }}
           />
         </div>
-        <div className="absolute top-32 right-44 rotate-12 hidden md:block">
+        <div className="absolute top-32 right-44 rotate-12 hidden md:block xl:hidden 3xl:block">
           <img
             src={bannerShape2}
             alt="Banner Shape"

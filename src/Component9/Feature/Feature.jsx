@@ -34,7 +34,7 @@ const Feature = () => {
           ))}
         </div>
       </div>
-      <div className="absolute -bottom-2.5 md:-bottom-[58px] left-0 right-0">
+      <div className="absolute -bottom-2.5 sm:-bottom-5 md:-bottom-6 lg:-bottom-8 2xl:-bottom-11 3xl:-bottom-[58px] left-0 right-0">
         <img src={lineShape} alt="Line Shape" draggable={false} />
       </div>
     </section>

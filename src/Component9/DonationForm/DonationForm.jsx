@@ -26,9 +26,9 @@ const DonationForm = () => {
   };
 
   return (
-    <section className="relative z-10 before:absolute before:bg-[url(/images/charity-donation-form-bg.png)] before:left-0 before:top-0 before:w-full before:h-[72%] before:bg-cover before:bg-no-repeat before:bg-center pt-24 md:pt-24 lg:pt-[140px] -mt-12 md:-mt-7">
+    <section className="relative z-10 before:absolute before:bg-[url(/images/charity-donation-form-bg.png)] before:left-0 before:top-0 before:w-full before:h-[72%] before:bg-cover before:bg-no-repeat before:bg-center pt-24 md:pt-32 lg:pt-[140px] -mt-12 md:-mt-14 lg:-mt-10 3xl:-mt-7">
       <div className="Container relative z-10">
-        <div className="text-center mb-14 lg:mb-[98px]">
+        <div className="text-center mb-14 md:mb-24 lg:mb-[98px]">
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
             <img src={subtitleIcon} alt="Icon" draggable={false} /> Give
             Donation
@@ -46,6 +46,7 @@ const DonationForm = () => {
                 src={donationFormImg}
                 alt="Donation Form Image"
                 draggable={false}
+                className="h-full"
               />
             </div>
             <div className="px-4 md:px-10 lg:px-0 py-7 md:py-[67px] 2xl:pr-[60px]">

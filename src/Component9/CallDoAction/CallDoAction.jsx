@@ -8,9 +8,9 @@ const CallDoAction = () => {
   return (
     <div className="bg-BodyBg-0">
       <div className="Container">
-        <div className="fade-up -mt-20 md:-mt-32 lg:-mt-[190px] relative z-40 pl-4 md:pl-20 py-5 md:py-[90px] w-full rounded-[30px] overflow-hidden bg-white md:bg-transparent before:absolute before:-z-10 before:top-0 before:left-0 before:w-full before:h-full before:bg-[linear-gradient(295.67deg,_rgba(255,_255,_255,_0)_40.34%,_#ffffff_58.81%)] inline-block">
-          <div className="absolute -z-20 top-0 right-0 w-full h-full hidden md:block">
-            <img src={ctaImage} alt="image" draggable={false} />
+        <div className="fade-up -mt-20 md:-mt-32 lg:-mt-[190px] relative z-40 pl-4 md:pl-20 py-5 md:py-[90px] w-full rounded-[30px] overflow-hidden bg-white lg:bg-transparent before:absolute before:-z-10 before:top-0 before:left-0 before:w-full before:h-full lg:before:bg-[linear-gradient(295.67deg,_rgba(255,_255,_255,_0)_28.34%,_#ffffff_48.81%)] xl:before:bg-[linear-gradient(295.67deg,_rgba(255,_255,_255,_0)_40.34%,_#ffffff_58.81%)] inline-block">
+          <div className="absolute -z-20 top-0 right-0 w-full h-full hidden lg:block">
+            <img src={ctaImage} alt="image" draggable={false} className="h-full object-cover object-center" />
           </div>
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
             <img src={subtitleIcon} alt="Icon" draggable={false} /> Contact Us
