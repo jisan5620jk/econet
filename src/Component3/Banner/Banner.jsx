@@ -1,103 +1,155 @@
-import bannerImg from "/images/hero-thumb4.png";
-import bannerShape from "/images/hero-shape46.png";
-import bannerShape2 from "/images/hero-shape45.png";
-import bannerShape3 from "/images/hero-shape43.png";
-import bannerShape4 from "/images/hero-shape44.png";
-import bannerShape5 from "/images/hero-shape41.png";
-import bannerShape6 from "/images/hero-shape42.png";
-import btnIcon from "/images/book-icon.png";
-import user from "/images/hero-autor.png";
-import { Link } from "react-router-dom";
-import { HiArrowNarrowRight } from "react-icons/hi";
-import OnScrollCounter from "../../Shared/Counter/OnScrollCounter";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import { GoArrowRight } from "react-icons/go";
+import "swiper/css";
+import "swiper/css/effect-fade";
+
+import bannerStar from "/images/charity-banner-star.png";
+import bannerShape from "/images/banner-left-shape.png";
+import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
+import BannerNavigation from "./BannerNavigation";
 
 const Banner = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const slides = [
+    {
+      subtitle: "Help The Humanity",
+      titleLines: ["Building evergreen", "Natural humanity", "Innovate earth"],
+    },
+    {
+      subtitle: "Help The Humanity",
+      titleLines: ["Building evergreen", "Natural humanity", "Innovate earth"],
+    },
+  ];
+
+  const swiperSettings = {
+    loop: true,
+    speed: 2000,
+    modules: [Autoplay, EffectFade],
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    effect: "fade",
+    fadeEffect: {
+      crossFade: false,
+    },
+    onSlideChange: (swiper) => setActiveIndex(swiper.realIndex),
+    onSwiper: (swiper) => setActiveIndex(swiper.realIndex),
+  };
+
   return (
-    <section className="bg-[url('/images/hero-bg4.png')] bg-cover bg-bottom bg-no-repeat h-[900px] sm:h-[1100px] md:h-[1450px] lg:h-[750px] xl:h-[890px] flex items-center relative z-10 overflow-hidden">
-      <div className="absolute top-[26%] left-6 lg:left-20 hidden 3xl:block">
-        <img src={bannerShape5} draggable={false} className="animate-float" />
-      </div>
-      <div className="absolute bottom-36 2xl:bottom-24 3xl:bottom-36 left-6 lg:left-36 hidden 2xl:block">
-        <img src={bannerShape6} draggable={false} className="animate-flip" />
-      </div>
-      <div className="Container lg:px-0">
-        <div className="grid lg:grid-cols-2 items-center gap-16 lg:gap-0 mt-[70px] lg:mt-[90px]">
-          <div className="relative">
-            <h1 className="font-Outfit font-semibold text-HeadingColor-0 text-[26px] leading-[32px] sm:text-[36px] sm:leading-[42px] md:text-[56px] md:leading-[62px] lg:text-[42px] lg:leading-[48px] xl:text-[48px] xl:leading-[54px] 2xl:text-[60px] 2xl:leading-[70px]">
-              Unlocking the Magic of <br />
-              Learning – Bright Future <br />
-              Strong Foundation
-            </h1>
-            <p className="font-NotoSans text-TextColor2-0 mb-8 mt-5">
-              <span className="text-HeadingColor-0">Educate</span> the ultimate
-              destination for knowledge seekers and educators
-              <br className="lg:block xl:block 2xl:hidden" /> alike.
-              <br className="hidden 2xl:block" /> We are committed to
-              transforming education
-            </p>
-            <div className="flex flex-wrap items-center gap-y-5 gap-x-8">
-              <div>
-                <Link to={"/about"} className="primary-btn !px-9">
-                  <img src={btnIcon} draggable={false} alt="Button Icon" />
-                  Get Started
-                </Link>
-              </div>
-              <div>
-                <Link
-                  to={"/about"}
-                  className="font-Outfit text-base text-HeadingColor-0 transition-all duration-500 inline-flex gap-2 uppercase font-medium relative before:absolute before:bottom-0 before:left-0 before:w-full before:h-[1px] before:bg-HeadingColor-0 before:bg-opacity-50 before:transition-all before:duration-500 hover:before:bg-PrimaryColor-0 hover:text-PrimaryColor-0"
-                >
-                  Find Course
-                  <span className="relative top-[2px]">
-                    <HiArrowNarrowRight size={20} />
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="sm:flex justify-center lg:justify-end relative 3xl:-right-[110px] z-10">
-            <img
-              src={bannerImg}
-              draggable="false"
-              className="2xl:w-[inherit]"
-            />
-            <img
-              src={bannerShape}
-              draggable={false}
-              className="absolute top-10 animate-dance2 right-16 lg:-right-5 hidden md:block lg:hidden xl:block"
-            />
-            <img
-              src={bannerShape3}
-              draggable={false}
-              className="absolute top-[17%] left-6 lg:-left-4 animate-rotational hidden md:block lg:hidden 2xl:block"
-            />
-            <img
-              src={bannerShape2}
-              draggable={false}
-              className="absolute top-0 right-44 animate-swing hidden md:block lg:hidden 2xl:block"
-            />
-            <img
-              src={bannerShape4}
-              draggable={false}
-              className="absolute -z-10 bottom-0 -left-20 animate-dance hidden md:block lg:hidden 2xl:block"
-            />
-            <div className="hidden absolute bottom-32 lg:bottom-20 xl:bottom-2 left-0 lg:left-[24%] bg-white rounded-[20px] px-7 py-7 md:inline-flex gap-5 items-start animate-movebtn">
-              <div>
-                <img src={user} draggable={false} alt="User Image" />
-              </div>
-              <div>
-                <div className="!font-Outfit font-semibold text-[26px] text-HeadingColor-0 flex gap-1 items-center">
-                  <OnScrollCounter start={0} end={130} duration={3000} />
-                  <span>+</span>
+    <section className="relative z-30 overflow-hidden">
+      <Swiper {...swiperSettings}>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="bg-[url(/images/classic-banner-bg.jpg)] bg-cover bg-no-repeat bg-left xl:bg-center relative z-10 overflow-hidden pt-[100px]">
+              <div className="relative overflow-hidden 2xl:px-5 3xl:px-0 pt-24 sm:pt-20 md:pt-40 2xl:pt-[120px] pb-[140px]">
+                <div className="Container">
+                  <div className="grid grid-cols-1 lg:grid-cols-2">
+                    <div>
+                      {/* Animated Title */}
+                      <h2 className="relative z-10 font-Outfit font-semibold text-white text-[26px] leading-[32px] sm:text-[36px] sm:leading-[42px] md:text-[56px] md:leading-[62px] lg:text-[60px] lg:leading-[64px] xl:text-[48px] xl:leading-[48px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[78px]">
+                        {slide.titleLines.map((line, i) => (
+                          <div
+                            key={i}
+                            className={`transition-all duration-500 ${
+                              activeIndex === index
+                                ? `translate-y-0 opacity-100 delay-[${
+                                    300 + i * 150
+                                  }ms]`
+                                : "translate-y-[100px] opacity-0"
+                            }`}
+                          >
+                            {i === slide.titleLines.length - 1 ? (
+                              // highlight first word of last line
+                              <>
+                                <span className="text-PrimaryColor-0">
+                                  {line.split(" ")[0]}
+                                </span>{" "}
+                                {line.split(" ").slice(1).join(" ")}
+                              </>
+                            ) : (
+                              line
+                            )}
+                          </div>
+                        ))}
+                      </h2>
+                      {/* CTA with animation */}
+                      <div
+                        className={`mt-6 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-7 transition-all duration-700 ${
+                          activeIndex === index
+                            ? "translate-y-0 opacity-100 delay-[550ms]"
+                            : "translate-y-[100px] opacity-0"
+                        }`}
+                      >
+                        <PrimaryButton as="link" href="/about">
+                          Explore Services <GoArrowRight size={22} />
+                        </PrimaryButton>
+                        <div>
+                          <h6 className="font-NotoSans text-[15px] text-TextColor2-0 mb-1">
+                            Call Us (Toll Free)
+                          </h6>
+                          <a
+                            href="calto:+1456678032"
+                            title="+1 (456) 678 032"
+                            className="font-Outfit text-[22px] font-medium text-white"
+                          >
+                            +1 (456) 678 032
+                          </a>
+                        </div>
+                      </div>
+                      {/* Bottom Info with animation */}
+                      <div
+                        className={`flex flex-wrap xl:flex-nowrap gap-5 justify-between mt-20 md:mt-[136px] xl:mt-24 2xl:mt-[156px] pt-5 border-t border-white/15 transition-all duration-700 ${
+                          activeIndex === index
+                            ? "translate-y-0 opacity-100 delay-[700ms]"
+                            : "translate-y-[100px] opacity-0"
+                        }`}
+                      >
+                        <div className="flex items-center gap-4">
+                          <div>
+                            <img
+                              src={bannerStar}
+                              alt="Banner Star"
+                              draggable={false}
+                            />
+                          </div>
+                          <h6 className="flex-1 font-Outfit text-lg text-white">
+                            We’re Since{" "}
+                            <span className="text-PrimaryColor-0">1998</span>
+                            <br />
+                            Based in USA
+                          </h6>
+                        </div>
+                        <div>
+                          <p className="font-NotoSans font-light text-white w-full max-w-[390px] xl:max-w-[300px] 2xl:max-w-[390px]">
+                            Econet is a nonprofit environmental organizations
+                            dedicated to protecting planet through sustainable
+                            community empowerment.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div></div>
+                  </div>
                 </div>
-                <h5 className="font-NotoSans text-HeadingColor-0">
-                  Expert Instructor
-                </h5>
+                <div className="absolute top-5 left-0 [transform:rotateY(180deg)]">
+                  <img
+                    src={bannerShape}
+                    draggable={false}
+                    className="animate-wiggle w-full max-w-[210px] hidden 3xl:block"
+                    style={{ animationDelay: "0.5s" }}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </SwiperSlide>
+        ))}
+        <BannerNavigation />
+      </Swiper>
     </section>
   );
 };

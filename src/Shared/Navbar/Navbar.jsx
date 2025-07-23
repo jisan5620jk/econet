@@ -455,7 +455,7 @@ const Navbar = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 z-[99] h-screen w-full max-w-[400px] bg-[#041424] shadow-[0_20px_50px_0_#04142466] transition-all duration-500 ${
+        className={`fixed top-0 right-0 z-[99] h-screen w-full max-w-[400px] bg-SecondaryColor-0 shadow-[0_20px_50px_0_#04142466] transition-all duration-500 ${
           isOpen
             ? "translate-x-0 opacity-100 visible"
             : "translate-x-full opacity-0 invisible"

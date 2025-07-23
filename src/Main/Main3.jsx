@@ -1,5 +1,4 @@
 import { Outlet, useLocation } from "react-router-dom";
-import Navbar from "../Shared/Navbar/Navbar";
 import BackToTop from "../Shared/BackToTop/BackToTop";
 import Footer from "../Shared/Footer/Footer";
 import { useEffect, useRef } from "react";
@@ -10,6 +9,7 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 import HelmetChanger from "../Shared/Helmet/Helmet";
 import ImageReveal from "../Shared/ImageReveal/ImageReveal";
 import TextReveal from "../Shared/TextAnim/TextReveal";
+import Navbar3 from "../Shared/Navbar/Navbar3";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
@@ -80,7 +80,7 @@ const Main3 = () => {
     <>
       <HelmetChanger title={"Environment Main Demo"} />
       <BackToTop />
-      <Navbar />
+      <Navbar3 />
       <div id="smooth-wrapper" className="h-full">
         <div id="smooth-content" className="min-h-screen will-change-transform">
           <Outlet />
