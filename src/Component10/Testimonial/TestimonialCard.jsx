@@ -28,7 +28,7 @@ const TestimonialCard = ({ image, name, role, company, rating, review }) => {
       </div>
 
       {/* Review Text */}
-      <p className="font-NotoSans text-lg text-TextColor2-0 pb-2">
+      <p className="font-NotoSans text-base sm:text-lg text-TextColor2-0 pb-2">
         “ {review} ”
       </p>
     </div>

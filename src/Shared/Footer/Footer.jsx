@@ -194,7 +194,7 @@ const Footer = () => {
                 Contact Us
               </h4>
               <div>
-                <p className="font-NotoSans text-lg text-TextColor2-0">
+                <p className="font-NotoSans text-base sm:text-lg text-TextColor2-0">
                   Our Address
                 </p>
                 <p className="font-NotoSans text-lg text-white font-light mt-2.5">
@@ -203,7 +203,7 @@ const Footer = () => {
                 </p>
               </div>
               <div className="mt-8">
-                <p className="font-NotoSans text-lg text-TextColor2-0 pb-2.5">
+                <p className="font-NotoSans text-base sm:text-lg text-TextColor2-0 pb-2.5">
                   Our Address
                 </p>
                 <a

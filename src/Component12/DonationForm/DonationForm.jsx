@@ -26,7 +26,7 @@ const DonationForm = () => {
   };
 
   return (
-    <section className="relative z-10 before:absolute before:bg-[url(/images/charity-classic-donation-form-bg.png)] before:left-0 before:top-0 before:w-full before:h-[72%] before:bg-cover before:bg-no-repeat before:bg-center pt-16 md:pt-20 lg:pt-[120px] -mt-5">
+    <section className="bg-BodyBgDark-0 relative z-20 before:absolute before:bg-[url(/images/charity-classic-donation-form-bg.png)] before:left-0 before:top-0 before:w-full before:h-[72%] before:bg-cover before:bg-no-repeat before:bg-center pt-16 md:pt-20 lg:pt-[120px] -mt-5 -mb-5">
       <div className="Container relative z-10">
         <div className="text-center mb-14 md:mb-24 lg:mb-[98px]">
           <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
@@ -39,7 +39,7 @@ const DonationForm = () => {
             Donate Your Love
           </h1>
         </div>
-        <div className="bg-BodyBg-0 rounded-[30px] relative before:absolute before:-top-3 md:before:-top-5 before:left-1/2 before:-translate-x-1/2 before:h-full before:w-[calc(100%-20px)] md:before:w-[calc(100%-40px)] before:bg-PrimaryColor-0 before:rounded-[30px] before:-z-10 after:absolute after:-top-6 md:after:-top-10 after:left-1/2 after:-translate-x-1/2 after:h-full after:w-[calc(100%-40px)] md:after:w-[calc(100%-80px)] after:bg-white/20 after:rounded-[30px] after:-z-20">
+        <div className="bg-BodyBgDark2-0 rounded-[30px] relative before:absolute before:-top-3 md:before:-top-5 before:left-1/2 before:-translate-x-1/2 before:h-full before:w-[calc(100%-20px)] md:before:w-[calc(100%-40px)] before:bg-PrimaryColor-0 before:rounded-[30px] before:-z-10 after:absolute after:-top-6 md:after:-top-10 after:left-1/2 after:-translate-x-1/2 after:h-full after:w-[calc(100%-40px)] md:after:w-[calc(100%-80px)] after:bg-white/20 after:rounded-[30px] after:-z-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 rounded-[30px] overflow-hidden">
             <div>
               <img
@@ -51,22 +51,22 @@ const DonationForm = () => {
             </div>
             <div className="px-4 md:px-10 lg:px-0 py-7 md:py-[67px] 2xl:pr-[60px]">
               {/* Donation Tab Content */}
-              <h2 className="fade-up font-Outfit text-xl sm:text-3xl md:text-4xl md:leading-[44px] font-semibold text-HeadingColor-0">
+              <h2 className="fade-up font-Outfit text-xl sm:text-3xl md:text-4xl md:leading-[44px] font-semibold text-white">
                 Give Your Love Donation <br /> For Humanity
               </h2>
               {/* Donation Amount */}
               <div className="mt-10">
-                <h5 className="fade-up font-Outfit font-medium text-HeadingColor-0 text-lg sm:text-2xl mb-5">
+                <h5 className="fade-up font-Outfit text-white text-lg sm:text-2xl mb-5">
                   Your Donation
                 </h5>
-                <div className="fade-up flex items-center bg-white rounded-full px-3 py-2 border border-SecondaryColor-0/10 w-full">
+                <div className="fade-up flex items-center bg-white/5 rounded-full px-3 py-2 border border-white/20 w-full">
                   <span className="size-10 rounded-full flex items-center justify-center bg-PrimaryColor-0 text-white text-lg mr-3">
                     <FaDollarSign />
                   </span>
                   <span className="flex-1">
                     <input
                       type="text"
-                      className="w-full outline-none bg-transparent font-Outfit text-lg sm:text-[22px] text-HeadingColor-0"
+                      className="w-full outline-none bg-transparent font-Outfit text-lg sm:text-[22px] text-white"
                       value={customAmount || amount}
                       onChange={handleCustomInput}
                       placeholder="Enter Amount"
@@ -80,10 +80,10 @@ const DonationForm = () => {
                     <button
                       key={amt}
                       onClick={() => handleAmountClick(amt)}
-                      className={`px-[30px] py-1 rounded-full font-Outfit text-lg font-medium border transition-all ${
+                      className={`px-[30px] py-1 rounded-full font-Outfit text-lg font-medium border transition-all bg-white/10 ${
                         amount === amt
                           ? "border-PrimaryColor-0 text-PrimaryColor-0"
-                          : "border-gray-300 text-HeadingColor-0"
+                          : "border-transparent text-white font-normal"
                       }`}
                     >
                       ${amt}
@@ -94,10 +94,10 @@ const DonationForm = () => {
                       setCustomAmount("");
                       setAmount("");
                     }}
-                    className={`px-[30px] py-1 rounded-full font-Outfit text-lg font-medium border transition-all ${
+                    className={`px-[30px] py-1 rounded-full font-Outfit text-lg font-medium border transition-all bg-white/10 ${
                       customAmount && !presetAmounts.includes(amount)
                         ? "border-PrimaryColor-0 text-PrimaryColor-0"
-                        : "border-gray-300 text-HeadingColor-0"
+                        : "border-transparent text-white font-normal"
                     }`}
                   >
                     Custom
@@ -106,7 +106,7 @@ const DonationForm = () => {
               </div>
               {/* Payment Methods */}
               <div className="mt-[52px]">
-                <h4 className="fade-up font-Outfit font-medium text-HeadingColor-0 text-2xl mb-5">
+                <h4 className="fade-up font-Outfit text-white text-2xl mb-5">
                   Select Payment Method
                 </h4>
                 <div className="fade-up flex flex-wrap gap-8 mb-11">
@@ -119,7 +119,7 @@ const DonationForm = () => {
                       type="button"
                       key={method.value}
                       onClick={() => setSelectedMethod(method.value)}
-                      className="group flex items-center gap-2 font-NotoSans text-lg transition-all duration-500"
+                      className="group flex items-center gap-2 font-NotoSans text-white text-lg transition-all duration-500"
                     >
                       <span className="relative w-5 h-5">
                         {/* Hidden native radio */}
@@ -135,7 +135,7 @@ const DonationForm = () => {
                           className={`block w-full h-full rounded-full border transition-all duration-500 ${
                             selectedMethod === method.value
                               ? "border-PrimaryColor-0"
-                              : "border-SecondaryColor-0/20"
+                              : "border-white/20"
                           }`}
                         />
                         {/* Inner dot */}
@@ -143,7 +143,7 @@ const DonationForm = () => {
                           <span className="absolute top-1/2 left-1/2 size-3 bg-PrimaryColor-0 rounded-full -translate-x-1/2 -translate-y-1/2" />
                         )}
                         {selectedMethod !== method.value && (
-                          <span className="absolute top-1/2 left-1/2 size-3 bg-SecondaryColor-0/20 rounded-full -translate-x-1/2 -translate-y-1/2" />
+                          <span className="absolute top-1/2 left-1/2 size-3 bg-white/20 rounded-full -translate-x-1/2 -translate-y-1/2" />
                         )}
                       </span>
 

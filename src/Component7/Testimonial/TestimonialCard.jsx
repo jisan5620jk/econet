@@ -4,7 +4,6 @@ import { FaStar } from "react-icons/fa";
 const TestimonialCard = ({ image, name, role, company, rating, review }) => {
   return (
     <div className="group bg-white rounded-[20px] p-5 sm:p-10 relative overflow-hidden z-10">
-      
       {/* User Info */}
       <div className="flex flex-wrap items-center gap-6">
         <img src={image} alt={name} className="rounded-full object-cover" />
@@ -29,7 +28,9 @@ const TestimonialCard = ({ image, name, role, company, rating, review }) => {
       </div>
 
       {/* Review Text */}
-      <p className="font-NotoSans text-lg text-TextColor-0">“ {review} ”</p>
+      <p className="font-NotoSans text-base sm:text-lg text-TextColor-0">
+        “ {review} ”
+      </p>
     </div>
   );
 };
