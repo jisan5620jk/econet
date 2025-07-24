@@ -41,7 +41,8 @@ const processData = [
 
 const Process = () => {
   return (
-      <section className="[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px]  relative z-10 overflow-hidden">
+    <div className="bg-PrimaryColor-0/20">
+      <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px]  relative z-10 overflow-hidden">
         <div className="fade-leftt absolute left-0 top-5">
           <img
             src={shape}
@@ -84,6 +85,7 @@ const Process = () => {
           </div>
         </div>
       </section>
+    </div>
   );
 };
 

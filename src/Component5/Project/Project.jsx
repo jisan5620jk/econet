@@ -63,13 +63,12 @@ const project = () => {
     loop: false,
     spaceBetween: 26,
     modules: [Autoplay],
-    centeredSlides: true,
     speed: 2000,
     autoplay: {
       delay: 3000, // Set delay time in milliseconds
       disableOnInteraction: false, // Keep autoplay on user interaction
     },
-   breakpoints: {
+    breakpoints: {
       320: {
         slidesPerView: 1,
       },
@@ -128,17 +127,17 @@ const project = () => {
             </PrimaryButton>
           </div>
         </div>
-      </div>
-      <div className="box-row relative z-10 pt-[58px]">
-        <Swiper {...settings} className="!overflow-visible">
-          {projectData.map((project, index) => (
-            <SwiperSlide key={index}>
-              <div className="box">
-                <ProjectCard {...project} />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="box-row relative z-10 pt-[58px]">
+          <Swiper {...settings} className="!overflow-visible">
+            {projectData.map((project, index) => (
+              <SwiperSlide key={index}>
+                <div className="box">
+                  <ProjectCard {...project} />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   );

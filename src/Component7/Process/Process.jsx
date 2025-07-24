@@ -41,7 +41,7 @@ const processData = [
 
 const Process = () => {
   return (
-    <div className="relative z-30">
+    <div className="bg-PrimaryColor-0/20 relative z-30">
       <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] relative z-10 overflow-hidden">
         <div className="Container">
           <div className="text-center">

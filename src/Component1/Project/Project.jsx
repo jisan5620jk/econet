@@ -85,7 +85,7 @@ const Project = () => {
   return (
     <div className="px-2 md:px-4 3xl:px-8 relative z-10 -mt-5 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-[246px] inline-block bg-SecondaryColor-0 -z-10"></div>
-      <section className="project-pin-wrapper bg-white lg:bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px] rounded-lg sm:rounded-2xl md:rounded-[20px] relative overflow-hidden">
+      <section className="project-pin-wrapper bg-white lg:bg-transparent lg:bg-[url('/images/project-bg.png')] bg-top bg-cover bg-no-repeat py-16 md:py-20 lg:py-[120px] rounded-lg sm:rounded-2xl md:rounded-[20px] relative overflow-hidden">
         <div className="fade-left absolute left-[18%] top-24">
           <img
             src={shape}

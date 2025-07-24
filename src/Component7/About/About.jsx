@@ -37,7 +37,7 @@ const itemData = [
 
 const About = () => {
   return (
-    <div className="relative z-10 -mt-5 overflow-hidden">
+    <div className="bg-PrimaryColor-0/20 relative z-10 -mt-5 overflow-hidden">
       <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px] relative z-10 overflow-hidden">
         <div className="Container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-8 xl:gap-12 2xl:gap-20">
