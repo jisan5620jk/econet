@@ -255,22 +255,19 @@ const Navbar3 = () => {
                     <PrimaryButton
                       as="link"
                       href="/about"
-                      className="!py-2.5 !px-7 bg-white bg-opacity-10"
+                      className="!py-[11px] !px-7 bg-white bg-opacity-10"
                     >
                       Get a Quote <GoArrowRight size={22} />
                     </PrimaryButton>
                   </div>
                   <div
-                    className="hidden group bg-transparent xl:flex items-center justify-center gap-3 cursor-pointer"
+                    className="hidden group size-12 rounded-full bg-PrimaryColor-0 xl:flex items-center justify-center gap-3 cursor-pointer"
                     onClick={() => setIsOpen(true)}
                   >
-                    <h5 className="hidden 2xl:block font-Outfit text-lg text-white font-medium">
-                      Sidebar
-                    </h5>
                     <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
-                      <span className="bg-PrimaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
-                      <span className="bg-PrimaryColor-0 w-6 md:w-6 h-0.5 rounded-xl block"></span>
-                      <span className="bg-PrimaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                      <span className="bg-white w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                      <span className="bg-white w-6 md:w-6 h-0.5 rounded-xl block"></span>
+                      <span className="bg-white w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
                     </button>
                   </div>
                   <div

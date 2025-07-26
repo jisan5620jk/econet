@@ -100,7 +100,7 @@ const Project = () => {
 
   return (
     <div className="relative z-10 -mt-5 overflow-hidden">
-      <section className=" py-16 md:py-20 lg:py-[120px] relative overflow-hidden">
+      <section className="py-16 md:py-20 lg:py-[120px] relative overflow-hidden">
         <div className="fade-left absolute left-[18%] top-24">
           <img
             src={shape}
@@ -132,7 +132,7 @@ const Project = () => {
           </div>
         </div>
 
-        <div className="box-row relative z-10 pt-[58px]">
+        <div className="box-row relative z-10 pt-[58px] pb-5">
           <Swiper {...settings}>
             {projectData.map((project, index) => (
               <SwiperSlide key={index}>

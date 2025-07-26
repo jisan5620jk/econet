@@ -5,8 +5,6 @@ import processIcon2 from "/images/process-icon2.png";
 import processIcon3 from "/images/process-icon3.png";
 import processLeaf from "/images/process-leaf.png";
 import processBorder from "/images/process2-border.png";
-import shape from "/images/why-choose-shape.png";
-import shape2 from "/images/leaf.png";
 
 const processData = [
   {
@@ -43,24 +41,6 @@ const Process = () => {
   return (
     <div className="bg-PrimaryColor-0/20">
       <section className="bg-[url(/images/about2-bg.png)] bg-no-repeat bg-cover bg-center py-16 md:py-20 lg:py-[120px]  relative z-10 overflow-hidden">
-        <div className="fade-leftt absolute left-0 top-5">
-          <img
-            src={shape}
-            draggable={false}
-            alt="Shape"
-            className="animate-wiggle hidden 2xl:block"
-            style={{ animationDuration: "5s" }}
-          />
-        </div>
-        <div className="zoom-in absolute right-[5%] top-10">
-          <img
-            src={shape2}
-            draggable={false}
-            alt="Shape"
-            className="animate-swing hidden 2xl:block"
-            style={{ animationDuration: "4s" }}
-          />
-        </div>
         <div className="Container">
           <div className="text-center">
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">

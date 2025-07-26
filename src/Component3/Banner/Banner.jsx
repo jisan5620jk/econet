@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 
 import bannerStar from "/images/charity-banner-star.png";
-import bannerShape from "/images/banner-left-shape.png";
+import bannerShape from "/images/classic-leaf.png";
 import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
 import BannerNavigation from "./BannerNavigation";
 
@@ -136,11 +136,11 @@ const Banner = () => {
                     <div></div>
                   </div>
                 </div>
-                <div className="absolute top-5 left-0 [transform:rotateY(180deg)]">
+                <div className="absolute top-5 left-0">
                   <img
                     src={bannerShape}
                     draggable={false}
-                    className="animate-wiggle w-full max-w-[210px] hidden 3xl:block"
+                    className="animate-wiggle hidden 3xl:block"
                     style={{ animationDelay: "0.5s" }}
                   />
                 </div>

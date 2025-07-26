@@ -1,5 +1,5 @@
 import whyChooseThumb from "/images/why-choose-thumb.png";
-import shape from "/images/why-choose-shape.png";
+import shape from "/images/classic-leaf.png";
 import shape2 from "/images/why-choose-shape2.png";
 import OnScrollCounter from "../../Shared/Counter/OnScrollCounter";
 import { PiSealCheckFill } from "react-icons/pi";
@@ -38,7 +38,7 @@ const WhyChoose = () => {
           style={{ animationDuration: "5s" }}
         />
       </div>
-      <div className="zoom-in absolute right-[15%] top-36">
+      <div className="zoom-in absolute right-[12%] top-28">
         <img
           src={shape2}
           draggable={false}
