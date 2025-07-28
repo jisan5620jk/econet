@@ -150,302 +150,298 @@ const Navbar3 = () => {
 
   return (
     <div>
-        <header
-          className={`absolute z-50 inline-block w-full transition-all duration-500 bg-transparent border-b border-white/10 ${
-            isSticky
-              ? "!fixed top-0 rounded-t-none !bg-BodyBgDark-0 shadow-shade animate-headerSlideDown border-transparent"
-              : ""
-          }`}
-        >
-          <div className="Container py-4 lg:py-0">
-            <div className="flex items-center justify-between gap-5">
-              <div className="">
-                <Link to="/" title="Econet">
-                  <img src={logo2} draggable="false" />
-                </Link>
-              </div>
+      <header
+        className={`absolute z-50 inline-block w-full transition-all duration-500 bg-transparent border-b border-white/10 ${
+          isSticky
+            ? "!fixed top-0 rounded-t-none !bg-BodyBgDark-0 shadow-shade animate-headerSlideDown border-transparent"
+            : ""
+        }`}
+      >
+        <div className="Container py-4 lg:py-0">
+          <div className="flex items-center justify-between gap-5">
+            <div className="">
+              <Link to="/" title="Econet">
+                <img src={logo2} draggable="false" />
+              </Link>
+            </div>
 
-              {/* Desktop Menu */}
-              <div className="hidden lg:block">
-                <nav>
-                  <ul className="flex gap-2 xl:gap-5 2xl:gap-8 text-sm font-medium">
-                    {menuItems.map((item, idx) => (
-                      <li key={idx} className="relative z-10 group">
-                        {item.links.length > 1 ? (
-                          <>
-                            <Link
-                              to="#"
-                              data-text={item.label}
-                              className={`clip-hover inline-flex items-center gap-1.5 2xl:mx-1 my-[36px] font-Outfit font-medium capitalize text-lg transition-all duration-500 hover:text-PrimaryColor-0 relative z-10 overflow-hidden
+            {/* Desktop Menu */}
+            <div className="hidden lg:block">
+              <nav>
+                <ul className="flex gap-2 xl:gap-5 2xl:gap-8 text-sm font-medium">
+                  {menuItems.map((item, idx) => (
+                    <li key={idx} className="relative z-10 group">
+                      {item.links.length > 1 ? (
+                        <>
+                          <Link
+                            to="#"
+                            data-text={item.label}
+                            className={`clip-hover inline-flex items-center gap-1.5 2xl:mx-1 my-[36px] font-Outfit font-medium capitalize text-lg transition-all duration-500 hover:text-PrimaryColor-0 relative z-10 overflow-hidden
                                 ${
                                   isParentActive(item.links)
                                     ? "text-PrimaryColor-0"
                                     : "text-white"
                                 }`}
-                            >
-                              {item.label}
-                              <FaChevronDown size={12} className="mt-[2px]" />
-                            </Link>
+                          >
+                            {item.label}
+                            <FaChevronDown size={12} className="mt-[2px]" />
+                          </Link>
 
-                            <ul className="absolute z-50 -left-1 top-full origin-top w-64 bg-BodyBgDark2-0 text-white rounded-md border-t-[3px] border-PrimaryColor-0 scale-y-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
-                              {item.links.map((link, i) => (
-                                <li
-                                  key={i}
-                                  className="relative z-10 group/submenu"
-                                >
-                                  <Link
-                                    to={link.to}
-                                    className={`block px-7 py-3 border-b border-SecondaryColor-0 border-opacity-10 font-Outfit font-medium transition-all duration-500 relative z-10 before:absolute before:left-0 before:top-auto before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:bottom-auto hover:before:top-0 hover:text-white
+                          <ul className="absolute z-50 -left-1 top-full origin-top w-64 bg-BodyBgDark2-0 text-white rounded-md border-t-[3px] border-PrimaryColor-0 scale-y-0 transition-all duration-500 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                            {item.links.map((link, i) => (
+                              <li
+                                key={i}
+                                className="relative z-10 group/submenu"
+                              >
+                                <Link
+                                  to={link.to}
+                                  className={`block px-7 py-3 border-b border-SecondaryColor-0 border-opacity-10 font-Outfit font-medium transition-all duration-500 relative z-10 before:absolute before:left-0 before:top-auto before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:bottom-auto hover:before:top-0 hover:text-white
                                     ${
                                       currentPath === link.to
                                         ? "before:h-full text-white"
                                         : ""
                                     }`}
-                                  >
-                                    {link.label}
-                                  </Link>
+                                >
+                                  {link.label}
+                                </Link>
 
-                                  {/* Grandchild submenu */}
-                                  {link.children && (
-                                    <ul className="absolute top-0 left-full w-64 bg-BodyBgDark2-0 text-white rounded-md border-t-[3px] border-PrimaryColor-0 scale-y-0 opacity-0 invisible origin-top-left transition-all duration-500 group-hover/submenu:opacity-100 group-hover/submenu:visible group-hover/submenu:scale-y-100">
-                                      {link.children.map((child, j) => (
-                                        <li key={j}>
-                                          <Link
-                                            to={child.to}
-                                            className={`block px-5 py-3 border-b border-SecondaryColor-0 border-opacity-10 font-Outfit font-medium transition-all duration-500 relative z-10 before:absolute before:left-0 before:top-auto before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:bottom-auto hover:before:top-0 hover:text-white
+                                {/* Grandchild submenu */}
+                                {link.children && (
+                                  <ul className="absolute top-0 left-full w-64 bg-BodyBgDark2-0 text-white rounded-md border-t-[3px] border-PrimaryColor-0 scale-y-0 opacity-0 invisible origin-top-left transition-all duration-500 group-hover/submenu:opacity-100 group-hover/submenu:visible group-hover/submenu:scale-y-100">
+                                    {link.children.map((child, j) => (
+                                      <li key={j}>
+                                        <Link
+                                          to={child.to}
+                                          className={`block px-5 py-3 border-b border-SecondaryColor-0 border-opacity-10 font-Outfit font-medium transition-all duration-500 relative z-10 before:absolute before:left-0 before:top-auto before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:bottom-auto hover:before:top-0 hover:text-white
                                             ${
                                               currentPath === child.to
                                                 ? "before:h-full text-white"
                                                 : ""
                                             }`}
-                                          >
-                                            {child.label}
-                                          </Link>
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  )}
-                                </li>
-                              ))}
-                            </ul>
-                          </>
-                        ) : (
-                          // Only 1 link, render direct link with no submenu
-                          <Link
-                            to={item.links[0].to}
-                            className={`inline-flex items-center gap-1.5 mx-1 my-[36px] font-Outfit font-medium text-lg capitalize transition-all duration-500 hover:text-PrimaryColor-0 relative z-10 overflow-hidden ${
-                              currentPath === item.links[0].to
-                                ? "text-PrimaryColor-0"
-                                : "text-white"
-                            }`}
-                          >
-                            {item.label}
-                          </Link>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-              </div>
-
-              {/* Button + Sidebar + Hamburger */}
-              <div className="inline-block">
-                <div className="inline-flex items-center gap-2 sm:gap-7 lg:gap-5 xl:gap-8">
-                  <div className="hidden sm:flex items-center gap-4">
-                    <PrimaryButton
-                      as="link"
-                      href="/about"
-                      className="!py-[11px] !px-7 bg-white bg-opacity-10"
-                    >
-                      Get a Quote <GoArrowRight size={22} />
-                    </PrimaryButton>
-                  </div>
-                  <div
-                    className="hidden group size-12 rounded-full bg-PrimaryColor-0 xl:flex items-center justify-center gap-3 cursor-pointer"
-                    onClick={() => setIsOpen(true)}
-                  >
-                    <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
-                      <span className="bg-white w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
-                      <span className="bg-white w-6 md:w-6 h-0.5 rounded-xl block"></span>
-                      <span className="bg-white w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
-                    </button>
-                  </div>
-                  <div
-                    className="lg:hidden group bg-transparent flex items-center justify-center gap-3 cursor-pointer"
-                    onClick={() => setMobileOpen(true)}
-                  >
-                    <h5 className="hidden md:block font-Outfit text-lg text-white font-medium">
-                      Menu
-                    </h5>
-                    <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
-                      <span className="bg-PrimaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
-                      <span className="bg-PrimaryColor-0 w-6 md:w-6 h-0.5 rounded-xl block"></span>
-                      <span className="bg-PrimaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile Menu */}
-          <div
-            className={`fixed top-0 right-0 h-full w-full sm:w-[350px] md:w-[380px] overflow-y-auto bg-SecondaryColor-0 shadow-lg transform transition-transform duration-300 z-50 ${
-              mobileOpen ? "translate-x-0" : "translate-x-full"
-            }`}
-          >
-            <div className="popup-scroll-area">
-              <div className="p-4 flex justify-between items-center border-b border-white border-opacity-15">
-                <h2 className="font-Outfit text-2xl font-medium text-white">
-                  Menu
-                </h2>
-                <button
-                  onClick={() => setMobileOpen(false)}
-                  className="text-2xl text-white transition-all duration-500 hover:rotate-180"
-                >
-                  <CgClose />
-                </button>
-              </div>
-
-              <ul className="p-4 mt-5">
-                {menuItems.map((item, idx) => (
-                  <li key={idx}>
-                    {item.links.length > 1 ? (
-                      <>
-                        <button
-                          onClick={() => toggleMobileMenu(item.label)}
-                          className={`w-full text-left inline-flex items-center justify-between py-3 ${
-                            idx !== item.links.length - 1
-                              ? "border-b border-white border-opacity-15"
-                              : ""
-                          } font-Outfit text-lg text-white capitalize transition-all duration-500 relative z-10 overflow-hidden group-hover:text-PrimaryColor-0 hover:pl-3`}
-                        >
-                          {item.label}
-                          <FaChevronDown
-                            className={`transition-transform duration-500 ${
-                              activeMobileMenu === item.label
-                                ? "rotate-180"
-                                : ""
-                            }`}
-                          />
-                        </button>
-
-                        <div
-                          className={`overflow-hidden transition-all duration-500 ${
-                            activeMobileMenu === item.label
-                              ? "max-h-screen"
-                              : "max-h-0"
-                          }`}
-                        >
-                          <ul className="pl-3 mt-2 sm:text-2xl">
-                            {item.links.map((link, i) => (
-                              <li key={i}>
-                                <div>
-                                  {link.children ? (
-                                    <>
-                                      <button
-                                        onClick={() =>
-                                          setActiveMobileSubMenu((prev) =>
-                                            prev === link.label
-                                              ? null
-                                              : link.label
-                                          )
-                                        }
-                                        className={`w-full text-left inline-flex items-center justify-between px-5 py-3 border-b border-white border-opacity-15 font-Outfit text-lg text-white transition-all duration-500 relative z-10 before:absolute before:left-0 before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:before:top-0 hover:text-white ${
-                                          currentPath === link.to
-                                            ? "before:h-full text-white border-none"
-                                            : ""
-                                        }
-                                        `}
-                                      >
-                                        {link.label}
-                                        <FaChevronDown
-                                          className={`transition-transform duration-500 ${
-                                            activeMobileSubMenu === link.label
-                                              ? "rotate-180"
-                                              : ""
-                                          }`}
-                                        />
-                                      </button>
-
-                                      <div
-                                        className={`transition-all duration-500 overflow-hidden ${
-                                          activeMobileSubMenu === link.label
-                                            ? "max-h-80"
-                                            : "max-h-0"
-                                        }`}
-                                      >
-                                        <ul className="ml-4">
-                                          {link.children.map((child, j) => (
-                                            <li key={j}>
-                                              <Link
-                                                to={child.to}
-                                                onClick={() =>
-                                                  setMobileOpen(false)
-                                                }
-                                                className="block py-2 pl-2 text-base text-white hover:text-PrimaryColor-0 transition-all duration-500 hover:pl-4 border-b border-white border-opacity-15"
-                                              >
-                                                {child.label}
-                                              </Link>
-                                            </li>
-                                          ))}
-                                        </ul>
-                                      </div>
-                                    </>
-                                  ) : (
-                                    <Link
-                                      to={link.to}
-                                      onClick={() => setMobileOpen(false)}
-                                      className={`block px-5 py-2 border-b border-white border-opacity-15 font-Outfit text-lg text-white transition-all duration-500 relative z-10 before:absolute before:left-0 before:bottom-0 before:w-full before:h-0 before:transition-all before:duration-500 before:bg-PrimaryColor-0 before:-z-10 hover:before:h-full hover:before:top-0 hover:text-white ${
-                                        currentPath === link.to
-                                          ? "before:h-full text-white"
-                                          : ""
-                                      }
-                                      `}
-                                    >
-                                      {link.label}
-                                    </Link>
-                                  )}
-                                </div>
+                                        >
+                                          {child.label}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                )}
                               </li>
                             ))}
                           </ul>
-                        </div>
-                      </>
-                    ) : (
-                      // Single link, no submenu
-                      <Link
-                        to={item.links[0].to}
-                        onClick={() => setMobileOpen(false)}
-                        className={`block w-full text-left py-2.5 ${
-                          idx !== menuItems.length - 1
-                            ? "border-b border-white border-opacity-15"
-                            : ""
-                        } font-Outfit text-lg text-white capitalize transition-all duration-500 relative z-10 hover:text-PrimaryColor-0 hover:pl-3 ${
-                          currentPath === item.links[0].to
-                            ? "text-PrimaryColor-0"
-                            : ""
-                        }`}
-                      >
-                        {item.label}
-                      </Link>
-                    )}
-                  </li>
-                ))}
-              </ul>
+                        </>
+                      ) : (
+                        // Only 1 link, render direct link with no submenu
+                        <Link
+                          to={item.links[0].to}
+                          className={`inline-flex items-center gap-1.5 mx-1 my-[36px] font-Outfit font-medium text-lg capitalize transition-all duration-500 hover:text-PrimaryColor-0 relative z-10 overflow-hidden ${
+                            currentPath === item.links[0].to
+                              ? "text-PrimaryColor-0"
+                              : "text-white"
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
+
+            {/* Button + Sidebar + Hamburger */}
+            <div className="inline-flex items-center gap-2 sm:gap-7 lg:gap-5 xl:gap-8">
+              <div className="hidden sm:flex items-center gap-4">
+                <PrimaryButton
+                  as="link"
+                  href="/about"
+                  className="!py-[11px] !px-7 bg-white bg-opacity-10"
+                >
+                  Get a Quote <GoArrowRight size={22} />
+                </PrimaryButton>
+              </div>
+              <div
+                className="hidden group size-12 rounded-full bg-PrimaryColor-0 xl:flex items-center justify-center gap-3 cursor-pointer"
+                onClick={() => setIsOpen(true)}
+              >
+                <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
+                  <span className="bg-white w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                  <span className="bg-white w-6 md:w-6 h-0.5 rounded-xl block"></span>
+                  <span className="bg-white w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                </button>
+              </div>
+              <div
+                className="lg:hidden group bg-transparent flex items-center justify-center gap-3 cursor-pointer"
+                onClick={() => setMobileOpen(true)}
+              >
+                <h5 className="hidden md:block font-Outfit text-lg text-white font-medium">
+                  Menu
+                </h5>
+                <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
+                  <span className="bg-PrimaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                  <span className="bg-PrimaryColor-0 w-6 md:w-6 h-0.5 rounded-xl block"></span>
+                  <span className="bg-PrimaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                </button>
+              </div>
             </div>
           </div>
+        </div>
 
-          {/* Overlay */}
-          <div
-            className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-all duration-500 cursor-[url('/images/cross.png'),_pointer] ${
-              mobileOpen
-                ? "opacity-100 visible left-0"
-                : "opacity-0 invisible left-1/2"
-            }`}
-            onClick={() => setMobileOpen(false)}
-          ></div>
-        </header>
+        {/* Mobile Menu */}
+        <div
+          className={`fixed top-0 right-0 h-full w-full sm:w-[350px] md:w-[380px] overflow-y-auto bg-SecondaryColor-0 shadow-lg transform transition-transform duration-300 z-50 ${
+            mobileOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="popup-scroll-area">
+            <div className="p-4 flex justify-between items-center border-b border-white border-opacity-15">
+              <h2 className="font-Outfit text-2xl font-medium text-white">
+                Menu
+              </h2>
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="text-2xl text-white transition-all duration-500 hover:rotate-180"
+              >
+                <CgClose />
+              </button>
+            </div>
+
+            <ul className="p-4 mt-5">
+              {menuItems.map((item, idx) => (
+                <li key={idx}>
+                  {item.links.length > 1 ? (
+                    <>
+                      <button
+                        onClick={() => toggleMobileMenu(item.label)}
+                        className={`w-full text-left inline-flex items-center justify-between py-3 ${
+                          idx !== item.links.length - 1
+                            ? "border-b border-white border-opacity-15"
+                            : ""
+                        } font-Outfit text-lg text-white capitalize transition-all duration-500 relative z-10 overflow-hidden group-hover:text-PrimaryColor-0 hover:pl-3`}
+                      >
+                        {item.label}
+                        <FaChevronDown
+                          className={`transition-transform duration-500 ${
+                            activeMobileMenu === item.label ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+
+                      <div
+                        className={`overflow-hidden transition-all duration-500 ${
+                          activeMobileMenu === item.label
+                            ? "max-h-screen"
+                            : "max-h-0"
+                        }`}
+                      >
+                        <ul className="pl-3 mt-2 sm:text-2xl">
+                          {item.links.map((link, i) => (
+                            <li key={i}>
+                              <div>
+                                {link.children ? (
+                                  <>
+                                    <button
+                                      onClick={() =>
+                                        setActiveMobileSubMenu((prev) =>
+                                          prev === link.label
+                                            ? null
+                                            : link.label
+                                        )
+                                      }
+                                      className={`w-full text-left inline-flex items-center justify-between px-5 py-3 border-b border-white border-opacity-15 font-Outfit text-lg text-white transition-all duration-500 relative z-10 before:absolute before:left-0 before:bottom-0 before:w-full before:h-0 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:-z-10 hover:before:h-full hover:before:top-0 hover:text-white ${
+                                        currentPath === link.to
+                                          ? "before:h-full text-white border-none"
+                                          : ""
+                                      }
+                                        `}
+                                    >
+                                      {link.label}
+                                      <FaChevronDown
+                                        className={`transition-transform duration-500 ${
+                                          activeMobileSubMenu === link.label
+                                            ? "rotate-180"
+                                            : ""
+                                        }`}
+                                      />
+                                    </button>
+
+                                    <div
+                                      className={`transition-all duration-500 overflow-hidden ${
+                                        activeMobileSubMenu === link.label
+                                          ? "max-h-80"
+                                          : "max-h-0"
+                                      }`}
+                                    >
+                                      <ul className="ml-4">
+                                        {link.children.map((child, j) => (
+                                          <li key={j}>
+                                            <Link
+                                              to={child.to}
+                                              onClick={() =>
+                                                setMobileOpen(false)
+                                              }
+                                              className="block py-2 pl-2 text-base text-white hover:text-PrimaryColor-0 transition-all duration-500 hover:pl-4 border-b border-white border-opacity-15"
+                                            >
+                                              {child.label}
+                                            </Link>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  </>
+                                ) : (
+                                  <Link
+                                    to={link.to}
+                                    onClick={() => setMobileOpen(false)}
+                                    className={`block px-5 py-2 border-b border-white border-opacity-15 font-Outfit text-lg text-white transition-all duration-500 relative z-10 before:absolute before:left-0 before:bottom-0 before:w-full before:h-0 before:transition-all before:duration-500 before:bg-PrimaryColor-0 before:-z-10 hover:before:h-full hover:before:top-0 hover:text-white ${
+                                      currentPath === link.to
+                                        ? "before:h-full text-white"
+                                        : ""
+                                    }
+                                      `}
+                                  >
+                                    {link.label}
+                                  </Link>
+                                )}
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  ) : (
+                    // Single link, no submenu
+                    <Link
+                      to={item.links[0].to}
+                      onClick={() => setMobileOpen(false)}
+                      className={`block w-full text-left py-2.5 ${
+                        idx !== menuItems.length - 1
+                          ? "border-b border-white border-opacity-15"
+                          : ""
+                      } font-Outfit text-lg text-white capitalize transition-all duration-500 relative z-10 hover:text-PrimaryColor-0 hover:pl-3 ${
+                        currentPath === item.links[0].to
+                          ? "text-PrimaryColor-0"
+                          : ""
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Overlay */}
+        <div
+          className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-all duration-500 cursor-[url('/images/cross.png'),_pointer] ${
+            mobileOpen
+              ? "opacity-100 visible left-0"
+              : "opacity-0 invisible left-1/2"
+          }`}
+          onClick={() => setMobileOpen(false)}
+        ></div>
+      </header>
 
       {/* Sidebar */}
       <div

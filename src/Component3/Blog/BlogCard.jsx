@@ -35,7 +35,7 @@ const BlogCard = ({ blogImage, blogurl, blogTitle, blogDate, blogPostBy }) => {
         </div>
         <Link
           to={blogurl}
-          className="font-Outfit text-HeadingColor-0 inline-block text-lg sm:text-xl md:text-2xl xl:text-xl 2xl:text-2xl font-medium md:leading-[32px] transition-all duration-500 hover:text-PrimaryColor-0"
+          className="font-Outfit text-HeadingColor-0 inline-block text-lg sm:text-xl md:text-[22px] xl:text-xl 2xl:text-2xl font-medium lg:leading-[32px] transition-all duration-500 hover:text-PrimaryColor-0"
         >
           {blogTitle}
         </Link>

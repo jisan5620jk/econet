@@ -86,11 +86,11 @@ const Project = () => {
         centeredSlides: true,
       },
       992: {
-        slidesPerView: 2.8,
+        slidesPerView: 2.5,
         centeredSlides: true,
       },
       1400: {
-        slidesPerView: 3.6,
+        slidesPerView: 3.4,
       },
       1600: {
         slidesPerView: 3.6,

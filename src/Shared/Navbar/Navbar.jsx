@@ -251,43 +251,41 @@ const Navbar = () => {
               </div>
 
               {/* Button + Sidebar + Hamburger */}
-              <div className="inline-block">
-                <div className="inline-flex items-center gap-2 sm:gap-7 lg:gap-5 xl:gap-8">
-                  <div className="hidden sm:flex items-center gap-4">
-                    <PrimaryButton
-                      as="link"
-                      href="/about"
-                      className="!py-2.5 !px-7 bg-SecondaryColor-0"
-                    >
-                      Get a Quote <GoArrowRight size={22} />
-                    </PrimaryButton>
-                  </div>
-                  <div
-                    className="hidden group bg-transparent xl:flex items-center justify-center gap-3 cursor-pointer"
-                    onClick={() => setIsOpen(true)}
+              <div className="inline-flex items-center gap-2 sm:gap-7 lg:gap-5 xl:gap-8">
+                <div className="hidden sm:flex items-center gap-4">
+                  <PrimaryButton
+                    as="link"
+                    href="/about"
+                    className="!py-2.5 !px-7 bg-SecondaryColor-0"
                   >
-                    <h5 className="hidden 2xl:block font-Outfit text-lg text-HeadingColor-0 font-medium">
-                      Sidebar
-                    </h5>
-                    <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
-                      <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
-                      <span className="bg-SecondaryColor-0 w-6 md:w-6 h-0.5 rounded-xl block"></span>
-                      <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
-                    </button>
-                  </div>
-                  <div
-                    className="lg:hidden group bg-transparent flex items-center justify-center gap-3 cursor-pointer"
-                    onClick={() => setMobileOpen(true)}
-                  >
-                    <h5 className="hidden md:block font-Outfit text-lg text-HeadingColor-0 font-medium">
-                      Menu
-                    </h5>
-                    <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
-                      <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
-                      <span className="bg-SecondaryColor-0 w-6 md:w-6 h-0.5 rounded-xl block"></span>
-                      <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
-                    </button>
-                  </div>
+                    Get a Quote <GoArrowRight size={22} />
+                  </PrimaryButton>
+                </div>
+                <div
+                  className="hidden group bg-transparent xl:flex items-center justify-center gap-3 cursor-pointer"
+                  onClick={() => setIsOpen(true)}
+                >
+                  <h5 className="hidden 2xl:block font-Outfit text-lg text-HeadingColor-0 font-medium">
+                    Sidebar
+                  </h5>
+                  <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
+                    <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                    <span className="bg-SecondaryColor-0 w-6 md:w-6 h-0.5 rounded-xl block"></span>
+                    <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                  </button>
+                </div>
+                <div
+                  className="lg:hidden group bg-transparent flex items-center justify-center gap-3 cursor-pointer"
+                  onClick={() => setMobileOpen(true)}
+                >
+                  <h5 className="hidden md:block font-Outfit text-lg text-HeadingColor-0 font-medium">
+                    Menu
+                  </h5>
+                  <button className="space-y-1 md:space-y-[5px] flex flex-col items-end text-right">
+                    <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                    <span className="bg-SecondaryColor-0 w-6 md:w-6 h-0.5 rounded-xl block"></span>
+                    <span className="bg-SecondaryColor-0 w-4 md:w-[18px] h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-6"></span>
+                  </button>
                 </div>
               </div>
             </div>

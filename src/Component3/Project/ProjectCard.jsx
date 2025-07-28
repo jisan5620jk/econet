@@ -18,7 +18,7 @@ const ProjectCard = ({
           className="w-full"
         />
       </div>
-      <div className="absolute z-20 left-0 right-0 -bottom-20 opacity-0 transition-all duration-500 group-hover:bottom-10 group-hover:opacity-100 mx-auto bg-white/20 rounded-2xl backdrop-filter backdrop-blur-lg w-[calc(100%-80px)] max-w-full inline-block px-2 sm:px-[30px] pt-9 pb-7">
+      <div className="absolute z-20 left-0 right-0 -bottom-20 opacity-0 transition-all duration-500 group-hover:bottom-4 lg:group-hover:bottom-10 xl:group-hover:bottom-5 3xl:group-hover:bottom-10 group-hover:opacity-100 mx-auto bg-white/20 rounded-2xl backdrop-filter backdrop-blur-lg w-[calc(100%-32px)] lg:w-[calc(100%-80px)] 2xl:w-[calc(100%-40px)] 3xl:w-[calc(100%-80px)] max-w-full inline-block px-4 sm:px-[30px] pt-5 sm:pt-9 pb-4 sm:pb-7">
         <h6 className="inline-block px-6 py-1.5 bg-PrimaryColor-0 rounded-full font-Outfit text-white uppercase mb-5">
           {projectSubTitle}
         </h6>

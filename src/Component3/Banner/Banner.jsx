@@ -48,10 +48,10 @@ const Banner = () => {
             <div className="bg-[url(/images/classic-banner-bg.jpg)] bg-cover bg-no-repeat bg-left xl:bg-center relative z-10 overflow-hidden pt-[100px]">
               <div className="relative overflow-hidden 2xl:px-5 3xl:px-0 pt-24 sm:pt-20 md:pt-40 2xl:pt-[120px] pb-[140px]">
                 <div className="Container">
-                  <div className="grid grid-cols-1 lg:grid-cols-2">
+                  <div className="grid grid-cols-1 xl:grid-cols-2">
                     <div>
                       {/* Animated Title */}
-                      <h2 className="relative z-10 font-Outfit font-semibold text-white text-[26px] leading-[32px] sm:text-[36px] sm:leading-[42px] md:text-[56px] md:leading-[62px] lg:text-[60px] lg:leading-[64px] xl:text-[48px] xl:leading-[48px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[78px]">
+                      <h2 className="relative z-10 font-Outfit font-semibold text-white text-[26px] leading-[32px] sm:text-[36px] sm:leading-[42px] md:text-[56px] md:leading-[62px] lg:text-[64px] lg:leading-[68px] xl:text-[48px] xl:leading-[48px] 2xl:text-[64px] 2xl:leading-[68px] 3xl:text-[74px] 3xl:leading-[78px]">
                         {slide.titleLines.map((line, i) => (
                           <div
                             key={i}

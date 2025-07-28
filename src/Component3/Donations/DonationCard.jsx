@@ -33,7 +33,7 @@ const DonationCard = ({ image, category, title, raised, goal, color, URL }) => {
           ))}
         </div>
       </div>
-      <div className="px-6 sm:px-9 md:px-[42px] pt-7 sm:pt-9 pb-8 sm:pb-11">
+      <div className="px-6 sm:px-9 lg:px-7 xl:px-[42px] pt-7 sm:pt-9 md:pt-8 xl:pt-9 pb-8 sm:pb-11">
         <Link
           to={URL}
           className="font-Outfit font-medium text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-[28px] 2xl:leading-[36px] text-HeadingColor-0 transition-all duration-500 hover:text-PrimaryColor-0"
