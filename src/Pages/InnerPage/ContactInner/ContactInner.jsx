@@ -1,22 +1,20 @@
+import { FaArrowRightLong } from "react-icons/fa6";
 import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb";
-import HelmetChanger from "../../../Shared/Helmet/Helmet";
-import { BsArrowUpRight } from "react-icons/bs";
-import Contact from "./Contact";
-import Map from "./Map";
-
+import Appointment from "./Appointment/Appointment";
+import ContactBox from "./ContactBox";
 
 const ContactInner = () => {
   return (
     <>
-      <HelmetChanger title={"Contact Inner Page"} />
       <BreadCrumb
-        breadCrumbTitle={"Contact"}
-        breadCrumbIcon={<BsArrowUpRight />}
-        breadCrumbLink={"Contact"}
+        breadCrumbTitle={"Contact Us"}
+        breadCrumbIcon={<FaArrowRightLong />}
+        breadCrumbLink={"Contact Us"}
       />
-      <Contact />
-      <Map />
+      <ContactBox />
+      <Appointment />
     </>
   );
 };
+
 export default ContactInner;

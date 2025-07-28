@@ -1,30 +1,28 @@
-import BreadCrumb from '../../../Shared/BreadCrumb/BreadCrumb';
-import HelmetChanger from '../../../Shared/Helmet/Helmet';
-import { BsArrowUpRight } from 'react-icons/bs';
-import About from './About/About';
-import Feature from '../../../Component2/Feature/Feature';
-import TeamMember from '../../../Component1/TeamMember/TeamMember';
-import CallDoAction from '../../../Component2/CallDoAction/CallDoAction';
-import Testimonial from './Testimonial/Testimonial';
-import Brand from './Brand/Brand';
-import Offer from './Offer/Offer';
+import { FaArrowRightLong } from "react-icons/fa6";
+import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb";
+import About from "../../../Componant2/About/About";
+import Counter from "../../../Componant1/Counter/Counter";
+import Process from "../../../Componant1/Process/Process";
+import Brand from "./Brand/Brand";
+import TeamMember from "../../../Componant1/TeamMember/TeamMember";
+import Testimonial from "../../../Componant1/Testimonial/Testimonial";
+import ContentSlider2 from "../../../Componant2/ContentSlider2/ContentSlider2";
 
 const AboutInner = () => {
   return (
     <>
-      <HelmetChanger title={'About Inner Page'} />
       <BreadCrumb
-        breadCrumbTitle={'About Us'}
-        breadCrumbIcon={<BsArrowUpRight />}
-        breadCrumbLink={'About Us'}
+        breadCrumbTitle={"About Us"}
+        breadCrumbIcon={<FaArrowRightLong />}
+        breadCrumbLink={"About Us"}
       />
       <About />
-      <Feature />
-      <Offer />
-      <CallDoAction />
-      <TeamMember />
-      <Testimonial />
+      <Counter />
+      <Process />
       <Brand />
+      <TeamMember />
+      <ContentSlider2 />
+      <Testimonial />
     </>
   );
 };

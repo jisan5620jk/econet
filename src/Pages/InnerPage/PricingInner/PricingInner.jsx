@@ -1,18 +1,20 @@
-import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb"
-import Pricing from "./Pricing/Pricing";
-import HelmetChanger from "../../../Shared/Helmet/Helmet";
-import { BsArrowUpRight } from "react-icons/bs";
+import { FaArrowRightLong } from "react-icons/fa6";
+import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb";
+import PricingFaq from "./Accordion/PricingFaq";
+import Pricing from "../../../Componant3/Pricing/Pricing";
 
 const PricingInner = () => {
   return (
     <>
-      <HelmetChanger title={'Pricing Inner Page Style Two'} />
       <BreadCrumb
-        breadCrumbTitle={'Affordable Price'}
-        breadCrumbIcon={<BsArrowUpRight />}
-        breadCrumbLink={'Pricing Plan'}
+        breadCrumbTitle={"Affordable Price"}
+        breadCrumbIcon={<FaArrowRightLong />}
+        breadCrumbLink={"Pricing"}
       />
       <Pricing />
+      <div>
+        <PricingFaq />
+      </div>
     </>
   );
 };

@@ -2,66 +2,59 @@
 import { Link } from "react-router-dom";
 
 const BlogListCard = ({
-  blogThumb,
-  blogDate,
-  blogPostIcon,
-  blogPost,
-  blogUrl,
-  blogTitle,
-  blogBtnText,
-  blogBtnIcon,
-  bgColor = 'bg-white',
-  spanBg = 'bg-gray-200',
-  dateBg = 'bg-gray-300',
-  titleHover = 'group-hover:text-black',
-  borderColor = 'border-gray-300',
-  buttonBg = 'bg-white',
-  buttonText = 'text-black',
-  buttonBefore = 'before:bg-black',
+  blogListImg,
+  thumbContent,
+  blogListTitle,
+  postByIcon,
+  postBy,
+  postDateIcon,
+  postDate,
+  postFileIcon,
+  postFile,
+  blogListDesc,
+  blogListUrl,
+  blogListBtn,
+  blogListBtnIcon,
 }) => {
   return (
-    <div
-      className={`group transition-all duration-500 rounded-[20px] p-3 sm:p-6 ${bgColor}`}
-    >
-      <div className="blog-thumb relative rounded-[10px] overflow-hidden">
-        <span
-          className={`absolute left-[12.5%] top-0 h-full w-0 transition-all duration-500 z-10 group-hover:bg-opacity-0 group-hover:w-[25%] group-hover:left-0 ${spanBg}`}
-        ></span>
-        <span
-          className={`absolute left-[37.5%] top-0 h-full w-0 transition-all duration-500 z-10 group-hover:bg-opacity-0 group-hover:w-[25%] group-hover:left-[25%] ${spanBg}`}
-        ></span>
-        <span
-          className={`absolute left-[62.5%] top-0 h-full w-0 transition-all duration-500 z-10 group-hover:bg-opacity-0 group-hover:w-[25%] group-hover:left-1/2 ${spanBg}`}
-        ></span>
-        <span
-          className={`absolute left-[87.5%] top-0 h-full w-0 transition-all duration-500 z-10 group-hover:bg-opacity-0 group-hover:w-[25%] group-hover:left-[75%] ${spanBg}`}
-        ></span>
-        <img src={blogThumb} className="w-full" />
-        <p
-          className={`absolute z-10 bottom-5 left-5 px-4 py-[2px] rounded-full font-Outfit text-white text-sm sm:text-base flex gap-2 items-center leading-[15px] ${dateBg}`}
-        >
-          {blogDate}
-        </p>
+    <div className="border border-BorderColor2-0 rounded-md overflow-hidden group">
+      <div className="relative overflow-hidden">
+        <img
+          src={blogListImg}
+          className="w-full transition-all duration-500 group-hover:scale-110"
+        />
+        <h6 className="font-AlbertSans text-white px-5 py-2 rounded absolute top-5 -left-1/4 transition-all duration-500 bg-PrimaryColor-0 group-hover:left-5">
+          {thumbContent}
+        </h6>
       </div>
-      <div className="relative z-20 rounded-lg transition-all duration-500 px-3 pb-3">
-        <p className="font-Outfit font-medium text-HeadingColor-0 flex gap-3 items-center mt-7 mb-4">
-          <img src={blogPostIcon} draggable={false} alt="UserIcon" />
-          {blogPost}
-        </p>
-        <Link to={blogUrl}>
-          <button
-            className={`blog-title font-Outfit text-left font-medium text-lg sm:text-[22px] md:text-xl lg:text-2xl xl:text-[21px] 2xl:text-2xl text-HeadingColor-0 transition-all duration-500 mb-7 ${titleHover}`}
-          >
-            {blogTitle}
+      <div className="px-4 sm:px-8">
+        <Link to={blogListUrl}>
+          <button className="font-AlbertSans font-bold text-left text-lg sm:text-2xl 2xl:text-3xl text-HeadingColor-0 transition-all duration-500 hover:text-PrimaryColor-0 mt-9 mb-6">
+            {blogListTitle}
           </button>
         </Link>
-        <Link to={blogUrl}>
-          <button
-            className={`blog-button font-Outfit flex items-center justify-between w-full pl-8 pr-6 py-[13px] border relative z-10 overflow-hidden rounded-full transition-all duration-500 group-hover:!text-white 
-            ${borderColor} ${buttonBg} ${buttonText} before:absolute before:left-0 before:top-0 before:w-full before:h-full before:[clip-path:polygon(50%_0,_50%_0,_50%_50%,_50%_100%,_50%_100%,_50%_50%)] before:transition-all before:duration-500 before:-z-10 group-hover:before:[clip-path:polygon(_25%_-70%,_75%_-70%,_120%_50%,_75%_170%,_25%_170%,_-20%_50%_)] ${buttonBefore}`}
-          >
-            {blogBtnText}
-            <span className="text-2xl">{blogBtnIcon}</span>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-5 mb-7">
+          <h6 className="flex items-center gap-2 font-AlbertSans text-TextColor-0 font-light">
+            <span className="text-4xl text-[#dedede]">{postByIcon}</span>
+            {postBy}
+          </h6>
+          <h6 className="flex items-center gap-2 font-AlbertSans text-TextColor-0 font-light">
+            <span className="text-lg text-PrimaryColor-0">{postDateIcon}</span>
+            {postDate}
+          </h6>
+          <h6 className="flex items-center gap-2 font-AlbertSans text-TextColor-0 font-light">
+            <span className="text-lg text-PrimaryColor-0">{postFileIcon}</span>
+            {postFile}
+          </h6>
+        </div>
+        <p className="font-AlbertSans font-light text-TextColor-0 mb-8">
+          {blogListDesc}
+        </p>
+      </div>
+      <div className="border-t border-BorderColor2-0 py-5 px-4 sm:px-8">
+        <Link to={blogListUrl}>
+          <button className="primary-btn2 !rounded !px-7 !py-3 group-hover:before:w-full group-hover:before:left-0">
+            {blogListBtn} {blogListBtnIcon}
           </button>
         </Link>
       </div>
