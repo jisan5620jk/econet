@@ -2,55 +2,46 @@
 
 import { Link } from "react-router-dom";
 
-const ServiceCard = ({
-  serviceIcon,
-  serviceTitle,
-  serviceDesc,
-  serviceUrl,
-  serviceBtnText,
-  serviceBtnIcon,
-  serviceShape,
-  serviceShape2,
-}) => {
+const ServiceCard = ({ serviceTitle, serviceImg, serviceIcon, serviceUrl }) => {
   return (
-    <div className="group p-3 sm:p-6 lg:p-3 xl:p-6 border border-white border-opacity-10 rounded-[20px]">
-      <div className="bg-BodyBg2-0 rounded-2xl px-4 sm:px-[34px] md:px-4 lg:px-5 xl:px-7 2xl:px-10 pt-4 sm:pt-7 md:pt-4 lg:pt-8 xl:pt-[60px] pb-4 sm:pb-8 md:pb-4 lg:pb-7 xl:pb-14 relative z-10 overflow-hidden">
-        <span className="absolute left-[12.5%] top-0 h-full w-0 bg-PrimaryColor-0 transition-all duration-500 -z-10 group-hover:w-[25%] group-hover:left-0"></span>
-        <span className="absolute left-[37.5%] top-0 h-full w-0 bg-PrimaryColor-0 transition-all duration-500 -z-10 group-hover:w-[25%] group-hover:left-[25%]"></span>
-        <span className="absolute left-[62.5%] top-0 h-full w-0 bg-PrimaryColor-0 transition-all duration-500 -z-10 group-hover:w-[25%] group-hover:left-1/2"></span>
-        <span className="absolute left-[87.5%] top-0 h-full w-0 bg-PrimaryColor-0 transition-all duration-500 -z-10 group-hover:w-[25%] group-hover:left-[75%]"></span>
-        <div className="">
+    <div className="group rounded-[20px] relative z-10 overflow-hidden">
+      <div className="relative rounded-[20px] overflow-hidden">
+        <div>
+          {[
+            { initial: "left-[12.5%]", hover: "group-hover:left-0" },
+            { initial: "left-[37.5%]", hover: "group-hover:left-[25%]" },
+            { initial: "left-[62.5%]", hover: "group-hover:left-1/2" },
+            { initial: "left-[87.5%]", hover: "group-hover:left-[75%]" },
+          ].map((pos, i) => (
+            <span
+              key={i}
+              className={`absolute top-0 h-full w-0 transition-all duration-500 z-10 bg-PrimaryColor-0 group-hover:w-[25%] group-hover:opacity-0 ${pos.initial} ${pos.hover}`}
+            ></span>
+          ))}
+        </div>
+        <img
+          src={serviceImg}
+          draggable={false}
+          alt="Service Image"
+          className="w-full"
+        />
+      </div>
+      <div className=" -mt-[94px]">
+        <div className="-mt-[35px] -mb-[35px] size-[70px] ml-auto bg-PrimaryColor-0 flex justify-center items-center rounded-l-[10px] transition-all duration-500 relative z-20 overflow-hidden before:absolute before:left-0 before:top-0 before:size-full before:bg-PrimaryColor2-0 before:transition-all before:duration-500 before:-z-10 before:rotate-180 before:scale-0 group-hover:before:scale-100 group-hover:before:rotate-0">
           <img
             src={serviceIcon}
-            draggable="false"
-            className="group-hover:animate-wobble_vertical transition-all duration-500 group-hover:brightness-0 group-hover:invert"
+            alt="Service Icon"
+            draggable={false}
+            className="w-inherit transition-all duration-500 group-hover:brightness-0 group-hover:invert group-hover:animate-wobble_vertical"
           />
         </div>
-        <h5 className="font-Outfit font-semibold text-xl sm:text-2xl xl:text-[22px] 2xl:text-[26px] pb-[10px] pt-5 sm:pt-8 mt-6 sm:mt-10 mb-1 text-HeadingColor-0 transition-all duration-500 group-hover:text-white border-t border-SecondaryColor-0 border-opacity-10 relative before:absolute before:-left-14 before:-top-[.5px] before:w-20 before:h-[.5px] before:z-20 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:animate-dance5 group-hover:before:bg-white overflow-x-hidden overflow-y-visible">
-          {serviceTitle}
-        </h5>
-        <p className="font-NotoSans text-TextColor2-0 mb-6 sm:mb-10 transition-all duration-500 group-hover:text-white">
-          {serviceDesc}
-        </p>
-        <div className="inline-block overflow-hidden">
+        <div className="ml-auto w-[calc(100%-20px)] sm:w-[calc(100%-40px)] bg-BodyBgDark-0 relative z-10 rounded-[20px] pl-[34px] pt-9 pb-8 overflow-hidden before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-BodyBgDark2-0 before:-z-10 before:transition-all before:duration-500 group-hover:before:left-0 group-hover:before:w-full">
           <Link
             to={serviceUrl}
-            className="inline-flex gap-2 items-center font-Outfit text-HeadingColor-0 uppercase transition-all duration-500 -ml-[100px] group-hover:ml-0 group-hover:text-white"
+            className="w-full font-Outfit font-medium text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-[28px] 2xl:leading-[36px] text-white transition-all duration-500 group-hover:text-white"
           >
-            {serviceBtnText}
-            <span className="text-xl">{serviceBtnIcon}</span>
+            {serviceTitle}
           </Link>
-        </div>
-        <div className="absolute top-0 right-0">
-          <img src={serviceShape} draggable={false} alt="Shape" />
-        </div>
-        <div className="absolute -z-10 -bottom-[37%] -right-[35%] transition-all duration-500 group-hover:opacity-20">
-          <img
-            src={serviceShape2}
-            draggable={false}
-            alt="Shape"
-            className="animate-rotational"
-          />
         </div>
       </div>
     </div>

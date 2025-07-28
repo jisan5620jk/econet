@@ -1,102 +1,108 @@
-import serviceIcon from '/images/learn-icon1.png';
-import serviceIcon2 from '/images/learn-icon2.png';
-import serviceIcon3 from '/images/learn-icon3.png';
-import serviceShape from '/images/circle-hover1.png';
-import serviceShape2 from '/images/learn-circle.png';
-import shape from '/images/learn-arabic.png';
-import shape2 from '/images/learn-round.png';
-import shape3 from '/images/learn-book.png';
-import ServiceCard from './ServiceCard';
-import { HiArrowNarrowRight } from 'react-icons/hi';
+import serviceImg from "/images/classic-service-img.png";
+import serviceImg2 from "/images/classic-service-img2.png";
+import serviceImg3 from "/images/classic-service-img3.png";
+import serviceIcon from "/images/classic-service-icon.png";
+import serviceIcon2 from "/images/classic-service-icon2.png";
+import serviceIcon3 from "/images/classic-service-icon3.png";
+import subtitleIcon from "/images/sub-title-icon.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Autoplay } from "swiper/modules";
+import ServiceNavigation from "./ServiceNavigation";
+import { useRef } from "react";
+import ServiceCard from "./ServiceCard";
 
-const serviceCard = [
+const serviceData = [
   {
-    id: 1,
+    serviceImg: serviceImg,
     serviceIcon: serviceIcon,
-    serviceTitle: 'Quran Memorization',
-    serviceUrl: '/service/quran-memorization',
-    serviceBtnText: 'Read More',
-    serviceBtnIcon: <HiArrowNarrowRight />,
-    serviceDesc:
-      'Embark on a transformative journey knowledge and spiritual growth with in. Delve into its timeless teachings, wisdom, guidance, and life lessons.',
-    serviceShape: serviceShape,
-    serviceShape2: serviceShape2,
+    serviceTitle: "Suntainable energy Environment",
+    serviceUrl: "/service",
   },
   {
-    id: 2,
+    serviceImg: serviceImg2,
     serviceIcon: serviceIcon2,
-    serviceTitle: 'Free Trial Classes',
-    serviceUrl: '/service/free-trial-classes',
-    serviceBtnText: 'Read More',
-    serviceBtnIcon: <HiArrowNarrowRight />,
-    serviceDesc:
-      'Embark on a transformative journey knowledge and spiritual growth with in. Delve into its timeless teachings, wisdom, guidance, and life lessons.',
-    serviceShape: serviceShape,
-    serviceShape2: serviceShape2,
+    serviceTitle: "Environment Waste Recycling",
+    serviceUrl: "/service",
   },
   {
-    id: 3,
+    serviceImg: serviceImg3,
     serviceIcon: serviceIcon3,
-    serviceTitle: 'Arabic Language',
-    serviceUrl: '/service/arabic-language',
-    serviceBtnText: 'Read More',
-    serviceBtnIcon: <HiArrowNarrowRight />,
-    serviceDesc:
-      'Embark on a transformative journey knowledge and spiritual growth with in. Delve into its timeless teachings, wisdom, guidance, and life lessons.',
-    serviceShape: serviceShape,
-    serviceShape2: serviceShape2,
+    serviceTitle: "Dirty Recycling and Tree Plantation",
+    serviceUrl: "/service",
+  },
+  {
+    serviceImg: serviceImg3,
+    serviceIcon: serviceIcon3,
+    serviceTitle: "Dirty Recycling and Tree Plantation",
+    serviceUrl: "/service",
   },
 ];
 
 const Service = () => {
+  const swiperRef = useRef(null);
+
+  const settings = {
+    loop: true,
+    spaceBetween: 26,
+    modules: [Autoplay],
+    speed: 2000,
+    autoplay: {
+      delay: 3000, // Set delay time in milliseconds
+      disableOnInteraction: false, // Keep autoplay on user interaction
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1400: {
+        slidesPerView: 3,
+      },
+    },
+  };
   return (
-    <section className='relative py-16 md:py-20 lg:py-28  bg-SecondaryColor-0 overflow-hidden'>
-      <div className='absolute left-28 top-32'>
-        <img src={shape} draggable={false} alt="Shape" className='animate-dance2 hidden lg:block' />
-      </div>
-      <div className='absolute -bottom-60 -left-8'>
-        <img src={shape2} draggable={false} alt="Shape" className='animate-dance hidden lg:block' />
-      </div>
-      <div className='absolute right-24 bottom-[24%]'>
-        <img src={shape3} draggable={false} alt="Shape" className='animate-flip hidden lg:block' />
-      </div>
-      <div className='Container'>
-        <div className='text-center'>
-          <h5 className='font-Outfit text-sm text-PrimaryColor-0 uppercase pb-1 relative z-10 before:absolute before:left-1/2 before:top-full before:-translate-x-1/2 before:w-[48%] md:before:w-[11%] before:h-[.5px] before:bg-gradient-to-r before:to-SecondaryColor-0 before:via-PrimaryColor-0 before:from-SecondaryColor-0'>
-            learn & place
-          </h5>
-          <h1 className='font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[44px] md:text-[44px] md:leading-[54px] lg:text-[30px] lg:leading-[40px] xl:text-[36px] xl:leading-[46px] 2xl:text-[42px] 2xl:leading-[52px] text-white mt-[18px] mb-4'>
-            Perfecting Quranic{' '}
-            <span className='text-PrimaryColor-0'>Learning</span>
-          </h1>
+    <section className="bg-BodyBgDark-0 pt-16 md:pt-20 lg:pt-[120px] pb-20 md:pb-28 lg:pb-[140px] -mt-5">
+      <div className="Container pt-5">
+        <div className="flex items-center flex-wrap gap-2 md:gap-10 xl:gap-20">
+          <div>
+            <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+              <img src={subtitleIcon} alt="Icon" draggable={false} /> services
+            </h5>
+            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-white mt-3.5">
+              Reliable Solar Installation
+              <br />
+              Innovation Experience
+            </h1>
+          </div>
+          <p className="fade-up font-NotoSans text-TextColor2-0 max-w-[395px] w-full pt-4">
+            Econet is a environmental organizations maintaince dedicated to
+            protecting planet through sustainable community empowerment
+            moderator
+          </p>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-7 mt-8 md:mt-[58px]'>
-          {serviceCard.map(
-            ({
-              id,
-              serviceIcon,
-              serviceTitle,
-              serviceUrl,
-              serviceDesc,
-              serviceBtnText,
-              serviceBtnIcon,
-              serviceShape,
-              serviceShape2,
-            }) => (
-              <div key={id}>
-                <ServiceCard
-                  serviceIcon={serviceIcon}
-                  serviceTitle={serviceTitle}
-                  serviceUrl={serviceUrl}
-                  serviceBtnText={serviceBtnText}
-                  serviceBtnIcon={serviceBtnIcon}
-                  serviceDesc={serviceDesc}
-                  serviceShape={serviceShape}
-                  serviceShape2={serviceShape2}
-                />
-              </div>
-            )
-          )}
+        <div className="box-row relative z-10 pt-[140px] md:pt-[58px]">
+          <Swiper
+            {...settings}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+          >
+            {serviceData.map((service, index) => (
+              <SwiperSlide key={index}>
+                <div className="box">
+                  <ServiceCard {...service} />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <ServiceNavigation swiperRef={swiperRef} />
         </div>
       </div>
     </section>

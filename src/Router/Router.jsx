@@ -22,6 +22,8 @@ import Home12 from "../Pages/Home12/Home12";
 import Main12 from "../Main/Main12";
 import Main3 from "../Main/Main3";
 import Home3 from "../Pages/Home3/Home3";
+import Main4 from "../Main/Main4";
+import Home4 from "../Pages/Home4/Home4";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +54,16 @@ const router = createBrowserRouter([
       {
         path: "/home3",
         element: <Home3 />,
+      },
+    ],
+  },
+  {
+    errorElement: <ErrorPage />,
+    element: <Main4 />,
+    children: [
+      {
+        path: "/home4",
+        element: <Home4 />,
       },
     ],
   },
