@@ -22,7 +22,7 @@ const ProjectCard = ({
            duration-500 group-hover:-top-[180px] group-hover:-right-[190px]"
         />
       </div>
-      <div className="w-11/12 -mt-[42px] bg-[#f5f8ed] rounded-md overflow-hidden px-4 md:px-8 pb-8 transition-all duration-500 relative z-10 after:absolute after:left-0 after:top-0 after:w-[5px] after:h-full after:bg-PrimaryColor-0 after:z-10 before:-z-10 before:absolute before:left-0 before:w-[5px] before:h-full before:bg-SecondaryColor-0 before:transition-all before:duration-500 group-hover:before:w-full group-hover:-mt-[86px]">
+      <div className="w-11/12 -mt-[42px] bg-BodyBg-0 rounded-md overflow-hidden px-4 md:px-8 pb-8 transition-all duration-500 relative z-10 after:absolute after:left-0 after:top-0 after:w-[5px] after:h-full after:bg-PrimaryColor-0 after:z-10 before:-z-10 before:absolute before:left-0 before:w-[5px] before:h-full before:bg-SecondaryColor-0 before:transition-all before:duration-500 group-hover:before:w-full group-hover:-mt-[86px]">
         <img
           src={projectContentShape}
           draggable="false"

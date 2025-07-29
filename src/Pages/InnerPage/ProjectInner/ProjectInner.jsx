@@ -88,7 +88,7 @@ const ProjectInner = () => {
         breadCrumbIcon={<FaArrowRightLong />}
         breadCrumbLink={"Projects"}
       />
-      <section className="py-28 bg-[#f3f4f8]">
+      <section className="py-28 bg-BodyBg-0">
         <div className="Container">
           <div className="text-center">
             <h5 className="font-AlbertSans font-medium text-PrimaryColor-0 flex items-center justify-center gap-2">

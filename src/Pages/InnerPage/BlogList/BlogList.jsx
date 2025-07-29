@@ -23,11 +23,11 @@ const blogListData = [
     id: 1,
     blogListImg: blogListImg,
     thumbContent: "Cleaning",
-    blogListTilte: "Newest Cleaning Equipment for House 2024",
+    blogListTilte: "Newest Cleaning Equipment for House 2025",
     postByIcon: <FaUserCircle />,
     postBy: "By Author",
     postDateIcon: <FaRegCalendarCheck />,
-    postDate: "03 January, 2024",
+    postDate: "03 January, 2025",
     postFileIcon: <FaRegFolderOpen />,
     postFile: "Cleaning",
     blogListDesc:
@@ -40,11 +40,11 @@ const blogListData = [
     id: 2,
     blogListImg: blogListImg2,
     thumbContent: "Cleaning",
-    blogListTilte: "Newest Cleaning Equipment for House 2024",
+    blogListTilte: "Newest Cleaning Equipment for House 2025",
     postByIcon: <FaUserCircle />,
     postBy: "By Author",
     postDateIcon: <FaRegCalendarCheck />,
-    postDate: "03 March, 2024",
+    postDate: "03 March, 2025",
     postFileIcon: <FaRegFolderOpen />,
     postFile: "Cleaning",
     blogListDesc:
@@ -57,11 +57,11 @@ const blogListData = [
     id: 3,
     blogListImg: blogListImg3,
     thumbContent: "Cleaning",
-    blogListTilte: "Newest Cleaning Equipment for House 2024",
+    blogListTilte: "Newest Cleaning Equipment for House 2025",
     postByIcon: <FaUserCircle />,
     postBy: "By Author",
     postDateIcon: <FaRegCalendarCheck />,
-    postDate: "03 May, 2024",
+    postDate: "03 May, 2025",
     postFileIcon: <FaRegFolderOpen />,
     postFile: "Cleaning",
     blogListDesc:
@@ -74,11 +74,11 @@ const blogListData = [
     id: 4,
     blogListImg: blogListImg4,
     thumbContent: "Cleaning",
-    blogListTilte: "Newest Cleaning Equipment for House 2024",
+    blogListTilte: "Newest Cleaning Equipment for House 2025",
     postByIcon: <FaUserCircle />,
     postBy: "By Author",
     postDateIcon: <FaRegCalendarCheck />,
-    postDate: "03 January, 2024",
+    postDate: "03 January, 2025",
     postFileIcon: <FaRegFolderOpen />,
     postFile: "Cleaning",
     blogListDesc:
@@ -91,11 +91,11 @@ const blogListData = [
     id: 5,
     blogListImg: blogListImg5,
     thumbContent: "Cleaning",
-    blogListTilte: "Newest Cleaning Equipment for House 2024",
+    blogListTilte: "Newest Cleaning Equipment for House 2025",
     postByIcon: <FaUserCircle />,
     postBy: "By Author",
     postDateIcon: <FaRegCalendarCheck />,
-    postDate: "03 June, 2024",
+    postDate: "03 June, 2025",
     postFileIcon: <FaRegFolderOpen />,
     postFile: "Cleaning",
     blogListDesc:
@@ -161,7 +161,7 @@ const BlogList = () => {
               )}
             </div>
             <div className="col-span-2 lg:col-span-1">
-              <div className="relative inline-block w-full mb-7 p-4 sm:p-8 lg:p-6 xl:p-8 rounded-md bg-[#f3f4f8]">
+              <div className="relative inline-block w-full mb-7 p-4 sm:p-8 lg:p-6 xl:p-8 rounded-md bg-BodyBg-0">
                 <input
                   type="text"
                   name="search"
@@ -177,14 +177,14 @@ const BlogList = () => {
                   <IoSearch />
                 </button>
               </div>
-              <div className="bg-[#f3f4f8] rounded-md px-4 sm:px-8 lg:px-6 xl:px-8 pt-7 pb-4 mb-7">
+              <div className="bg-BodyBg-0 rounded-md px-4 sm:px-8 lg:px-6 xl:px-8 pt-7 pb-4 mb-7">
                 <h4 className="font-AlbertSans font-semibold text-2xl text-HeadingColor-0 pb-3 mb-8 relative before:absolute before:bottom-0 before:left-0 before:w-7 before:h-[2px] before:bg-PrimaryColor-0">
                   Categories
                 </h4>
                 <ul className="mt-8">
                   <li>
                     <Link to={"/service_details"}>
-                      <button className="w-full font-AlbertSans text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded bg-white mb-3 overflow-hidden z-[1] relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-[1] before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
+                      <button className="w-full font-AlbertSans text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded bg-white mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
                           <FaRegFolderOpen className="text-PrimaryColor-0 transition-all duration-500 group-hover:text-white" />
                           Ocean Cleaning
@@ -195,7 +195,7 @@ const BlogList = () => {
                   </li>
                   <li>
                     <Link to={"/service_details2"}>
-                      <button className="w-full font-AlbertSans text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded bg-white mb-3 overflow-hidden z-[1] relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-[1] before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
+                      <button className="w-full font-AlbertSans text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded bg-white mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
                           <FaRegFolderOpen className="text-PrimaryColor-0 transition-all duration-500 group-hover:text-white" />
                           Dust Recycling
@@ -206,7 +206,7 @@ const BlogList = () => {
                   </li>
                   <li>
                     <Link to={"/service_details3"}>
-                      <button className="w-full font-AlbertSans text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded bg-white mb-3 overflow-hidden z-[1] relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-[1] before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
+                      <button className="w-full font-AlbertSans text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded bg-white mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
                           <FaRegFolderOpen className="text-PrimaryColor-0 transition-all duration-500 group-hover:text-white" />
                           Plant Seedlings
@@ -217,7 +217,7 @@ const BlogList = () => {
                   </li>
                   <li>
                     <Link to={"/service_details4"}>
-                      <button className="w-full font-AlbertSans text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded bg-white mb-3 overflow-hidden z-[1] relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-[1] before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
+                      <button className="w-full font-AlbertSans text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded bg-white mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
                           <FaRegFolderOpen className="text-PrimaryColor-0 transition-all duration-500 group-hover:text-white" />
                           Renewable Energy
@@ -228,7 +228,7 @@ const BlogList = () => {
                   </li>
                   <li>
                     <Link to={"/service_details5"}>
-                      <button className="w-full font-AlbertSans text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded bg-white mb-3 overflow-hidden z-[1] relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-[1] before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
+                      <button className="w-full font-AlbertSans text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded bg-white mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
                           <FaRegFolderOpen className="text-PrimaryColor-0 transition-all duration-500 group-hover:text-white" />
                           Environmental
@@ -239,7 +239,7 @@ const BlogList = () => {
                   </li>
                   <li>
                     <Link to={"/service_details6"}>
-                      <button className="w-full font-AlbertSans text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded bg-white mb-3 overflow-hidden z-[1] relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-[1] before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
+                      <button className="w-full font-AlbertSans text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded bg-white mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
                           <FaRegFolderOpen className="text-PrimaryColor-0 transition-all duration-500 group-hover:text-white" />
                           Forest Cleaning
@@ -250,7 +250,7 @@ const BlogList = () => {
                   </li>
                 </ul>
               </div>
-              <div className="px-4 sm:px-8 lg:px-6 xl:px-8 bg-[#f3f4f8] rounded-md pt-7 pb-4 mb-7">
+              <div className="px-4 sm:px-8 lg:px-6 xl:px-8 bg-BodyBg-0 rounded-md pt-7 pb-4 mb-7">
                 <h4 className="font-AlbertSans font-semibold text-2xl text-HeadingColor-0 pb-3 mb-8 relative before:absolute before:bottom-0 before:left-0 before:w-7 before:h-[2px] before:bg-PrimaryColor-0">
                   Popular Post
                 </h4>
@@ -264,7 +264,7 @@ const BlogList = () => {
                         Dramatically Architect new model before...
                       </h6>
                       <p className="font-AlbertSans text-PrimaryColor-0 text-sm mt-1">
-                        01 Jan, 2024
+                        01 Jan, 2025
                       </p>
                     </div>
                   </button>
@@ -279,7 +279,7 @@ const BlogList = () => {
                         Progressively Syndicate Vista Seamless...
                       </h6>
                       <p className="font-AlbertSans text-PrimaryColor-0 text-sm mt-1">
-                        16 Jan, 2024
+                        16 Jan, 2025
                       </p>
                     </div>
                   </button>
@@ -294,55 +294,55 @@ const BlogList = () => {
                         Completely Leverage Existing Customer...
                       </h6>
                       <p className="font-AlbertSans text-PrimaryColor-0 text-sm mt-1">
-                        27 Jan, 2024
+                        27 Jan, 2025
                       </p>
                     </div>
                   </button>
                 </Link>
               </div>
-              <div className="bg-[#f3f4f8] rounded-md px-4 sm:px-8 lg:px-6 xl:px-8 pt-7 pb-10 mb-7">
+              <div className="bg-BodyBg-0 rounded-md px-4 sm:px-8 lg:px-6 xl:px-8 pt-7 pb-10 mb-7">
                 <h4 className="font-AlbertSans font-semibold text-2xl text-HeadingColor-0 pb-3 mb-8 relative before:absolute before:bottom-0 before:left-0 before:w-7 before:h-[2px] before:bg-PrimaryColor-0">
                   Tags
                 </h4>
                 <ul className="inline-block">
                   <li className="inline-block mr-[10px] mb-[10px]">
                     <Link to={"/"}>
-                      <button className="bg-white rounded flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-AlbertSans text-sm relative z-[1] before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-[1] hover:before:scale-100 hover:text-white">
+                      <button className="bg-white rounded flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-AlbertSans text-sm relative z-10 before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 hover:before:scale-100 hover:text-white">
                         Environment
                       </button>
                     </Link>
                   </li>
                   <li className="inline-block mr-[10px] mb-[10px]">
                     <Link to={"/"}>
-                      <button className="bg-white rounded flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-AlbertSans text-sm relative z-[1] before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-[1] hover:before:scale-100 hover:text-white">
+                      <button className="bg-white rounded flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-AlbertSans text-sm relative z-10 before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 hover:before:scale-100 hover:text-white">
                         Echology
                       </button>
                     </Link>
                   </li>
                   <li className="inline-block mr-[10px] mb-[10px]">
                     <Link to={"/"}>
-                      <button className="bg-white rounded flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-AlbertSans text-sm relative z-[1] before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-[1] hover:before:scale-100 hover:text-white">
+                      <button className="bg-white rounded flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-AlbertSans text-sm relative z-10 before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 hover:before:scale-100 hover:text-white">
                         Seedlings
                       </button>
                     </Link>
                   </li>
                   <li className="inline-block mr-[10px] mb-[10px]">
                     <Link to={"/"}>
-                      <button className="bg-white rounded flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-AlbertSans text-sm relative z-[1] before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-[1] hover:before:scale-100 hover:text-white">
+                      <button className="bg-white rounded flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-AlbertSans text-sm relative z-10 before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 hover:before:scale-100 hover:text-white">
                         Tree Plantation
                       </button>
                     </Link>
                   </li>
                   <li className="inline-block mr-[10px] mb-[10px]">
                     <Link to={"/"}>
-                      <button className="bg-white rounded flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-AlbertSans text-sm relative z-[1] before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-[1] hover:before:scale-100 hover:text-white">
+                      <button className="bg-white rounded flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-AlbertSans text-sm relative z-10 before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 hover:before:scale-100 hover:text-white">
                         Recycling
                       </button>
                     </Link>
                   </li>
                   <li className="inline-block mr-[10px] mb-[10px]">
                     <Link to={"/"}>
-                      <button className="bg-white rounded flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-AlbertSans text-sm relative z-[1] before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-[1] hover:before:scale-100 hover:text-white">
+                      <button className="bg-white rounded flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-AlbertSans text-sm relative z-10 before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 hover:before:scale-100 hover:text-white">
                         Cleaning
                       </button>
                     </Link>

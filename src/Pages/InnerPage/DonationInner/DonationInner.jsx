@@ -16,7 +16,7 @@ const DonationData = [
     donateImg: donateImg,
     donateUrl: "/donation_inner",
     imgButton: "Donate Now",
-    donateTitle: "Fund Raising For Tree Plantation - 2024",
+    donateTitle: "Fund Raising For Tree Plantation - 2025",
     donateDesc:
       "Cultivate worldwide tailers through nature professionally engineer high",
     donatePercent: "85",
@@ -86,7 +86,7 @@ const DonationData = [
     donateImg: donateImg6,
     donateUrl: "/donation_inner",
     imgButton: "Donate Now",
-    donateTitle: "Fund Raising For Tree Plantation - 2024",
+    donateTitle: "Fund Raising For Tree Plantation - 2025",
     donateDesc:
       "Cultivate worldwide tailers through nature professionally engineer high",
     donatePercent: "85",
@@ -105,7 +105,7 @@ const DonationInner = () => {
         breadCrumbIcon={<FaArrowRightLong />}
         breadCrumbLink={"Contact Us"}
       />
-      <section className="service relative pt-28 pb-[120px] bg-[#f5f8ed] z-10">
+      <section className="service relative pt-28 pb-[120px] bg-BodyBg-0 z-10">
         <div className="Container">
           <div className="text-center">
             <h5 className="font-AlbertSans font-medium text-PrimaryColor-0 flex items-center gap-2 justify-center">

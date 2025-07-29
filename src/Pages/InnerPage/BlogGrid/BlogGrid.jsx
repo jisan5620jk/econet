@@ -20,7 +20,7 @@ const blogData = [
     blogThumb: blogThumb,
     thumbContent: "Energy",
     blogUrl: "/blog_details",
-    blogTitle: "Newest Cleaning Tools for House 2024",
+    blogTitle: "Newest Cleaning Tools for House 2025",
     blogDesc:
       "Competently repurpose forward benefits conveniently target e-business",
     btnContent: "Read More",

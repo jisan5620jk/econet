@@ -11,7 +11,7 @@ const BlogCard = ({
   btnIcon,
 }) => {
   return (
-    <div className="bg-[#f3f4f8] group transition-all duration-500 hover:bg-white hover:shadow-cases rounded-md">
+    <div className="bg-BodyBg-0 group transition-all duration-500 hover:bg-white hover:shadow-cases rounded-md">
       <div className="relative overflow-hidden rounded-md">
         <img
           src={blogThumb}

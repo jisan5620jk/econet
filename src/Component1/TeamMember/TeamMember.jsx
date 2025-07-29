@@ -109,7 +109,7 @@ const TeamMember = () => {
           All Members <GoArrowRight size={22} />
         </PrimaryButton>
       </div>
-      <div className="box-row mt-[42px]">
+      <div className="box-row mt-8 lg:-mt-[42px]">
         <Swiper {...settings}>
           {teamsData.map((teams, index) => {
             return (
