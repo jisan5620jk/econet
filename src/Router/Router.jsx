@@ -36,6 +36,9 @@ import DonationInner from "../Pages/InnerPage/DonationInner/DonationInner";
 import TeamInner from "../Pages/InnerPage/TeamInner/TeamInner";
 import ProjectInner from "../Pages/InnerPage/ProjectInner/ProjectInner";
 import TestimonialInner from "../Pages/InnerPage/TestimonialInner/TestimonialInner";
+import BlogLeftSidebar from "../Pages/InnerPage/BlogList/BlogLeftSidebar";
+import BlogNoSidebar from "../Pages/InnerPage/BlogList/BlogNoSidebar";
+import BlogRightSidebar from "../Pages/InnerPage/BlogList/BlogRightSidebar";
 
 const router = createBrowserRouter([
   {
@@ -198,6 +201,18 @@ const router = createBrowserRouter([
       {
         path: "/project_details",
         element: <ProjectDetails />,
+      },
+      {
+        path: "/blog_no_sidebar",
+        element: <BlogNoSidebar />,
+      },
+      {
+        path: "/blog_left_sidebar",
+        element: <BlogLeftSidebar />,
+      },
+      {
+        path: "/blog_right_sidebar",
+        element: <BlogRightSidebar />,
       },
       {
         path: "/blog_details",
