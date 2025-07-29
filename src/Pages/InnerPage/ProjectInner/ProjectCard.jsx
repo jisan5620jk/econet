@@ -1,48 +1,33 @@
 /* eslint-disable react/prop-types */
+
 import { Link } from "react-router-dom";
 
 const ProjectCard = ({
-  projectThumb,
   projectSubTitle,
-  projectShape,
-  projectContentShape,
   projectTitle,
+  projectImg,
   projectUrl,
-  buttonTitle,
-  buttonIcon,
 }) => {
   return (
-    <div className="relative z-10 group rounded-md overflow-hidden">
-      <div className="overflow-hidden relative z-10 before:absolute before:top-0 before:left-1/2 before:w-0 before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 group-hover:before:w-full group-hover:before:left-0 group-hover:before:opacity-0">
-        <img src={projectThumb} draggable="false" className="w-full" />
+    <div className="group rounded-[20px] relative z-10 overflow-hidden before:absolute before:left-0 before:bottom-0 before:w-full before:h-0 before:bg-gradient-to-b before:to-SecondaryColor-0 before:from-transparent before:z-10 before:transition-all before:duration-500 3xl:hover:before:h-1/2">
+      <div className="relative rounded-2xl overflow-hidden">
         <img
-          src={projectShape}
-          draggable="false"
-          className="absolute -top-80 -right-80 animate-rotate transition-all
-           duration-500 group-hover:-top-[180px] group-hover:-right-[190px]"
+          src={projectImg}
+          draggable={false}
+          alt="project Image"
+          className="w-full"
         />
       </div>
-      <div className="w-11/12 -mt-[42px] bg-BodyBg-0 rounded-md overflow-hidden px-4 md:px-8 pb-8 transition-all duration-500 relative z-10 after:absolute after:left-0 after:top-0 after:w-[5px] after:h-full after:bg-PrimaryColor-0 after:z-10 before:-z-10 before:absolute before:left-0 before:w-[5px] before:h-full before:bg-SecondaryColor-0 before:transition-all before:duration-500 group-hover:before:w-full group-hover:-mt-[86px]">
-        <img
-          src={projectContentShape}
-          draggable="false"
-          className="absolute bottom-0 right-10 animate-dance2 -z-10 opacity-0 transition-all
-           duration-500 group-hover:opacity-100"
-        />
-        <h6 className="font-AlbertSans font-medium text-TextColor-0 transition-all duration-500 group-hover:text-white pt-[30px]">
+      <div className="absolute z-20 left-0 right-0 -bottom-20 opacity-0 transition-all duration-500 group-hover:bottom-4 lg:group-hover:bottom-10 xl:group-hover:bottom-5 3xl:group-hover:bottom-10 group-hover:opacity-100 mx-auto bg-white/20 rounded-2xl backdrop-filter backdrop-blur-lg w-[calc(100%-32px)] lg:w-[calc(100%-80px)] 2xl:w-[calc(100%-40px)] 3xl:w-[calc(100%-80px)] max-w-full inline-block px-4 sm:px-[30px] pt-5 sm:pt-9 pb-4 sm:pb-7">
+        <h6 className="inline-block px-6 py-1.5 bg-PrimaryColor-0 rounded-full font-Outfit text-white uppercase mb-5">
           {projectSubTitle}
         </h6>
-        <h5 className="font-AlbertSans font-semibold text-HeadingColor-0 text-[26px] lg:text-2xl xl:text-[26px] transition-all duration-500 group-hover:text-white pt-1">
+        <Link
+          to={projectUrl}
+          className="w-full font-Outfit font-medium block text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-2xl 3xl:text-[32px] 2xl:leading-[40px] text-white"
+        >
           {projectTitle}
-        </h5>
-        <div className="-mt-[42px] transition-all duration-500 opacity-0 group-hover:mt-0 group-hover:border-white group-hover:opacity-100">
-          <Link to={projectUrl}>
-            <button className="font-AlbertSans font-medium text-white text-[17px] flex gap-2 items-center pt-3">
-              {buttonTitle}
-              {buttonIcon}
-            </button>
-          </Link>
-        </div>
+        </Link>
       </div>
     </div>
   );

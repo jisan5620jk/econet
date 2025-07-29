@@ -38,7 +38,7 @@ const BlogDetails = () => {
         breadCrumbIcon2={<FaArrowRightLong />}
         breadCrumbContent={"How Every Individual Can..."}
       />
-      <section className="py-16 md:py-20 lg:py-28">
+      <section className="py-16 md:py-20 lg:py-[120px]">
         <div className="Container">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-12">
             <div className="col-span-2">

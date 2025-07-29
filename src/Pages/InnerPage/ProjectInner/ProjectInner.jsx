@@ -1,82 +1,56 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb";
-import projectThumb from "/images/project-img.png";
-import projectThumb2 from "/images/project-img2.png";
-import projectThumb3 from "/images/project-img3.png";
-import projectThumb4 from "/images/project-img4.jpg";
-import projectThumb5 from "/images/project-img5.jpg";
-import projectThumb6 from "/images/project-img6.jpg";
-import projectShape from "/images/project-shape.png";
-import projectContentShape from "/images/project-content-shape.png";
-import subTitleShape from "/images/sub-title-shape.png";
+import subtitleIcon from "/images/sub-title-icon.png";
+import projectImg from "/images/classic-project-img.png";
+import projectImg2 from "/images/classic-project-img2.png";
+import projectImg3 from "/images/classic-project-img3.png";
+import projectImg4 from "/images/classic-project-img4.png";
+import projectImg5 from "/images/classic-project-img5.png";
+import { HiMiniArrowUpRight } from "react-icons/hi2";
 import ProjectCard from "./ProjectCard";
 
-const ProjectData = [
+const projectData = [
   {
-    id: 1,
-    projectThumb: projectThumb,
-    projectSubTitle: "Climate",
-    projectTitle: "Cleaning Forest",
-    projectUrl: "/project_details",
-    buttonTitle: "View Details",
-    buttonIcon: <FaArrowRightLong />,
-    projectContentShape: projectContentShape,
-    projectShape: projectShape,
+    projectImg: projectImg,
+    projectIcon: <HiMiniArrowUpRight />,
+    projectSubTitle: "Pannels",
+    projectTitle: "Suntainable Energy",
+    projectUrl: "/project",
   },
   {
-    id: 2,
-    projectThumb: projectThumb2,
-    projectSubTitle: "Environment",
-    projectTitle: "Echology Energy",
-    projectUrl: "/project_details",
-    buttonTitle: "View Details",
-    buttonIcon: <FaArrowRightLong />,
-    projectContentShape: projectContentShape,
-    projectShape: projectShape,
+    projectImg: projectImg2,
+    projectIcon: <HiMiniArrowUpRight />,
+    projectSubTitle: "Installation",
+    projectTitle: "Turbine Installations",
+    projectUrl: "/project",
   },
   {
-    id: 3,
-    projectThumb: projectThumb3,
-    projectSubTitle: "Recycling",
-    projectTitle: "Plastic Recycling",
-    projectUrl: "/project_details",
-    buttonTitle: "View Details",
-    buttonIcon: <FaArrowRightLong />,
-    projectContentShape: projectContentShape,
-    projectShape: projectShape,
+    projectImg: projectImg3,
+    projectIcon: <HiMiniArrowUpRight />,
+    projectSubTitle: "Planet",
+    projectTitle: "Industrial Power Planet",
+    projectUrl: "/project",
   },
   {
-    id: 4,
-    projectThumb: projectThumb4,
-    projectSubTitle: "Recycling",
-    projectTitle: "Ocean Cleaning",
-    projectUrl: "/project_details",
-    buttonTitle: "View Details",
-    buttonIcon: <FaArrowRightLong />,
-    projectContentShape: projectContentShape,
-    projectShape: projectShape,
+    projectImg: projectImg4,
+    projectIcon: <HiMiniArrowUpRight />,
+    projectSubTitle: "Pannels",
+    projectTitle: "Solar Panel Cleaning",
+    projectUrl: "/project",
   },
   {
-    id: 5,
-    projectThumb: projectThumb5,
-    projectSubTitle: "Plants",
-    projectTitle: "Seedlings Plants",
-    projectUrl: "/project_details",
-    buttonTitle: "View Details",
-    buttonIcon: <FaArrowRightLong />,
-    projectContentShape: projectContentShape,
-    projectShape: projectShape,
+    projectImg: projectImg5,
+    projectIcon: <HiMiniArrowUpRight />,
+    projectSubTitle: "Installation",
+    projectTitle: "Turbine Installations",
+    projectUrl: "/project",
   },
   {
-    id: 6,
-    projectThumb: projectThumb6,
-    projectSubTitle: "Environment",
-    projectTitle: "Renewable Energy",
-    projectUrl: "/project_details",
-    buttonTitle: "View Details",
-    buttonIcon: <FaArrowRightLong />,
-    projectContentShape: projectContentShape,
-    projectShape: projectShape,
+    projectImg: projectImg2,
+    projectIcon: <HiMiniArrowUpRight />,
+    projectSubTitle: "Installation",
+    projectTitle: "Turbine Installations",
+    projectUrl: "/project",
   },
 ];
 
@@ -84,52 +58,30 @@ const ProjectInner = () => {
   return (
     <>
       <BreadCrumb
-        breadCrumbTitle={"Projects"}
+        breadCrumbTitle={"Our Projects"}
         breadCrumbIcon={<FaArrowRightLong />}
         breadCrumbLink={"Projects"}
       />
-      <section className="py-28 bg-BodyBg-0">
+      <section className="px-2 2xl:px-[120px] py-16 md:py-20 lg:py-[120px] bg-white">
         <div className="Container">
           <div className="text-center">
-            <h5 className="font-AlbertSans font-medium text-PrimaryColor-0 flex items-center justify-center gap-2">
-              <img src={subTitleShape} draggable="false" />
-              OUR SERVICES
+            <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+              <img src={subtitleIcon} alt="Icon" draggable={false} /> Projects
             </h5>
-            <h1 className="font-AlbertSans font-bold text-xl leading-6 sm:text-[38px] sm:leading-[48px] md:text-[40px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 mt-5">
-              Echofy Provide Environment <br />
-              Best Leading Services
+            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+              We Bring Powerful Solution
+              <br />
+              Protect Environment
             </h1>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-[60px]">
-            {ProjectData.map(
-              ({
-                id,
-                projectThumb,
-                projectShape,
-                projectContentShape,
-                projectSubTitle,
-                projectTitle,
-                projectUrl,
-                buttonTitle,
-                buttonIcon,
-              }) => {
-                return (
-                  <div key={id}>
-                    <ProjectCard
-                      projectThumb={projectThumb}
-                      projectContentShape={projectContentShape}
-                      projectShape={projectShape}
-                      projectSubTitle={projectSubTitle}
-                      projectTitle={projectTitle}
-                      projectUrl={projectUrl}
-                      buttonTitle={buttonTitle}
-                      buttonIcon={buttonIcon}
-                    />
-                  </div>
-                );
-              }
-            )}
-          </div>
+        </div>
+
+        <div className="box-row grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7 relative z-10 pt-[58px]">
+          {projectData.map((project, index) => (
+            <div key={index} className="box">
+              <ProjectCard {...project} />
+            </div>
+          ))}
         </div>
       </section>
     </>

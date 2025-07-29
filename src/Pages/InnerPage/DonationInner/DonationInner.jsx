@@ -1,99 +1,63 @@
-/* eslint-disable no-unused-vars */
-import donateImg from "/images/donate-img.jpg";
-import donateImg2 from "/images/donate-img2.jpg";
-import donateImg3 from "/images/donate-img3.jpg";
-import donateImg4 from "/images/donation-4.png";
-import donateImg5 from "/images/donation-5.png";
-import donateImg6 from "/images/donation-6.png";
-import subTitleShape from "/images/sub-title-shape.png";
-import DonationInnerCard from "./DonationInnerCard";
 import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const DonationData = [
+import subtitleIcon from "/images/sub-title-icon.png";
+import DonationCard from "./DonationCard";
+
+const cardData = [
   {
-    id: 1,
-    donateImg: donateImg,
-    donateUrl: "/donation_inner",
-    imgButton: "Donate Now",
-    donateTitle: "Fund Raising For Tree Plantation - 2025",
-    donateDesc:
-      "Cultivate worldwide tailers through nature professionally engineer high",
-    donatePercent: "85",
-    percentTitle: "Raised :",
-    percentNumber: "$780.00",
-    percentTitle2: "Gaol :",
-    percentNumber2: "$1000.00",
+    image: "/images/classic-donation-img.png",
+    category: "Discover",
+    title: "Fund Raising for Tree Plantation - 2025",
+    raised: 1260,
+    goal: 1700,
+    color: "bg-PrimaryColor-0",
+    URL: "/",
   },
   {
-    id: 2,
-    donateImg: donateImg2,
-    donateUrl: "/donation_inner",
-    imgButton: "Donate Now",
-    donateTitle: "Fund Raising For Forest Recycling & Repair",
-    donateDesc:
-      "Cultivate worldwide tailers through nature professionally engineer high",
-    donatePercent: "80",
-    percentTitle: "Raised :",
-    percentNumber: "$700.00",
-    percentTitle2: "Gaol :",
-    percentNumber2: "$1000.00",
+    image: "/images/classic-donation-img2.png",
+    category: "Ecology",
+    title: "Cleaning Environment Campaign - 2025",
+    raised: 1080,
+    goal: 1500,
+    color: "bg-PrimaryColor-0",
+    URL: "/",
   },
   {
-    id: 3,
-    donateImg: donateImg3,
-    donateUrl: "/donation_inner",
-    imgButton: "Donate Now",
-    donateTitle: "Environmental Dust Cleaning & Recycling",
-    donateDesc:
-      "Cultivate worldwide tailers through nature professionally engineer high",
-    donatePercent: "90",
-    percentTitle: "Raised :",
-    percentNumber: "$880.00",
-    percentTitle2: "Gaol :",
-    percentNumber2: "$1000.00",
+    image: "/images/classic-donation-img3.png",
+    category: "Plantation",
+    title: "Save the Soil Movement Donate Here",
+    raised: 1790,
+    goal: 1900,
+    color: "bg-PrimaryColor-0",
+    URL: "/",
   },
   {
-    id: 4,
-    donateImg: donateImg4,
-    donateUrl: "/donation_inner",
-    imgButton: "Donate Now",
-    donateTitle: "Fund Raising For Renewable Energy Poor Peaples",
-    donateDesc:
-      "Cultivate worldwide tailers through nature professionally engineer high",
-    donatePercent: "85",
-    percentTitle: "Raised :",
-    percentNumber: "$780.00",
-    percentTitle2: "Gaol :",
-    percentNumber2: "$1000.00",
+    image: "/images/charity-donation-img.png",
+    category: "EDUCATION",
+    title: "Fund Raising for Kids Education - 2025",
+    raised: 1260,
+    goal: 1600,
+    color: "bg-PrimaryColor-0",
+    URL: "/",
   },
   {
-    id: 5,
-    donateImg: donateImg5,
-    donateUrl: "/donation_inner",
-    imgButton: "Donate Now",
-    donateTitle: "Donations for Plant Seedlings Orphan Peoples",
-    donateDesc:
-      "Cultivate worldwide tailers through nature professionally engineer high",
-    donatePercent: "85",
-    percentTitle: "Raised :",
-    percentNumber: "$780.00",
-    percentTitle2: "Gaol :",
-    percentNumber2: "$1000.00",
+    image: "/images/charity-donation-img2.png",
+    category: "FOODS",
+    title: "Donation Campaign for Healthy Meals",
+    raised: 1080,
+    goal: 1400,
+    color: "bg-PrimaryColor-0",
+    URL: "/",
   },
   {
-    id: 6,
-    donateImg: donateImg6,
-    donateUrl: "/donation_inner",
-    imgButton: "Donate Now",
-    donateTitle: "Fund Raising For Tree Plantation - 2025",
-    donateDesc:
-      "Cultivate worldwide tailers through nature professionally engineer high",
-    donatePercent: "85",
-    percentTitle: "Raised :",
-    percentNumber: "$780.00",
-    percentTitle2: "Gaol :",
-    percentNumber2: "$1000.00",
+    image: "/images/charity-donation-img3.png",
+    category: "MEDICAL",
+    title: "Medical Fund Raising for Orphan People",
+    raised: 1890,
+    goal: 2100,
+    color: "bg-PrimaryColor-0",
+    URL: "/",
   },
 ];
 
@@ -101,57 +65,28 @@ const DonationInner = () => {
   return (
     <>
       <BreadCrumb
-        breadCrumbTitle={"Contact Us"}
+        breadCrumbTitle={"Donations"}
         breadCrumbIcon={<FaArrowRightLong />}
-        breadCrumbLink={"Contact Us"}
+        breadCrumbLink={"Donations"}
       />
-      <section className="service relative pt-28 pb-[120px] bg-BodyBg-0 z-10">
+      <section className="service relative pt-28 pb-[120px] bg-white z-10">
         <div className="Container">
           <div className="text-center">
-            <h5 className="font-AlbertSans font-medium text-PrimaryColor-0 flex items-center gap-2 justify-center">
-              <img src={subTitleShape} draggable="false" />
-              DONATIONS
+            <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+              <img src={subtitleIcon} alt="Icon" draggable={false} /> Donations
             </h5>
-            <h1 className="font-AlbertSans font-bold text-xl leading-6 sm:text-[38px] sm:leading-[48px] md:text-[40px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 mt-5 mb-3">
-              For Savings Environments <br />
-              Donation Money
+            <h1 className="font-Outfit font-semibold text-lg leading-6 sm:text-[32px] sm:leading-[40px] md:text-[42px] md:leading-[50px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+              Donate Now and Help Us Continue
+              <br />
+              Our Life Changing Work
             </h1>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-[60px]">
-            {DonationData.map(
-              ({
-                id,
-                donateImg,
-                imgButton,
-                donateUrl,
-                donateDesc,
-                donateTitle,
-                donatePercent,
-                percentTitle,
-                percentNumber,
-                percentTitle2,
-                percentNumber2,
-              }) => {
-                return (
-                  <>
-                    <div key={id}>
-                      <DonationInnerCard
-                        donateImg={donateImg}
-                        imgbutton={imgButton}
-                        donateUrl={donateUrl}
-                        donateTitle={donateTitle}
-                        donateDesc={donateDesc}
-                        donatePercent={donatePercent}
-                        percentTitle={percentTitle}
-                        percentNumber={percentNumber}
-                        percentTitle2={percentTitle2}
-                        percentNumber2={percentNumber2}
-                      />
-                    </div>
-                  </>
-                );
-              }
-            )}
+          <div className="box-row grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-[58px]">
+            {cardData.map((card, i) => (
+              <div key={i} className="box">
+                <DonationCard {...card} />
+              </div>
+            ))}
           </div>
         </div>
       </section>

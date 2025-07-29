@@ -17,10 +17,10 @@ const BreadCrumb = ({
       <div className="bg-[url('/images/breadcrumb-bg.png')] bg-no-repeat bg-cover bg-center flex items-center rounded-[20px] text-center pt-[200px] pb-[200px] relative z-10 overflow-hidden">
         <div className="absolute z-10 bg-SecondaryColor-0/30 w-full h-full"></div>
         <div className="Container relative z-20">
-          <h1 className="font-Outfit font-semibold text-4xl sm:text-5xl text-white">
+          <h1 className="font-Outfit font-semibold text-4xl sm:text-5xl sm:leading-[54px] text-white">
             {breadCrumbTitle}
           </h1>
-          <ul className="flex flex-col md:flex-row gap-2 sm:gap-4 items-center justify-center mt-8 sm:mt-7">
+          <ul className="flex flex-col md:flex-row gap-2 sm:gap-4 items-center justify-center mt-8 sm:mt-6">
             <div className="flex gap-2 sm:gap-4 items-center justify-center">
               <li>
                 <Link to={"/"}>

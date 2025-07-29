@@ -1,95 +1,65 @@
-/* eslint-disable no-unused-vars */
-import testiImg from "/images/testi-author1.png";
-import testiImg2 from "/images/testi-author2.png";
-import testiImg3 from "/images/testi-author3.png";
-import testiImg4 from "/images/testi-author-4.png";
-import testiImg5 from "/images/testi-author-5.png";
-import testiImg6 from "/images/testi-author-6.png";
-import testiShape from "/images/testi-quote-6.png";
-import subTitleShape from "/images/sub-title-shape.png";
-import { MdOutlineStarPurple500 } from "react-icons/md";
-import TestimonialInnerCard from "./TestimonialInnerCard";
+import testiImg from "/images/testi2-img.png";
+import testiImg2 from "/images/testi2-img2.png";
+import testiImg3 from "/images/testi2-img3.png";
 import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb";
 import { FaArrowRightLong } from "react-icons/fa6";
+import TestimonialCard from "./TestimonialCard";
+import subtitleIcon from "/images/sub-title-icon.png";
 
 const testiData = [
   {
-    id: 1,
-    testiImg: testiImg,
-    testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiName: "Anjelina Watson",
-    testiDesignation: "Web Developer",
-    testiDesc: `Appropriately administrate proactive value with to
-                niche markets. Dramatically target market position
-                idea after high quality best practice. Dramatically 
-                synergize open source service`,
-    testiTitle: "Support",
-    testiShape: testiShape,
+    image: testiImg2,
+    name: "Anjelina Watson",
+    role: "UI Designer",
+    company: "Dream IT",
+    rating: 5.0,
+    review:
+      "Econet is a environmental organization maintaince monetize worldwide outside the box thinking for end-to-end outsourcing. Conceptualize networks parallel",
   },
   {
-    id: 2,
-    testiImg: testiImg2,
-    testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiName: "Jhon D. Alexon",
-    testiDesignation: "UI/UX Designer",
-    testiDesc: `Appropriately administrate proactive value with to
-                niche markets. Dramatically target market position
-                idea after high quality best practice. Dramatically 
-                synergize open source service`,
-    testiTitle: "Service Quality",
-    testiShape: testiShape,
+    image: testiImg,
+    name: "John D. Alex",
+    role: "UI Designer",
+    company: "Dream IT",
+    rating: 5.0,
+    review:
+      "Econet is a environmental organization maintaince monetize worldwide outside the box thinking for end-to-end outsourcing. Conceptualize networks parallel",
   },
   {
-    id: 3,
-    testiImg: testiImg3,
-    testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiName: "Tina Rose",
-    testiDesignation: "Zoo Visitors",
-    testiDesc: `Appropriately administrate proactive value with to
-                niche markets. Dramatically target market position
-                idea after high quality best practice. Dramatically 
-                synergize open source service`,
-    testiTitle: "Support",
-    testiShape: testiShape,
+    image: testiImg3,
+    name: "Jakulin Farna",
+    role: "UI Designer",
+    company: "Dream IT",
+    rating: 5.0,
+    review:
+      "Econet is a environmental organization maintaince monetize worldwide outside the box thinking for end-to-end outsourcing. Conceptualize networks parallel",
   },
   {
-    id: 4,
-    testiImg: testiImg4,
-    testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiName: "David Miller",
-    testiDesignation: "Volunteer",
-    testiDesc: `Appropriately administrate proactive value with to
-                niche markets. Dramatically target market position
-                idea after high quality best practice. Dramatically 
-                synergize open source service`,
-    testiTitle: "Service Quality",
-    testiShape: testiShape,
+    image: testiImg2,
+    name: "Anjelina Watson",
+    role: "UI Designer",
+    company: "Dream IT",
+    rating: 5.0,
+    review:
+      "Econet is a environmental organization maintaince monetize worldwide outside the box thinking for end-to-end outsourcing. Conceptualize networks parallel",
   },
   {
-    id: 5,
-    testiImg: testiImg5,
-    testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiName: "Jisan Khan",
-    testiDesignation: "Zoo Visitors",
-    testiDesc: `Appropriately administrate proactive value with to
-                niche markets. Dramatically target market position
-                idea after high quality best practice. Dramatically 
-                synergize open source service`,
-    testiTitle: "Support",
-    testiShape: testiShape,
+    image: testiImg,
+    name: "John D. Alex",
+    role: "UI Designer",
+    company: "Dream IT",
+    rating: 5.0,
+    review:
+      "Econet is a environmental organization maintaince monetize worldwide outside the box thinking for end-to-end outsourcing. Conceptualize networks parallel",
   },
   {
-    id: 6,
-    testiImg: testiImg6,
-    testiRatingIcon: <MdOutlineStarPurple500 />,
-    testiName: "Marina M.Cullam",
-    testiDesignation: "Web Developer",
-    testiDesc: `Appropriately administrate proactive value with to
-                niche markets. Dramatically target market position
-                idea after high quality best practice. Dramatically 
-                synergize open source service`,
-    testiTitle: "Service Quality",
-    testiShape: testiShape,
+    image: testiImg3,
+    name: "Jakulin Farna",
+    role: "UI Designer",
+    company: "Dream IT",
+    rating: 5.0,
+    review:
+      "Econet is a environmental organization maintaince monetize worldwide outside the box thinking for end-to-end outsourcing. Conceptualize networks parallel",
   },
 ];
 
@@ -101,46 +71,26 @@ const TestimonialInner = () => {
         breadCrumbIcon={<FaArrowRightLong />}
         breadCrumbLink={"Testimonial"}
       />
-      <section className="py-28 bg-BodyBg-0 relative z-10 before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:w-2/3 before:-z-10 before:h-2/3 before:bg-[url('/images/map.png')] before:bg-center before:bg-cover before:bg-no-repeat overflow-hidden testimonial">
+      <section className="py-16 md:py-20 lg:py-28 bg-white relative z-10">
         <div className="Container">
           <div className="text-center">
-            <h5 className="font-AlbertSans font-medium text-PrimaryColor-0 flex items-center gap-2 justify-center">
-              <img src={subTitleShape} draggable="false" />
-              TESTIMONIALS
+            <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+              <img src={subtitleIcon} alt="Icon" draggable={false} /> Projects
             </h5>
-            <h1 className="font-AlbertSans font-bold text-xl leading-7 sm:text-[36px] sm:leading-[48px] md:text-[44px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 mt-5 mb-3">
+            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
               Clients Best Feedback About
               <br />
-              Echofy Provission
+              Econet Provission
             </h1>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-[56px]">
-            {testiData.map(
-              ({
-                id,
-                testiImg,
-                testiRatingIcon,
-                testiName,
-                testiDesignation,
-                testiDesc,
-                testiTitle,
-                testiShape,
-              }) => {
-                return (
-                  <div key={id}>
-                    <TestimonialInnerCard
-                      testiImg={testiImg}
-                      testiRatingIcon={testiRatingIcon}
-                      testiName={testiName}
-                      testiDesignation={testiDesignation}
-                      testiDesc={testiDesc}
-                      testiTitle={testiTitle}
-                      testiShape={testiShape}
-                    />
-                  </div>
-                );
-              }
-            )}
+          <div className="box-row grid grid-cols-1 lg:grid-cols-2 gap-6 mt-[56px]">
+            {testiData.map((service, index) => {
+              return (
+                <div key={index} className="box">
+                  <TestimonialCard {...service} />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -95,8 +95,8 @@ const Navbar9 = () => {
     {
       label: "Services",
       links: [
-        { to: "/course", label: "All Courses" },
-        { to: "/course_details", label: "Course Details" },
+        { to: "/service", label: "Services" },
+        { to: "/service_details", label: "Services Details" },
       ],
     },
     {

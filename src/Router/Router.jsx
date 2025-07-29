@@ -30,6 +30,12 @@ import AboutInner from "../Pages/InnerPage/AboutInner/AboutInner";
 import PricingInner from "../Pages/InnerPage/PricingInner/PricingInner";
 import ProjectDetails from "../Pages/InnerPage/ProjectDetails/ProjectDetails";
 import ServiceDetails from "../Pages/InnerPage/ServiceDetails/ServiceDetails";
+import ContactInner from "../Pages/InnerPage/ContactInner/ContactInner";
+import ServiceInner from "../Pages/InnerPage/ServiceInner/ServiceInner";
+import DonationInner from "../Pages/InnerPage/DonationInner/DonationInner";
+import TeamInner from "../Pages/InnerPage/TeamInner/TeamInner";
+import ProjectInner from "../Pages/InnerPage/ProjectInner/ProjectInner";
+import TestimonialInner from "../Pages/InnerPage/TestimonialInner/TestimonialInner";
 
 const router = createBrowserRouter([
   {
@@ -162,12 +168,32 @@ const router = createBrowserRouter([
         element: <AboutInner />,
       },
       {
-        path: "/pricing",
-        element: <PricingInner />,
+        path: "/service",
+        element: <ServiceInner />,
       },
       {
         path: "/service_details",
         element: <ServiceDetails />,
+      },
+      {
+        path: "/pricing",
+        element: <PricingInner />,
+      },
+      {
+        path: "/donation",
+        element: <DonationInner />,
+      },
+      {
+        path: "/team",
+        element: <TeamInner />,
+      },
+      {
+        path: "/project",
+        element: <ProjectInner />,
+      },
+      {
+        path: "/testimonial",
+        element: <TestimonialInner />,
       },
       {
         path: "/project_details",
@@ -176,6 +202,10 @@ const router = createBrowserRouter([
       {
         path: "/blog_details",
         element: <BlogDetails />,
+      },
+      {
+        path: "/contact",
+        element: <ContactInner />,
       },
     ],
   },

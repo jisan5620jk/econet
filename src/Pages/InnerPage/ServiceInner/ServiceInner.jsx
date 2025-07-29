@@ -1,95 +1,53 @@
-/* eslint-disable no-unused-vars */
-import { FaArrowRightLong, FaCheck } from "react-icons/fa6";
-import serviceImg from "/images/services-thumb.png";
-import serviceImg2 from "/images/services-thumb2.png";
-import serviceImg3 from "/images/services-thumb3.png";
-import serviceImg4 from "/images/services-thumb4.png";
-import serviceImg5 from "/images/services-thumb5.png";
-import serviceImg6 from "/images/services-thumb6.png";
-import serviceShape from "/images/service-shape.png";
-import serviceIcon from "/images/service2-icon.png";
-import serviceIcon2 from "/images/service2-icon2.png";
-import serviceIcon3 from "/images/service2-icon3.png";
-import serviceIcon4 from "/images/service2-icon4.png";
-import serviceIcon5 from "/images/service2-icon5.png";
-import serviceIcon6 from "/images/service2-icon6.png";
+import serviceImg from "/images/classic-service-img.png";
+import serviceImg2 from "/images/classic-service-img2.png";
+import serviceImg3 from "/images/classic-service-img3.png";
+import serviceIcon from "/images/classic-service-icon.png";
+import serviceIcon2 from "/images/classic-service-icon2.png";
+import serviceIcon3 from "/images/classic-service-icon3.png";
+import serviceIcon4 from "/images/service2-icon1.png";
+import serviceIcon5 from "/images/service2-icon2.png";
+import serviceIcon6 from "/images/service2-icon3.png";
+import { FaArrowRightLong } from "react-icons/fa6";
 import ServiceCard from "./ServiceCard";
 import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb";
-import subTitleShape from "/images/sub-title-shape.png";
-import { GoArrowUpRight } from "react-icons/go";
+import subtitleIcon from "/images/sub-title-icon.png";
 
 const serviceData = [
   {
-    id: 1,
     serviceImg: serviceImg,
     serviceIcon: serviceIcon,
-    serviceUrl: "/service_details",
-    serviceButton: <GoArrowUpRight />,
-    serviceButton2: "Discover More",
-    serviceTitle: "Ocean Clean",
-    serviceDesc:
-      "Alternative innovation to ethical network environmental whiteboard",
-    serviceShape: serviceShape,
+    serviceTitle: "Suntainable energy Environment",
+    serviceUrl: "/service",
   },
   {
-    id: 2,
     serviceImg: serviceImg2,
     serviceIcon: serviceIcon2,
-    serviceUrl: "/service_details",
-    serviceButton: <GoArrowUpRight />,
-    serviceButton2: "Discover More",
-    serviceTitle: "Dust Recycling",
-    serviceDesc:
-      "Alternative innovation to ethical network environmental whiteboard",
-    serviceShape: serviceShape,
+    serviceTitle: "Environment Waste Recycling",
+    serviceUrl: "/service",
   },
   {
-    id: 3,
     serviceImg: serviceImg3,
-    serviceIcon: serviceIcon4,
-    serviceUrl: "/service_details",
-    serviceButton: <GoArrowUpRight />,
-    serviceButton2: "Discover More",
-    serviceTitle: "Corbon Emissions",
-    serviceDesc:
-      "Alternative innovation to ethical network environmental whiteboard",
-    serviceShape: serviceShape,
-  },
-  {
-    id: 4,
-    serviceImg: serviceImg4,
     serviceIcon: serviceIcon3,
-    serviceUrl: "/service_details",
-    serviceButton: <GoArrowUpRight />,
-    serviceButton2: "Discover More",
-    serviceTitle: "Tree Plantation",
-    serviceDesc:
-      "Alternative innovation to ethical network environmental whiteboard",
-    serviceShape: serviceShape,
+    serviceTitle: "Dirty Recycling and Tree Plantation",
+    serviceUrl: "/service",
   },
   {
-    id: 5,
-    serviceImg: serviceImg5,
+    serviceImg: serviceImg,
+    serviceIcon: serviceIcon4,
+    serviceTitle: "Windmill Turbine Installation",
+    serviceUrl: "/service",
+  },
+  {
+    serviceImg: serviceImg2,
     serviceIcon: serviceIcon5,
-    serviceUrl: "/service_details",
-    serviceButton: <GoArrowUpRight />,
-    serviceButton2: "Discover More",
-    serviceTitle: "Sustainble Energy",
-    serviceDesc:
-      "Alternative innovation to ethical network environmental whiteboard",
-    serviceShape: serviceShape,
+    serviceTitle: "Solar Panel Installation Safty Guide",
+    serviceUrl: "/service",
   },
   {
-    id: 6,
-    serviceImg: serviceImg6,
+    serviceImg: serviceImg3,
     serviceIcon: serviceIcon6,
-    serviceUrl: "/service_details",
-    serviceButton: <GoArrowUpRight />,
-    serviceButton2: "Discover More",
-    serviceTitle: "Plantary Warming",
-    serviceDesc:
-      "Alternative innovation to ethical network environmental whiteboard",
-    serviceShape: serviceShape,
+    serviceTitle: "Solar Panel Cleaning Services",
+    serviceUrl: "/service",
   },
 ];
 
@@ -101,50 +59,26 @@ const ServiceInner = () => {
         breadCrumbIcon={<FaArrowRightLong />}
         breadCrumbLink={"Our Services"}
       />
-      <section className="pt-28 pb-[120px] p relative z-10 bg-[#f3f3f7]">
+      <section className="py-16 md:py-20 lg:py-[120px] relative z-10 bg-white">
         <div className="Container">
           <div className="text-center">
-            <h5 className="font-AlbertSans font-medium text-PrimaryColor-0 flex items-center justify-center gap-2">
-              <img src={subTitleShape} draggable="false" />
-              OUR SERVICES
+            <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
+              <img src={subtitleIcon} alt="Icon" draggable={false} /> Our
+              Services
             </h5>
-            <h1 className="font-AlbertSans font-bold text-xl leading-6 sm:text-[38px] sm:leading-[48px] md:text-[40px] md:leading-[54px] lg:text-[32px] lg:leading-[42px] xl:text-[40px] xl:leading-[50px] 2xl:text-[46px] 2xl:leading-[56px] text-HeadingColor-0 mt-5">
-              Echofy Provide Environment <br />
-              Best Leading Services
+            <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
+              Leading the Transition to
+              <br />
+              Renewable Energy
             </h1>
           </div>
           <div className="mt-[60px]">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-              {serviceData.map(
-                ({
-                  id,
-                  serviceImg,
-                  serviceIcon,
-                  serviceUrl,
-                  serviceButton,
-                  serviceButton2,
-                  serviceTitle,
-                  serviceDesc,
-                  serviceShape,
-                }) => {
-                  return (
-                    <>
-                      <div key={id}>
-                        <ServiceCard
-                          serviceImg={serviceImg}
-                          serviceIcon={serviceIcon}
-                          serviceUrl={serviceUrl}
-                          serviceButton={serviceButton}
-                          serviceButton2={serviceButton2}
-                          serviceTitle={serviceTitle}
-                          serviceDesc={serviceDesc}
-                          serviceShape={serviceShape}
-                        />
-                      </div>
-                    </>
-                  );
-                }
-              )}
+              {serviceData.map((service, index) => (
+                <div key={index} className="box">
+                  <ServiceCard {...service} />
+                </div>
+              ))}
             </div>
           </div>
         </div>

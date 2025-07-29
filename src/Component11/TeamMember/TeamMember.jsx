@@ -108,7 +108,7 @@ const TeamMember = () => {
             })}
           </Swiper>
         </div>
-      </div>{" "}
+      </div>
       <div className="absolute -z-10 bottom-0 left-0 hidden 3xl:block">
         <img
           src={shape}
