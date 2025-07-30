@@ -32,9 +32,9 @@ const ServiceDetails = () => {
         breadCrumbIcon2={<FaArrowRightLong />}
         breadCrumbContent={"Tree Plantation"}
       />
-      <section className="py-[120px] bg-white">
+      <section className="py-16 md:py-20 lg:py-[120px] bg-white">
         <div className="Container">
-          <div className="grid grid-cols-3 gap-[70px]">
+          <div className="grid grid-cols-3 gap-[70px] lg:gap-10 xl:gap-[70px]">
             <div className="col-span-3 lg:col-span-2">
               <img
                 src={serviceDetailsThumb}
@@ -87,12 +87,12 @@ const ServiceDetails = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-PrimaryColor-0 px-[42px] rounded-md py-7 flex flex-col sm:flex-row sm:items-center gap-5 mt-[62px]">
+              <div className="bg-PrimaryColor-0 px-4 sm:px-[42px] rounded-md py-3 sm:py-7 flex flex-col sm:flex-row sm:items-center gap-5 mt-[62px]">
                 <div className="pr-5 sm:border-r-2 border-white/20 text-white">
                   <GiEcology size={50} />
                 </div>
                 <div className="flex-1">
-                  <p className="font-Outfit italic text-lg sm:text-[22px] leading-8 text-white">
+                  <p className="font-Outfit italic text-lg sm:text-[22px] leading-7 text-white">
                     Competently architect intermandated deliverables client
                     <br className="hidden 2xl:block" />
                     niches continually underwhelm
@@ -113,10 +113,10 @@ const ServiceDetails = () => {
                     <img
                       src={projectDetialsBoxImg}
                       draggable="false"
-                      className="transition-all duration-500 hover:scale-110"
+                      className="w-full transition-all duration-500 hover:scale-110"
                     />
                   </div>
-                  <div className="bg-white shadow-cases rounded-lg inline-block pt-7 pl-4 sm:pl-8 pb-7 w-4/5 -mt-8 relative z-10">
+                  <div className="bg-white shadow-cases rounded-lg inline-block pt-7 pl-4 sm:pl-8 lg:pl-4 xl:pl-8 pb-7 w-[calc(100%-30px)] sm:w-[calc(100%-60px)] lg:w-[calc(100%-30px)] xl:w-[calc(100%-60px)] -mt-8 relative z-10">
                     <h4 className="font-Outfit text-HeadingColor-0 font-semibold text-[22px] lg:text-xl xl:text-[22px] text-left mb-3">
                       Green Environment
                     </h4>
@@ -137,10 +137,10 @@ const ServiceDetails = () => {
                     <img
                       src={projectDetialsBoxImg2}
                       draggable="false"
-                      className="transition-all duration-500 hover:scale-110"
+                      className="w-full transition-all duration-500 hover:scale-110"
                     />
                   </div>
-                  <div className="bg-white shadow-cases rounded-lg inline-block pt-7 pl-4 sm:pl-8 pb-7 w-4/5 -mt-8 relative z-10">
+                  <div className="bg-white shadow-cases rounded-lg inline-block pt-7 pl-4 sm:pl-8 lg:pl-4 xl:pl-8 pb-7 w-[calc(100%-30px)] sm:w-[calc(100%-60px)] lg:w-[calc(100%-30px)] xl:w-[calc(100%-60px)] -mt-8 relative z-10">
                     <h4 className="font-Outfit text-HeadingColor-0 font-semibold text-[22px] lg:text-xl xl:text-[22px] text-left mb-3">
                       Renewable Energy
                     </h4>

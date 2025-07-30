@@ -81,7 +81,7 @@ const BlogLeftSidebar = () => {
       />
       <section className="pt-[120px]">
         <div className="Container">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-12">
             <div className="col-span-2 lg:col-span-1">
               <div className="relative inline-block w-full mb-7 p-4 sm:p-8 lg:p-6 xl:p-8 rounded-[20px] bg-BodyBg-0">
                 <input

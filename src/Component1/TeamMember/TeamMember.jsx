@@ -93,7 +93,7 @@ const TeamMember = () => {
     },
   };
   return (
-    <section className="bg-white px-2 2xl:px-[120px] py-16 md:py-20 lg:py-[120px] relative z-10 rounded-xl sm:rounded-2xl md:rounded-b-[50px] overflow-hidden">
+    <section className="bg-white px-2 2xl:px-10 3xl:px-[120px] py-16 md:py-20 lg:py-[120px] relative z-10 rounded-xl sm:rounded-2xl md:rounded-b-[50px] overflow-hidden">
       <div className="text-center">
         <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
           <img src={subtitleIcon} alt="Icon" draggable={false} /> Our Teams
@@ -109,7 +109,7 @@ const TeamMember = () => {
           All Members <GoArrowRight size={22} />
         </PrimaryButton>
       </div>
-      <div className="box-row mt-8 lg:-mt-[42px]">
+      <div className="box-row mt-8 2xl:-mt-[42px]">
         <Swiper {...settings}>
           {teamsData.map((teams, index) => {
             return (

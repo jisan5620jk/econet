@@ -46,7 +46,7 @@ const BlogDetails = () => {
       />
       <section className="py-16 md:py-20 lg:py-[120px]">
         <div className="Container">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-12">
             <div className="col-span-2">
               <div className="border border-BorderColor2-0 rounded-[20px] overflow-hidden">
                 <div className="relative">
@@ -109,7 +109,7 @@ const BlogDetails = () => {
                       </h6>
                     </div>
                   </div>
-                  <h4 className="font-Outfit font-medium text-left text-2xl text-HeadingColor-0 mt-14 mb-4">
+                  <h4 className="font-Outfit font-medium text-left text-lg sm:text-2xl text-HeadingColor-0 mt-14 mb-4">
                     Clean Enviromnent Policy
                   </h4>
                   <p className="font-NotoSans  text-TextColor-0">
@@ -163,7 +163,7 @@ const BlogDetails = () => {
                       <img draggable="false" src={blog_detailsImg2} />
                     </div>
                   </div>
-                  <h4 className="font-Outfit font-medium text-left text-2xl text-HeadingColor-0 mt-10 mb-4">
+                  <h4 className="font-Outfit font-medium text-left text-lg sm:text-2xl text-HeadingColor-0 mt-10 mb-4">
                     Tree Plantation for Human
                   </h4>
                   <p className="font-NotoSans  text-TextColor-0">
@@ -223,14 +223,14 @@ const BlogDetails = () => {
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mt-[60px]">
-                <div className="rounded-[20px] bg-BodyBg-0 pt-8 pb-10 px-9">
+                <div className="rounded-[20px] bg-BodyBg-0 pt-8 pb-10 px-4 sm:px-9 lg:px-4 xl:px-9">
                   <button className="font-Outfit font-medium text-lg text-HeadingColor-0 flex items-center gap-2">
                     <FaAnglesLeft size={"14"} />
                     Previous Post
                   </button>
                   <button
                     to={"/"}
-                    className="flex flex-col sm:flex-row lg:flex-col xl:flex-row xl:items-center gap-5 sm:items-center lg:items-start mt-5"
+                    className="flex gap-5 mt-5"
                   >
                     <div className="size-20">
                       <img
@@ -249,14 +249,14 @@ const BlogDetails = () => {
                     </div>
                   </button>
                 </div>
-                <div className="rounded-[20px] bg-BodyBg-0 pt-8 pb-10 px-9 flex flex-col items-end">
+                <div className="rounded-[20px] bg-BodyBg-0 pt-8 pb-10 px-4 sm:px-9 lg:px-4 xl:px-9 flex flex-col items-end">
                   <button className="font-Outfit font-medium text-lg text-HeadingColor-0 flex items-center gap-2">
                     Next Post
                     <FaAnglesRight size={"14"} />
                   </button>
                   <button
                     to={"/"}
-                    className="flex flex-col sm:flex-row lg:flex-col xl:flex-row xl:items-center gap-5 sm:items-center lg:items-start mt-5 text-right"
+                    className="flex gap-5 mt-5 text-right"
                   >
                     <div className="flex-1">
                       <h4 className="font-Outfit font-medium sm:text-lg md:text-base 2xl:text-lg text-HeadingColor-0">

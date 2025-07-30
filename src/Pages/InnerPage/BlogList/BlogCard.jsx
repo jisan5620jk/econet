@@ -29,13 +29,13 @@ const BlogCard = ({ blogImage, blogurl, blogTitle, blogDate, blogPostBy }) => {
       </div>
 
       {/* Text Content */}
-      <div className="pr-10 lg:pr-[74px] pt-8">
+      <div className="pr-10 lg:pr-5 xl:pr-[74px] pt-8">
         <div className="inline-block bg-PrimaryColor-0 font-Outfit text-white text-sm px-5 py-1.5 rounded-full mb-3.5">
           {blogDate}
         </div>
         <Link
           to={blogurl}
-          className="font-Outfit text-HeadingColor-0 inline-block text-lg sm:text-xl md:text-[22px] xl:text-xl 2xl:text-2xl font-medium lg:leading-[32px] transition-all duration-500 hover:text-PrimaryColor-0"
+          className="font-Outfit text-HeadingColor-0 inline-block text-lg sm:text-xl md:text-[22px] 2xl:text-2xl font-medium lg:leading-[32px] transition-all duration-500 hover:text-PrimaryColor-0"
         >
           {blogTitle}
         </Link>

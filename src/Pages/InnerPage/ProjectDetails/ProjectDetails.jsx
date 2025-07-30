@@ -29,9 +29,9 @@ const ProjectDetails = () => {
             draggable="false"
             className="w-full rounded-[20px]"
           />
-          <div className="grid grid-cols-3 gap-[70px] mt-12">
+          <div className="grid grid-cols-3 gap-[70px] lg:gap-10 xl:gap-[70px] mt-12">
             <div className="col-span-3 lg:col-span-2">
-              <h2 className="font-Outfit font-semibold text-3xl sm:text-4xl text-HeadingColor-0">
+              <h2 className="font-Outfit font-semibold text-2xl sm:text-3xl md:text-4xl text-HeadingColor-0">
                 Rapidiously Formulate efficient
               </h2>
               <p className="font-NotoSans text-TextColor-0 mt-6">
@@ -49,7 +49,7 @@ const ProjectDetails = () => {
                 meta-services. Interactively harness integrated ROI whereas
                 frictionless products.
               </p>
-              <h2 className="font-Outfit font-medium text-[28px] text-HeadingColor-0 mt-[52px]">
+              <h2 className="font-Outfit font-medium text-[22px] text-2xl md:text-[28px] text-HeadingColor-0 mt-[52px]">
                 Quickly Parallel Task
               </h2>
               <p className="font-NotoSans text-TextColor-0 mt-6">
@@ -110,7 +110,7 @@ const ProjectDetails = () => {
                   </ul>
                 </div>
               </div>
-              <h2 className="font-Outfit font-medium text-3xl text-PrimaryColor-0 mt-[44px]">
+              <h2 className="font-Outfit font-medium text-xl sm:text-2xl md:text-3xl text-PrimaryColor-0 mt-[44px]">
                 Competently architect intermandated deliverables client niches
                 continually underwhelm
               </h2>

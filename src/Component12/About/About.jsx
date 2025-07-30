@@ -26,9 +26,9 @@ const itemData = [
 
 const About = () => {
   return (
-    <div className="relative z-10 overflow-hidden">
-      <section className="bg-BodyBgDark-0 py-16 md:py-20 lg:py-[120px] relative z-10 rounded-[20px] overflow-hidden">
-        <div className="Container pb-5">
+    <div className="relative z-10 overflow-hidden -mt-5">
+      <section className="bg-BodyBgDark-0 py-16 md:py-20 lg:py-[120px] relative z-10 overflow-hidden">
+        <div className="Container pt-5 pb-5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 2xl:gap-6 items-center">
             <div className="relative 2xl:-ml-[60px]">
               <img src={aboutThumb} draggable={false} alt="About Image" />

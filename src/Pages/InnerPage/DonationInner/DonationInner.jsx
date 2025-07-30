@@ -74,7 +74,7 @@ const DonationInner = () => {
         breadCrumbIcon={<FaArrowRightLong />}
         breadCrumbLink={"Donations"}
       />
-      <section className="service relative pt-28 pb-[120px] bg-white z-10">
+      <section className="relative py-16 md:py-20 lg:py-[120px] bg-white z-10">
         <div className="Container">
           <div className="text-center">
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">

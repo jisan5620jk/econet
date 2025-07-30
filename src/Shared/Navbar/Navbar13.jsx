@@ -10,6 +10,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import logo from "/images/header-logo.png";
+import logo2 from "/images/footer-logo.png";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { IoIosSearch, IoMdPaperPlane } from "react-icons/io";
 import { LiaTimesSolid } from "react-icons/lia";
@@ -84,12 +85,12 @@ const Navbar13 = () => {
       label: "Pages",
       links: [
         { to: "/pricing", label: "Pricing Plans" },
-        { to: "/events", label: "All Events" },
-        { to: "/event_details", label: "Event Details" },
-        { to: "/instructor", label: "Our Instructors" },
-        { to: "/instructor_details", label: "Instructor Profile" },
-        { to: "/shop", label: "Shop" },
-        { to: "/shop_details", label: "Product Details" },
+        { to: "/team", label: "Team Member" },
+        { to: "/donation", label: "Donation" },
+        { to: "/testimonial", label: "Testimonial" },
+        { to: "/project", label: "Project" },
+        { to: "/project_details", label: "Project Details" },
+        { to: "/appointment", label: "Appointment" },
       ],
     },
     {
@@ -183,7 +184,7 @@ const Navbar13 = () => {
             : ""
         }`}
       >
-        <div className="px-5 sm:px-8 lg:px-[50px] xl:px-8 2xl:px-[50px] py-4 lg:py-0">
+        <div className="px-5 sm:px-8 lg:px-[50px] xl:px-8 2xl:px-[50px] py-4 md:py-3 lg:py-0">
           <div className="flex items-center justify-between gap-5">
             {/* Logo */}
             <div className="">
@@ -308,13 +309,13 @@ const Navbar13 = () => {
                 {/* Hamburger Icon */}
 
                 <div
-                  className="group lg:hidden size-8 md:size-[46px] bg-transparent border border-white border-opacity-10 rounded-full flex items-center justify-center cursor-pointer"
+                  className="group lg:hidden size-8 md:size-[46px] bg-transparent border border-SecondaryColor-0 border-opacity-20 rounded-full flex items-center justify-center cursor-pointer"
                   onClick={() => setMobileOpen(true)}
                 >
                   <button className="space-y-[3px] md:space-y-1">
-                    <span className="bg-white w-4 md:w-5 h-0.5 rounded-xl block"></span>
-                    <span className="bg-white w-4 md:w-5 h-0.5 rounded-xl block"></span>
-                    <span className="bg-white w-2 md:w-3 h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-5"></span>
+                    <span className="bg-PrimaryColor-0 w-4 md:w-5 h-0.5 rounded-xl block"></span>
+                    <span className="bg-PrimaryColor-0 w-4 md:w-5 h-0.5 rounded-xl block"></span>
+                    <span className="bg-PrimaryColor-0 w-2 md:w-3 h-0.5 rounded-xl block transition-all duration-500 group-hover:w-4 md:group-hover:w-5"></span>
                   </button>
                 </div>
               </div>
@@ -495,7 +496,7 @@ const Navbar13 = () => {
 
           <div className="mb-6">
             <Link to="/">
-              <img src={logo} alt="Logo" draggable="false" />
+              <img src={logo2} alt="Logo" draggable="false" />
             </Link>
           </div>
 

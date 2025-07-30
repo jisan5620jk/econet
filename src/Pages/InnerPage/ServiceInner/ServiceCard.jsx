@@ -38,7 +38,7 @@ const ServiceCard = ({ serviceTitle, serviceImg, serviceIcon, serviceUrl }) => {
         <div className="ml-auto w-[calc(100%-20px)] sm:w-[calc(100%-40px)] bg-BodyBg-0 relative z-10 rounded-[20px] pl-[34px] pt-9 pb-8 overflow-hidden before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-BodyBgDark-0 before:-z-10 before:transition-all before:duration-500 group-hover:before:left-0 group-hover:before:w-full">
           <Link
             to={serviceUrl}
-            className="w-full font-Outfit font-medium text-[22px] sm:text-2xl lg:text-[22px] 2xl:text-[28px] 2xl:leading-[36px] text-HeadingColor-0 transition-all duration-500 group-hover:text-white"
+            className="w-full font-Outfit font-medium text-[22px] sm:text-2xl lg:text-xl xl:text-2xl 2xl:text-[28px] 2xl:leading-[36px] text-HeadingColor-0 transition-all duration-500 group-hover:text-white"
           >
             {serviceTitle}
           </Link>

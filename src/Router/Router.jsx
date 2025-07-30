@@ -196,12 +196,12 @@ const router = createBrowserRouter([
         element: <AppointmentInner />,
       },
       {
-        path: "/project",
-        element: <ProjectInner />,
-      },
-      {
         path: "/testimonial",
         element: <TestimonialInner />,
+      },
+      {
+        path: "/project",
+        element: <ProjectInner />,
       },
       {
         path: "/project_details",

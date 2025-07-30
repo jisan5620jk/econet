@@ -80,12 +80,12 @@ const Navbar3 = () => {
       label: "Pages",
       links: [
         { to: "/pricing", label: "Pricing Plans" },
-        { to: "/events", label: "All Events" },
-        { to: "/event_details", label: "Event Details" },
-        { to: "/instructor", label: "Our Instructors" },
-        { to: "/instructor_details", label: "Instructor Profile" },
-        { to: "/shop", label: "Shop" },
-        { to: "/shop_details", label: "Product Details" },
+        { to: "/team", label: "Team Member" },
+        { to: "/donation", label: "Donation" },
+        { to: "/testimonial", label: "Testimonial" },
+        { to: "/project", label: "Project" },
+        { to: "/project_details", label: "Project Details" },
+        { to: "/appointment", label: "Appointment" },
       ],
     },
     {
