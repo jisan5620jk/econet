@@ -6,30 +6,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 import HelmetChanger from "../Shared/Helmet/Helmet";
-import ImageReveal from "../Shared/ImageReveal/ImageReveal";
-import TextReveal from "../Shared/TextAnim/TextReveal";
 import Footer9 from "../Shared/Footer/Footer9";
 import Navbar9 from "../Shared/Navbar/Navbar9";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
 const Main9 = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (smootherRef.current) {
-      smootherRef.current.scrollTo(0, true); // Scroll to top with animation
-    }
-  }, [location]);
-
-  //image Reveal
-
-  ImageReveal();
-
-  //image Reveal
-
-  TextReveal();
-
   //Scroll Smoother
 
   const smootherRef = useRef(null);
@@ -76,13 +58,28 @@ const Main9 = () => {
     };
   }, []);
 
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const smoother = ScrollSmoother.get();
+
+    if (smoother) {
+      smoother.scrollTo(0, true); // smooth scroll to top
+    } else {
+      window.scrollTo(0, 0); // fallback
+    }
+  }, [pathname]);
+
   return (
     <>
       <HelmetChanger title={"Environment Main Demo"} />
       <BackToTop />
       <Navbar9 />
       <div id="smooth-wrapper" className="h-full">
-        <div id="smooth-content" className="min-h-screen will-change-transform pt-[72px] lg:pt-[100px]">
+        <div
+          id="smooth-content"
+          className="min-h-screen will-change-transform pt-[72px] lg:pt-[100px]"
+        >
           <Outlet />
           <Footer9 />
         </div>

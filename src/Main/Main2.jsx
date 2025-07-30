@@ -8,28 +8,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 import HelmetChanger from "../Shared/Helmet/Helmet";
-import ImageReveal from "../Shared/ImageReveal/ImageReveal";
-import TextReveal from "../Shared/TextAnim/TextReveal";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
 const Main2 = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (smootherRef.current) {
-      smootherRef.current.scrollTo(0, true); // Scroll to top with animation
-    }
-  }, [location]);
-
-  //image Reveal
-
-  ImageReveal();
-
-  //image Reveal
-
-  TextReveal();
-
   //Scroll Smoother
 
   const smootherRef = useRef(null);
@@ -75,6 +57,18 @@ const Main2 = () => {
       links.forEach((link) => link.removeEventListener("click", () => {}));
     };
   }, []);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const smoother = ScrollSmoother.get();
+
+    if (smoother) {
+      smoother.scrollTo(0, true); // smooth scroll to top
+    } else {
+      window.scrollTo(0, 0); // fallback
+    }
+  }, [pathname]);
 
   return (
     <>
