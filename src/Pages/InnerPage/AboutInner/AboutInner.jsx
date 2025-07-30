@@ -5,8 +5,14 @@ import Testimonial from "../../../Component8/Testimonial/Testimonial";
 import About from "./About/About";
 import Brand from "../../../Component1/Brand/Brand";
 import Process from "../../../Component1/Process/Process";
+import BoxReveal from "../../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../../Shared/TextAnim/TextReveal";
 
 const AboutInner = () => {
+  BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <BreadCrumb

@@ -11,6 +11,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import ServiceCard from "./ServiceCard";
 import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb";
 import subtitleIcon from "/images/sub-title-icon.png";
+import BoxReveal from "../../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../../Shared/TextAnim/TextReveal";
 
 const serviceData = [
   {
@@ -52,6 +55,9 @@ const serviceData = [
 ];
 
 const ServiceInner = () => {
+  BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <BreadCrumb

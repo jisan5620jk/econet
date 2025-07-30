@@ -13,9 +13,13 @@ import Subscribe from "../../Component9/Subscribe/Subscribe";
 import Testimonial from "../../Component9/Testimonial/Testimonial";
 import VideoCta from "../../Component9/VideoCta/VideoCta";
 import BoxReveal from "../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../Shared/TextAnim/TextReveal";
 
 const Home9 = () => {
   BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <Banner />

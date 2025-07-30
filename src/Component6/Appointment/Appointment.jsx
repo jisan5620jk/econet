@@ -112,10 +112,10 @@ const Appointment = () => {
                   <option value="" disabled>
                     Select Subject
                   </option>
-                  <option value="math">Mathematics</option>
-                  <option value="science">Science</option>
-                  <option value="history">History</option>
-                  <option value="literature">Literature</option>
+                  <option value="math" className="bg-SecondaryColor-0">Mathematics</option>
+                  <option value="science" className="bg-SecondaryColor-0">Science</option>
+                  <option value="history" className="bg-SecondaryColor-0">History</option>
+                  <option value="literature" className="bg-SecondaryColor-0">Literature</option>
                 </select>
               </div>
             </div>

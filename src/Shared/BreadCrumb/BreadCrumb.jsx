@@ -13,7 +13,7 @@ const BreadCrumb = ({
   breadCrumbContent,
 }) => {
   return (
-    <div className="px-2 md:px-4 xl:px-8 pb-2 md:pb-4 xl:pb-8 bg-BodyBg-0 rounded-b-xl sm:rounded-b-2xl md:rounded-b-3xl lg:rounded-b-[30px]">
+    <div className="px-2 md:px-4 xl:px-8 pb-2 md:pb-4 xl:pb-8 bg-BodyBg-0 rounded-b-xl sm:rounded-b-2xl md:rounded-b-3xl lg:rounded-b-[30px] relative z-20">
       <div className="bg-[url('/images/breadcrumb-bg.png')] bg-no-repeat bg-cover bg-center flex items-center rounded-[20px] text-center pt-[200px] pb-[200px] relative z-10 overflow-hidden">
         <div className="absolute z-10 bg-SecondaryColor-0/30 w-full h-full"></div>
         <div className="Container relative z-20">

@@ -15,8 +15,14 @@ import { BsFileEarmarkPdf } from "react-icons/bs";
 import { IoMdCall, IoMdCheckmark } from "react-icons/io";
 import { FaPhoneVolume, FaRegEnvelope } from "react-icons/fa";
 import { GiEcology } from "react-icons/gi";
+import BoxReveal from "../../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../../Shared/TextAnim/TextReveal";
 
 const ServiceDetails = () => {
+  BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <BreadCrumb

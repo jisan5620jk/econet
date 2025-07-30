@@ -60,7 +60,7 @@ const projectData = [
 
 const project = () => {
   const settings = {
-    loop: false,
+    loop: true,
     spaceBetween: 26,
     modules: [Autoplay],
     speed: 2000,

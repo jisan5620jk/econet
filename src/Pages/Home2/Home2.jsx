@@ -9,9 +9,13 @@ import TeamMember from "../../Component2/TeamMember/TeamMember";
 import Testimonial from "../../Component2/Testimonial/Testimonial";
 import WhyChoose from "../../Component2/Whychoose/WhyChoose";
 import BoxReveal from "../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../Shared/TextAnim/TextReveal";
 
 const Home2 = () => {
   BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <Banner />

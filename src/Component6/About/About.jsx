@@ -89,7 +89,7 @@ const About = () => {
                 {itemData.map((item, index) => (
                   <div
                     key={index}
-                    className={`box group flex flex-wrap xl:flex-nowrap items-center justify-between gap-5 py-9 lg:py-3 xl:py-9 border-SecondaryColor-0 border-opacity-10 ${
+                    className={`box group flex flex-wrap xl:flex-nowrap items-center justify-between gap-5 py-9 lg:py-3 xl:py-9 border-white border-opacity-10 ${
                       index !== 0 ? "border-t" : ""
                     }`}
                   >

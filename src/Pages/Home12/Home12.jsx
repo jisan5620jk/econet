@@ -13,9 +13,13 @@ import TeamMember from "../../Component12/TeamMember/TeamMember";
 import Testimonial from "../../Component12/Testimonial/Testimonial";
 import VideoCta from "../../Component12/VideoCta/VideoCta";
 import BoxReveal from "../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../Shared/TextAnim/TextReveal";
 
 const Home12 = () => {
   BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <Banner />

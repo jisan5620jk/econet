@@ -64,7 +64,7 @@ const Blog = () => {
   };
   return (
     <div className="relative z-10 -mt-5">
-      <section className="bg-white py-16 md:py-20 lg:py-[120px] overflow-hidden">
+      <section className="bg-BodyBg-0 py-16 md:py-20 lg:py-[120px] overflow-hidden">
         <div className="Container">
           <div className="text-center">
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">

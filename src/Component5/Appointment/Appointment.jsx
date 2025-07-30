@@ -124,7 +124,7 @@ const Appointment = () => {
                 name="message"
                 id="message"
                 placeholder="Write Message..."
-                className="min-h-[150px] w-full rounded-[30px] px-7 py-3 resize-none text-PrimaryColor-0 font-Rajdhani text-lg bg-white outline-none border border-SecondaryColor-0 border-opacity-15 transition-all duration-500 ease-linear placeholder:text-HeadingColor-0 hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
+                className="min-h-[150px] w-full rounded-[30px] px-7 py-3 resize-none text-PrimaryColor-0 font-Rajdhani text-lg bg-transparent outline-none border border-SecondaryColor-0 border-opacity-15 transition-all duration-500 ease-linear placeholder:text-HeadingColor-0 hover:border-PrimaryColor-0 focus:border-PrimaryColor-0"
               ></textarea>
             </div>
             <PrimaryButton type="submit">

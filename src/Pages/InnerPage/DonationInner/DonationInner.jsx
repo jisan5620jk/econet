@@ -1,8 +1,10 @@
 import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb";
 import { FaArrowRightLong } from "react-icons/fa6";
-
 import subtitleIcon from "/images/sub-title-icon.png";
 import DonationCard from "./DonationCard";
+import BoxReveal from "../../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../../Shared/TextAnim/TextReveal";
 
 const cardData = [
   {
@@ -62,6 +64,9 @@ const cardData = [
 ];
 
 const DonationInner = () => {
+  BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <BreadCrumb

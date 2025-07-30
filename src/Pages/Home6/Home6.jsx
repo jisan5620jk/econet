@@ -10,9 +10,13 @@ import Service from "../../Component6/Service/Service";
 import Testimonial from "../../Component6/Testimonial/Testimonial";
 import WhyChoose from "../../Component6/Whychoose/WhyChoose";
 import BoxReveal from "../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../Shared/TextAnim/TextReveal";
 
 const Home6 = () => {
   BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <Banner />

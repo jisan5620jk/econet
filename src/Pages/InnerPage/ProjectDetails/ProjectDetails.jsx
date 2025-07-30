@@ -5,8 +5,14 @@ import projectDetailsListThumb from "/images/classic-service-img2.png";
 import { FaArrowRight, FaArrowRightLong, FaCircleCheck } from "react-icons/fa6";
 import { IoMdCall } from "react-icons/io";
 import { FaPhoneVolume, FaRegEnvelope } from "react-icons/fa";
+import BoxReveal from "../../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../../Shared/TextAnim/TextReveal";
 
 const ProjectDetails = () => {
+  BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <BreadCrumb

@@ -8,6 +8,9 @@ import projectImg4 from "/images/classic-project-img4.png";
 import projectImg5 from "/images/classic-project-img5.png";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 import ProjectCard from "./ProjectCard";
+import BoxReveal from "../../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../../Shared/TextAnim/TextReveal";
 
 const projectData = [
   {
@@ -55,6 +58,9 @@ const projectData = [
 ];
 
 const ProjectInner = () => {
+  BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <BreadCrumb

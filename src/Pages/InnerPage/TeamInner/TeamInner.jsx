@@ -11,6 +11,9 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import TeamCard from "./TeamCard";
+import BoxReveal from "../../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../../Shared/TextAnim/TextReveal";
 
 const teamsData = [
   {
@@ -76,6 +79,9 @@ const teamsData = [
 ];
 
 const TeamInner = () => {
+  BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <BreadCrumb

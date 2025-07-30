@@ -65,7 +65,7 @@ const projectData = [
 
 const Project = () => {
   const settings = {
-    loop: false,
+    loop: true,
     spaceBetween: 26,
     modules: [Autoplay],
     centeredSlides: true,

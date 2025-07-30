@@ -26,8 +26,14 @@ import {
 import { BiSolidQuoteAltRight, BiSolidShare } from "react-icons/bi";
 import PrimaryButton from "../../../Shared/PrimaryButton/PrimaryButton";
 import { BsFillSendFill } from "react-icons/bs";
+import BoxReveal from "../../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../../Shared/TextAnim/TextReveal";
 
 const BlogDetails = () => {
+  BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <BreadCrumb

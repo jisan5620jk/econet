@@ -10,9 +10,13 @@ import Service from "../../Component4/Service/Service";
 import Testimonial from "../../Component4/Testimonial/Testimonial";
 import WhyChoose from "../../Component4/Whychoose/WhyChoose";
 import BoxReveal from "../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../Shared/TextAnim/TextReveal";
 
 const Home4 = () => {
   BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <Banner />

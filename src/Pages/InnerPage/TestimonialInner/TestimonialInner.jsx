@@ -5,6 +5,9 @@ import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb";
 import { FaArrowRightLong } from "react-icons/fa6";
 import TestimonialCard from "./TestimonialCard";
 import subtitleIcon from "/images/sub-title-icon.png";
+import BoxReveal from "../../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../../Shared/TextAnim/TextReveal";
 
 const testiData = [
   {
@@ -64,6 +67,9 @@ const testiData = [
 ];
 
 const TestimonialInner = () => {
+  BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <BreadCrumb

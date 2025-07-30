@@ -8,6 +8,9 @@ import blogImage4 from "/images/charity-classic-blog-img.png";
 import blogImage5 from "/images/charity-classic-blog-img2.png";
 import blogImage6 from "/images/charity-classic-blog-img3.png";
 import subtitleIcon from "/images/sub-title-icon.png";
+import BoxReveal from "../../../Shared/BoxAnim/BoxReveal";
+import ImageReveal from "../../../Shared/ImageReveal/ImageReveal";
+import TextReveal from "../../../Shared/TextAnim/TextReveal";
 
 const blogPosts = [
   {
@@ -53,7 +56,11 @@ const blogPosts = [
     blogPostBy: "Anjelina Jholi",
   },
 ];
+
 const BlogNoSidebar = () => {
+  BoxReveal();
+  ImageReveal();
+  TextReveal();
   return (
     <>
       <BreadCrumb
@@ -88,22 +95,22 @@ const BlogNoSidebar = () => {
           </div>
           <ul className="flex items-center gap-2 justify-center pb-16 md:pb-20 lg:pb-[120px] pt-10 md:pt-12 lg:pt-20">
             <li>
-              <button className="h-[50px] w-[50px] font-AlbertSans rounded-full border-BorderColor2-0 border bg-white flex justify-center items-center transition-all duration-500 text-white overflow-hidden relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-100">
+              <button className="h-[50px] w-[50px] font-Outfit rounded-full border-BorderColor2-0 border bg-white flex justify-center items-center transition-all duration-500 text-white overflow-hidden relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-100">
                 01
               </button>
             </li>
             <li>
-              <button className="h-[50px] w-[50px] font-AlbertSans rounded-full border-BorderColor2-0 border bg-white flex justify-center items-center text-HeadingColor-0 transition-all duration-500 hover:text-white overflow-hidden relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100">
+              <button className="h-[50px] w-[50px] font-Outfit rounded-full border-BorderColor2-0 border bg-white flex justify-center items-center text-HeadingColor-0 transition-all duration-500 hover:text-white overflow-hidden relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100">
                 02
               </button>
             </li>
             <li>
-              <button className="h-[50px] w-[50px] font-AlbertSans rounded-full border-BorderColor2-0 border bg-white flex justify-center items-center text-HeadingColor-0 transition-all duration-500 hover:text-white overflow-hidden relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100">
+              <button className="h-[50px] w-[50px] font-Outfit rounded-full border-BorderColor2-0 border bg-white flex justify-center items-center text-HeadingColor-0 transition-all duration-500 hover:text-white overflow-hidden relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100">
                 03
               </button>
             </li>
             <li>
-              <button className="h-[50px] w-[50px] font-AlbertSans rounded-full border-BorderColor2-0 border bg-white flex justify-center items-center text-HeadingColor-0 transition-all duration-500 hover:text-white overflow-hidden relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100">
+              <button className="h-[50px] w-[50px] font-Outfit rounded-full border-BorderColor2-0 border bg-white flex justify-center items-center text-HeadingColor-0 transition-all duration-500 hover:text-white overflow-hidden relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 hover:before:scale-100">
                 <FaAngleRight />
               </button>
             </li>
