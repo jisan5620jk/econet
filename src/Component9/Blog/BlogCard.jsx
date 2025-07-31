@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const BlogCard = ({
   blogImage,
   blogTag,
-  blogurl,
+  blogUrl,
   blogTitle,
   blogDate,
   blogBtnText,
@@ -63,7 +63,7 @@ const BlogCard = ({
           }`}
         >
           <Link
-            to={blogurl}
+            to={blogUrl}
             className={`font-Outfit text-HeadingColor-0 inline-block mt-5 transition-all duration-500 hover:text-PrimaryColor-0 ${
               isMain
                 ? "text-xl sm:text-3xl md:text-4xl xl:text-[32px] 2xl:text-4xl font-semibold md:leading-[44px] md:mr-14 lg:mr-0 xl:mr-20"
@@ -74,7 +74,7 @@ const BlogCard = ({
           </Link>
         </div>
         <Link
-          to={blogurl}
+          to={blogUrl}
           className="flex items-center font-Outfit gap-2 text-lg text-HeadingColor-0 font-medium mt-2 transition-all duration-500 hover:gap-3"
         >
           {blogBtnText}

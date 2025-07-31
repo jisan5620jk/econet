@@ -50,7 +50,7 @@ const Banner = () => {
               </div>
             </h2>
             <div className="mt-9">
-              <PrimaryButton as="link" href="/about">
+              <PrimaryButton as="link" href="/service">
                 Explore Services <GoArrowRight size={22} />
               </PrimaryButton>
             </div>

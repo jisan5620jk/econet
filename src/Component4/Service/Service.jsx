@@ -17,25 +17,25 @@ const serviceData = [
     serviceImg: serviceImg,
     serviceIcon: serviceIcon,
     serviceTitle: "Suntainable energy Environment",
-    serviceUrl: "/service",
+    serviceUrl: "/service_details",
   },
   {
     serviceImg: serviceImg2,
     serviceIcon: serviceIcon2,
     serviceTitle: "Environment Waste Recycling",
-    serviceUrl: "/service",
+    serviceUrl: "/service_details",
   },
   {
     serviceImg: serviceImg3,
     serviceIcon: serviceIcon3,
     serviceTitle: "Dirty Recycling and Tree Plantation",
-    serviceUrl: "/service",
+    serviceUrl: "/service_details",
   },
   {
     serviceImg: serviceImg3,
     serviceIcon: serviceIcon3,
     serviceTitle: "Dirty Recycling and Tree Plantation",
-    serviceUrl: "/service",
+    serviceUrl: "/service_details",
   },
 ];
 

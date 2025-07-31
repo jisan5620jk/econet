@@ -2,7 +2,7 @@
 
 import { Link } from "react-router-dom";
 
-const BlogCard = ({ blogImage, blogurl, blogTitle, blogDate, blogPostBy }) => {
+const BlogCard = ({ blogImage, blogUrl, blogTitle, blogDate, blogPostBy }) => {
   return (
     <div className="group">
       {/* Image */}
@@ -34,7 +34,7 @@ const BlogCard = ({ blogImage, blogurl, blogTitle, blogDate, blogPostBy }) => {
           {blogDate}
         </div>
         <Link
-          to={blogurl}
+          to={blogUrl}
           className="font-Outfit text-HeadingColor-0 inline-block text-lg sm:text-xl md:text-[22px] xl:text-xl 2xl:text-2xl font-medium lg:leading-[32px] transition-all duration-500 hover:text-PrimaryColor-0"
         >
           {blogTitle}

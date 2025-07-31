@@ -81,7 +81,7 @@ const TestimonialInner = () => {
         <div className="Container">
           <div className="text-center">
             <h5 className="zoom-in font-Outfit text-lg font-medium leading-7 text-PrimaryColor-0 px-5 py-[3px] inline-flex items-center gap-2 border border-PrimaryColor-0 rounded-full">
-              <img src={subtitleIcon} alt="Icon" draggable={false} /> Projects
+              <img src={subtitleIcon} alt="Icon" draggable={false} /> Testimonial
             </h5>
             <h1 className="font-Outfit font-semibold text-xl leading-7 sm:text-[34px] sm:leading-[42px] md:text-[44px] md:leading-[52px] lg:text-[30px] lg:leading-[38px] xl:text-[36px] xl:leading-[44px] 2xl:text-[50px] 2xl:leading-[58px] text-HeadingColor-0 mt-3.5">
               Clients Best Feedback About

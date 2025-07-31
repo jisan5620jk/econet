@@ -21,7 +21,7 @@ const serviceData = [
     serviceDesc:
       "Environmental organizations maintainance dedicated to protecting",
     serviceIcon: serviceIcon,
-    serviceUrl: "/services/turbine-installation",
+    serviceUrl: "/service_details",
     serviceBtnText: "Explore More",
     serviceBtnIcon: <GoArrowRight />,
   },
@@ -31,7 +31,7 @@ const serviceData = [
     serviceDesc:
       "Environmental organizations maintainance dedicated to protecting",
     serviceIcon: serviceIcon2,
-    serviceUrl: "/services/panel-installations",
+    serviceUrl: "/service_details",
     serviceBtnText: "Explore More",
     serviceBtnIcon: <GoArrowRight />,
   },
@@ -41,7 +41,7 @@ const serviceData = [
     serviceDesc:
       "Environmental organizations maintainance dedicated to protecting",
     serviceIcon: serviceIcon3,
-    serviceUrl: "/services/solar-cleaning",
+    serviceUrl: "/service_details",
     serviceBtnText: "Explore More",
     serviceBtnIcon: <GoArrowRight />,
   },
@@ -51,7 +51,7 @@ const serviceData = [
     serviceDesc:
       "Environmental organizations maintainance dedicated to protecting",
     serviceIcon: serviceIcon4,
-    serviceUrl: "/services/wind-financing",
+    serviceUrl: "/service_details",
     serviceBtnText: "Explore More",
     serviceBtnIcon: <GoArrowRight />,
   },
@@ -61,7 +61,7 @@ const serviceData = [
     serviceDesc:
       "Environmental organizations maintainance dedicated to protecting",
     serviceIcon: serviceIcon2,
-    serviceUrl: "/services/panel-installations",
+    serviceUrl: "/service_details",
     serviceBtnText: "Explore More",
     serviceBtnIcon: <GoArrowRight />,
   },
@@ -71,7 +71,7 @@ const serviceData = [
     serviceDesc:
       "Environmental organizations maintainance dedicated to protecting",
     serviceIcon: serviceIcon3,
-    serviceUrl: "/services/solar-cleaning",
+    serviceUrl: "/service_details",
     serviceBtnText: "Explore More",
     serviceBtnIcon: <GoArrowRight />,
   },

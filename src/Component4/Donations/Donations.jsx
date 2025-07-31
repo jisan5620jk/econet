@@ -11,7 +11,7 @@ const cardData = [
     raised: 1260,
     goal: 1600,
     color: "bg-PrimaryColor-0",
-    URL: "/",
+    URL: "/donation",
   },
   {
     image: "/images/classic-donation-img2.png",
@@ -20,7 +20,7 @@ const cardData = [
     raised: 1080,
     goal: 1400,
     color: "bg-PrimaryColor-0",
-    URL: "/",
+    URL: "/donation",
   },
   {
     image: "/images/classic-donation-img3.png",
@@ -29,7 +29,7 @@ const cardData = [
     raised: 1890,
     goal: 2100,
     color: "bg-PrimaryColor-0",
-    URL: "/",
+    URL: "/donation",
   },
 ];
 

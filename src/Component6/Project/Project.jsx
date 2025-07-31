@@ -19,42 +19,42 @@ const projectData = [
     projectIcon: <HiMiniArrowUpRight />,
     projectSubTitle: "Pannels",
     projectTitle: "Suntainable Energy",
-    projectUrl: "/project",
+    projectUrl: "/project_details",
   },
   {
     projectImg: projectImg2,
     projectIcon: <HiMiniArrowUpRight />,
     projectSubTitle: "Installation",
     projectTitle: "Turbine Installations",
-    projectUrl: "/project",
+    projectUrl: "/project_details",
   },
   {
     projectImg: projectImg3,
     projectIcon: <HiMiniArrowUpRight />,
     projectSubTitle: "Planet",
     projectTitle: "Industrial Power Planet",
-    projectUrl: "/project",
+    projectUrl: "/project_details",
   },
   {
     projectImg: projectImg4,
     projectIcon: <HiMiniArrowUpRight />,
     projectSubTitle: "Pannels",
     projectTitle: "Solar Panel Cleaning",
-    projectUrl: "/project",
+    projectUrl: "/project_details",
   },
   {
     projectImg: projectImg2,
     projectIcon: <HiMiniArrowUpRight />,
     projectSubTitle: "Installation",
     projectTitle: "Turbine Installations",
-    projectUrl: "/project",
+    projectUrl: "/project_details",
   },
   {
     projectImg: projectImg3,
     projectIcon: <HiMiniArrowUpRight />,
     projectSubTitle: "Planet",
     projectTitle: "Industrial Power Planet",
-    projectUrl: "/project",
+    projectUrl: "/project_details",
   },
 ];
 
@@ -122,7 +122,7 @@ const project = () => {
             </h1>
           </div>
           <div className="fade-right">
-            <PrimaryButton as="link" href="/about">
+            <PrimaryButton as="link" href="/project">
               More Projects <GoArrowRight size={22} />
             </PrimaryButton>
           </div>

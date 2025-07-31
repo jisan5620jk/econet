@@ -118,7 +118,7 @@ const About = () => {
                 ))}
               </div>
               <div className="mt-2 md:mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-7">
-                <PrimaryButton as="link" href="/about">
+                <PrimaryButton as="link" href="/service">
                   Explore Services <GoArrowRight size={22} />
                 </PrimaryButton>
                 <div>

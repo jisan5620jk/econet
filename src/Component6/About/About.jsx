@@ -57,7 +57,10 @@ const About = () => {
             <div>
               <div className="box-row grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {cardData.map((card, index) => (
-                  <div key={index} className={`box group px-10 sm:px-4 md:px-10 lg:px-4 xl:px-10 pt-8 pb-[34px] relative z-10`}>
+                  <div
+                    key={index}
+                    className={`box group px-10 sm:px-4 md:px-10 lg:px-4 xl:px-10 pt-8 pb-[34px] relative z-10`}
+                  >
                     {/* Card BG */}
                     <div className="absolute -z-10 top-0 right-0 w-full h-full">
                       <img
@@ -118,7 +121,7 @@ const About = () => {
                 ))}
               </div>
               <div className="mt-2 md:mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-7">
-                <PrimaryButton as="link" href="/about">
+                <PrimaryButton as="link" href="/service">
                   Explore Services <GoArrowRight size={22} />
                 </PrimaryButton>
                 <div>

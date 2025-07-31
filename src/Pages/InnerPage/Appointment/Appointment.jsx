@@ -65,7 +65,7 @@ const Appointment = () => {
           <form
             action="https://formspree.io/f/xayrekgy"
             method="post"
-            className="box-row pace-y-5 mt-9"
+            className="box-row space-y-5 mt-9"
           >
             <div className="box grid grid-cols-1 sm:grid-cols-2 gap-7">
               <div className="relative">

@@ -1,10 +1,10 @@
-import projectImg from "/images/project2-img.png";
-import projectImg2 from "/images/project2-img2.png";
-import projectImg3 from "/images/project2-img3.png";
-import projectImg4 from "/images/project2-img4.png";
+import projectImg from "/images/project_details2-img.png";
+import projectImg2 from "/images/project_details2-img2.png";
+import projectImg3 from "/images/project_details2-img3.png";
+import projectImg4 from "/images/project_details2-img4.png";
 import shape from "/images/dot.png";
 import shape2 from "/images/arrow.png";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./project_detailsCard";
 import subtitleIcon from "/images/sub-title-icon.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -19,42 +19,42 @@ const projectData = [
     projectIcon: <HiMiniArrowUpRight />,
     projectSubTitle: "Pannels",
     projectTitle: "Suntainable Energy",
-    projectUrl: "/project",
+    projectUrl: "/project_details",
   },
   {
     projectImg: projectImg2,
     projectIcon: <HiMiniArrowUpRight />,
     projectSubTitle: "Installation",
     projectTitle: "Turbine Installations",
-    projectUrl: "/project",
+    projectUrl: "/project_details",
   },
   {
     projectImg: projectImg3,
     projectIcon: <HiMiniArrowUpRight />,
     projectSubTitle: "Planet",
     projectTitle: "Industrial Power Planet",
-    projectUrl: "/project",
+    projectUrl: "/project_details",
   },
   {
     projectImg: projectImg4,
     projectIcon: <HiMiniArrowUpRight />,
     projectSubTitle: "Pannels",
     projectTitle: "Solar Panel Cleaning",
-    projectUrl: "/project",
+    projectUrl: "/project_details",
   },
   {
     projectImg: projectImg2,
     projectIcon: <HiMiniArrowUpRight />,
     projectSubTitle: "Installation",
     projectTitle: "Turbine Installations",
-    projectUrl: "/project",
+    projectUrl: "/project_details",
   },
   {
     projectImg: projectImg3,
     projectIcon: <HiMiniArrowUpRight />,
     projectSubTitle: "Planet",
     projectTitle: "Industrial Power Planet",
-    projectUrl: "/project",
+    projectUrl: "/project_details",
   },
 ];
 
@@ -122,7 +122,7 @@ const project = () => {
             </h1>
           </div>
           <div className="fade-right">
-            <PrimaryButton as="link" href="/about">
+            <PrimaryButton as="link" href="/project">
               More Projects <GoArrowRight size={22} />
             </PrimaryButton>
           </div>
