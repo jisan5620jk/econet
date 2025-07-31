@@ -4,6 +4,7 @@ import { useState } from "react";
 import { IoPlaySharp } from "react-icons/io5";
 import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
 import { GoArrowRight } from "react-icons/go";
+import FsLightboxPortal from "../../Shared/FsLightBox/FsLightBox";
 
 const VideoCta = () => {
   const [toggler, setToggler] = useState(false);
@@ -40,17 +41,25 @@ const VideoCta = () => {
               Organization
             </h3>
 
-            <PrimaryButton as="link" href="/about" className="!bg-white/10 !px-9 !py-3 backdrop-filter backdrop-blur-sm border border-white/20 hover:border-SecondaryColor-0">
+            <PrimaryButton
+              as="link"
+              href="/about"
+              className="!bg-white/10 !px-9 !py-3 backdrop-filter backdrop-blur-sm border border-white/20 hover:border-SecondaryColor-0"
+            >
               Donate Now <GoArrowRight size={22} />
             </PrimaryButton>
           </div>
         </div>
       </div>
 
-      <FsLightbox
-        toggler={toggler}
-        sources={["https://youtu.be/LlCwHnp3kL4?si=SD5vSCPhr4vc_U5t"]}
-      />
+      <FsLightboxPortal>
+        <FsLightbox
+          toggler={toggler}
+          sources={[
+            "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+          ]}
+        />
+      </FsLightboxPortal>
     </section>
   );
 };

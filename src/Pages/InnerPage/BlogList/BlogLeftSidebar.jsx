@@ -238,43 +238,43 @@ const BlogLeftSidebar = () => {
                 <h4 className="font-Outfit font-medium text-2xl text-HeadingColor-0 pb-3 mb-8 relative before:absolute before:bottom-0 before:left-0 before:w-7 before:h-[2px] before:bg-PrimaryColor-0">
                   Tags
                 </h4>
-                <ul className="inline-block">
-                  <li className="inline-block mr-[10px] mb-[10px]">
+                <ul className="fade-up flex gap-2.5 items-center flex-wrap">
+                  <li>
                     <Link to={"/"}>
                       <button className="bg-white rounded-lg flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-Outfit relative z-10 before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 hover:before:scale-100 hover:text-white">
                         Environment
                       </button>
                     </Link>
                   </li>
-                  <li className="inline-block mr-[10px] mb-[10px]">
+                  <li>
                     <Link to={"/"}>
                       <button className="bg-white rounded-lg flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-Outfit relative z-10 before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 hover:before:scale-100 hover:text-white">
                         Echology
                       </button>
                     </Link>
                   </li>
-                  <li className="inline-block mr-[10px] mb-[10px]">
+                  <li>
                     <Link to={"/"}>
                       <button className="bg-white rounded-lg flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-Outfit relative z-10 before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 hover:before:scale-100 hover:text-white">
                         Seedlings
                       </button>
                     </Link>
                   </li>
-                  <li className="inline-block mr-[10px] mb-[10px]">
+                  <li>
                     <Link to={"/"}>
                       <button className="bg-white rounded-lg flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-Outfit relative z-10 before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 hover:before:scale-100 hover:text-white">
                         Tree Plantation
                       </button>
                     </Link>
                   </li>
-                  <li className="inline-block mr-[10px] mb-[10px]">
+                  <li>
                     <Link to={"/"}>
                       <button className="bg-white rounded-lg flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-Outfit relative z-10 before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 hover:before:scale-100 hover:text-white">
                         Recycling
                       </button>
                     </Link>
                   </li>
-                  <li className="inline-block mr-[10px] mb-[10px]">
+                  <li>
                     <Link to={"/"}>
                       <button className="bg-white rounded-lg flex items-center justify-center text-HeadingColor-0 transition-all duration-500 font-medium px-5 py-2 font-Outfit relative z-10 before:absolute before:top-0 before:left-0 before:rounded before:w-full before:h-full before:bg-PrimaryColor-0 before:transition-all before:duration-500 before:scale-0 before:-z-10 hover:before:scale-100 hover:text-white">
                         Cleaning
@@ -285,10 +285,10 @@ const BlogLeftSidebar = () => {
               </div>
             </div>
             <div className="col-span-2">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+              <div className="box-row grid grid-cols-1 md:grid-cols-2 gap-7">
                 {blogPosts.map((post, index) => {
                   return (
-                    <div key={index}>
+                    <div key={index} className="box">
                       <BlogCard {...post} />
                     </div>
                   );

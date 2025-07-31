@@ -31,7 +31,7 @@ const ProjectDetails = () => {
           />
           <div className="grid grid-cols-3 gap-[70px] lg:gap-10 xl:gap-[70px] mt-12">
             <div className="col-span-3 lg:col-span-2">
-              <h2 className="font-Outfit font-semibold text-2xl sm:text-3xl md:text-4xl text-HeadingColor-0">
+              <h2 className="fade-up font-Outfit font-semibold text-2xl sm:text-3xl md:text-4xl text-HeadingColor-0">
                 Rapidiously Formulate efficient
               </h2>
               <p className="font-NotoSans text-TextColor-0 mt-6">
@@ -40,7 +40,7 @@ const ProjectDetails = () => {
                 empowerment. Dramatically architect go forward opportunities
                 before user-centric partner Credibly implement exceptional
               </p>
-              <p className="font-NotoSans text-TextColor-0 mt-7 mb-9">
+              <p className="fade-up font-NotoSans text-TextColor-0 mt-7 mb-9">
                 Continually fashion orthogonal leadership skills whereas
                 wireless metrics. Uniquely syndicate exceptio opportunities with
                 interdependent users. Globally enhance fully tested
@@ -49,10 +49,10 @@ const ProjectDetails = () => {
                 meta-services. Interactively harness integrated ROI whereas
                 frictionless products.
               </p>
-              <h2 className="font-Outfit font-medium text-[22px] text-2xl md:text-[28px] text-HeadingColor-0 mt-[52px]">
+              <h2 className="fade-up font-Outfit font-medium text-[22px] text-2xl md:text-[28px] text-HeadingColor-0 mt-[52px]">
                 Quickly Parallel Task
               </h2>
-              <p className="font-NotoSans text-TextColor-0 mt-6">
+              <p className="fade-up font-NotoSans text-TextColor-0 mt-6">
                 Methods empowerment. Dramatically architect go forward
                 opportunities credibly revolutionize front-end initiatives for
                 interoperable outsourcing. Conveniently repurpose market-driven
@@ -68,39 +68,39 @@ const ProjectDetails = () => {
                   />
                 </div>
                 <div>
-                  <h2 className="font-Outfit font-semibold text-[28px] text-HeadingColor-0">
+                  <h2 className="fade-up font-Outfit font-semibold text-[28px] text-HeadingColor-0">
                     Project Benifits
                   </h2>
-                  <ul className="flex flex-col gap-[14px] mt-7">
-                    <li className="flex gap-3 items-center font-NotoSans text-TextColor-0">
+                  <ul className="box-row flex flex-col gap-[14px] mt-7">
+                    <li className="box flex gap-3 items-center font-NotoSans text-TextColor-0">
                       <FaCircleCheck
                         size={"20"}
                         className="text-PrimaryColor-0"
                       />
                       Innovate wireless market
                     </li>
-                    <li className="flex gap-3 items-center font-NotoSans text-TextColor-0">
+                    <li className="box flex gap-3 items-center font-NotoSans text-TextColor-0">
                       <FaCircleCheck
                         size={"20"}
                         className="text-PrimaryColor-0"
                       />
                       Productivate resource sucking
                     </li>
-                    <li className="flex gap-3 items-center font-NotoSans text-TextColor-0">
+                    <li className="box flex gap-3 items-center font-NotoSans text-TextColor-0">
                       <FaCircleCheck
                         size={"20"}
                         className="text-PrimaryColor-0"
                       />
                       Proactively unleash oriented communities
                     </li>
-                    <li className="flex gap-3 items-center font-NotoSans text-TextColor-0">
+                    <li className="box flex gap-3 items-center font-NotoSans text-TextColor-0">
                       <FaCircleCheck
                         size={"20"}
                         className="text-PrimaryColor-0"
                       />
                       Credibly develop progressive archi
                     </li>
-                    <li className="flex gap-3 items-center font-NotoSans text-TextColor-0">
+                    <li className="box flex gap-3 items-center font-NotoSans text-TextColor-0">
                       <FaCircleCheck
                         size={"20"}
                         className="text-PrimaryColor-0"
@@ -110,11 +110,11 @@ const ProjectDetails = () => {
                   </ul>
                 </div>
               </div>
-              <h2 className="font-Outfit font-medium text-xl sm:text-2xl md:text-3xl text-PrimaryColor-0 mt-[44px]">
+              <h2 className="fade-up font-Outfit font-medium text-xl sm:text-2xl md:text-3xl text-PrimaryColor-0 mt-[44px]">
                 Competently architect intermandated deliverables client niches
                 continually underwhelm
               </h2>
-              <p className="font-NotoSans text-TextColor-0 mt-5">
+              <p className="fade-up font-NotoSans text-TextColor-0 mt-5">
                 Appropriately communicate economically sound e-commerce after
                 enterprise services. Dramatically target cross-media solutions
                 and error-free platforms. Monotonectally pontificate 24/365
@@ -122,20 +122,20 @@ const ProjectDetails = () => {
               </p>
             </div>
             <div className="col-span-3 lg:col-span-1">
-              <div className="rounded-[20px] overflow-hidden bg-BodyBg-0 mb-7">
-                <div className="mx-9 pt-9 border-b border-dashed border-[#D9DDEC] pb-4">
+              <div className="box-row rounded-[20px] overflow-hidden bg-BodyBg-0 mb-7">
+                <div className="box mx-9 pt-9 border-b border-dashed border-[#D9DDEC] pb-4">
                   <p className="font-Outfit text-TextColor-0">Clients :</p>
                   <h5 className="font-Outfit font-medium text-HeadingColor-0 pt-1">
                     Holquim Group & Company
                   </h5>
                 </div>
-                <div className="mx-9 pt-3 border-b border-dashed border-[#D9DDEC] pb-4">
+                <div className="box mx-9 pt-3 border-b border-dashed border-[#D9DDEC] pb-4">
                   <p className="font-Outfit text-TextColor-0">Category :</p>
                   <h5 className="font-Outfit font-medium text-HeadingColor-0 pt-1">
                     Dust Recycling
                   </h5>
                 </div>
-                <div className="mx-9 pt-3 border-b border-dashed border-[#D9DDEC] pb-4">
+                <div className="box mx-9 pt-3 border-b border-dashed border-[#D9DDEC] pb-4">
                   <p className="font-Outfit text-TextColor-0">
                     Starting Date :
                   </p>
@@ -143,13 +143,13 @@ const ProjectDetails = () => {
                     02 January, 2025
                   </h5>
                 </div>
-                <div className="mx-9 pt-3 border-b border-dashed border-[#D9DDEC] pb-4">
+                <div className="box mx-9 pt-3 border-b border-dashed border-[#D9DDEC] pb-4">
                   <p className="font-Outfit text-TextColor-0">Ending Date :</p>
                   <h5 className="font-Outfit font-medium text-HeadingColor-0 pt-1">
                     05 June, 2025
                   </h5>
                 </div>
-                <div className="mx-9 pt-3">
+                <div className="box mx-9 pt-3">
                   <p className="font-Outfit text-TextColor-0">
                     Project Value :
                   </p>
@@ -158,7 +158,7 @@ const ProjectDetails = () => {
                   </h5>
                 </div>
               </div>
-              <div className="rounded-[20px] px-9 relative z-10 overflow-hidden bg-[url('/images/classic-project-img2.png')] bg-cover bg-no-repeat bg-center py-[50px]">
+              <div className="fade-up rounded-[20px] px-9 relative z-10 overflow-hidden bg-[url('/images/classic-project-img2.png')] bg-cover bg-no-repeat bg-center py-[50px]">
                 <div className="absolute -z-10 top-0 left-0 w-full h-full bg-SecondaryColor-0/40"></div>
                 <div className="size-[90px] relative before:absolute before:left-0 before:top-0 before:size-full before:rounded-full before:border-2 before:animate-rotational  before:border-dashed before:border-PrimaryColor-0 flex items-center justify-center">
                   <div className="size-[70px] rounded-full bg-PrimaryColor-0 flex items-center justify-center">

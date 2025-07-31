@@ -8,17 +8,17 @@ const featureData = [
   {
     featureIcon: featureIcon,
     featureTitle: "Healthy Foods Suppliers",
-    featureUrl: "/feature",
+    featureUrl: "/service",
   },
   {
     featureIcon: featureIcon2,
     featureTitle: "Quality Education Initiatives",
-    featureUrl: "/feature",
+    featureUrl: "/service",
   },
   {
     featureIcon: featureIcon3,
     featureTitle: "Medical Care Assistance",
-    featureUrl: "/feature",
+    featureUrl: "/service",
   },
 ];
 

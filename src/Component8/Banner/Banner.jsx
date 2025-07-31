@@ -20,7 +20,7 @@ const Banner = () => {
     },
     {
       BgImage: "/images/solar-banner-classic-bg.png",
-      image: "/images/solar-banner-classic-img.png",
+      image: "/images/solar-banner-classic-img2.png",
     },
   ];
 

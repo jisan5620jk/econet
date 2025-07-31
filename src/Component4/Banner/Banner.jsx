@@ -15,10 +15,12 @@ const Banner = () => {
 
   const slides = [
     {
+      image: "/images/classic-banner-bg.jpg",
       subtitle: "Help The Humanity",
       titleLines: ["Building evergreen", "Natural humanity", "Innovate earth"],
     },
     {
+      image: "/images/classic-banner-bg2.jpg",
       subtitle: "Help The Humanity",
       titleLines: ["Building evergreen", "Natural humanity", "Innovate earth"],
     },
@@ -45,7 +47,10 @@ const Banner = () => {
       <Swiper {...swiperSettings}>
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-[url(/images/classic-banner-bg.jpg)] bg-cover bg-no-repeat bg-left xl:bg-center relative z-10 overflow-hidden pt-[100px]">
+            <div
+              className="bg-cover bg-no-repeat bg-left xl:bg-center relative z-10 overflow-hidden pt-[100px]"
+              style={{ backgroundImage: `url(${slide.image})` }}
+            >
               <div className="relative overflow-hidden 2xl:px-5 3xl:px-0 pt-24 sm:pt-20 md:pt-40 2xl:pt-[120px] pb-[140px]">
                 <div className="Container">
                   <div className="grid grid-cols-1 xl:grid-cols-2">

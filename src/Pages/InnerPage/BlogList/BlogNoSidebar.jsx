@@ -84,10 +84,10 @@ const BlogNoSidebar = () => {
               Update blog posts
             </h1>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          <div className="box-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             {blogPosts.map((post, index) => {
               return (
-                <div key={index}>
+                <div key={index} className="box">
                   <BlogCard {...post} />
                 </div>
               );

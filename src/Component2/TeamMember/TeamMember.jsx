@@ -20,7 +20,7 @@ import { Autoplay } from "swiper/modules";
 const teamsData = [
   {
     teamThumb: teamThumb,
-    teamUrl: "/team_details",
+    teamUrl: "/team",
     teamTitle: "Jone D. Alexon",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
@@ -31,7 +31,7 @@ const teamsData = [
   },
   {
     teamThumb: teamThumb2,
-    teamUrl: "/team_details",
+    teamUrl: "/team",
     teamTitle: "Anjelina M. Jholi",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
@@ -42,7 +42,7 @@ const teamsData = [
   },
   {
     teamThumb: teamThumb3,
-    teamUrl: "/team_details",
+    teamUrl: "/team",
     teamTitle: "Alaina Melvis",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
@@ -53,7 +53,7 @@ const teamsData = [
   },
   {
     teamThumb: teamThumb4,
-    teamUrl: "/team_details",
+    teamUrl: "/team",
     teamTitle: "David Jhonson",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,

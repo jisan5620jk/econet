@@ -20,7 +20,7 @@ import shape2 from "/images/charity-donation-shape2.png";
 const teamsData = [
   {
     teamThumb: teamThumb,
-    teamUrl: "/team_details",
+    teamUrl: "/team",
     teamTitle: "Alaina Melvis",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
@@ -30,7 +30,7 @@ const teamsData = [
   },
   {
     teamThumb: teamThumb3,
-    teamUrl: "/team_details",
+    teamUrl: "/team",
     teamTitle: "Jone D. Alexon",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
@@ -40,7 +40,7 @@ const teamsData = [
   },
   {
     teamThumb: teamThumb2,
-    teamUrl: "/team_details",
+    teamUrl: "/team",
     teamTitle: "Anjelina M. Jholi",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,

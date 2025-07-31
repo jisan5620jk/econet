@@ -1,6 +1,9 @@
 import serviceImg from "/images/classic-service-img.png";
 import serviceImg2 from "/images/classic-service-img2.png";
 import serviceImg3 from "/images/classic-service-img3.png";
+import serviceImg4 from "/images/classic-service-img4.png";
+import serviceImg5 from "/images/classic-service-img5.png";
+import serviceImg6 from "/images/classic-service-img6.png";
 import serviceIcon from "/images/classic-service-icon.png";
 import serviceIcon2 from "/images/classic-service-icon2.png";
 import serviceIcon3 from "/images/classic-service-icon3.png";
@@ -35,19 +38,19 @@ const serviceData = [
     serviceUrl: "/service",
   },
   {
-    serviceImg: serviceImg,
+    serviceImg: serviceImg4,
     serviceIcon: serviceIcon4,
     serviceTitle: "Windmill Turbine Installation",
     serviceUrl: "/service",
   },
   {
-    serviceImg: serviceImg2,
+    serviceImg: serviceImg5,
     serviceIcon: serviceIcon5,
     serviceTitle: "Solar Panel Installation Safty Guide",
     serviceUrl: "/service",
   },
   {
-    serviceImg: serviceImg3,
+    serviceImg: serviceImg6,
     serviceIcon: serviceIcon6,
     serviceTitle: "Solar Panel Cleaning Services",
     serviceUrl: "/service",
@@ -79,7 +82,7 @@ const ServiceInner = () => {
             </h1>
           </div>
           <div className="mt-[60px]">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            <div className="box-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
               {serviceData.map((service, index) => (
                 <div key={index} className="box">
                   <ServiceCard {...service} />

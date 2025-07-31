@@ -41,16 +41,16 @@ const ServiceDetails = () => {
                 draggable="false"
                 className="w-full rounded-[20px]"
               />
-              <h2 className="font-Outfit font-semibold text-2xl sm:text-4xl text-HeadingColor-0 mt-8">
+              <h2 className="fade-up font-Outfit font-semibold text-2xl sm:text-4xl text-HeadingColor-0 mt-8">
                 Tree Plantation Services
               </h2>
-              <p className="font-NotoSans text-TextColor-0 mt-6">
+              <p className="fade-up font-NotoSans text-TextColor-0 mt-6">
                 Alternative innovation to ethical network environmental
                 whiteboard pursue compelling results premier methods
                 empowerment. Dramatically architect go forward opportunities
                 before user-centric partner Credibly implement exceptional
               </p>
-              <p className="font-NotoSans text-TextColor-0 mt-7 mb-11">
+              <p className="fade-up font-NotoSans text-TextColor-0 mt-7 mb-11">
                 Continually fashion orthogonal leadership skills whereas
                 wireless metrics. Uniquely syndicate exceptio opportunities with
                 interdependent users. Globally enhance fully tested
@@ -59,8 +59,8 @@ const ServiceDetails = () => {
                 meta-services. Interactively harness integrated ROI whereas
                 frictionless products.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
-                <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row gap-5 bg-BodyBg-0 rounded-md px-6 py-7">
+              <div className="box-row grid grid-cols-1 sm:grid-cols-2 gap-7">
+                <div className="box flex flex-col md:flex-row lg:flex-col xl:flex-row gap-5 bg-BodyBg-0 rounded-md px-6 py-7">
                   <div className="w-[72px] h-[72px] rounded-full bg-white flex justify-center items-center">
                     <img src={serviceDetailsIcon} draggable="false" />
                   </div>
@@ -73,7 +73,7 @@ const ServiceDetails = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row gap-5 bg-BodyBg-0 rounded-md px-6 py-7">
+                <div className="box flex flex-col md:flex-row lg:flex-col xl:flex-row gap-5 bg-BodyBg-0 rounded-md px-6 py-7">
                   <div className="w-[72px] h-[72px] rounded-full bg-white flex justify-center items-center">
                     <img src={serviceDetailsIcon2} draggable="false" />
                   </div>
@@ -87,7 +87,7 @@ const ServiceDetails = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-PrimaryColor-0 px-4 sm:px-[42px] rounded-md py-3 sm:py-7 flex flex-col sm:flex-row sm:items-center gap-5 mt-[62px]">
+              <div className="fade-up bg-PrimaryColor-0 px-4 sm:px-[42px] rounded-md py-3 sm:py-7 flex flex-col sm:flex-row sm:items-center gap-5 mt-[62px]">
                 <div className="pr-5 sm:border-r-2 border-white/20 text-white">
                   <GiEcology size={50} />
                 </div>
@@ -99,10 +99,10 @@ const ServiceDetails = () => {
                   </p>
                 </div>
               </div>
-              <h2 className="font-Outfit font-medium text-2xl sm:text-3xl text-HeadingColor-0 mt-[54px]">
+              <h2 className="fade-up font-Outfit font-medium text-2xl sm:text-3xl text-HeadingColor-0 mt-[54px]">
                 What the Benifits?
               </h2>
-              <p className="font-NotoSans text-TextColor-0 mt-6">
+              <p className="fade-up font-NotoSans text-TextColor-0 mt-6">
                 Alternative innovation to ethical network environmental
                 whiteboard pursue compelling results for premier methods
                 empowerment. Dramatically architect go forward opportunities
@@ -116,7 +116,7 @@ const ServiceDetails = () => {
                       className="w-full transition-all duration-500 hover:scale-110"
                     />
                   </div>
-                  <div className="bg-white shadow-cases rounded-lg inline-block pt-7 pl-4 sm:pl-8 lg:pl-4 xl:pl-8 pb-7 w-[calc(100%-30px)] sm:w-[calc(100%-60px)] lg:w-[calc(100%-30px)] xl:w-[calc(100%-60px)] -mt-8 relative z-10">
+                  <div className="fade-up bg-white shadow-cases rounded-lg inline-block pt-7 pl-4 sm:pl-8 lg:pl-4 xl:pl-8 pb-7 w-[calc(100%-30px)] sm:w-[calc(100%-60px)] lg:w-[calc(100%-30px)] xl:w-[calc(100%-60px)] -mt-8 relative z-10">
                     <h4 className="font-Outfit text-HeadingColor-0 font-semibold text-[22px] lg:text-xl xl:text-[22px] text-left mb-3">
                       Green Environment
                     </h4>
@@ -140,7 +140,7 @@ const ServiceDetails = () => {
                       className="w-full transition-all duration-500 hover:scale-110"
                     />
                   </div>
-                  <div className="bg-white shadow-cases rounded-lg inline-block pt-7 pl-4 sm:pl-8 lg:pl-4 xl:pl-8 pb-7 w-[calc(100%-30px)] sm:w-[calc(100%-60px)] lg:w-[calc(100%-30px)] xl:w-[calc(100%-60px)] -mt-8 relative z-10">
+                  <div className="fade-up bg-white shadow-cases rounded-lg inline-block pt-7 pl-4 sm:pl-8 lg:pl-4 xl:pl-8 pb-7 w-[calc(100%-30px)] sm:w-[calc(100%-60px)] lg:w-[calc(100%-30px)] xl:w-[calc(100%-60px)] -mt-8 relative z-10">
                     <h4 className="font-Outfit text-HeadingColor-0 font-semibold text-[22px] lg:text-xl xl:text-[22px] text-left mb-3">
                       Renewable Energy
                     </h4>
@@ -160,11 +160,11 @@ const ServiceDetails = () => {
             </div>
             <div className="col-span-3 lg:col-span-1">
               <div className="bg-BodyBg-0 rounded-[20px] px-4 sm:px-8 lg:px-6 xl:px-8 pt-7 pb-4 mb-7">
-                <h4 className="font-Outfit font-medium text-2xl text-HeadingColor-0 pb-3 mb-8 relative before:absolute before:bottom-0 before:left-0 before:w-7 before:h-[2px] before:bg-PrimaryColor-0">
+                <h4 className="fade-up font-Outfit font-medium text-2xl text-HeadingColor-0 pb-3 mb-8 relative before:absolute before:bottom-0 before:left-0 before:w-7 before:h-[2px] before:bg-PrimaryColor-0">
                   Categories
                 </h4>
-                <ul className="mt-8">
-                  <li>
+                <ul className="mt-8 box-row">
+                  <li className="box">
                     <Link to={"/service_details"}>
                       <button className="w-full font-Outfit text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded-xl bg-white mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
@@ -175,7 +175,7 @@ const ServiceDetails = () => {
                       </button>
                     </Link>
                   </li>
-                  <li>
+                  <li className="box">
                     <Link to={"/service_details2"}>
                       <button className="w-full font-Outfit text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded-xl bg-white mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
@@ -186,7 +186,7 @@ const ServiceDetails = () => {
                       </button>
                     </Link>
                   </li>
-                  <li>
+                  <li className="box">
                     <Link to={"/service_details3"}>
                       <button className="w-full font-Outfit text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded-xl bg-white mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
@@ -197,7 +197,7 @@ const ServiceDetails = () => {
                       </button>
                     </Link>
                   </li>
-                  <li>
+                  <li className="box">
                     <Link to={"/service_details4"}>
                       <button className="w-full font-Outfit text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded-xl bg-white mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
@@ -208,7 +208,7 @@ const ServiceDetails = () => {
                       </button>
                     </Link>
                   </li>
-                  <li>
+                  <li className="box">
                     <Link to={"/service_details5"}>
                       <button className="w-full font-Outfit text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded-xl bg-white mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
@@ -219,7 +219,7 @@ const ServiceDetails = () => {
                       </button>
                     </Link>
                   </li>
-                  <li>
+                  <li className="box">
                     <Link to={"/service_details6"}>
                       <button className="w-full font-Outfit text-left text-HeadingColor-0 transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded-xl bg-white mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
@@ -233,11 +233,11 @@ const ServiceDetails = () => {
                 </ul>
               </div>
               <div className="bg-BodyBg-0 rounded-[20px] px-4 sm:px-8 lg:px-6 xl:px-8 pt-7 pb-4 mb-7">
-                <h4 className="font-Outfit font-medium text-2xl text-HeadingColor-0 pb-3 mb-8 relative before:absolute before:bottom-0 before:left-0 before:w-7 before:h-[2px] before:bg-PrimaryColor-0">
+                <h4 className="fade-up font-Outfit font-medium text-2xl text-HeadingColor-0 pb-3 mb-8 relative before:absolute before:bottom-0 before:left-0 before:w-7 before:h-[2px] before:bg-PrimaryColor-0">
                   Downloads
                 </h4>
                 <ul className="mt-8">
-                  <li>
+                  <li className="fade-up">
                     <Link to={"/"}>
                       <button className="w-full font-Outfit bg-SecondaryColor-0 text-left text-white transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded-lg bg-HoverColor-0 mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
@@ -251,7 +251,7 @@ const ServiceDetails = () => {
                       </button>
                     </Link>
                   </li>
-                  <li>
+                  <li className="fade-up">
                     <Link to={"/"}>
                       <button className="w-full font-Outfit bg-SecondaryColor-0 text-left text-white transition-all duration-500 group px-7 py-4 flex items-center justify-between rounded-lg bg-HoverColor-0 mb-3 overflow-hidden z-10 relative before:absolute before:top-0 before:right-0 before:w-0 before:-z-10 before:h-full before:bg-PrimaryColor-0 before:rounded before:transition-all before:duration-500 hover:before:w-full hover:before:left-0 hover:text-white">
                         <span className="flex items-center gap-3">
@@ -267,7 +267,7 @@ const ServiceDetails = () => {
                   </li>
                 </ul>
               </div>
-              <div className="rounded-[20px] px-9 relative z-10 overflow-hidden bg-[url('/images/classic-project-img2.png')] bg-cover bg-no-repeat bg-center py-[50px]">
+              <div className="fade-up rounded-[20px] px-9 relative z-10 overflow-hidden bg-[url('/images/classic-project-img2.png')] bg-cover bg-no-repeat bg-center py-[50px]">
                 <div className="absolute -z-10 top-0 left-0 w-full h-full bg-SecondaryColor-0/40"></div>
                 <div className="size-[90px] relative before:absolute before:left-0 before:top-0 before:size-full before:rounded-full before:border-2 before:animate-rotational  before:border-dashed before:border-PrimaryColor-0 flex items-center justify-center">
                   <div className="size-[70px] rounded-full bg-PrimaryColor-0 flex items-center justify-center">

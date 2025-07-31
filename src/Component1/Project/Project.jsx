@@ -19,7 +19,7 @@ const projectData = [
     boxTitle: "Eco - Innovative Climate solution",
     boxDesc:
       "Econet is a nonprofit environmental main dedicated to protecting planet the through community empowerment",
-    boxUrl: "/projects/climate-solutions",
+    boxUrl: "/project_details",
     boxBtnText: "Explore More",
     boxBtnIcon: <GoArrowRight />,
   },
@@ -31,7 +31,7 @@ const projectData = [
     boxTitle: "Sustainable energy Environment",
     boxDesc:
       "Econet is a nonprofit environmental main dedicated to protecting planet the through community empowerment",
-    boxUrl: "/projects/renewable-energy",
+    boxUrl: "/project_details",
     boxBtnText: "Explore More",
     boxBtnIcon: <GoArrowRight />,
   },
@@ -43,7 +43,7 @@ const projectData = [
     boxTitle: "Tree plantations and Green movement",
     boxDesc:
       "Econet is a nonprofit environmental main dedicated to protecting planet the through community empowerment",
-    boxUrl: "/projects/green-movement",
+    boxUrl: "/project_details",
     boxBtnText: "Explore More",
     boxBtnIcon: <GoArrowRight />,
   },

@@ -2,6 +2,9 @@ import subtitleIcon from "/images/sub-title-icon.png";
 import teamThumb from "/images/charity-classic-team-img.png";
 import teamThumb2 from "/images/charity-classic-team-img2.png";
 import teamThumb3 from "/images/charity-classic-team-img3.png";
+import teamThumb4 from "/images/charity-classic-team-img4.png";
+import teamThumb5 from "/images/charity-classic-team-img5.png";
+import teamThumb6 from "/images/charity-classic-team-img6.png";
 import BreadCrumb from "../../../Shared/BreadCrumb/BreadCrumb";
 import {
   FaArrowRightLong,
@@ -18,7 +21,7 @@ import TextReveal from "../../../Shared/TextAnim/TextReveal";
 const teamsData = [
   {
     teamThumb: teamThumb,
-    teamUrl: "/team_details",
+    teamUrl: "/team",
     teamTitle: "Alaina Melvis",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
@@ -28,7 +31,7 @@ const teamsData = [
   },
   {
     teamThumb: teamThumb3,
-    teamUrl: "/team_details",
+    teamUrl: "/team",
     teamTitle: "Jone D. Alexon",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
@@ -38,7 +41,7 @@ const teamsData = [
   },
   {
     teamThumb: teamThumb2,
-    teamUrl: "/team_details",
+    teamUrl: "/team",
     teamTitle: "Anjelina M. Jholi",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
@@ -47,9 +50,9 @@ const teamsData = [
     teamDesc: "Volanteer",
   },
   {
-    teamThumb: teamThumb,
-    teamUrl: "/team_details",
-    teamTitle: "Alaina Melvis",
+    teamThumb: teamThumb4,
+    teamUrl: "/team",
+    teamTitle: "Maria M. Marie",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
     socialIcon3: <FaLinkedinIn />,
@@ -57,9 +60,9 @@ const teamsData = [
     teamDesc: "Volanteer",
   },
   {
-    teamThumb: teamThumb3,
-    teamUrl: "/team_details",
-    teamTitle: "Jone D. Alexon",
+    teamThumb: teamThumb5,
+    teamUrl: "/team",
+    teamTitle: "David Miller",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
     socialIcon3: <FaLinkedinIn />,
@@ -67,9 +70,9 @@ const teamsData = [
     teamDesc: "Volanteer",
   },
   {
-    teamThumb: teamThumb2,
-    teamUrl: "/team_details",
-    teamTitle: "Anjelina M. Jholi",
+    teamThumb: teamThumb6,
+    teamUrl: "/team",
+    teamTitle: "Natasha Nira",
     socialIcon: <FaFacebookF />,
     socialIcon2: <FaXTwitter />,
     socialIcon3: <FaLinkedinIn />,

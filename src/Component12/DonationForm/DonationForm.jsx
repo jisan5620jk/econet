@@ -5,7 +5,7 @@ import { GoArrowRight } from "react-icons/go";
 import subtitleIcon from "/images/sub-title-icon.png";
 import shape from "/images/charity-donation-shape.png";
 import shape2 from "/images/charity-donation-form-shape.png";
-import donationFormImg from "/images/charity-donation-form-img.png";
+import donationFormImg from "/images/charity-classic-donation-form-img.png";
 
 const DonationForm = () => {
   const [amount, setAmount] = useState(100);

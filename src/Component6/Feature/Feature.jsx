@@ -17,25 +17,25 @@ const featureData = [
     featureImg: featureImg,
     featureIcon: featureIcon,
     featureTitle: "Suntainable energy Environment",
-    featureUrl: "/feature",
+    featureUrl: "/service",
   },
   {
     featureImg: featureImg2,
     featureIcon: featureIcon2,
     featureTitle: "Environment Waste Recycling",
-    featureUrl: "/feature",
+    featureUrl: "/service",
   },
   {
     featureImg: featureImg3,
     featureIcon: featureIcon3,
     featureTitle: "Dirty Recycling and Tree Plantation",
-    featureUrl: "/feature",
+    featureUrl: "/service",
   },
   {
     featureImg: featureImg3,
     featureIcon: featureIcon3,
     featureTitle: "Dirty Recycling and Tree Plantation",
-    featureUrl: "/feature",
+    featureUrl: "/service",
   },
 ];
 

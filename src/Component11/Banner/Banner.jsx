@@ -16,10 +16,12 @@ const Banner = () => {
 
   const slides = [
     {
+      image: "/images/charity-classic-banner-bg.png",
       subtitle: "Help The Humanity",
       titleLines: ["Join the Movement", "Change the — World", "Donate Love"],
     },
     {
+      image: "/images/charity-classic-banner-bg2.png",
       subtitle: "Help The Humanity",
       titleLines: ["Empower the People", "Shape the Future", "Give Hope"],
     },
@@ -46,7 +48,10 @@ const Banner = () => {
       <Swiper {...swiperSettings}>
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-[url(/images/charity-classic-banner-bg.png)] bg-cover bg-no-repeat bg-left xl:bg-center 2xl:px-5 3xl:px-0 pt-24 sm:pt-20 md:pt-40 2xl:pt-[120px] rounded-xl sm:rounded-2xl md:rounded-[30px] relative z-10 overflow-hidden">
+            <div
+              className="bg-cover bg-no-repeat bg-left xl:bg-center 2xl:px-5 3xl:px-0 pt-24 sm:pt-20 md:pt-40 2xl:pt-[120px] rounded-xl sm:rounded-2xl md:rounded-[30px] relative z-10 overflow-hidden"
+              style={{ backgroundImage: `url(${slide.image})` }}
+            >
               <div className="Container">
                 <div className="pb-36 xl:pb-[124px]">
                   {/* Subtitle */}
