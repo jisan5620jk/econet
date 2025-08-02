@@ -25,7 +25,7 @@ const CallDoAction = () => {
             dedicated to protecting planet through
           </p>
           <div className="flex flex-wrap items-center gap-5 mt-9">
-            <PrimaryButton as="link" href="/about">
+            <PrimaryButton as="link" href="/contact">
               Contact Us Now <GoArrowRight size={22} />
             </PrimaryButton>
             <div className="flex items-center gap-4">

@@ -1,10 +1,10 @@
-import projectImg from "/images/project_details2-img.png";
-import projectImg2 from "/images/project_details2-img2.png";
-import projectImg3 from "/images/project_details2-img3.png";
-import projectImg4 from "/images/project_details2-img4.png";
+import projectImg from "/images/project2-img.png";
+import projectImg2 from "/images/project2-img2.png";
+import projectImg3 from "/images/project2-img3.png";
+import projectImg4 from "/images/project2-img4.png";
 import shape from "/images/dot.png";
 import shape2 from "/images/arrow.png";
-import ProjectCard from "./project_detailsCard";
+import ProjectCard from "./ProjectCard";
 import subtitleIcon from "/images/sub-title-icon.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

@@ -43,7 +43,7 @@ const VideoCta = () => {
 
             <PrimaryButton
               as="link"
-              href="/about"
+              href="/donation"
               className="!bg-white/10 !px-9 !py-3 backdrop-filter backdrop-blur-sm border border-white/20 hover:border-SecondaryColor-0"
             >
               Donate Now <GoArrowRight size={22} />

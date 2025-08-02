@@ -37,9 +37,9 @@ const FeatureCard = ({
       <div className="absolute top-7 right-7">
         <Link
           to={featureUrl}
-          className="size-[50px] flex justify-center items-center font-Outfit text-white text-[28px] bg-transparent border border-SecondaryColor-0/20 hover:border-white/100 rounded-full transition-all duration-500 relative z-10 overflow-hidden -rotate-45 before:absolute before:left-0 before:top-0 before:size-full before:bg-white before:transition-all before:duration-500 before:-z-10 before:rotate-180 before:scale-0 group-hover:before:scale-100 group-hover:before:rotate-0"
+          className="size-[50px] flex justify-center items-center font-Outfit text-white text-[28px] bg-transparent border border-white/20 hover:border-white/100 rounded-full transition-all duration-500 relative z-10 overflow-hidden -rotate-45 before:absolute before:left-0 before:top-0 before:size-full before:bg-white before:transition-all before:duration-500 before:-z-10 before:rotate-180 before:scale-0 group-hover:before:scale-100 group-hover:before:rotate-0"
         >
-          {featureBtnIcon}
+          <span className="transition-all duration-500 group-hover:brightness-0">{featureBtnIcon}</span>
         </Link>
       </div>
     </div>

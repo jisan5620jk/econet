@@ -86,7 +86,7 @@ const Banner = () => {
                         : "translate-y-[100px] opacity-0"
                     }`}
                   >
-                    <PrimaryButton as="link" href="/about">
+                    <PrimaryButton as="link" href="/donation">
                       Donate Now <GoArrowRight size={22} />
                     </PrimaryButton>
 

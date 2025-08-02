@@ -26,7 +26,7 @@ const Banner = () => {
                 Donate Love
               </h2>
               <div className="flex flex-wrap xl:flex-nowrap gap-5 sm:gap-10 items-center mt-7 md:mt-[48px]">
-                <PrimaryButton as="link" href="/about">
+                <PrimaryButton as="link" href="/donation">
                   Donate Now <GoArrowRight size={22} />
                 </PrimaryButton>
                 <div className="flex items-center gap-5">
